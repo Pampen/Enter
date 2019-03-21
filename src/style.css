@@ -1,0 +1,27 @@
+.game-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 24px;
+  letter-spacing: 6px;
+  margin-left: 5px;
+}
+
+#game-title-first-letter {
+  font-size: 32px;
+}
+
+#title-animation {
+  animation: 0.47s infinite alternate blink-animation;
+}
+
+@keyframes blink-animation {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
