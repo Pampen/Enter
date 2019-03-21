@@ -27,5 +27,15 @@ def getMessage():
     '''
 
 def getResponse(userInput):
-    #TODO Change dic. to corresponding functions, modules. 
-    return "poop"
+    #TODO Change dict. to corresponding functions, modules. 
+    return {
+        "newGameState": {
+            "levelTitle": None,
+            "levelDescription": 'This is a very so much like a description.',
+            "levelChatboxText": 'This appears in the chatbox.'
+        },
+        "inventory": {
+            "firstObject": True,
+            "secondObject": False
+        }
+    }

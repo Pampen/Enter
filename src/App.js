@@ -6,20 +6,48 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state={
-      messages: []
+      title: 'Default Title',
+      description: 'This is a game!',
+      chatboxText: [],
+      inventory: [
+        'firstObject',
+        'secondObject'
+      ]
     }
     this.handleClick=this.handleClick.bind(this)
   }
   handleClick() {
     sendMessage(this.inputElement.value).then(response => {
-      var messages = this.state.messages;
-      messages.push(this.inputElement.value);
-      this.setState({messages: messages});
+      const newTitle = response.newGameState.levelTitle || null
+      const newDescription = response.newGameState.levelDescription || null
+      const newChatboxText = response.newGameState.levelChatboxText || null
+      const newGameState = {
+        inventory: []
+      };
+      if (newTitle) {
+        newGameState.title = newTitle;
+      };
+      if (newDescription) {
+        newGameState.description = newDescription;
+      };
+      if (newChatboxText) {
+        const currentChatboxText = this.state.chatboxText;
+        currentChatboxText.push(newChatboxText);
+        newGameState.chatboxText = currentChatboxText;
+      }
+      if (response.inventory) {
+        if (response.inventory.firstObject) {
+          newGameState.inventory.push('firstObject');
+        }
+        if (response.inventory.secondObject) {
+          newGameState.inventory.push('secondObject');
+        }
+      }
+      this.setState(newGameState);
+      console.log(this.state);
   })
 };
-  /*renderMessages() {
-    Text render, title render, chat render goes here.
-  }*/
+
   render() {
     return (
       <div id="wrapper">
@@ -28,10 +56,14 @@ class App extends Component {
             <div className="game-container">
               <div className="game-screen">
                 <div className="game-screen-header">
+                  <h2 id="title">{this.state.title}</h2>
+                  <p className="level-description">{this.state.description}</p>
                 </div>
                 <div className="game-text-box">
                   {
-                    //Chatbox-text insert
+                    this.state.chatboxText.map((text, i) => {
+                      return <p key={i} className="chatbox-text">{text}</p>
+                    })
                   }
                 </div>
               </div>
