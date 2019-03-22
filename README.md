@@ -15,7 +15,7 @@ Läs sakerna. Gör sakerna. Allt är bra i världen, peace out.
 ## Starta Server och kör programmet
 
 1. Öppna en ny terminal.
-2.  Gå till mappen som "game.py" finns i på din dator.
+2. Gå till mappen som "game.py" finns i på din dator.
 3. Skriv:
 		FLASK_APP=game.py FLASK_DEBUG=1 flask run
 4. Gå till terminalen i din integrerade utvecklingsmiljö (IDE) och skriv:
