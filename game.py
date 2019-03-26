@@ -1,9 +1,10 @@
 from flask import Flask, request, Response, jsonify
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 app = Flask(__name__)
-CORS(app)
+CORS(app, support_credentials=True)
 
 @app.route('/', methods=['POST'])
+@cross_origin(supports_credentials=True)
 def getRequest():
     getUserInput = request.get_json()
     userInput = getUserInput.get('message')
@@ -15,25 +16,32 @@ def getResponse(userInput):
     #TODO Change dict. entries to corresponding functions, modules.
     # userInput contains string that corresponds with what the player did
     return {
-        "newGameState": {handleResponse(userInput)}
+        "newGameState": handleResponse(userInput),
+        "inventory": {
+            "firstObject": True,
+            "secondObject": False
+        }
     }
 
 def handleResponse(userInput):
-    response = None
-    if userInput == 'goforward':
-        response = {
-            "LevelTitle": "Test 2",
-            "LevelDescription": "Test 2",
-            "LevelChatboxText": "Test 2"
-        }
-    elif userInput == 'inget':
-        response = { 
-            "levelTitle": "Test1",
+    if userInput == '1':
+        return {
+            "levelTitle": "Test1 ",
             "levelDescription": "Test 1",
-            "levelChatboxText": "Test 1."
-            }
-    
-    return response
+            "levelChatboxText": 'Test 1'
+        }
+    elif userInput == '2':
+        return {
+            "levelTitle": 'Test 2',
+            "levelDescription": 'Test 2',
+            "levelChatboxText": 'Test 2!!'
+        }
+    else:
+        return {
+            "levelTitle": None,
+            "levelDescription": None,
+            "levelChatboxText": "Du vad gör du"
+        }
 '''
 def outsideRoom(userInput):
     if UserInput == "go forward":

@@ -8,31 +8,44 @@ class App extends Component {
     this.state={
       title: 'Default Title',
       description: 'This is a game!',
-      chatboxText: []
+      chatboxText: [],
+      inventory: [
+        'firstObject',
+        'secondObject'
+      ]
     }
     this.handleClick=this.handleClick.bind(this)
   }
   handleClick() {
     sendMessage(this.inputElement.value).then(response => {
-      let newTitle = response.newGameState.levelTitle || null
-      let newDescription = response.newGameState.levelDescription || null
-      let newChatboxText = response.newGameState.levelChatboxText || null
-      let newState = {
+      const newTitle = response.newGameState.levelTitle || null
+      const newDescription = response.newGameState.levelDescription || null
+      const newChatboxText = response.newGameState.levelChatboxText || null
+      const newGameState = {
+        inventory: []
       };
       if (newTitle) {
-        newState.title = newTitle;
+        newGameState.title = newTitle;
       };
       if (newDescription) {
-        newState.description = newDescription;
+        newGameState.description = newDescription;
       };
       if (newChatboxText) {
         const currentChatboxText = this.state.chatboxText;
         currentChatboxText.push(newChatboxText);
-        newState.chatboxText = currentChatboxText;
-      };
-      this.setState(newState);
+        newGameState.chatboxText = currentChatboxText;
+      }
+      if (response.inventory) {
+        if (response.inventory.firstObject) {
+          newGameState.inventory.push('firstObject');
+        }
+        if (response.inventory.secondObject) {
+          newGameState.inventory.push('secondObject');
+        }
+      }
+      this.setState(newGameState);
       console.log(this.state);
-  });
+  })
 };
 
   render() {
