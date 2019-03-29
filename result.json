@@ -1,0 +1,11 @@
+{
+  "newGameState": {
+    "levelTitle": "Shed",
+    "levelDescription": "Youre in the shed",
+    "levelChatboxText": "YAY"
+  },
+  "inventory": {
+    "firstObject": true,
+    "secondObject": false
+  }
+}

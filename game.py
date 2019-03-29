@@ -8,35 +8,22 @@ CORS(app, support_credentials=True)
 @cross_origin(supports_credentials=True)
 def getRequest():
     file_name = "result.json"
-    gameState = get_result_from_file(file_name)
-    currentLevel = saveCurrentLevel(gameState)
 
     getUserInput = request.get_json()
     userInput = getUserInput.get('message')
     userInput = userInput.lower()
 
-    response = getResponse(userInput, currentLevel)
-    save_results_to_file(file_name, response)
+    response = getResponse(userInput)
     return jsonify(response) #Return value of variable 'response' to JavaScript
 
-def getResponse(userInput, currentLevel):
+def getResponse(userInput):
     #TODO Change dict. entries to corresponding functions, modules.
     # userInput contains string that corresponds with what the player did
-    return {
-        "newGameState": allLevelsControl(userInput, currentLevel),
-        "inventory": {
-            "firstObject": True,
-            "secondObject": False
-        }
-    }
-
-def saveCurrentLevel(gameState):
+    gameState = getLevelInfo()
     currentLevel = gameState["newGameState"]["levelTitle"]
-    print(currentLevel)
-    return currentLevel
+    return allLevelsControl(userInput, currentLevel)
 
 def allLevelsControl(userInput, currentLevel):
-    print(currentLevel)
     if currentLevel == "Main porch":
         return porch(userInput, currentLevel)
     elif currentLevel == "Outside":
@@ -49,11 +36,19 @@ def porch(userInput, currentLevel):
     if userInput == "go forward" and levelPorch:
         return wrongPorchDirection()
     elif userInput == "go back" and levelPorch:
-        return {
-            "levelTitle": "Outside",
-            "levelDescription": "Youre outside",
-            "levelChatboxText": "YAY"
+        newLevelInfo = {
+            "newGameState": {
+                "levelTitle": "Outside",
+                "levelDescription": "outside",
+                "levelChatboxText": "YAY"
+            },
+            "inventory": {
+                "firstObject": True,
+                "secondObject": False
+            }
         }
+        saveNewLevelInfo(newLevelInfo)
+        return newLevelInfo
     elif userInput == "go left" and levelPorch:
         return wrongPorchDirection()
     elif userInput == "go right" and levelPorch:
@@ -63,37 +58,65 @@ def porch(userInput, currentLevel):
 
 def wrongPorchDirection():
     return {
-            "levelTitle": "Main porch",
-            "levelDescription": "Youre on the main porch",
-            "levelChatboxText": "You cant do that"
+            "newGameState": {
+                "levelTitle": "Outside",
+                "levelDescription": "outside",
+                "levelChatboxText": "YAY"
+            },
+            "inventory": {
+                "firstObject": True,
+                "secondObject": False
+            }
         }
 
 def outside(userInput, currentLevel):
-    levelOutside = currentLevel
-    if userInput == "go forward" and levelOutside:
-        return {
-            "levelTitle": "Main porch",
-            "levelDescription": "Youre on the main porch",
-            "levelChatboxText": "YAY"
+    if userInput == "go forward":
+        newLevelInfo = {
+            "newGameState": {
+                "levelTitle": "Main porch",
+                "levelDescription": "Youre in porch",
+                "levelChatboxText": "YAY"
+            },
+            "inventory": {
+                "firstObject": True,
+                "secondObject": False
+            }
         }
-    elif userInput == "go back" and levelOutside:
+        saveNewLevelInfo(newLevelInfo)
+        return newLevelInfo
+    elif userInput == "go back":
         return wrongOutsideDirection()
-    elif userInput == "go left" and levelOutside:
-        return {
-            "levelTitle": "Shed",
-            "levelDescription": "Youre in the shed",
-            "levelChatboxText": "YAY"
+    elif userInput == "go left":
+        #open file, overwrite with new level info, then return file info
+        newLevelInfo = {
+            "newGameState": {
+                "levelTitle": "Shed",
+                "levelDescription": "Youre in the shed",
+                "levelChatboxText": "YAY"
+            },
+            "inventory": {
+                "firstObject": True,
+                "secondObject": False
+            }
         }
-    elif userInput == "go right" and levelOutside:
+        saveNewLevelInfo(newLevelInfo)
+        return newLevelInfo
+    elif userInput == "go right":
         return wrongOutsideDirection()
     else: 
         return wrongUserInput()
 
 def wrongOutsideDirection():
     return {
-            "levelTitle": "Outside",
-            "levelDescription": "Youre outside",
-            "levelChatboxText": "You cant do that"
+            "newGameState": {
+                "levelTitle": "Shed",
+                "levelDescription": "Youre in the shed",
+                "levelChatboxText": "YAY"
+            },
+            "inventory": {
+                "firstObject": True,
+                "secondObject": False
+            }
         }
 
 def shed(userInput, currentLevel):
@@ -106,29 +129,48 @@ def shed(userInput, currentLevel):
     elif userInput == "go left" and levelShed:
         return wrongShedDirection()
     elif userInput == "go right" and levelShed:
-       return {
-            "levelTitle": "Outside",
-            "levelDescription": "The outside",
-            "levelChatboxText": "YAY"
+        newLevelInfo = {
+            "newGameState": {
+                "levelTitle": "Outside",
+                "levelDescription": "Youre in outside",
+                "levelChatboxText": "YAY"
+            },
+            "inventory": {
+                "firstObject": True,
+                "secondObject": False
+            }
         }
+        saveNewLevelInfo(newLevelInfo)
+        return newLevelInfo
     else:
         return wrongUserInput()
         
 
 def wrongShedDirection():
     return {
-            "levelTitle": "Shed",
-            "levelDescription": "The Shed",
-            "levelChatboxText": "You cant do that"
+            "newGameState": {
+                "levelTitle": "Shed",
+                "levelDescription": "Youre in outside",
+                "levelChatboxText": "YAY"
+            },
+            "inventory": {
+                "firstObject": True,
+                "secondObject": False
+            }
         }
 
 def wrongUserInput():
     return {
-            "levelTitle": None,
-            "levelDescription": None,
-            "levelChatboxText": "That is not a valid input"
+            "newGameState": {
+                "levelTitle": None,
+                "levelDescription": None,
+                "levelChatboxText": "invalid input"
+            },
+            "inventory": {
+                "firstObject": True,
+                "secondObject": False
+            }
         }
-
 def get_result_from_file(file_name):
     try:
         my_file = open(file_name, "r")
@@ -158,3 +200,16 @@ def save_results_to_file(file_name, response):
     my_file = open(file_name, "w")
     my_file.write(jsonResponse)
     my_file.close()
+
+def getLevelInfo():
+    with open("result.json", "r") as getTheFile:
+        theFile = json.load(getTheFile)
+        return theFile
+
+def saveNewLevelInfo(response):
+    with open("result.json", "w") as theFile:
+        json.dump(response, theFile,  indent=2)
+
+        
+
+        

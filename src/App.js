@@ -55,10 +55,10 @@ class App extends Component {
           <div className="container">
             <div className="game-container">
               <div className="game-screen">
-                <div className="game-screen-header">
-                  <h2 id="title">{this.state.title}</h2>
-                  <p className="level-description">{this.state.description}</p>
-                </div>
+              <div className="game-screen-header">
+                <h2 id="title">{this.state.title}</h2>
+                <p className="level-description">{this.state.description}</p>
+              </div>
                 <div className="game-text-box">
                   {
                     this.state.chatboxText.map((text, i) => {
