@@ -13,6 +13,7 @@ def getRequest():
 
     getUserInput = request.get_json()
     userInput = getUserInput.get('message')
+    userInput = userInput.lower()
 
     response = getResponse(userInput, currentLevel)
     save_results_to_file(file_name, response)
@@ -29,6 +30,11 @@ def getResponse(userInput, currentLevel):
         }
     }
 
+def saveCurrentLevel(gameState):
+    currentLevel = gameState["newGameState"]["levelTitle"]
+    print(currentLevel)
+    return currentLevel
+
 def allLevelsControl(userInput, currentLevel):
     print(currentLevel)
     if currentLevel == "Main porch":
@@ -37,8 +43,6 @@ def allLevelsControl(userInput, currentLevel):
         return outside(userInput, currentLevel)
     elif currentLevel == "Shed":
         return shed(userInput, currentLevel)
-    else:
-        return None
 
 def porch(userInput, currentLevel):
     levelPorch = currentLevel
@@ -54,6 +58,8 @@ def porch(userInput, currentLevel):
         return wrongPorchDirection()
     elif userInput == "go right" and levelPorch:
         return wrongPorchDirection()
+    else:
+        return wrongUserInput()
 
 def wrongPorchDirection():
     return {
@@ -80,7 +86,9 @@ def outside(userInput, currentLevel):
         }
     elif userInput == "go right" and levelOutside:
         return wrongOutsideDirection()
-    
+    else: 
+        return wrongUserInput()
+
 def wrongOutsideDirection():
     return {
             "levelTitle": "Outside",
@@ -103,6 +111,9 @@ def shed(userInput, currentLevel):
             "levelDescription": "The outside",
             "levelChatboxText": "YAY"
         }
+    else:
+        return wrongUserInput()
+        
 
 def wrongShedDirection():
     return {
@@ -111,9 +122,12 @@ def wrongShedDirection():
             "levelChatboxText": "You cant do that"
         }
 
-def saveCurrentLevel(gameState):
-    currentLevel = gameState["newGameState"]["levelTitle"]
-    return currentLevel
+def wrongUserInput():
+    return {
+            "levelTitle": None,
+            "levelDescription": None,
+            "levelChatboxText": "That is not a valid input"
+        }
 
 def get_result_from_file(file_name):
     try:
