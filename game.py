@@ -59,9 +59,9 @@ def porch(userInput, currentLevel):
 def wrongPorchDirection():
     return {
             "newGameState": {
-                "levelTitle": "Outside",
-                "levelDescription": "outside",
-                "levelChatboxText": "YAY"
+                "levelTitle": None,
+                "levelDescription": None,
+                "levelChatboxText": "You cannot go that way."
             },
             "inventory": {
                 "firstObject": True,
@@ -109,9 +109,9 @@ def outside(userInput, currentLevel):
 def wrongOutsideDirection():
     return {
             "newGameState": {
-                "levelTitle": "Shed",
-                "levelDescription": "Youre in the shed",
-                "levelChatboxText": "YAY"
+                "levelTitle": None,
+                "levelDescription": None,
+                "levelChatboxText": "You cannot go that way."
             },
             "inventory": {
                 "firstObject": True,
@@ -149,9 +149,9 @@ def shed(userInput, currentLevel):
 def wrongShedDirection():
     return {
             "newGameState": {
-                "levelTitle": "Shed",
-                "levelDescription": "Youre in outside",
-                "levelChatboxText": "YAY"
+                "levelTitle": None,
+                "levelDescription": None,
+                "levelChatboxText": "You cannot go that way."
             },
             "inventory": {
                 "firstObject": True,
@@ -164,7 +164,7 @@ def wrongUserInput():
             "newGameState": {
                 "levelTitle": None,
                 "levelDescription": None,
-                "levelChatboxText": "invalid input"
+                "levelChatboxText": "You can't do that right now."
             },
             "inventory": {
                 "firstObject": True,
