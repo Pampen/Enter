@@ -1,4 +1,4 @@
-export default function returnFlaskPost(message) {
+export default function returnFlaskPost(message, state) {
     return fetch( 'http://localhost:5000/', {
       headers: {
         'Accept': 'application/json',
@@ -6,7 +6,11 @@ export default function returnFlaskPost(message) {
       }, 
       method: 'POST',
       body: JSON.stringify( {
-        message
+        message,
+        state: {
+          inventory: state.inventory,
+          level: state.level
+        }
       })
     }).then(response => {
         return response.json()

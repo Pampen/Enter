@@ -1,0 +1,17 @@
+[
+    {
+        "level": "OUTSIDE",
+        "levelDescription": "This is outside.",
+        "levelTitle": "Outside"
+    },
+    {
+        "level": "SHED",
+        "levelDescription": "This is a shed.",
+        "levelTitle": "Shed"
+    },
+    {
+        "level": "PORCH",
+        "levelDescription": "This is a porch.",
+        "levelTitle": "Main Porch"
+    }
+]
