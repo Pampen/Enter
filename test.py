@@ -9,7 +9,6 @@ CORS(app, support_credentials=True)
 def getRequest():
 
     getState = request.get_json()
-    print(getState)
     userInput = getState.get('message')
     state = getState.get('state')
     
@@ -29,9 +28,9 @@ def getResponse(userInput, state):
     
 def handleOutside(userInput, state):
     if userInput == 'GO WEST':
-        return goToShed(state)
+        return goToLevel(state, 'SHED')
     elif userInput == 'GO NORTH':
-        return goToPorch(state)
+        return goToLevel(state, 'PORCH')
     elif userInput == 'GO SOUTH' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
     else:
@@ -39,7 +38,7 @@ def handleOutside(userInput, state):
 
 def handlePorch(userInput, state):
     if userInput == 'GO SOUTH':
-        return goToOutside(state)
+        return goToLevel(state, 'OUTSIDE')
     elif userInput == 'GO NORTH' or userInput == 'GO EAST' or userInput == 'GO WEST':
         return handleInvalidDirection(state)
     else:
@@ -47,12 +46,12 @@ def handlePorch(userInput, state):
 
 def handleShed(userInput, state):
     if userInput == 'GO EAST':
-        return goToOutside(state)
+        return goToLevel(state, 'OUTSIDE')
     elif userInput == 'GO NORTH' or userInput == 'GO SOUTH' or userInput == 'GO WEST':
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)
-
+''' 
 def goToOutside(state):
     response = {
         'state': state,
@@ -64,7 +63,8 @@ def goToOutside(state):
     response['state']['level'] = 'OUTSIDE'
     print(response)
     return response
-
+'''
+'''
 def goToShed(state):
     response = {
         'state': state,
@@ -75,7 +75,8 @@ def goToShed(state):
     }
     response['state']['level'] = 'SHED'
     return response
-
+'''
+'''
 def goToPorch(state):
     response = {
         'state': state,
@@ -86,7 +87,23 @@ def goToPorch(state):
     }
     response['state']['level'] = 'PORCH'
     return response
+'''
 
+def goToLevel(state, currentLevel):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelTitle": '',
+            "levelDescription": ''
+        }
+    }
+    data = openLevelFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
 
 def handleInvalidDirection(state):
     response = {
@@ -105,3 +122,8 @@ def handleInvalidInput(userInput, state):
         }
     }
     return response 
+
+def openLevelFile():
+    with open('tutorial.json', 'r') as getData:
+        data = json.loads(getData.read())
+        return data
