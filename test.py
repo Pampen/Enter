@@ -52,7 +52,7 @@ def handleShed(userInput, state):
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)
- 
+
 def goToOutside(state):
     response = {
         'state': state,
@@ -64,6 +64,7 @@ def goToOutside(state):
     response['state']['level'] = 'OUTSIDE'
     print(response)
     return response
+
 def goToShed(state):
     response = {
         'state': state,
@@ -85,11 +86,6 @@ def goToPorch(state):
     }
     response['state']['level'] = 'PORCH'
     return response
-
-
-
-
-
 
 
 def handleInvalidDirection(state):

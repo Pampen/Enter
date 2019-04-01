@@ -7,7 +7,7 @@ class App extends Component {
     super(props)
     this.state={
       title: 'Outside',
-      description: 'You wake up outside, what do you want to do?',
+      description: 'This is outside.',
       chatboxText: [],
       inventory: {
         firstObject: false,
