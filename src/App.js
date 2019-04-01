@@ -7,23 +7,25 @@ class App extends Component {
     super(props)
     this.state={
       title: 'Outside',
-      description: 'You wake up outside, what do you want to do?',
+      description: 'This is outside.',
       chatboxText: [],
-      inventory: [
-        'firstObject',
-        'secondObject'
-      ]
+      inventory: {
+        firstObject: false,
+        secondObject: false
+      },
+      level: 'OUTSIDE'
     }
     this.handleClick=this.handleClick.bind(this)
   }
+
   handleClick() {
-    sendMessage(this.inputElement.value).then(response => {
-      const newTitle = response.newGameState.levelTitle || null
-      const newDescription = response.newGameState.levelDescription || null
-      const newChatboxText = response.newGameState.levelChatboxText || null
-      const newGameState = {
-        inventory: []
-      };
+    sendMessage(this.inputElement.value, this.state).then(response => {
+      const newTitle = response.pageChanges.levelTitle || null
+      const newDescription = response.pageChanges.levelDescription || null
+      const newChatboxText = response.pageChanges.levelChatboxText || null
+      const newGameState = {}
+      newGameState.inventory = response.state.inventory
+      newGameState.level = response.state.level
       if (newTitle) {
         newGameState.title = newTitle;
       };
@@ -34,14 +36,6 @@ class App extends Component {
         const currentChatboxText = this.state.chatboxText;
         currentChatboxText.push(newChatboxText);
         newGameState.chatboxText = currentChatboxText;
-      }
-      if (response.inventory) {
-        if (response.inventory.firstObject) {
-          newGameState.inventory.push('firstObject');
-        }
-        if (response.inventory.secondObject) {
-          newGameState.inventory.push('secondObject');
-        }
       }
       this.setState(newGameState);
       console.log(this.state);
