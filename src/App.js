@@ -18,7 +18,8 @@ class App extends Component {
     this.handleClick=this.handleClick.bind(this)
   }
 
-  handleClick() {
+  handleClick(noDefault) {
+    noDefault.preventDefault()
     sendMessage(this.inputElement.value, this.state).then(response => {
       const newTitle = response.pageChanges.levelTitle || null
       const newDescription = response.pageChanges.levelDescription || null
@@ -42,6 +43,7 @@ class App extends Component {
   })
 };
 
+
   render() {
     return (
       <div id="wrapper">
@@ -62,16 +64,18 @@ class App extends Component {
                 </div>
               </div>
               <div className="terminal">
-                <input 
-                  ref={
-                    function(inputElement) {
-                      this.inputElement=inputElement;
-                    }.bind(this)
-                  }
-                  type="text"
-                  className="terminal-input"
-                ></input>
-                <button id="game-button" onClick={this.handleClick}>CLICKME</button>
+                <form onSubmit={this.handleClick}>
+                  <input 
+                      ref={
+                        function(inputElement) {
+                          this.inputElement=inputElement;
+                        }.bind(this)
+                      }
+                      type="text"
+                      className="terminal-input"
+                  ></input>
+                  <button id="game-button">Enter</button>
+                </form>
               </div>
             </div>
           </div>
