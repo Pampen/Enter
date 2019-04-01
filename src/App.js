@@ -6,8 +6,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state={
-      title: 'Default Title',
-      description: 'This is a game!',
+      title: 'Outside',
+      description: 'You wake up outside, what do you want to do?',
       chatboxText: [],
       inventory: [
         'firstObject',
@@ -55,10 +55,10 @@ class App extends Component {
           <div className="container">
             <div className="game-container">
               <div className="game-screen">
-                <div className="game-screen-header">
-                  <h2 id="title">{this.state.title}</h2>
-                  <p className="level-description">{this.state.description}</p>
-                </div>
+              <div className="game-screen-header">
+                <h2 id="title">{this.state.title}</h2>
+                <p className="level-description">{this.state.description}</p>
+              </div>
                 <div className="game-text-box">
                   {
                     this.state.chatboxText.map((text, i) => {
