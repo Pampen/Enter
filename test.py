@@ -51,43 +51,6 @@ def handleShed(userInput, state):
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)
-''' 
-def goToOutside(state):
-    response = {
-        'state': state,
-        'pageChanges': {
-            'levelTitle': 'Outside',
-            'levelDescription': 'This is outside.'
-        }
-    }
-    response['state']['level'] = 'OUTSIDE'
-    print(response)
-    return response
-'''
-'''
-def goToShed(state):
-    response = {
-        'state': state,
-        'pageChanges': {
-            'levelTitle': 'Shed',
-            'levelDescription': 'This is a shed.'
-        }
-    }
-    response['state']['level'] = 'SHED'
-    return response
-'''
-'''
-def goToPorch(state):
-    response = {
-        'state': state,
-        'pageChanges': {
-            'levelTitle': 'Porch',
-            'levelDescription': 'This is a porch.'
-        }
-    }
-    response['state']['level'] = 'PORCH'
-    return response
-'''
 
 def goToLevel(state, currentLevel):
     response = {
