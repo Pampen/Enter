@@ -1,8 +1,43 @@
+* {
+  background-color: #282828;
+  color: rgb(41, 209, 8);
+  
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+
+
+.container{
+  
+  display: flex;
+  flex-basis: 80%;
+  flex-grow: 1;
+  padding: 30px;
+  margin: 20px 40px 20px 20px;
+  justify-content: center;
+  background-color: #282828;
+  color: rgb(41, 209, 8);
+  text-align: center;
+  font-size: 9px;
+}
+
+.game-container{
+  border-style:double;
+  border-color: gray;
+  padding: 30px;
+  border-width: 6px;
+
+}
+
+
 .game-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 24px;
   letter-spacing: 6px;
   margin-left: 5px;
+  text-shadow: 0 0 6px rgb(98, 206, 98);
 }
 
 #game-title-first-letter {
