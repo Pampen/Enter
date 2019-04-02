@@ -7,7 +7,6 @@ CORS(app, support_credentials=True)
 @app.route('/', methods=['POST'])
 @cross_origin(supports_credentials=True)
 def getRequest():
-
     getState = request.get_json()
     userInput = getState.get('message')
     state = getState.get('state')
