@@ -20,33 +20,38 @@
         "levelTitle": "Main Hall"
     },
     {
-        "level": "FURY",
-        "levelDescription": "This is the Fury",
-        "levelTitle": "Fury"
+        "level": "LIVING ROOM",
+        "levelDescription": "This is the Living Room ",
+        "levelTitle": "Living Room"
     },
     {
-        "level": "ANGER",
-        "levelDescription": "This is the Anger",
-        "levelTitle": "Anger"
+        "level": "KITCHEN",
+        "levelDescription": "This is the Kitchen",
+        "levelTitle": "Kitchen"
     },
     {
-        "level": "WRATH",
-        "levelDescription": "This is the Wrath",
-        "levelTitle": "Wrath"
+        "level": "HALL",
+        "levelDescription": "This is the Hall",
+        "levelTitle": "Hall"
     },
     {
-        "level": "RESENTMENT",
-        "levelDescription": "This is the Resentment",
-        "levelTitle": "Resentment"
+        "level": "UPPER FLOOR",
+        "levelDescription": "This is the Upper Floor",
+        "levelTitle": "Upper Floor"
     },
     {
-        "level": "BITTERNESS",
-        "levelDescription": "This is the Bitterness",
-        "levelTitle": "Bitterness"
+        "level": "ATTIC",
+        "levelDescription": "This is the Attic",
+        "levelTitle": "Attic"
     },
     {
-        "level": "RAGE",
-        "levelDescription": "This is the Rage",
-        "levelTitle": "Rage"
+        "level": "BEDROOM",
+        "levelDescription": "This is the Bedroom",
+        "levelTitle": "Bedroom"
+    },
+    {
+        "level": "BASEMENT",
+        "levelDescription": "This is the Basement",
+        "levelTitle": "Basement"
     }
 ]
