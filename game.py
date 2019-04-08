@@ -1,5 +1,7 @@
 from flask import Flask, request, Response, jsonify
 from flask_cors import CORS, cross_origin
+from blueDoor import handleBlueStart, handleBlueFinish, handleBlueCorridor1, handleBlueCorridor2, handleBlueCorridor3, handleBlueCorridor4, handleBlueCorridor5, handleBlueCorridor6, handleBlueCorridor7, handleBlueCorridor8, handleBlueCorridor9, handleTourchRoom
+from tutorial import handleOutside, handleShed, handlePorch
 import json
 app = Flask(__name__)
 CORS(app, support_credentials=True)
@@ -25,68 +27,27 @@ def getResponse(userInput, state):
         return handleShed(userInput, state)
     elif state['level'] == 'PORCH':
         return handlePorch(userInput, state)
-    
-def handleOutside(userInput, state):
-    if userInput == 'GO WEST':
-        return goToLevel(state, 'SHED')
-    elif userInput == 'GO NORTH':
-        return goToLevel(state, 'PORCH')
-    elif userInput == 'GO SOUTH' or userInput == 'GO EAST':
-        return handleInvalidDirection(state)
-    else:
-        return handleInvalidInput(userInput, state)
-
-def handlePorch(userInput, state):
-    if userInput == 'GO SOUTH':
-        return goToLevel(state, 'OUTSIDE')
-    elif userInput == 'GO NORTH' or userInput == 'GO EAST' or userInput == 'GO WEST':
-        return handleInvalidDirection(state)
-    else:
-        return handleInvalidInput(userInput, state)
-
-def handleShed(userInput, state):
-    if userInput == 'GO EAST':
-        return goToLevel(state, 'OUTSIDE')
-    elif userInput == 'GO NORTH' or userInput == 'GO SOUTH' or userInput == 'GO WEST':
-        return handleInvalidDirection(state)
-    else:
-        return handleInvalidInput(userInput, state)
-
-def goToLevel(state, currentLevel):
-    response = {
-        'state': state,
-        'pageChanges': {
-            "levelTitle": '',
-            "levelDescription": ''
-        }
-    }
-    data = openLevelFile()
-    for level in data:
-        if level["level"] == currentLevel:
-            response['pageChanges']['levelTitle'] = level['levelTitle']
-            response['pageChanges']['levelDescription'] = level['levelDescription']
-            response['state']['level'] = level['level']
-            return response
-
-def handleInvalidDirection(state):
-    response = {
-        'state': state,
-        'pageChanges': {
-            'levelChatboxText': 'You cannot go that way.'
-        }
-    }
-    return response  
-
-def handleInvalidInput(userInput, state):
-    response = {
-        'state': state,
-        'pageChanges': {
-            'levelChatboxText': 'You cannot ' + userInput + '.'
-        }
-    }
-    return response 
-
-def openLevelFile():
-    with open('tutorial.json', 'r') as getData:
-        data = json.loads(getData.read())
-        return data
+    elif state['level'] == "Blue start":
+        return handleBlueStart(userInput, state)
+    elif state['level'] == "Blue Tourch Room":
+        return handleTourchRoom(userInput, state)
+    elif state['level'] == "Blue Corridor 1":
+        return handleBlueCorridor1(userInput, state)
+    elif state['level'] == "Blue Corridor 2":
+        return handleBlueCorridor2(userInput, state)
+    elif state['level'] == "Blue Corridor 3":
+        return handleBlueCorridor3(userInput, state)
+    elif state['level'] == "Blue Corridor 4":
+        return handleBlueCorridor4(userInput, state)
+    elif state['level'] == "Blue Corridor 5":
+        return handleBlueCorridor5(userInput, state)
+    elif state['level'] == "Blue Corridor 6":
+        return handleBlueCorridor6(userInput, state)
+    elif state['level'] == "Blue Corridor 7":
+        return handleBlueCorridor7(userInput, state)
+    elif state['level'] == "Blue Corridor 8":
+        return handleBlueCorridor8(userInput, state)
+    elif state['level'] == "Blue Corridor 9":
+        return handleBlueCorridor9(userInput, state)
+    elif state['level'] == "Blue Finish":
+        return handleBlueFinish(userInput, state)

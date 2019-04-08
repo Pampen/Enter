@@ -12,6 +12,67 @@
     {
         "level": "PORCH",
         "levelDescription": "This is a porch.",
-        "levelTitle": "Main Porch"
+        "levelTitle": "Main Porch this is yes"
+    },
+    {
+        "level": "Blue start",
+        "levelDescription": "This is the start blue",
+        "levelTitle": "Blue start"
+    },
+    {
+        "level": "Blue Tourch Room",
+        "levelDescription": "This is the blue tourch.",
+        "levelTitle": "Blue Tourch Room"
+    },
+    {
+        "level": "Blue Corridor 1",
+        "levelDescription": "This is the blue corridor.",
+        "levelTitle": "Blue Corridor 1"
+    },
+    {
+        "level": "Blue Corridor 2",
+        "levelDescription": "This is the blue corridor.",
+        "levelTitle": "Blue Corridor 2"
+    },
+    {
+        "level": "Blue Corridor 3",
+        "levelDescription": "This is the blue corridor.",
+        "levelTitle": "Blue Corridor 3"
+    },
+    {
+        "level": "Blue Corridor 4",
+        "levelDescription": "This is the blue corridor.",
+        "levelTitle": "Blue Corridor 4"
+    },
+    {
+        "level": "Blue Corridor 5",
+        "levelDescription": "This is the blue corridor.",
+        "levelTitle": "Blue Corridor 5"
+    },
+    {
+        "level": "Blue Corridor 6",
+        "levelDescription": "This is the blue corridor.",
+        "levelTitle": "Blue Corridor 6"
+    },
+    {
+        "level": "Blue Corridor 7",
+        "levelDescription": "This is the blue corridor.",
+        "levelTitle": "Blue Corridor 7"
+    },
+    {
+        "level": "Blue Corridor 8",
+        "levelDescription": "This is the blue corridor.",
+        "levelTitle": "Blue Corridor 8"
+    },
+    {
+        "level": "Blue Corridor 9",
+        "levelDescription": "This is the blue corridor.",
+        "levelTitle": "Blue Corridor 9"
+    },
+    {
+        "level": "Blue Finish",
+        "levelDescription": "This is the blue corridor.",
+        "levelTitle": "Blue Finish "
     }
+
 ]
