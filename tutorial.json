@@ -13,5 +13,40 @@
         "level": "PORCH",
         "levelDescription": "This is a porch.",
         "levelTitle": "Main Porch"
+    },
+    {
+        "level": "MAIN HALL",
+        "levelDescription": "This is the Main Hall.",
+        "levelTitle": "Main Hall"
+    },
+    {
+        "level": "FURY",
+        "levelDescription": "This is the Fury",
+        "levelTitle": "Fury"
+    },
+    {
+        "level": "ANGER",
+        "levelDescription": "This is the Anger",
+        "levelTitle": "Anger"
+    },
+    {
+        "level": "WRATH",
+        "levelDescription": "This is the Wrath",
+        "levelTitle": "Wrath"
+    },
+    {
+        "level": "RESENTMENT",
+        "levelDescription": "This is the Resentment",
+        "levelTitle": "Resentment"
+    },
+    {
+        "level": "BITTERNESS",
+        "levelDescription": "This is the Bitterness",
+        "levelTitle": "Bitterness"
+    },
+    {
+        "level": "RAGE",
+        "levelDescription": "This is the Rage",
+        "levelTitle": "Rage"
     }
 ]
