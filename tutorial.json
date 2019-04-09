@@ -12,7 +12,7 @@
     {
         "level": "PORCH",
         "levelDescription": "This is a porch.",
-        "levelTitle": "Main Porch this is yes"
+        "levelTitle": "Porch"
     },
     {
         "level": "Blue start",
@@ -73,6 +73,46 @@
         "level": "Blue Finish",
         "levelDescription": "This is the blue corridor.",
         "levelTitle": "Blue Finish "
+    },
+    {
+        "level": "MAIN HALL",
+        "levelDescription": "This is the Main Hall.",
+        "levelTitle": "Main Hall"
+    },
+    {
+        "level": "LIVING ROOM",
+        "levelDescription": "This is the Living Room ",
+        "levelTitle": "Living Room"
+    },
+    {
+        "level": "KITCHEN",
+        "levelDescription": "This is the Kitchen",
+        "levelTitle": "Kitchen"
+    },
+    {
+        "level": "HALL",
+        "levelDescription": "This is the Hall",
+        "levelTitle": "Hall"
+    },
+    {
+        "level": "UPPER FLOOR",
+        "levelDescription": "This is the Upper Floor",
+        "levelTitle": "Upper Floor"
+    },
+    {
+        "level": "ATTIC",
+        "levelDescription": "This is the Attic",
+        "levelTitle": "Attic"
+    },
+    {
+        "level": "BEDROOM",
+        "levelDescription": "This is the Bedroom",
+        "levelTitle": "Bedroom"
+    },
+    {
+        "level": "BASEMENT",
+        "levelDescription": "This is the Basement",
+        "levelTitle": "Basement"
     }
 
 ]
