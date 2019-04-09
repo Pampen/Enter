@@ -5,7 +5,9 @@ def handleMainHall(userInput, state):
         return goToLevel(state, 'PORCH')
     elif userInput == 'GO NORTH':
         return goToLevel (state, 'LIVING ROOM')
-    elif userInput == 'GO WEST' or  userInput == 'GO EAST':
+    elif userInput == 'GO EAST':
+        return goToLevel(state, 'Blue start')
+    elif userInput == 'GO WEST':  
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)

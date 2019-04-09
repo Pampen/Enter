@@ -3,6 +3,7 @@ from flask_cors import CORS, cross_origin
 from blueDoor import handleBlueStart, handleBlueFinish, handleBlueCorridor1, handleBlueCorridor2, handleBlueCorridor3, handleBlueCorridor4, handleBlueCorridor5, handleBlueCorridor6, handleBlueCorridor7, handleBlueCorridor8, handleBlueCorridor9, handleTourchRoom
 from tutorial import handleOutside, handleShed, handlePorch
 from MainHall import handleMainHall
+from redDoor import handleAttic, handleBasement, handleBedroom, handleHall, handleKitchen, handleLivingRoom, handleUpperFloor
 import json
 app = Flask(__name__)
 CORS(app, support_credentials=True)
@@ -67,110 +68,3 @@ def getResponse(userInput, state):
         return handleBasement(userInput, state)
     elif state['level'] == 'ATTIC':
         return handleAttic(userInput, state)
-
-def handleLivingRoom(userInput, state):
-    if userInput == 'GO SOUTH':
-        return goToLevel(state, 'MAIN HALL')
-    elif userInput == 'GO EAST':
-        return goToLevel(state, 'KITCHEN')
-    elif userInput == 'GO WEST':
-        return goToLevel(state, 'HALL')
-    elif userInput == 'GO NORTH' or userInput == 'GO WEST':
-        return handleInvalidDirection(state)
-    else:
-        return handleInvalidInput(userInput, state)
-
-def handleKitchen(userInput, state):
-    if userInput == 'GO WEST':
-        return goToLevel(state, 'LIVING ROOM')
-    elif userInput == 'GO SOUTH':
-        return goToLevel(state, 'BASEMENT')
-    elif userInput == 'GO NORTH' or userInput == 'GO EAST':
-        return handleInvalidDirection(state)
-    else:
-        return handleInvalidInput(userInput, state)
-
-def handleHall(userInput, state):
-    if userInput == 'GO EAST':
-        return goToLevel(state, 'LIVING ROOM')
-    elif userInput == 'GO NORTH':
-        return goToLevel(state, 'UPPER FLOOR')
-    elif userInput == 'GO SOUTH' or  userInput == 'GO WEST':
-        return handleInvalidDirection(state)
-    else:
-        return handleInvalidInput(userInput, state)
-
-def handleUpperFloor(userInput, state):
-    if userInput == 'GO SOUTH':
-        return goToLevel(state, 'HALL')
-    elif userInput == 'GO WEST':
-        return goToLevel(state, 'BEDROOM')
-    elif userInput == 'GO NORTH':
-        return goToLevel(state, 'ATTIC')
-    elif userInput == 'GO EAST':
-        return handleInvalidDirection(state)
-    else:
-        return handleInvalidInput(userInput, state)
-
-def handleAttic(userInput, state):
-    if userInput == 'GO SOUTH':
-        return goToLevel(state, 'UPPER FLOOR')
-    elif userInput == 'GO NORTH' or userInput == 'GO WEST' or userInput == 'GO EAST':
-        return handleInvalidDirection(state)
-    else:
-        return handleInvalidInput(userInput, state)
-
-def handleBedroom(userInput, state):
-    if userInput == 'GO EAST':
-        return goToLevel(state, 'UPPER FLOOR')
-    elif userInput == 'GO NORTH' or userInput == 'GO SOUTH' or userInput == 'GO EAST':
-        return handleInvalidDirection(state)
-    else:
-        return handleInvalidInput(userInput, state)
-
-def handleBasement(userInput, state):
-    if userInput == 'GO NORTH':
-        return goToLevel(state, 'KITCHEN')
-    elif userInput == 'GO WEST' or userInput == 'GO SOUTH' or userInput == 'GO EAST':
-        return handleInvalidDirection(state)
-    else:
-        return handleInvalidInput(userInput, state)
-
-def goToLevel(state, currentLevel):
-    response = {
-        'state': state,
-        'pageChanges': {
-            "levelTitle": '',
-            "levelDescription": ''
-        }
-    }
-    data = openLevelFile()
-    for level in data:
-        if level["level"] == currentLevel:
-            response['pageChanges']['levelTitle'] = level['levelTitle']
-            response['pageChanges']['levelDescription'] = level['levelDescription']
-            response['state']['level'] = level['level']
-            return response
-
-def handleInvalidDirection(state):
-    response = {
-        'state': state,
-        'pageChanges': {
-            'levelChatboxText': 'You cannot go that way.'
-        }
-    }
-    return response  
-
-def handleInvalidInput(userInput, state):
-    response = {
-        'state': state,
-        'pageChanges': {
-            'levelChatboxText': 'You cannot ' + userInput + '.'
-        }
-    }
-    return response 
-
-def openLevelFile():
-    with open('tutorial.json', 'r') as getData:
-        data = json.loads(getData.read())
-        return data
