@@ -5,7 +5,9 @@ import ButtonContainer from './components/button-container'
 import GameScreen from './components/game-screen'
 import Terminal from './components/terminal'
 import Modal from './components/Modal'
+
 import apple from './assets/apple.jpg'
+import testBild from './assets/testBild.png'
 
 class App extends Component {
   constructor(props) {
@@ -50,15 +52,30 @@ class App extends Component {
 showMapModal = () => {
     this.setState({
       ...this.state,
-      show: !this.state.show
+      mapShow: !this.state.mapShow
     });
+}
+
+showInventoryModal = () => {
+  this.setState({
+    ...this.state,
+    inventoryShow: !this.state.inventoryShow
+  });
+}
+
+showCommandModal = () => {
+  this.setState({
+    ...this.state,
+    commandShow: !this.state.commandShow
+  });
 }
 
   render() {
     return (
       <main id="wrapper">
         <div className="container">
-          <ButtonContainer handleMapClick={this.showMapModal}/>
+          <ButtonContainer props handleMapClick={this.showMapModal} handleInventoryClick={this.showInventoryModal} handleCommandClick={this.showCommandModal}/>
+        
           <div className="game-container">
             <GameScreen
               title={this.state.title}
@@ -70,8 +87,17 @@ showMapModal = () => {
             />
             <Modal 
               onClose={this.showMapModal}
-              show={this.state.show}>
-                <img src={apple} alt="An apple"/>
+              show={this.state.mapShow}>
+              <img src={apple} alt="An apple"/>,
+            </Modal>
+            <Modal
+              onClose={this.showInventoryModal}
+              show={this.state.inventoryShow}>
+                <img src={testBild} alt="An apple"/>
+            </Modal>
+            <Modal
+              onClose={this.showCommandModal}
+              show={this.state.commandShow}>
             </Modal>
         </div> 
       </div>
