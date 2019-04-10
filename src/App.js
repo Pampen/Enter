@@ -4,8 +4,6 @@ import sendMessage from './connect'
 import Modal from './Modal'
 import apple from './apple.jpg'
 
-console.log(apple)
-
 class App extends Component {
   constructor(props) {
     super(props)
