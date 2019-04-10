@@ -75,11 +75,6 @@
         "levelTitle": "Blue Finish "
     },
     {
-        "level": "MAIN HALL",
-        "levelDescription": "This is the Main Hall.",
-        "levelTitle": "Main Hall"
-    },
-    {
         "level": "LIVING ROOM",
         "levelDescription": "This is the Living Room ",
         "levelTitle": "Living Room"
@@ -113,6 +108,42 @@
         "level": "BASEMENT",
         "levelDescription": "This is the Basement",
         "levelTitle": "Basement"
+    },
+
+    {
+        "level": "CRIBROOM",
+        "levelDescription": "This is a room with a white crib in it.",
+        "levelTitle": "Cribroom"
+    },
+
+    {
+        "level": "MAIN HALL",
+        "levelDescription": "This is the main hall. Cobweb covers the walls...",
+        "levelTitle": "Main Hall"
+    },
+
+    {
+        "level": "BABYROOM",
+        "levelDescription": "This room is filled with babythings. The walls have painted unicorns and the shelves are filled with toys. Only thing missing is the crib..",
+        "levelTitle": "Babyroom"
+    },
+
+    {
+        "level": "NURSINGROOM",
+        "levelDescription": "A nursing room.. and a changing table. A funky smell surrounds this room..",
+        "levelTitle": "Nursing room"
+    },
+
+    {
+        "level": "STUDYROOM",
+        "levelDescription": "A study. A nice comfy chair, books on the shelves and a decanter filled with a golden liquid and a used glass. Dust everywhere.",
+        "levelTitle": "Study room"
+    },
+
+    {
+        "level": "MESSYROOM",
+        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls...",
+        "levelTitle": "Messy room"
     }
 
 ]

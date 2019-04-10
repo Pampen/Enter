@@ -4,6 +4,7 @@ from blueDoor import handleBlueStart, handleBlueFinish, handleBlueCorridor1, han
 from tutorial import handleOutside, handleShed, handlePorch
 from MainHall import handleMainHall
 from redDoor import handleAttic, handleBasement, handleBedroom, handleHall, handleKitchen, handleLivingRoom, handleUpperFloor
+from pinkDoor import handleBabyroom, handleCribroom, handleMessyroom, handleNursingroom, handleStudyroom
 import json
 app = Flask(__name__)
 CORS(app, support_credentials=True)
@@ -68,3 +69,13 @@ def getResponse(userInput, state):
         return handleBasement(userInput, state)
     elif state['level'] == 'ATTIC':
         return handleAttic(userInput, state)
+    elif state['level'] == 'CRIBROOM':
+        return handleCribroom(userInput, state)
+    elif state['level'] == 'BABYROOM':
+        return handleBabyroom(userInput, state)
+    elif state['level'] == 'NURSINGROOM':
+        return handleNursingroom(userInput, state)
+    elif state['level'] == 'STUDYROOM':
+        return handleStudyroom(userInput, state)
+    elif state['level'] == 'MESSYROOM':
+        return handleMessyroom(userInput, state)
