@@ -5,9 +5,9 @@
         "levelTitle": "Outside"
     },
     {
-        "level": "SHED",
-        "levelDescription": "This is a shed.",
-        "levelTitle": "Shed"
+        "level": "GREENHOUSE",
+        "levelDescription": "This is a greenhouse.",
+        "levelTitle": "Greenhouse"
     },
     {
         "level": "PORCH",

@@ -1,4 +1,5 @@
 import json
+import os
 
 def goToLevel(state, currentLevel):
     response = {
@@ -32,9 +33,21 @@ def handleInvalidInput(userInput, state):
             'levelChatboxText': 'You cannot ' + userInput + '.'
         }
     }
-    return response 
+    return response
+
+def handleInvalidPickUp(userInput, state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': 'You cannot pick up ' + userInput + '.'
+        }
+    }
+    return response
 
 def openLevelFile():
-    with open('tutorial.json', 'r') as getData:
+    cwd = os.getcwd()  # Get the current working directory (cwd)
+    filePath = cwd + '/Server/tutorial.json'
+    
+    with open(filePath, 'r') as getData:
         data = json.loads(getData.read())
         return data

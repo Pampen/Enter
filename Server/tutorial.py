@@ -3,7 +3,7 @@ from blueDoor import handleBlueStart
 
 def handleOutside(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'SHED')
+        return goToLevel(state, 'GREENHOUSE')
     elif userInput == 'GO NORTH':
         return goToLevel(state, 'PORCH')
     elif userInput == 'GO SOUTH' or userInput == 'GO EAST':
@@ -21,7 +21,7 @@ def handlePorch(userInput, state):
     else:
         return handleInvalidInput(userInput, state)
 
-def handleShed(userInput, state):
+def handleGreenHouse(userInput, state):
     if userInput == 'GO EAST':
         return goToLevel(state, 'OUTSIDE')
     elif userInput == 'GO NORTH' or userInput == 'GO SOUTH' or userInput == 'GO WEST':
