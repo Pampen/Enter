@@ -42,13 +42,9 @@ och kolla om du kan pusha.
 1. Öppna en ny terminal.
 2. Gå till mappen som "game.py" finns i på din dator.
 3. Skriv:
-		FLASK_APP=game.py FLASK_DEBUG=1 flask run
-FLASK_APP sätter vilken fil vi vill köra som server, 
-FLASK_DEBUG sätter servern i debug-mode, vilket tillåter
-servern att starta om automatiskt (annars måste ni skriva om detta för
-varje liten ändring i .py).
+        npm run flask
 4. Gå till terminalen i din integrerade utvecklingsmiljö (IDE) och skriv:
-					npm start
+	npm start
 5. Nu borde både back- och frontend vara igång. Applikationen finns på localhost:3000.
 
 ##Avsluta server
