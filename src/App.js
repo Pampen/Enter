@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './style.css';
 import sendMessage from './connect'
+import Modal from './Modal'
+import apple from './apple.jpg'
+
+console.log(apple)
 
 class App extends Component {
   constructor(props) {
@@ -43,6 +47,12 @@ class App extends Component {
   })
 };
 
+showModal = () => {
+    this.setState({
+      ...this.state,
+      show: !this.state.show
+    });
+}
 
   render() {
     return (
@@ -79,6 +89,14 @@ class App extends Component {
               </div>
             </div>
           </div>
+          <input type="button"
+            onClick={this.showModal}
+            value="Karta"/>
+            <Modal 
+              onClose={this.showModal}
+              show={this.state.show}>
+                <img src={apple} alt="An apple"/>
+            </Modal>
         </main>
       </div>
     );
