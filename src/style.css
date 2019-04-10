@@ -1,39 +1,87 @@
-* {
-  background-color: #282828;
-  color: rgb(41, 209, 8);
-  
-  text-align: center;
-  font-family: 'Press Start 2P', cursive;
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Press Start 2P', sans-serif;
 }
-
-
-
 
 .container{
   
   display: flex;
-  flex-basis: 80%;
   flex-grow: 1;
-  padding: 30px;
-  margin: 20px 40px 20px 20px;
   justify-content: center;
-  background-color: #282828;
-  color: rgb(41, 209, 8);
-  text-align: center;
-  font-size: 9px;
+  width: 700px;
+  height: 550px;
+  margin: auto;
+  color: white;
 }
 
 .game-container{
-  border-style:double;
-  border-color: gray;
-  padding: 30px;
-  border-width: 6px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #333;
 
+}
+.game-screen {
+  flex-grow: 1;
+}
+.terminal {
+  display: flex;
+  height: 50px;
+  background-color: #555;
+}
+
+.terminal-input {
+  font-size: 24px;
+  padding: 0;
+  margin-bottom: 5px;
+  height: 50px;
+  width: 550px;
+  background-color: #111;
+  color: white;
+  border: none;
+}
+.terminal-input:focus {
+  outline: 0;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 60px;
+  background-color: #444;
+}
+#main-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game-button {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  text-emphasis-style: bold;
+  color: white;
+  border: 1px solid green;
+}
+#inventory-button {
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+#command-button {
+  margin-bottom: 5px;
 }
 
 
+
+
+
+
+
 .game-title {
-  font-family: 'Press Start 2P', cursive;
   font-size: 24px;
   letter-spacing: 6px;
   margin-left: 5px;
