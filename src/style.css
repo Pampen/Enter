@@ -6,11 +6,7 @@
   font-family: 'Press Start 2P', cursive;
 }
 
-
-
-
 .container{
-  
   display: flex;
   flex-basis: 80%;
   flex-grow: 1;
@@ -30,7 +26,6 @@
   border-width: 6px;
 
 }
-
 
 .game-title {
   font-family: 'Press Start 2P', cursive;
