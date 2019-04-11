@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import './style.css';
-import sendMessage from './connect'
+import './styles/style.css';
+import sendMessage from './utilities/connect.js'
+import ButtonContainer from './components/button-container'
+import GameScreen from './components/game-screen'
+import Terminal from './components/terminal'
+import Modal from './components/Modal'
+import apple from './assets/apple.jpg'
 
 class App extends Component {
   constructor(props) {
@@ -15,12 +20,11 @@ class App extends Component {
       },
       level: 'BEACH'
     }
-    this.handleClick=this.handleClick.bind(this)
+    this.updateState=this.updateState.bind(this)
   }
 
-  handleClick(noDefault) {
-    noDefault.preventDefault()
-    sendMessage(this.inputElement.value, this.state).then(response => {
+  updateState(inputElementValue) {
+    sendMessage(inputElementValue, this.state).then(response => {
       const newTitle = response.pageChanges.levelTitle || null
       const newDescription = response.pageChanges.levelDescription || null
       const newChatboxText = response.pageChanges.levelChatboxText || null
@@ -40,47 +44,38 @@ class App extends Component {
       }
       this.setState(newGameState);
       console.log(this.state);
-  })
+    })
 };
 
+showMapModal = () => {
+    this.setState({
+      ...this.state,
+      show: !this.state.show
+    });
+}
 
   render() {
     return (
-      <div id="wrapper">
-        <main>
-          <div className="container">
-            <div className="game-container">
-              <div className="game-screen">
-              <div className="game-screen-header">
-                <h2 id="title">{this.state.title}</h2>
-                <p className="level-description">{this.state.description}</p>
-              </div>
-                <div className="game-text-box">
-                  {
-                    this.state.chatboxText.map((text, i) => {
-                      return <p key={i} className="chatbox-text">{text}</p>
-                    })
-                  }
-                </div>
-              </div>
-              <div className="terminal">
-                <form onSubmit={this.handleClick}>
-                  <input 
-                      ref={
-                        function(inputElement) {
-                          this.inputElement=inputElement;
-                        }.bind(this)
-                      }
-                      type="text"
-                      className="terminal-input"
-                  ></input>
-                  <button id="game-button">Enter</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </main>
+      <main id="wrapper">
+        <div className="container">
+          <ButtonContainer handleMapClick={this.showMapModal}/>
+          <div className="game-container">
+            <GameScreen
+              title={this.state.title}
+              description={this.state.description}
+              chatboxText={this.state.chatboxText}
+            />
+            <Terminal
+            updateState={this.updateState}
+            />
+            <Modal 
+              onClose={this.showMapModal}
+              show={this.state.show}>
+                <img src={apple} alt="An apple"/>
+            </Modal>
+        </div> 
       </div>
+    </main>
     );
   }
 }
