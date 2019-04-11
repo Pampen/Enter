@@ -1,15 +1,27 @@
-from blueDoor import handleBlueCorridor1, handleBlueCorridor2, handleBlueCorridor3, handleBlueCorridor4, handleBlueCorridor5, handleBlueCorridor6, handleBlueCorridor7, handleBlueCorridor8, handleBlueCorridor9, handleBlueStart, handleBlueFinish, handleTourchRoom
+from blueDoor import handleBlueCorridor1, handleBlueCorridor2, handleBlueCorridor3, handleBlueCorridor4, handleBlueCorridor5, handleBlueCorridor6, handleBlueCorridor7, handleBlueCorridor8, handleBlueCorridor9, handleBlueStart, handleBlueFinish, handleTorchRoom
 from tutorial import handleGreenHouse, handleOutside, handlePorch
 from MainHall import handleMainHall
 from redDoor import handleUpperFloor, handleLivingRoom, handleKitchen, handleHall, handleBedroom, handleBasement, handleAttic
 from pinkDoor import handleBabyroom, handleCribroom, handleMessyroom, handleNursingroom, handleStudyroom
+from greenDoor import handleBeach, handleCabin, handleCellar, handleGate, handleOutsideShed, handleShed, handleOutsideShipwreck, handleShipwreck, handleLighthouse, handleLighthouseOutside, handleLighthouseTop, handleOcean
 
 levels = {
     'OUTSIDE': handleOutside,
     'GREENHOUSE': handleGreenHouse,
     'PORCH': handlePorch,
+    'BEACH': handleBeach,
+    'CABIN': handleCabin,
+    'CELLAR': handleCellar,
+    'GATE': handleGate,
+    'OUTSIDE_SHED': handleOutsideShed,
+    'SHED': handleShed,
+    'OUTSIDE_SHIPWRECK': handleOutsideShipwreck,
+    'SHIPWRECK': handleShipwreck,
+    'LIGHTHOUSE_OUTSIDE': handleLighthouseOutside,
+    'LIGHTHOUSE': handleLighthouse,
+    'LIGHTHOUSE_TOP': handleLighthouseTop,
     'Blue start': handleBlueStart,
-    'Blue Torch Room': handleTourchRoom,
+    'Blue Torch Room': handleTorchRoom,
     'Blue Corridor 1': handleBlueCorridor1,
     'Blue Corridor 2': handleBlueCorridor2,
     'Blue Corridor 3': handleBlueCorridor3,

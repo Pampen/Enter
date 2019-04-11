@@ -11,14 +11,14 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state={
-      title: "Beach",
-      description: "The door closes behind you, leaving you alone in the darkness. Suddenly, everything lights up and you find yourself on the beach. There's a Lighthouse right infront of you up the hill(NORTH), a shipwreck by the coast(EAST) and what looks to be a shed to your left(WEST) by the seaside. Which way do you decide to go?",
+      title: "Outside",
+      description: "This is outside",
       chatboxText: [],
       inventory: {
         firstObject: false,
         secondObject: false
       },
-      level: 'BEACH'
+      level: 'OUTSIDE'
     }
     this.updateState=this.updateState.bind(this)
   }
