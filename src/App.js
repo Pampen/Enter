@@ -13,8 +13,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state={
-      title: 'Outside',
-      description: 'This is outside.',
+      title: "Outside",
+      description: "This is outside",
       chatboxText: [],
       inventory: {
         firstObject: false,

@@ -15,13 +15,68 @@
         "levelTitle": "Porch"
     },
     {
+        "level": "BEACH",
+        "levelDescription": "The door closes behind you, leaving you alone in the darkness. Suddenly, everything lights up and you find yourself on the beach. There's a Lighthouse right infront of you up the hill(NORTH), a shipwreck by the coast(EAST) and what looks to be a shed to your left(WEST) by the seaside. Which way do you decide to go?",
+        "levelTitle": "Beach"
+    },
+    {
+        "level": "GATE",
+        "levelDescription": "While making your way up the hill you encouter a gate blocking your path.",
+        "levelTitle": "Gate"
+    },
+    {
+        "level": "LIGHTHOUSE_OUTSIDE",
+        "levelDescription": "You stand outside the lighthouse, do you decide to go?",
+        "levelTitle": "Lighthouse"
+    },
+    {
+        "level": "LIGHTHOUSE",
+        "levelDescription": "This is the lighthouse, There's a staircase that leads up to the 2nd floor.",
+        "levelTitle": "Lighthouse 2nd Floor"
+    },
+    {
+        "level": "LIGHTHOUSE_TOP",
+        "levelDescription": "This is the top floor in the lighthouse",
+        "levelTitle": "Lighthouse"
+    },
+    {
+        "level": "OUTSIDE_SHED",
+        "levelDescription": "You stand outside the shed, do you decide to go in?.",
+        "levelTitle": "Shed Frontdoor"
+    },
+    {
+        "level": "SHED",
+        "levelDescription": "You stand inside the shed. There's a ladder leading down to the basement(NORTH)",
+        "levelTitle": "Shed"
+    },
+    {
+        "level": "CELLAR",
+        "levelDescription": "You find yourself in the basement of the shed.",
+        "levelTitle": "Cellar"
+    },
+    {
+        "level": "OUTSIDE_SHIPWRECK",
+        "levelDescription": "You see a shipwreck in the distant, do you decide to explore it?",
+        "levelTitle": "Beach East Side"
+    },
+    {
+        "level": "SHIPWRECK",
+        "levelDescription": "You find yourself inside the old rustic shipwreck. The captains cabin is to your right(EAST)",
+        "levelTitle": "Shipwreck"
+    },
+    {
+        "level": "CABIN",
+        "levelDescription": "You are currently inside the captains cabin.",
+        "levelTitle": "Shipwreck"
+    },
+    {
         "level": "Blue start",
         "levelDescription": "This is the start blue",
         "levelTitle": "Blue start"
     },
     {
         "level": "Blue Torch Room",
-        "levelDescription": "This is the blue tourch.",
+        "levelDescription": "This is the blue torch.",
         "levelTitle": "Blue Torch Room"
     },
     {

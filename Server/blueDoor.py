@@ -10,7 +10,7 @@ def handleBlueStart(userInput, state):
     else:
         return handleInvalidInput(userInput, state)
 
-def handleTourchRoom(userInput, state):
+def handleTorchRoom(userInput, state):
     if userInput == 'GO EAST':
         return goToLevel(state, 'Blue start')
     elif userInput == 'GO NORTH' or userInput == 'GO SOUTH' or userInput == 'GO WEST':

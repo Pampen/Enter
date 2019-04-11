@@ -8,6 +8,6 @@ def handleMainHall(userInput, state):
     elif userInput == 'GO EAST':
         return goToLevel(state, 'CRIBROOM')
     elif userInput == 'GO WEST':  
-        return handleInvalidDirection(state)
+        return goToLevel(state, 'BEACH')
     else:
         return handleInvalidInput(userInput, state)
