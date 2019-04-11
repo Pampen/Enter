@@ -2,7 +2,7 @@ from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handle
 
 def handleBlueStart(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'Blue Tourch Room')
+        return goToLevel(state, 'Blue Torch Room')
     elif userInput == 'GO SOUTH' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
     elif userInput == 'GO NORTH':
@@ -20,7 +20,7 @@ def handleTourchRoom(userInput, state):
 
 def handleBlueCorridor1(userInput, state):
     if userInput == 'GO SOUTH':
-        return goToLevel(state, 'Blue Start')
+        return goToLevel(state, 'Blue start')
     elif userInput == 'GO WEST':
         return goToLevel(state, 'Blue Corridor 2')
     elif userInput == 'GO EAST':
