@@ -7,7 +7,6 @@ import Terminal from './components/terminal'
 import Modal from './components/Modal'
 
 import apple from './assets/apple.jpg'
-import testBild from './assets/testBild.png'
 
 class App extends Component {
   constructor(props) {
@@ -17,22 +16,35 @@ class App extends Component {
       description: "This is outside",
       chatboxText: [],
       inventory: {
-        firstObject: false,
-        secondObject: false
+        bronzeKey: false,
+        ladder: false
       },
       level: 'OUTSIDE'
     }
     this.updateState=this.updateState.bind(this)
   }
 
+
   updateState(inputElementValue) {
     sendMessage(inputElementValue, this.state).then(response => {
       const newTitle = response.pageChanges.levelTitle || null
       const newDescription = response.pageChanges.levelDescription || null
       const newChatboxText = response.pageChanges.levelChatboxText || null
+
+      const newItemDescription = response.pageChanges.itemDescription || null 
+      const newItemName = response.pageChanges.itemName || null
+
+      if (newItemName) {
+        for (let item in response.state.inventory) {
+          if (item === newItemName) {
+            response.state.inventory[newItemName] = true;
+          }
+        }
+      };
       const newGameState = {}
       newGameState.inventory = response.state.inventory
       newGameState.level = response.state.level
+
       if (newTitle) {
         newGameState.title = newTitle;
       };
@@ -42,6 +54,11 @@ class App extends Component {
       if (newChatboxText) {
         const currentChatboxText = this.state.chatboxText;
         currentChatboxText.push(newChatboxText);
+        newGameState.chatboxText = currentChatboxText;
+      };
+      if (newItemDescription) {
+        const currentChatboxText = this.state.chatboxText;
+        currentChatboxText.push(newItemDescription);
         newGameState.chatboxText = currentChatboxText;
       }
       this.setState(newGameState);
@@ -85,22 +102,21 @@ showCommandModal = () => {
             <Terminal
             updateState={this.updateState}
             />
-            <Modal 
-              onClose={this.showMapModal}
-              show={this.state.mapShow}>
-              <img src={apple} alt="An apple"/>,
-            </Modal>
-            <Modal
-              onClose={this.showInventoryModal}
-              show={this.state.inventoryShow}>
-                <img src={testBild} alt="An apple"/>
-            </Modal>
-            <Modal
-              onClose={this.showCommandModal}
-              show={this.state.commandShow}>
-            </Modal>
         </div> 
       </div>
+        <Modal 
+          onClose={this.showMapModal}
+          show={this.state.mapShow}>
+          <img src={apple} alt="An apple"/>,
+        </Modal>
+        <Modal
+          onClose={this.showInventoryModal}
+          show={this.state.inventoryShow}>
+        </Modal>
+        <Modal
+          onClose={this.showCommandModal}
+          show={this.state.commandShow}>
+        </Modal>
     </main>
     );
   }

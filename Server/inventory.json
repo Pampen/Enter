@@ -1,0 +1,58 @@
+[
+    {
+        "itemName": "Ladder",
+        "itemDescription": "The ladder looks rather old and it seems like it has been through a lot. It looks like it could be made out of oak, but what do I know?"
+    },
+    {
+        "itemName": "Grey Key",
+        "itemDescription": "A regular key which could be used to open a room."
+    },
+    {
+        "itemName": "Photograph",
+        "itemDescription": "An old dusty photograph. It looks like it’s a picture of the two little girls but I can’t seem to see their faces, so I am not really sure."
+    },
+    {
+        "itemName": "Canvas",
+        "itemDescription": "A canvas painted with the color red on it."
+    },
+    {
+        "itemName": " Worn doll",
+        "itemDescription": ""
+    },
+    {
+        "itemName": " Moldy pacifier",
+        "itemDescription": ""
+    },
+    {
+        "itemName": " Dirty blanket",
+        "itemDescription": ""
+    },
+    {
+        "itemName": "Torn pages",
+        "itemDescription": ""
+    },
+    {
+        "itemName": "Torch",
+        "itemDescription": ""
+    },
+    {
+        "itemName": "",
+        "itemDescription": ""
+    },
+    {
+        "itemName": "",
+        "itemDescription": ""
+    },
+    {
+        "itemName": "",
+        "itemDescription": ""
+    },
+    {
+        "itemName": "",
+        "itemDescription": ""
+    },
+    {
+        "itemName": "bronzeKey",
+        "itemDescription": "You picked up the bronze key"
+    }
+]
