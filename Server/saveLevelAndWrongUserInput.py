@@ -19,21 +19,37 @@ def goToLevel(state, currentLevel):
 
 def pickUpItem(state, currentItem):
     print(currentItem)
+    itemData = openItemFile()
+    item = itemData[currentItem]
+    newState = state
+    newState['inventory'][currentItem] = True
     response = {
-        'state': state, 
+        'state': newState, 
         'pageChanges': {
-                "itemName": '',
-                "itemDescription": '',
+                'levelChatboxText': 'You picked up ' + item["itemName"].upper() + '.'
         }
     }
-
+    return response
+    
+def inspectItem(state, userInput):
     itemData = openItemFile()
     for item in itemData:
-        if item["itemName"] == currentItem:
-            response['pageChanges']['itemName'] = item['itemName']
-            response['pageChanges']['itemDescription'] = item['itemDescription']
-            return response
-
+        if itemData[item]['itemName'].upper() in userInput:
+            if state['inventory'][item] == True:
+                itemDescription = itemData[item]['itemDescription']
+                response = {
+                    'state': state, 
+                    'pageChanges': {
+                            'levelChatboxText': itemDescription
+                    }
+                }
+                return response
+    return {
+        'state': state, 
+        'pageChanges': {
+                'levelChatboxText': "You do not seem to be carrying that."
+        }
+    }
 def handleInvalidDirection(state):
     response = {
         'state': state,
