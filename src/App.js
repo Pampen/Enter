@@ -4,6 +4,7 @@ import sendMessage from './utilities/connect.js'
 import ButtonContainer from './components/button-container'
 import GameScreen from './components/game-screen'
 import Terminal from './components/terminal'
+import Inventory from './components/inventory'
 import Modal from './components/Modal'
 
 import apple from './assets/apple.jpg'
@@ -16,8 +17,6 @@ class App extends Component {
       description: "This is outside",
       chatboxText: [],
       inventory: {
-        bronzeKey: false,
-        ladder: false
       },
       level: 'OUTSIDE'
     }
@@ -99,24 +98,26 @@ showCommandModal = () => {
               description={this.state.description}
               chatboxText={this.state.chatboxText}
             />
+            <Modal 
+              onClose={this.showMapModal}
+              show={this.state.mapShow}>
+              <img src={apple} alt="An apple"/>,
+            </Modal>
+            <Modal
+              onClose={this.showInventoryModal}
+              show={this.state.inventoryShow}
+            >
+              <Inventory inventory={this.state.inventory}/>
+            </Modal>
+            <Modal
+              onClose={this.showCommandModal}
+              show={this.state.commandShow}>
+            </Modal>
             <Terminal
-            updateState={this.updateState}
+              updateState={this.updateState}
             />
         </div> 
       </div>
-        <Modal 
-          onClose={this.showMapModal}
-          show={this.state.mapShow}>
-          <img src={apple} alt="An apple"/>,
-        </Modal>
-        <Modal
-          onClose={this.showInventoryModal}
-          show={this.state.inventoryShow}>
-        </Modal>
-        <Modal
-          onClose={this.showCommandModal}
-          show={this.state.commandShow}>
-        </Modal>
     </main>
     );
   }

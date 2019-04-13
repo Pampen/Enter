@@ -19,11 +19,33 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  position: relative;
   background-color: #333;
 
 }
 .game-screen {
   flex-grow: 1;
+}
+.game-screen-header {
+  height: 150px;
+  background-color: #555;
+}
+.game-text-box {
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  overflow: scroll;
+  max-height: 318px;
+  color: #999;
+}
+.game-text-box p:last-child  {
+  color: white;
+}
+#title, .level-description {
+  padding: 16px 16px;
+  margin: 0;
 }
 .terminal {
   display: flex;
@@ -53,6 +75,9 @@ body {
   width: 60px;
   background-color: #444;
 }
+.animation-fade-in {
+  animation: 0.2s fade-in;
+}
 #main-buttons {
   display: flex;
   flex-direction: column;
@@ -70,6 +95,26 @@ body {
 #inventory-button {
   margin-top: 20px;
   margin-bottom: 7px;
+}
+.inventory {
+  padding: 16px;
+}
+.item {
+  position: relative;
+}
+.item-description {
+  display: none;
+  position: absolute;
+  top: 100%;
+  padding: 10px;
+  border: 5px solid black;
+  border-radius: 0 15px 15px 15px;
+  box-shadow: 3px 10px 10px #333;
+  background-color: white;
+  color: black;
+}
+.item-name:hover + .item-description{
+  display: block;
 }
 #command-button {
   margin-bottom: 5px;
@@ -90,6 +135,19 @@ body {
   animation: 0.47s infinite alternate blink-animation;
 }
 
+.close-button {
+  border: none;
+  background-color: transparent;
+  height: 30px;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+.close-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 @keyframes blink-animation {
   0% {
     opacity: 0;
@@ -101,4 +159,11 @@ body {
     opacity: 1;
   }
 }
-
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -22,7 +22,7 @@ def pickUpItem(state, currentItem):
     itemData = openItemFile()
     item = itemData[currentItem]
     newState = state
-    newState['inventory'][currentItem] = True
+    newState['inventory'][currentItem] = item
     response = {
         'state': newState, 
         'pageChanges': {
