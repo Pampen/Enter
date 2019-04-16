@@ -1,29 +1,21 @@
 import React from 'react';
 
-const backdropStyle = {
-    position: 'fixed',
+const modalStyle = {
+    backgroundColor: '#333',
+    padding: 30,
+    position: "absolute",
     top: 0,
     bottom: 0,
     left: 0,
-    right: 0,
-    backgroundColor: 'rgba(0,0,0,0.3)',
-    padding: 50
-};
-
-const modalStyle = {
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    maxWidth: 500,
-    minHeight: 300,
-    margin: '0 auto',
-    padding: 30,
-    position: "relative"
+    right: 0
 };
 
 const footerStyle = {
     position: "absolute",
     top: 10,
-    right: 10
+    right: 10,
+    borderRadius: 0,
+    backgroundColor: "transparent"
 };
 
 export default class extends React.Component {
@@ -35,16 +27,14 @@ export default class extends React.Component {
             return null;
         }
         return (
-            <div style={backdropStyle}>
-                <div style={modalStyle}>
+                <div className="animation-fade-in" style={modalStyle}>
                     {this.props.children}
                     <div style={footerStyle}>
-                        <button onClick={(e) => { this.onClose(e)}}>
-                            X
+                        <button onClick={(e) => { this.onClose(e)}} className="close-button">
+                            CLOSE (X)
                         </button>
                     </div>
                 </div>
-            </div>
         )
     }
 }
