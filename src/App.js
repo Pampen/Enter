@@ -33,13 +33,8 @@ class App extends Component {
       const newItemDescription = response.pageChanges.itemDescription || null 
       const newItemName = response.pageChanges.itemName || null
 
-      if (newItemName) {
-        for (let item in response.state.inventory) {
-          if (item === newItemName) {
-            response.state.inventory[newItemName] = true;
-          }
-        }
-      };
+      
+
       const newGameState = {}
       newGameState.inventory = response.state.inventory
       newGameState.level = response.state.level

@@ -35,7 +35,7 @@ def inspectItem(state, userInput):
     itemData = openItemFile()
     for item in itemData:
         if itemData[item]['itemName'].upper() in userInput:
-            if state['inventory'][item] == True:
+            if state['inventory'][item]:
                 itemDescription = itemData[item]['itemDescription']
                 response = {
                     'state': state, 
