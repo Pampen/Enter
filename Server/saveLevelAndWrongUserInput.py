@@ -35,7 +35,7 @@ def inspectItem(state, userInput):
     itemData = openItemFile()
     for item in itemData:
         if itemData[item]['itemName'].upper() in userInput:
-            if state['inventory'][item] == True:
+            if state['inventory'][item]:
                 itemDescription = itemData[item]['itemDescription']
                 response = {
                     'state': state, 
@@ -44,11 +44,19 @@ def inspectItem(state, userInput):
                     }
                 }
                 return response
+            else:
+                return {
+                    'state': state, 
+                    'pageChanges': {
+                    'levelChatboxText': "Targarfbhsefbk ."
+                    
+                    }
+                }    
     return {
-        'state': state, 
-        'pageChanges': {
-                'levelChatboxText': "You do not seem to be carrying that."
-        }
+            'state': state, 
+            'pageChanges': {
+                    'levelChatboxText': "You do not seem to be carrying that."
+            }
     }
 def handleInvalidDirection(state):
     response = {
