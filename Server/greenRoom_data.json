@@ -6,37 +6,37 @@
     },
     {
         "level": "GATE",
-        "levelDescription": "While making your way up the hill you encouter a gate blocking your path.",
+        "levelDescription": "While making your way up the hill you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over two hundred years old. There's also spikes at the top that makes it impossible to climb over",
         "levelTitle": "Gate"
     },
     {
         "level": "LIGHTHOUSE_OUTSIDE",
         "levelDescription": "You stand outside the lighthouse, do you decide to go?",
-        "levelTitle": "Lighthouse"
+        "levelTitle": "Lighthouse Outside"
     },
     {
         "level": "LIGHTHOUSE",
-        "levelDescription": "This is the lighthouse, There's a staircase that leads up to the 2nd floor.",
+        "levelDescription": "This is the lighthouse. There's a staircase that leads up to the 2nd floor.",
         "levelTitle": "Lighthouse"
     },
     {
         "level": "LIGHTHOUSE_TOP",
-        "levelDescription": "This is the top floor in the lighthouse",
-        "levelTitle": "Lighthouse"
+        "levelDescription": "This is the top floor in the lighthouse. There looks to be some sort of old machine that requires you to put in a key.",
+        "levelTitle": "Lighthouse 2nd Floor"
     },
     {
         "level": "OUTSIDE_SHED",
         "levelDescription": "You stand outside the shed, do you decide to go in?.",
-        "levelTitle": "Shed"
+        "levelTitle": "Shed Frontdoor"
     },
     {
         "level": "SHED",
-        "levelDescription": "You stand inside the shed. There's a ladder leading down to the basement(NORTH)",
+        "levelDescription": "You stand inside the shed. It’s filled with what looks to be a bunch of old fisherman gear. There's a ladder leading down to the basement(NORTH)",
         "levelTitle": "Shed"
     },
     {
         "level": "CELLAR",
-        "levelDescription": "You find yourself in the basement of the shed.",
+        "levelDescription": "You find yourself in the basement of the shed. There seems to be nothing but bunch of old junk. Though you see something glimmer in the distant, do you want to inspect it?",
         "levelTitle": "Cellar"
     },
     {
@@ -46,12 +46,12 @@
     },
     {
         "level": "SHIPWRECK",
-        "levelDescription": "You find yourself inside the old rustic shipwreck. The captains cabin is to your right(EAST)",
+        "levelDescription": "You find yourself inside the old rustic shipwreck. The boat seems to be very old from the looks of it. The captains cabin is to your right(EAST)",
         "levelTitle": "Shipwreck"
     },
     {
         "level": "CABIN",
-        "levelDescription": "You are currently inside the captains cabin.",
-        "levelTitle": "Shipwreck"
+        "levelDescription": "You are currently inside the captains cabin. There's a desk with a piece of paper on it.",
+        "levelTitle": "Captains Cabin"
     }
 ]
