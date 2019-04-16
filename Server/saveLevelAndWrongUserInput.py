@@ -34,8 +34,10 @@ def pickUpItem(state, currentItem):
 def inspectItem(state, userInput):
     itemData = openItemFile()
     for item in itemData:
+        print(item)
         if itemData[item]['itemName'].upper() in userInput:
-            if state['inventory'][item]:
+            print(itemData[item]['itemName'])
+            if item in state['inventory']:
                 itemDescription = itemData[item]['itemDescription']
                 response = {
                     'state': state, 
