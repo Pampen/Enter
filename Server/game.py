@@ -1,6 +1,7 @@
 from flask import Flask, request, Response, jsonify
 from flask_cors import CORS, cross_origin
 from levelChecker import levelChecker
+from saveLevelAndWrongUserInput import inspectItem
 import json
 app = Flask(__name__)
 CORS(app, support_credentials=True)
@@ -16,7 +17,12 @@ def getRequest():
 
     response = getResponse(userInput, state)
 
+    print(response)
+
     return jsonify(response)
 
 def getResponse(userInput, state):
-    return levelChecker(userInput, state)
+    if 'INSPECT' in userInput:
+        return inspectItem(state, userInput)
+    else: 
+        return levelChecker(userInput, state)

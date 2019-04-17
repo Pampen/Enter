@@ -4,7 +4,9 @@ import sendMessage from './utilities/connect.js'
 import ButtonContainer from './components/button-container'
 import GameScreen from './components/game-screen'
 import Terminal from './components/terminal'
+import Inventory from './components/inventory'
 import Modal from './components/Modal'
+
 import apple from './assets/apple.jpg'
 
 class App extends Component {
@@ -15,22 +17,28 @@ class App extends Component {
       description: "This is outside",
       chatboxText: [],
       inventory: {
-        firstObject: false,
-        secondObject: false
       },
       level: 'OUTSIDE'
     }
     this.updateState=this.updateState.bind(this)
   }
 
+
   updateState(inputElementValue) {
     sendMessage(inputElementValue, this.state).then(response => {
       const newTitle = response.pageChanges.levelTitle || null
       const newDescription = response.pageChanges.levelDescription || null
       const newChatboxText = response.pageChanges.levelChatboxText || null
+
+      const newItemDescription = response.pageChanges.itemDescription || null 
+      const newItemName = response.pageChanges.itemName || null
+
+      
+
       const newGameState = {}
       newGameState.inventory = response.state.inventory
       newGameState.level = response.state.level
+
       if (newTitle) {
         newGameState.title = newTitle;
       };
@@ -41,6 +49,11 @@ class App extends Component {
         const currentChatboxText = this.state.chatboxText;
         currentChatboxText.push(newChatboxText);
         newGameState.chatboxText = currentChatboxText;
+      };
+      if (newItemDescription) {
+        const currentChatboxText = this.state.chatboxText;
+        currentChatboxText.push(newItemDescription);
+        newGameState.chatboxText = currentChatboxText;
       }
       this.setState(newGameState);
       console.log(this.state);
@@ -50,29 +63,54 @@ class App extends Component {
 showMapModal = () => {
     this.setState({
       ...this.state,
-      show: !this.state.show
+      mapShow: !this.state.mapShow
     });
+}
+
+showInventoryModal = () => {
+  this.setState({
+    ...this.state,
+    inventoryShow: !this.state.inventoryShow
+  });
+}
+
+showCommandModal = () => {
+  this.setState({
+    ...this.state,
+    commandShow: !this.state.commandShow
+  });
 }
 
   render() {
     return (
       <main id="wrapper">
         <div className="container">
-          <ButtonContainer handleMapClick={this.showMapModal}/>
+          <ButtonContainer props handleMapClick={this.showMapModal} handleInventoryClick={this.showInventoryModal} handleCommandClick={this.showCommandModal}/>
+        
           <div className="game-container">
             <GameScreen
               title={this.state.title}
               description={this.state.description}
               chatboxText={this.state.chatboxText}
             />
-            <Terminal
-            updateState={this.updateState}
-            />
             <Modal 
               onClose={this.showMapModal}
-              show={this.state.show}>
-                <img src={apple} alt="An apple"/>
+              show={this.state.mapShow}>
+              <img src={apple} alt="An apple"/>,
             </Modal>
+            <Modal
+              onClose={this.showInventoryModal}
+              show={this.state.inventoryShow}
+            >
+              <Inventory inventory={this.state.inventory}/>
+            </Modal>
+            <Modal
+              onClose={this.showCommandModal}
+              show={this.state.commandShow}>
+            </Modal>
+            <Terminal
+              updateState={this.updateState}
+            />
         </div> 
       </div>
     </main>
