@@ -1,7 +1,7 @@
 [
     {
         "level": "BEACH",
-        "levelDescription": "The door closes behind you, leaving you alone in the darkness. Suddenly, everything lights up and you find yourself on the beach. There's a Lighthouse right infront of you up the hill(NORTH), a shipwreck by the coast(EAST) and what looks to be a shed to your left(WEST) by the seaside. Which way do you decide to go?",
+        "levelDescription": "The door closes behind you, leaving you alone in the darkness. Suddenly, everything lights up and you find yourself on the beach. There's a Lighthouse right infront of you up the hill, a shipwreck by the coast and what looks to be a shed to your left by the seaside. Which way do you decide to go?",
         "levelTitle": "Beach"
     },
     {
@@ -31,7 +31,7 @@
     },
     {
         "level": "SHED",
-        "levelDescription": "You stand inside the shed. It’s filled with what looks to be a bunch of old fisherman gear. There's a ladder leading down to the basement(NORTH)",
+        "levelDescription": "You stand inside the shed. It’s filled with what looks to be a bunch of old fisherman gear. There seems to be stairs leading down to the basement.",
         "levelTitle": "Shed"
     },
     {
@@ -42,16 +42,16 @@
     {
         "level": "OUTSIDE_SHIPWRECK",
         "levelDescription": "You see a shipwreck in the distant, do you decide to explore it?",
-        "levelTitle": "Beach"
+        "levelTitle": "Beach east side"
     },
     {
         "level": "SHIPWRECK",
-        "levelDescription": "You find yourself inside the old rustic shipwreck. The boat seems to be very old from the looks of it. The captains cabin is to your right(EAST)",
+        "levelDescription": "You find yourself inside the old rustic shipwreck. The boat seems to be very old from the looks of it. The captains cabin is up ahead to your right.",
         "levelTitle": "Shipwreck"
     },
     {
         "level": "CABIN",
-        "levelDescription": "You are currently inside the captains cabin. There's a desk with a piece of paper on it.",
+        "levelDescription": "You are currently inside the captains cabin. There's a desk with a pieces of torn pages on it.",
         "levelTitle": "Captains Cabin"
     }
 ]

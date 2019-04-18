@@ -30,7 +30,7 @@
     },
     "tornPages": {
         "itemName": "Torn pages",
-        "itemDescription": "It's a bunch of torn pages with yellowed, frayed edges. There is nothing comprehensible written on them."
+        "itemDescription": "It's a bunch of torn pages with yellowed, frayed edges. The pages appear to have the words JO FU YL drawn on to it, it could be some kind of puzzle?"
     },
     "torch": {
         "itemName": "Torch",
@@ -54,6 +54,10 @@
     },
     "bronzeKey": {
         "itemName": "Bronze key",
-        "itemDescription": "It's a simple key made of bronze. It has a greenish tint to it."
+        "itemDescription": "It's a simple key made of bronze. It has a silver looking tint to it with the words JOYFUL engraved on to it. This key could probably be used to open the gate."
+    },
+    "greenkey": {
+        "itemName": "Green key",
+        "itemDescription": "A green key."
     }
 }

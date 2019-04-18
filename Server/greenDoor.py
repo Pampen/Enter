@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handleInvalidInput
+from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handleInvalidInput, pickUpItem
 
 def handleBeach(userInput, state):
     if userInput == 'GO WEST':
@@ -26,18 +26,18 @@ def handleLighthouseOutside(userInput, state):
     if userInput == 'GO NORTH':
         return goToLevel(state, 'LIGHTHOUSE')
     elif userInput == "GO SOUTH":
-        return goToLevel(state, "BEACH")
+        return goToLevel(state, "GATE")
     elif userInput == 'GO WEST' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)
 
 def handleLighthouse(userInput, state):
-    if userInput == 'GO WEST' or userInput == 'GO EAST':
+    if userInput == 'GO WEST' or userInput == 'GO EAST' or userInput == 'GO NORTH':
         return handleInvalidDirection(state)
     elif userInput == "GO SOUTH":
-        return goToLevel(state, "BEACH")
-    elif userInput == "GO NORTH":
+        return goToLevel(state, "LIGHTHOUSE_OUTSIDE")
+    elif userInput == 'TAKE STAIRS':
         return goToLevel(state, "LIGHTHOUSE_TOP")
     else:
         return handleInvalidInput(userInput, state)
@@ -47,6 +47,8 @@ def handleLighthouseTop(userInput, state):
         return handleInvalidDirection(state)
     elif userInput == "GO SOUTH":
         return goToLevel(state, "LIGHTHOUSE")
+    elif userInput == "TAKE GREEN KEY" or userInput == "TAKE KEY":
+        return pickUpItem(state, "greenKey")
     else:
         return handleInvalidInput(userInput, state)
 
@@ -61,15 +63,16 @@ def handleOutsideShed(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleShed(userInput, state):
-    if userInput == 'GO WEST' or userInput == "GO SOUTH":
+    if userInput == 'GO WEST' or userInput == "GO SOUTH" or userInput == "GO NORTH":
         return handleInvalidDirection(state)
-    elif userInput == 'GO NORTH':
-        return goToLevel(state, "CELLAR")
+    elif userInput == 'TAKE STAIRS':
+        return handleBasement(state)
+        #return goToLevel(state, "CELLAR")
     elif userInput == 'GO EAST':
-        return goToLevel(state, "BEACH")
+        return goToLevel(state, "OUTSIDE_SHED")
     else:
         return handleInvalidInput(userInput, state)
-
+  
 def handleOutsideShipwreck(userInput, state):
     if userInput == 'GO WEST':
         return goToLevel(state, 'BEACH')
@@ -82,7 +85,7 @@ def handleOutsideShipwreck(userInput, state):
 
 def handleShipwreck(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'BEACH')
+        return goToLevel(state, 'SHIPWRECK_OUTSIDE')
     elif userInput == "GO EAST":
         return goToLevel(state, "CABIN")
     elif userInput == 'GO NORTH' or userInput == "GO SOUTH":
@@ -95,6 +98,8 @@ def handleCabin(userInput, state):
         return goToLevel(state, 'SHIPWRECK')
     elif userInput == "GO EAST" or userInput == "GO NORTH" or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
+    elif userInput == "TAKE TORN PAGES" or userInput == "TAKE PAGES":
+        return pickUpItem(state, "tornPages")
     else:
         return handleInvalidInput(userInput, state)
 
@@ -103,6 +108,8 @@ def handleCellar(userInput, state):
         return handleInvalidDirection(state)
     elif userInput == 'GO SOUTH':
         return goToLevel(state, "SHED")
+    elif userInput == "TAKE BRONZE KEY":
+        return pickUpItem(state, 'bronzeKey')
     else:
         return handleInvalidInput(userInput, state)
 
@@ -111,6 +118,15 @@ def handleOcean(state):
         'state': state,
         'pageChanges': {
             'levelChatboxText': "The sea is behind you, going south isn't going to work."
+        }
+    }
+    return response  
+
+def handleBasement(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': "While trying to make your way downstairs, a door is blocking your way from moving forward. The door appears to be locked with a bunch of chains put onto it, there's a padlock that requires you to enter 6 words in a certain order."
         }
     }
     return response  
