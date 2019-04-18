@@ -12,7 +12,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "flask": "FLASK_APP=./Server/game.py FLASK_DEBUG=1 flask run"
+    "flask": "FLASK_APP=./Server/game.py FLASK_DEBUG=1 flask run",
+    "jacky1": "set FLASK_APP=./Server/game.py",
+    "jacky2": "set FLASK_DEBUG=1",
+    "jacky3": "flask run",
+    "server": "npm run jacky1 && npm run jacky2 && flask run"
   },
   "eslintConfig": {
     "extends": "react-app"

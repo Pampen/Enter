@@ -53,7 +53,7 @@ def handleBlueCorridor3(userInput, state):
 def handleBlueCorridor4(userInput, state):
     if userInput == 'GO SOUTH':
         return goToLevel(state, 'Blue Corridor 1')
-    if userInput == 'GO WEST':
+    elif userInput == 'GO WEST':
         return goToLevel(state, 'Blue Corridor 3')
     elif userInput == 'GO EAST' or userInput == 'GO NORTH':
         return handleInvalidDirection(state)
@@ -62,7 +62,7 @@ def handleBlueCorridor4(userInput, state):
 
 def handleBlueCorridor5(userInput, state):
     if userInput == 'GO SOUTH' or userInput == 'GO EAST':
-        handleInvalidDirection(state)
+       return handleInvalidDirection(state)
     elif userInput == 'GO WEST':
         return goToLevel(state, 'Blue Corridor 1')
     elif userInput == 'GO NORTH':

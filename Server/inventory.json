@@ -4,8 +4,7 @@
         "itemDescription": "The ladder looks rather old and it seems like it has been through a lot. It looks like it could be made out of oak, but you're not entirely sure it matters."
     },
     "greyKey":{
-
-        "itemName": "Grey Key",
+        "itemName": "Grey key",
         "itemDescription": "It's a dull-looking, regular key. It can be used to open locked doors."
     },
     "photograph": {
@@ -15,6 +14,14 @@
     "canvas":{
         "itemName": "Canvas",
         "itemDescription": "It's a canvas painted entirely in the colour red."
+    },
+    "carKeys":{
+        "itemName": "Car keys",
+        "itemDescription": "Just some regular car keys, nothing fancy."
+    },
+    "redKey":{
+        "itemName": "Red key",
+        "itemDescription": "A red key"
     },
     "wornDoll": {
         "itemName": "Worn doll",
@@ -31,6 +38,14 @@
     "tornPages": {
         "itemName": "Torn pages",
         "itemDescription": "It's a bunch of torn pages with yellowed, frayed edges. The pages appear to have the words JO FU YL drawn on to it, it could be some kind of puzzle?"
+    },
+    "Crib": {
+        "itemName": "Crib",
+        "itemDescription": "An old but sturdy crib."
+    },
+        "pinkKey": {
+            "itemName": "Pink key",
+            "itemDescription": "A pink key."
     },
     "torch": {
         "itemName": "Torch",
@@ -56,8 +71,12 @@
         "itemName": "Bronze key",
         "itemDescription": "It's a simple key made of bronze. It has a silver looking tint to it with the words JOYFUL engraved on to it. This key could probably be used to open the gate."
     },
-    "greenkey": {
+    "greenKey": {
         "itemName": "Green key",
         "itemDescription": "A green key."
+    },
+    "brassKey": {
+        "itemName": "Brass key",
+        "itemDescription": "It's a simple key made of copper and zinc. It has a greenish tint to it."
     }
 }
