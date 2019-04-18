@@ -17,7 +17,7 @@ def goToLevel(state, currentLevel):
             response['state']['level'] = level['level']
             return response
 
-def pickUpItem(state, currentItem):
+def takeItem(state, currentItem):
     print(currentItem)
     itemData = openItemFile()
     item = itemData[currentItem]
