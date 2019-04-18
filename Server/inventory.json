@@ -39,6 +39,14 @@
         "itemName": "Torn pages",
         "itemDescription": "It's a bunch of torn pages with yellowed, frayed edges. There is nothing comprehensible written on them."
     },
+    "Crib": {
+        "itemName": "Crib",
+        "itemDescription": "An old but sturdy crib."
+    },
+        "pinkKey": {
+            "itemName": "Pink key",
+            "itemDescription": "A pink key."
+    },
     "torch": {
         "itemName": "Torch",
         "itemDescription": "It's a torch. It emits a steady glow of light, but no light. You feel like this might be important."
