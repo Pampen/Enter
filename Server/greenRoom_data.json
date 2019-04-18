@@ -16,13 +16,13 @@
     },
     {
         "level": "LIGHTHOUSE",
-        "levelDescription": "This is the lighthouse. There's a staircase that leads up to the 2nd floor.",
+        "levelDescription": "This is the lighthouse. There's a staircase that leads up to the top floor.",
         "levelTitle": "Lighthouse"
     },
     {
         "level": "LIGHTHOUSE_TOP",
-        "levelDescription": "This is the top floor in the lighthouse. There looks to be some sort of old machine that requires you to put in a key.",
-        "levelTitle": "Lighthouse 2nd Floor"
+        "levelDescription": "This is the top floor in the lighthouse. There's a green key hanging on the wall.",
+        "levelTitle": "Lighthouse Top Floor"
     },
     {
         "level": "OUTSIDE_SHED",
@@ -51,7 +51,7 @@
     },
     {
         "level": "CABIN",
-        "levelDescription": "You are currently inside the captains cabin. There's a desk with a pieces of torn pages on it.",
+        "levelDescription": "You are currently inside the captains cabin. There's a family photograph on the wall of what looks to be the owner of this boats family. There's a desk with a pieces of torn pages on it.",
         "levelTitle": "Captains Cabin"
     }
 ]
