@@ -36,24 +36,16 @@
         "itemName": "Torch",
         "itemDescription": "It's a torch. It emits a steady glow of light, but no light. You feel like this might be important."
     },
-    "item1": {
-        "itemName": "Item1",
-        "itemDescription": "This is an item! 1"
+    "rustyKey": {
+        "itemName": "Rusty key",
+        "itemDescription": "A rusty old key"
     },
-    "item2": {
-        "itemName": "Item 2",
-        "itemDescription": "It's an item! 2"
+    "blueKey": {
+        "itemName": "Blue key",
+        "itemDescription": "This key is used in the mirror room"
     },
-    "item3": {
-        "itemName": "item 3",
-        "itemDescription": "It's an item! 3"
-    },
-    "item4": {
-        "itemName": "Item 4",
-        "itemDescription": "It's an item! 4"
-    },
-    "bronzeKey": {
-        "itemName": "Bronze key",
+    "brassKey": {
+        "itemName": "Brass key",
         "itemDescription": "It's a simple key made of bronze. It has a greenish tint to it."
     }
 }

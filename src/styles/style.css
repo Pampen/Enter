@@ -5,7 +5,6 @@ body {
 }
 
 .container{
-  
   display: flex;
   flex-grow: 1;
   justify-content: center;
@@ -27,7 +26,8 @@ body {
   flex-grow: 1;
 }
 .game-screen-header {
-  height: 150px;
+  height: 300px;
+  width: 640px;
   background-color: #555;
 }
 .game-text-box {
@@ -37,7 +37,7 @@ body {
   justify-content: flex-end;
   padding: 16px;
   overflow: scroll;
-  max-height: 318px;
+  max-height: 168px;
   color: #999;
 }
 .game-text-box p:last-child  {
