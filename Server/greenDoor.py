@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handleInvalidInput, pickUpItem
+from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handleInvalidInput, takeItem
 
 def handleBeach(userInput, state):
     if userInput == 'GO WEST':
@@ -48,7 +48,7 @@ def handleLighthouseTop(userInput, state):
     elif userInput == "GO SOUTH":
         return goToLevel(state, "LIGHTHOUSE")
     elif userInput == "TAKE GREEN KEY" or userInput == "TAKE KEY":
-        return pickUpItem(state, "greenKey")
+        return takeItem(state, "greenKey")
     else:
         return handleInvalidInput(userInput, state)
 
@@ -99,7 +99,7 @@ def handleCabin(userInput, state):
     elif userInput == "GO EAST" or userInput == "GO NORTH" or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
     elif userInput == "TAKE TORN PAGES" or userInput == "TAKE PAGES":
-        return pickUpItem(state, "tornPages")
+        return takeItem(state, "tornPages")
     else:
         return handleInvalidInput(userInput, state)
 
@@ -109,7 +109,7 @@ def handleCellar(userInput, state):
     elif userInput == 'GO SOUTH':
         return goToLevel(state, "SHED")
     elif userInput == "TAKE BRONZE KEY":
-        return pickUpItem(state, 'bronzeKey')
+        return takeItem(state, 'bronzeKey')
     else:
         return handleInvalidInput(userInput, state)
 
