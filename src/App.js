@@ -8,8 +8,6 @@ import Inventory from './components/inventory'
 import Modal from './components/Modal'
 import Commands from './components/commands'
 
-
-
 import apple from './assets/apple.jpg'
 
 class App extends Component {
@@ -37,7 +35,6 @@ class App extends Component {
     }
     this.updateState=this.updateState.bind(this)
   }
-
 
   updateState(inputElementValue) {
     sendMessage(inputElementValue, this.state).then(response => {
