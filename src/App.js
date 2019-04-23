@@ -6,6 +6,7 @@ import GameScreen from './components/game-screen'
 import Terminal from './components/terminal'
 import Inventory from './components/inventory'
 import Modal from './components/Modal'
+import Commands from './components/commands'
 
 import apple from './assets/apple.jpg'
 
@@ -18,22 +19,29 @@ class App extends Component {
       chatboxText: [],
       inventory: {
       },
-      level: 'OUTSIDE'
+      level: 'OUTSIDE',
+      commands : { 
+        goCommand: {
+          commandName: "GO (North)",
+          commandDescription: "Use this command to navigate through the game"},
+        takeCommand: {
+          commandName: "TAKE (item)",
+          commandDescription: "Use this command to pick up items and add them to your inventory"},
+        inspectCommand: {
+          commandnAME: "INSPECT (item)",
+          commandDescription: "Use this command to inspect items that you have acquired"
+        }
+      }
     }
     this.updateState=this.updateState.bind(this)
   }
-
 
   updateState(inputElementValue) {
     sendMessage(inputElementValue, this.state).then(response => {
       const newTitle = response.pageChanges.levelTitle || null
       const newDescription = response.pageChanges.levelDescription || null
       const newChatboxText = response.pageChanges.levelChatboxText || null
-
       const newItemDescription = response.pageChanges.itemDescription || null 
-      const newItemName = response.pageChanges.itemName || null
-
-      
 
       const newGameState = {}
       newGameState.inventory = response.state.inventory
@@ -106,7 +114,9 @@ showCommandModal = () => {
             </Modal>
             <Modal
               onClose={this.showCommandModal}
-              show={this.state.commandShow}>
+              show={this.state.commandShow}
+              >
+              <Commands commandInfo={this.state.commands}/>
             </Modal>
             <Terminal
               updateState={this.updateState}
