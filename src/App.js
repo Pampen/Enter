@@ -92,6 +92,7 @@ showCommandModal = () => {
               title={this.state.title}
               description={this.state.description}
               chatboxText={this.state.chatboxText}
+              level={this.state.level}
             />
             <Modal 
               onClose={this.showMapModal}
