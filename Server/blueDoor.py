@@ -48,7 +48,7 @@ def handleBlueCorridor3(userInput, state):
     elif userInput == 'GO EAST':
         return checkTorchItem(state, 'Blue Corridor 4')
     elif userInput == "TAKE RUSTY KEY":
-        return pickUpItem(state, 'brassKey')
+        return pickUpItem(state, 'rustyKey')
     elif userInput == 'GO WEST' or userInput == 'GO NORTH':
         return handleInvalidDirection(state)
     else:
