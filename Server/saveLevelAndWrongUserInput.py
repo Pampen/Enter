@@ -77,16 +77,16 @@ def handleInvalidInput(userInput, state):
         }
     }
     return response
-
-def handleInvalidPickUp(userInput, state):
+"""
+def handleInvalidTake(userInput, state):
     response = {
         'state': state,
         'pageChanges': {
-            'levelChatboxText': 'You cannot pick up ' + userInput + '.'
+            'levelChatboxText': 'You cannot take ' + userInput + '.'
         }
     }
     return response
-
+"""
 def openLevelFile():
     cwd = os.getcwd()  # Get the current working directory (cwd)
     filePath = cwd + '/Server/tutorial.json'
