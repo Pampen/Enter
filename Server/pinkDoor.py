@@ -8,7 +8,7 @@ def handleCribroom(userInput, state):
     elif userInput == 'GO WEST':
         return goToLevel(state, 'MAIN HALL')
     elif userInput == "TAKE CRIB":
-        return takeItem(state, 'Crib')
+        return takeItem(state, 'crib')
     elif userInput == 'GO SOUTH':
         return handleInvalidDirection(state)
     else:
