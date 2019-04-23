@@ -42,10 +42,10 @@ def handleLighthouse(userInput, state):
     else:
         return handleInvalidInput(userInput, state)
 
-def handleLighthouseTop(userInput, state):
+def handleLighthouseTopFloor(userInput, state):
     if userInput == 'GO NORTH' or userInput == 'GO WEST' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
-    elif userInput == "GO SOUTH":
+    elif userInput == "TAKE STAIRS":
         return goToLevel(state, "LIGHTHOUSE")
     elif userInput == "TAKE GREEN KEY" or userInput == "TAKE KEY":
         return takeItem(state, "greenKey")
