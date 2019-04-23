@@ -37,7 +37,7 @@
     {
         "level": "LIGHTHOUSE_TOP",
         "levelDescription": "This is the top floor in the lighthouse. There looks to be some sort of old machine that requires you to put in a key.",
-        "levelTitle": "Lighthouse 2nd Floor"
+        "levelTitle": "Lighthouse Top Floor"
     },
     {
         "level": "OUTSIDE_SHED",
@@ -71,106 +71,104 @@
     },
     {
         "level": "Blue start",
-        "levelDescription": "This is the start blue",
+        "levelDescription": "You enter a dark room, you hear a faint sobbing. The only light there is is shining through the bottom of a door to your left. In front of you is a hallway leading seemingly into nothingness. ",
         "levelTitle": "Blue start"
     },
     {
         "level": "Blue Torch Room",
-        "levelDescription": "This is the blue torch.",
+        "levelDescription": "In the room, there's a desk with a wooden chair and a torch hanging on the wall. It seems the torch isn't bolted to the wall.",
         "levelTitle": "Blue Torch Room"
     },
     {
         "level": "Blue Corridor 1",
-        "levelDescription": "This is the blue corridor.",
+        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 1"
     },
     {
         "level": "Blue Corridor 2",
-        "levelDescription": "This is the blue corridor.",
+        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 2"
     },
     {
         "level": "Blue Corridor 3",
-        "levelDescription": "This is the blue corridor.",
+        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 3"
     },
     {
         "level": "Blue Corridor 4",
-        "levelDescription": "This is the blue corridor.",
+        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 4"
     },
     {
         "level": "Blue Corridor 5",
-        "levelDescription": "This is the blue corridor.",
+        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 5"
     },
     {
         "level": "Blue Corridor 6",
-        "levelDescription": "This is the blue corridor.",
+        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 6"
     },
     {
         "level": "Blue Corridor 7",
-        "levelDescription": "This is the blue corridor.",
+        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 7"
     },
     {
         "level": "Blue Corridor 8",
-        "levelDescription": "This is the blue corridor.",
+        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 8"
     },
     {
         "level": "Blue Corridor 9",
-        "levelDescription": "This is the blue corridor.",
+        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 9"
     },
     {
         "level": "Blue Finish",
-        "levelDescription": "This is the blue corridor.",
+        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Finish "
     },
     {
         "level": "LIVING ROOM",
-        "levelDescription": "This is the Living Room ",
+        "levelDescription": "A big room with a two red armchairs in front of a fireplace. There are some painting hanging on the walls. You can feel the heat emitting from the fireplace, the flame is dancing so violently. The fireplace could be useful later on... ",
         "levelTitle": "Living Room"
     },
     {
         "level": "KITCHEN",
-        "levelDescription": "This is the Kitchen",
+        "levelDescription": "An old kitchen, but some modern modifications. There are some plates and glasses in the sink that needs to be washed. By the looks of it, it seems that the person who lived here hasn’t done her or his dishes for a while. The fridge is pretty dusty and the dust is covering the photograph on the fridge. You can’t figure out what is in the picture because of all the dust. There is also a staircase leading down to the basement.",
         "levelTitle": "Kitchen"
     },
     {
         "level": "HALL",
-        "levelDescription": "This is the Hall",
+        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures and the wall, however, you can’t seem to see persons’ faces in the pictures for some reasons. Every face is blurry. Beneath the pictures there is a small table with a bowl, the bowl contains car keys.",
         "levelTitle": "Hall"
     },
     {
         "level": "UPPER FLOOR",
-        "levelDescription": "This is the Upper Floor",
+        "levelDescription": "There nothing much up here except a door, which you guess is the bedroom, an attic and a window which is painted black, but somehow the sunlight still shines through the black paint.",
         "levelTitle": "Upper Floor"
     },
     {
         "level": "ATTIC",
-        "levelDescription": "This is the Attic",
+        "levelDescription": "It looks like a regular bedroom, the walls are red, a bookcase filled with obviously books, photos, a tiny leather boot and a box full of old watches. There is a big round window in the room which is painted black, but it doesn’t  block the sunlight which is kind of odd. In the center of the bedroom, there is a canvas which is painted red.",
         "levelTitle": "Attic"
     },
     {
         "level": "BEDROOM",
-        "levelDescription": "This is the Bedroom",
+        "levelDescription": "The attic is very dark, but the sunbeams from the windows makes it much easier to distinguish what hides behind the dark. There are some boxes with the label 'memories'. In the middle of the attic is a grey key.",
         "levelTitle": "Bedroom"
     },
     {
         "level": "BASEMENT",
-        "levelDescription": "This is the Basement",
+        "levelDescription": "It’s cold in the basement. There is not so much down here, just some old furnitures and some boxes filled with old toys, pictures, watches and so on. Most of it seems to be covered by a red cloth to protect them from getting all dusty, except a ladder which is leaning on the wall.",
         "levelTitle": "Basement"
     },
-
     {
         "level": "CRIBROOM",
         "levelDescription": "This is a room with a white crib in it.",
         "levelTitle": "Cribroom"
     },
-
     {
         "level": "MAIN HALL",
         "levelDescription": "This is the main hall. Cobweb covers the walls...",
@@ -188,13 +186,11 @@
         "levelDescription": "A nursing room.. and a changing table. A funky smell surrounds this room..",
         "levelTitle": "Nursing room"
     },
-
     {
         "level": "STUDYROOM",
         "levelDescription": "A study. A nice comfy chair, books on the shelves and a decanter filled with a golden liquid and a used glass. Dust everywhere.",
         "levelTitle": "Study room"
     },
-
     {
         "level": "MESSYROOM",
         "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls...",

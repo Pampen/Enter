@@ -9,7 +9,7 @@
     },
     "photograph": {
         "itemName": "Photograph",
-        "itemDescription": "An old dusty photograph. It looks like it’s a picture of the two little girls but you can’t seem to see their faces."
+        "itemDescription": "An old dusty photograph. It looks like it's a picture of the two little girls but you can't seem to see their faces."
     },
     "canvas":{
         "itemName": "Canvas",
@@ -39,33 +39,25 @@
         "itemName": "Torn pages",
         "itemDescription": "It's a bunch of torn pages with yellowed, frayed edges. The pages appear to have the words JO FU YL drawn on to it, it could be some kind of puzzle?"
     },
-    "Crib": {
+    "crib": {
         "itemName": "Crib",
         "itemDescription": "An old but sturdy crib."
     },
-        "pinkKey": {
-            "itemName": "Pink key",
-            "itemDescription": "A pink key."
+    "pinkKey": {
+        "itemName": "Pink key",
+        "itemDescription": "A pink key."
     },
     "torch": {
         "itemName": "Torch",
         "itemDescription": "It's a torch. It emits a steady glow of light, but no light. You feel like this might be important."
     },
-    "item1": {
-        "itemName": "Item1",
-        "itemDescription": "This is an item! 1"
+    "rustyKey": {
+        "itemName": "Rusty key",
+        "itemDescription": "A rusty old key"
     },
-    "item2": {
-        "itemName": "Item 2",
-        "itemDescription": "It's an item! 2"
-    },
-    "item3": {
-        "itemName": "item 3",
-        "itemDescription": "It's an item! 3"
-    },
-    "item4": {
-        "itemName": "Item 4",
-        "itemDescription": "It's an item! 4"
+    "blueKey": {
+        "itemName": "Blue key",
+        "itemDescription": "This key is used in the mirror room"
     },
     "bronzeKey": {
         "itemName": "Bronze key",
