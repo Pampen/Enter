@@ -66,8 +66,8 @@ def handleShed(userInput, state):
     if userInput == 'GO WEST' or userInput == "GO SOUTH" or userInput == "GO NORTH":
         return handleInvalidDirection(state)
     elif userInput == 'TAKE STAIRS':
-        return handleBasement(state)
-        #return goToLevel(state, "CELLAR")
+        #return handleBasement(state)
+        return goToLevel(state, "CELLAR")
     elif userInput == 'GO EAST':
         return goToLevel(state, "OUTSIDE_SHED")
     else:
@@ -104,10 +104,12 @@ def handleCabin(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleCellar(userInput, state):
-    if userInput == 'GO WEST' or userInput == "GO NORTH" or userInput == "GO EAST":
+    if userInput == 'GO WEST' or userInput == "GO NORTH" or userInput == "GO EAST" or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
-    elif userInput == 'GO SOUTH':
+    elif userInput == 'TAKE STAIRS':
         return goToLevel(state, "SHED")
+    elif userInput == "INSPECT GLIMMER":
+        return handleGlimmer(state)
     elif userInput == "TAKE BRONZE KEY":
         return takeItem(state, 'bronzeKey')
     else:
@@ -127,6 +129,15 @@ def handleBasement(state):
         'state': state,
         'pageChanges': {
             'levelChatboxText': "While trying to make your way downstairs, a door is blocking your way from moving forward. The door appears to be locked with a bunch of chains put onto it, there's a padlock that requires you to enter 6 words in a certain order."
+        }
+    }
+    return response
+
+def handleGlimmer(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': "While taking a closer look at the glimmer, you can see the reflection of a key that sits right besides a big cogwheel. You could probably grab it if you tried hard enough."
         }
     }
     return response  
