@@ -25,6 +25,8 @@ def handleBabyroom(userInput, state):
         return takeItem(state, 'pinkKey')
     elif userInput == 'GO NORTH' or userInput == 'GO WEST':
         return handleInvalidDirection(state)
+    else:
+        return handleInvalidInput(userInput, state)
 
 def handleNursingroom(userInput, state):
     if userInput == 'GO WEST':
@@ -37,6 +39,8 @@ def handleNursingroom(userInput, state):
         return takeItem(state, 'moldyPacifier')
     elif userInput == 'GO NORTH':
         return handleInvalidDirection(state)
+    else:
+        return handleInvalidInput(userInput, state)
 
 def handleStudyroom(userInput, state):
     if userInput == 'GO NORTH':
@@ -47,6 +51,8 @@ def handleStudyroom(userInput, state):
         return takeItem(state, 'dirtyBlanket')
     elif userInput == 'GO WEST' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
+    else:
+        return handleInvalidInput(userInput, state)
 
 def handleMessyroom(userInput, state):
     if userInput == 'GO NORTH':
@@ -59,3 +65,5 @@ def handleMessyroom(userInput, state):
         return goToLevel(state, 'Blue start')
     elif userInput == 'GO SOUTH':
         return handleInvalidDirection(state)
+    else:
+        return handleInvalidInput(userInput, state)
