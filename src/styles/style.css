@@ -104,7 +104,7 @@ body {
 .item {
   position: relative;
 }
-.item-description {
+.description {
   display: none;
   position: absolute;
   top: 100%;
@@ -116,7 +116,7 @@ body {
   background-color: white;
   color: black;
 }
-.item-name:hover + .item-description{
+.item-name:hover + .description{
   display: block;
 }
 #command-button {

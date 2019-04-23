@@ -19,23 +19,10 @@ class App extends Component {
       chatboxText: [],
       inventory: {
       },
-      level: 'OUTSIDE',
-      commands : { 
-        goCommand: {
-          commandName: "GO (North)",
-          commandDescription: "Use this command to navigate through the game"},
-        takeCommand: {
-          commandName: "TAKE (item)",
-          commandDescription: "Use this command to pick up items and add them to your inventory"},
-        inspectCommand: {
-          commandnAME: "INSPECT (item)",
-          commandDescription: "Use this command to inspect items that you have acquired"
-        }
-      }
+      level: 'OUTSIDE'
     }
     this.updateState=this.updateState.bind(this)
   }
-
   updateState(inputElementValue) {
     sendMessage(inputElementValue, this.state).then(response => {
       const newTitle = response.pageChanges.levelTitle || null
@@ -90,6 +77,18 @@ showCommandModal = () => {
 }
 
   render() {
+    const commands = { 
+      goCommand: {
+        commandName: "GO (North)",
+        commandDescription: "Use this command to navigate through the game"},
+      takeCommand: {
+        commandName: "TAKE (item)",
+        commandDescription: "Use this command to pick up items and add them to your inventory"},
+      inspectCommand: {
+        commandName: "INSPECT (item)",
+        commandDescription: "Use this command to inspect items that you have acquired"
+      }
+    }
     return (
       <main id="wrapper">
         <div className="container">
@@ -116,7 +115,7 @@ showCommandModal = () => {
               onClose={this.showCommandModal}
               show={this.state.commandShow}
               >
-              <Commands commandInfo={this.state.commands}/>
+              <Commands commandInfo={commands}/>
             </Modal>
             <Terminal
               updateState={this.updateState}

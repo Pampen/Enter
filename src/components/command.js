@@ -8,7 +8,7 @@ export default class Command extends Component {
                 <span className="item-name"> 
                     {commandList.commandName}
                 </span>
-                <span className="item-description">
+                <span className="description">
                     {commandList.commandDescription}
                 </span>
             </li>
