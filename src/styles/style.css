@@ -28,6 +28,7 @@ body {
 }
 .game-screen-header {
   height: 300px;
+  width: 640px;
   background-color: #444;
 }
 .game-text-box {
