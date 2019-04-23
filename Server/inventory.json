@@ -9,7 +9,7 @@
     },
     "photograph": {
         "itemName": "Photograph",
-        "itemDescription": "An old dusty photograph. It looks like it’s a picture of the two little girls but you can’t seem to see their faces."
+        "itemDescription": "An old dusty photograph. It looks like it's a picture of the two little girls but you can't seem to see their faces."
     },
     "canvas":{
         "itemName": "Canvas",
@@ -39,7 +39,7 @@
         "itemName": "Torn pages",
         "itemDescription": "It's a bunch of torn pages with yellowed, frayed edges. The pages appear to have the words JO FU YL drawn on to it, it could be some kind of puzzle?"
     },
-    "Crib": {
+    "crib": {
         "itemName": "Crib",
         "itemDescription": "An old but sturdy crib."
     },
