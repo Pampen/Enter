@@ -36,8 +36,8 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   padding: 16px;
-  overflow: scroll;
-  max-height: 318px;
+  overflow: hidden;
+  height: 318px;
   color: #999;
 }
 .game-text-box p:last-child  {
@@ -106,6 +106,7 @@ body {
   display: none;
   position: absolute;
   top: 100%;
+  z-index: 4;
   padding: 10px;
   border: 5px solid black;
   border-radius: 0 15px 15px 15px;

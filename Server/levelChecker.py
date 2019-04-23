@@ -3,7 +3,7 @@ from tutorial import handleGreenHouse, handleOutside, handlePorch
 from MainHall import handleMainHall
 from redDoor import handleUpperFloor, handleLivingRoom, handleKitchen, handleHall, handleBedroom, handleBasement, handleAttic
 from pinkDoor import handleBabyroom, handleCribroom, handleMessyroom, handleNursingroom, handleStudyroom
-from greenDoor import handleBeach, handleCabin, handleCellar, handleGate, handleOutsideShed, handleShed, handleOutsideShipwreck, handleShipwreck, handleLighthouse, handleLighthouseOutside, handleLighthouseTop, handleOcean
+from greenDoor import handleBeach, handleCabin, handleCellar, handleGate, handleOutsideShed, handleShed, handleOutsideShipwreck, handleShipwreck, handleLighthouse, handleLighthouseOutside, handleLighthouseTopFloor, handleOcean
 
 levels = {
     'OUTSIDE': handleOutside,
@@ -19,7 +19,7 @@ levels = {
     'SHIPWRECK': handleShipwreck,
     'LIGHTHOUSE_OUTSIDE': handleLighthouseOutside,
     'LIGHTHOUSE': handleLighthouse,
-    'LIGHTHOUSE_TOP': handleLighthouseTop,
+    'LIGHTHOUSE_TOP': handleLighthouseTopFloor,
     'Blue start': handleBlueStart,
     'Blue Torch Room': handleTorchRoom,
     'Blue Corridor 1': handleBlueCorridor1,
