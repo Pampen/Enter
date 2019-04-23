@@ -6,6 +6,7 @@ import GameScreen from './components/game-screen'
 import Terminal from './components/terminal'
 import Inventory from './components/inventory'
 import Modal from './components/Modal'
+import Commands from './components/commands'
 
 import apple from './assets/apple.jpg'
 
@@ -22,18 +23,12 @@ class App extends Component {
     }
     this.updateState=this.updateState.bind(this)
   }
-
-
   updateState(inputElementValue) {
     sendMessage(inputElementValue, this.state).then(response => {
       const newTitle = response.pageChanges.levelTitle || null
       const newDescription = response.pageChanges.levelDescription || null
       const newChatboxText = response.pageChanges.levelChatboxText || null
-
       const newItemDescription = response.pageChanges.itemDescription || null 
-      const newItemName = response.pageChanges.itemName || null
-
-      
 
       const newGameState = {}
       newGameState.inventory = response.state.inventory
@@ -82,6 +77,18 @@ showCommandModal = () => {
 }
 
   render() {
+    const commands = { 
+      goCommand: {
+        commandName: "GO (North)",
+        commandDescription: "Use this command to navigate through the game"},
+      takeCommand: {
+        commandName: "TAKE (item)",
+        commandDescription: "Use this command to pick up items and add them to your inventory"},
+      inspectCommand: {
+        commandName: "INSPECT (item)",
+        commandDescription: "Use this command to inspect items that you have acquired"
+      }
+    }
     return (
       <main id="wrapper">
         <div className="container">
@@ -92,6 +99,7 @@ showCommandModal = () => {
               title={this.state.title}
               description={this.state.description}
               chatboxText={this.state.chatboxText}
+              level={this.state.level}
             />
             <Modal 
               onClose={this.showMapModal}
@@ -106,7 +114,9 @@ showCommandModal = () => {
             </Modal>
             <Modal
               onClose={this.showCommandModal}
-              show={this.state.commandShow}>
+              show={this.state.commandShow}
+              >
+              <Commands commandInfo={commands}/>
             </Modal>
             <Terminal
               updateState={this.updateState}

@@ -1,0 +1,62 @@
+[
+    {
+        "level": "Blue start",
+        "levelDescription": "With the torch in hand you can make out the end of the hallway infront of you. ",
+        "levelTitle": "Blue start"
+    },
+    {
+        "level": "Blue Torch Room",
+        "levelDescription": "In the room, there's a desk with a wooden chair and a torch hanging on the wall. It seems the torch isn't bolted to the wall, you might be able to pick it up.",
+        "levelTitle": "Blue Torch Room"
+    },
+    {
+        "level": "Blue Corridor 1",
+        "levelDescription": "As you enter the hallway, you see there’s corridors to the left, right and in front of you. The sobbing becomes ever so clearer. ",
+        "levelTitle": "Blue Corridor 1"
+    },
+    {
+        "level": "Blue Corridor 2",
+        "levelDescription": "As you hold your torch up you catch a glimpse of something shining in front of you down the corridor but the faint sobbing subsides. ",
+        "levelTitle": "Blue Corridor 2"
+    },
+    {
+        "level": "Blue Corridor 3",
+        "levelDescription": "On the floor, there's a rusty key in front of your feet",
+        "levelTitle": "Blue Corridor 3"
+    },
+    {
+        "level": "Blue Corridor 4",
+        "levelDescription": "As you hold your torch up you catch a glimpse of something shining to the left of you down the corridor.",
+        "levelTitle": "Blue Corridor 4"
+    },
+    {
+        "level": "Blue Corridor 5",
+        "levelDescription": "The sobbing increases, you can hear it in both your ears.",
+        "levelTitle": "Blue Corridor 5"
+    },
+    {
+        "level": "Blue Corridor 6",
+        "levelDescription": "As you walk forwards the sobbing increases. You walk up to a closed metal gate, to your right is a damp room.",
+        "levelTitle": "Blue Corridor 6"
+    },
+    {
+        "level": "Blue Corridor 7",
+        "levelDescription": "In the room there’s a keyhole on opposite side of the gate. ",
+        "levelTitle": "Blue Corridor 7"
+    },
+    {
+        "level": "Blue Corridor 8",
+        "levelDescription": "The sobbing increases, you can see a corridor on your left. ",
+        "levelTitle": "Blue Corridor 8"
+    },
+    {
+        "level": "Blue Corridor 9",
+        "levelDescription": "The sobbing becomes significantly louder, you can make out a figure in front of you sitting on the floor. ",
+        "levelTitle": "Blue Corridor 9"
+    },
+    {
+        "level": "Blue Finish",
+        "levelDescription": "On the floor, there’s a dark haired girl sitting on the ground, with her head in her hands covering her face. As you walk up and lay your hand on her shoulder, she crumbles into ash. You jump back, shook by the event. In the ash there’s a COLOR? key, you pick it up. Could this be the final piece of the puzzle?",
+        "levelTitle": "Blue Finish "
+    }
+]

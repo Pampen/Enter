@@ -9,7 +9,7 @@ export default class Item extends Component {
                 <span className="item-name"> 
                     {item.itemName}
                 </span>
-                <span className="item-description">
+                <span className="description">
                     {item.itemDescription}
                 </span>
             </li>

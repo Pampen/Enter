@@ -6,7 +6,6 @@ body {
 }
 
 .container{
-
   display: flex;
   flex-grow: 1;
   justify-content: center;
@@ -29,6 +28,7 @@ body {
 }
 .game-screen-header {
   height: 300px;
+  width: 640px;
   background-color: #444;
 }
 .game-text-box {
@@ -114,7 +114,7 @@ body {
 .item {
   position: relative;
 }
-.item-description {
+.description {
   display: none;
   position: absolute;
   top: 100%;
@@ -126,7 +126,7 @@ body {
   background-color: white;
   color: black;
 }
-.item-name:hover + .item-description{
+.item-name:hover + .description{
   display: block;
 }
 #command-button {

@@ -8,8 +8,30 @@ def goToLevel(state, currentLevel):
             "levelTitle": '',
             "levelDescription": ''
         }
-    }
+    } 
     data = openLevelFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
+
+def checkTorchItem(state, currentLevel):
+    if "torch" in state['inventory']:
+        return torchBlueDescription(state, currentLevel)
+    elif currentLevel != None:
+        return goToLevel(state, currentLevel)
+        
+def torchBlueDescription(state, currentLevel):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelTitle": '',
+            "levelDescription": ''
+        }
+    } 
+    data = openTorchFile()
     for level in data:
         if level["level"] == currentLevel:
             response['pageChanges']['levelTitle'] = level['levelTitle']
@@ -101,4 +123,12 @@ def openItemFile():
     
     with open(filePath, 'r') as getData:
         data = json.loads(getData.read())
+        return data
+
+def openTorchFile():
+    cwd = os.getcwd()
+    filePath = cwd + '/Server/blueTorchDescription.json'
+    
+    with open(filePath, 'r') as getData:
+        data =json.loads(getData.read())
         return data
