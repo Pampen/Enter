@@ -2,21 +2,21 @@ from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handle
 
 def handleBeach(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'OUTSIDE_SHED')
+        return goToLevel(state, 'OUTSIDE_SHED', userInput)
     elif userInput == 'GO NORTH':
-        return goToLevel(state, 'GATE')
+        return goToLevel(state, 'GATE', userInput)
     elif userInput == 'GO SOUTH':
         return handleOcean(state)
     elif userInput == 'GO EAST':
-        return goToLevel(state, "OUTSIDE_SHIPWRECK")
+        return goToLevel(state, "OUTSIDE_SHIPWRECK", userInput)
     else:
         return handleInvalidInput(userInput, state)
 
 def handleGate(userInput, state):
     if userInput == 'GO NORTH':
-        return goToLevel(state, 'LIGHTHOUSE_OUTSIDE')
+        return goToLevel(state, 'LIGHTHOUSE_OUTSIDE', userInput)
     elif userInput == "GO SOUTH":
-        return goToLevel(state, "BEACH")
+        return goToLevel(state, "BEACH", userInput)
     elif userInput == 'GO WEST' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
     else:
@@ -24,9 +24,9 @@ def handleGate(userInput, state):
 
 def handleLighthouseOutside(userInput, state):
     if userInput == 'GO NORTH':
-        return goToLevel(state, 'LIGHTHOUSE')
+        return goToLevel(state, 'LIGHTHOUSE', userInput)
     elif userInput == "GO SOUTH":
-        return goToLevel(state, "GATE")
+        return goToLevel(state, "GATE", userInput)
     elif userInput == 'GO WEST' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
     else:
@@ -36,9 +36,9 @@ def handleLighthouse(userInput, state):
     if userInput == 'GO WEST' or userInput == 'GO EAST' or userInput == 'GO NORTH':
         return handleInvalidDirection(state)
     elif userInput == "GO SOUTH":
-        return goToLevel(state, "LIGHTHOUSE_OUTSIDE")
+        return goToLevel(state, "LIGHTHOUSE_OUTSIDE", userInput)
     elif userInput == 'TAKE STAIRS':
-        return goToLevel(state, "LIGHTHOUSE_TOP")
+        return goToLevel(state, "LIGHTHOUSE_TOP", userInput)
     else:
         return handleInvalidInput(userInput, state)
 
@@ -46,7 +46,7 @@ def handleLighthouseTopFloor(userInput, state):
     if userInput == 'GO NORTH' or userInput == 'GO WEST' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
     elif userInput == "TAKE STAIRS":
-        return goToLevel(state, "LIGHTHOUSE")
+        return goToLevel(state, "LIGHTHOUSE", userInput)
     elif userInput == "TAKE GREEN KEY" or userInput == "TAKE KEY":
         return takeItem(state, "greenKey")
     else:
@@ -54,11 +54,11 @@ def handleLighthouseTopFloor(userInput, state):
 
 def handleOutsideShed(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'SHED')
+        return goToLevel(state, 'SHED', userInput)
     elif userInput == 'GO NORTH' or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
     elif userInput == 'GO EAST':
-        return goToLevel(state, "BEACH")
+        return goToLevel(state, "BEACH", userInput)
     else:
         return handleInvalidInput(userInput, state)
 
@@ -69,15 +69,15 @@ def handleShed(userInput, state):
         return handleBasement(state)
         #return goToLevel(state, "CELLAR")
     elif userInput == 'GO EAST':
-        return goToLevel(state, "OUTSIDE_SHED")
+        return goToLevel(state, "OUTSIDE_SHED", userInput)
     else:
         return handleInvalidInput(userInput, state)
   
 def handleOutsideShipwreck(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'BEACH')
+        return goToLevel(state, 'BEACH', userInput)
     elif userInput == 'GO EAST':
-        return goToLevel(state, 'SHIPWRECK')
+        return goToLevel(state, 'SHIPWRECK', userInput)
     elif userInput == 'GO SOUTH' or userInput == 'GO NORTH':
         return handleInvalidDirection(state)
     else:
@@ -85,9 +85,9 @@ def handleOutsideShipwreck(userInput, state):
 
 def handleShipwreck(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'SHIPWRECK_OUTSIDE')
+        return goToLevel(state, 'SHIPWRECK_OUTSIDE', userInput)
     elif userInput == "GO EAST":
-        return goToLevel(state, "CABIN")
+        return goToLevel(state, "CABIN", userInput)
     elif userInput == 'GO NORTH' or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
     else:
@@ -95,7 +95,7 @@ def handleShipwreck(userInput, state):
 
 def handleCabin(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'SHIPWRECK')
+        return goToLevel(state, 'SHIPWRECK', userInput)
     elif userInput == "GO EAST" or userInput == "GO NORTH" or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
     elif userInput == "TAKE TORN PAGES" or userInput == "TAKE PAGES":
@@ -107,7 +107,7 @@ def handleCellar(userInput, state):
     if userInput == 'GO WEST' or userInput == "GO NORTH" or userInput == "GO EAST":
         return handleInvalidDirection(state)
     elif userInput == 'GO SOUTH':
-        return goToLevel(state, "SHED")
+        return goToLevel(state, "SHED", userInput)
     elif userInput == "TAKE BRONZE KEY":
         return takeItem(state, 'bronzeKey')
     else:
