@@ -79,7 +79,7 @@ showCommandModal = () => {
   render() {
     const commands = { 
       goCommand: {
-        commandName: "GO (North)",
+        commandName: "GO (North/West/South/East)",
         commandDescription: "Use this command to navigate through the game"},
       takeCommand: {
         commandName: "TAKE (item)",
