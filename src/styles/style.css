@@ -2,6 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Press Start 2P', sans-serif;
+  background-color: #555;
 }
 .container{
   display: flex;
@@ -23,17 +24,18 @@ body {
   flex-grow: 1;
 }
 .game-screen-header {
-  height: 150px;
-  background-color: #555;
+  height: 300px;
+  background-color: #444;
 }
 .game-text-box {
   display: flex;
   flex-shrink: 1;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 16px;
-  overflow: scroll;
-  max-height: 318px;
+  padding: 0px 0px 30px 15px;
+  overflow: hidden;
+  height: 160px;
+  border: 5px solid black;
   color: #999;
 }
 .game-text-box p:last-child  {
@@ -46,7 +48,7 @@ body {
 .terminal {
   display: flex;
   height: 50px;
-  background-color: #555;
+  background-color: #444;
 }
 .terminal-input {
   font-size: 24px;
@@ -101,6 +103,7 @@ body {
   display: none;
   position: absolute;
   top: 100%;
+  z-index: 4;
   padding: 10px;
   border: 5px solid black;
   border-radius: 0 15px 15px 15px;
@@ -118,7 +121,8 @@ body {
   font-size: 24px;
   letter-spacing: 6px;
   margin-left: 5px;
-  text-shadow: 0 0 6px rgb(98, 206, 98);
+  text-shadow: 0 0 6px black;
+  color: white;
 }
 #game-title-first-letter {
   font-size: 32px;
