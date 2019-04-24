@@ -109,6 +109,24 @@ def handleInvalidPickUp(userInput, state):
     }
     return response
 
+def handleDoorLock(state, currentLevel):
+    response = {
+                'state': state,
+                'pageChanges': {
+                    'levelChatboxText': ''
+                    }
+                }
+    data = openUseDescriptionFile()
+    print(data, "ÅÅÅÅ", currentLevel)
+    for descrption in data:
+        print(descrption)
+        for d in descrption.keys():
+            print(d)
+            if d == currentLevel:
+                print("hej jesper")
+                response['pageChanges']['levelChatboxText'] = descrption[d]
+                return response
+
 def openLevelFile():
     cwd = os.getcwd()  # Get the current working directory (cwd)
     filePath = cwd + '/Server/tutorial.json'
@@ -128,6 +146,14 @@ def openItemFile():
 def openTorchFile():
     cwd = os.getcwd()
     filePath = cwd + '/Server/blueTorchDescription.json'
+    
+    with open(filePath, 'r') as getData:
+        data =json.loads(getData.read())
+        return data
+
+def openUseDescriptionFile():
+    cwd = os.getcwd()
+    filePath = cwd + '/Server/invalidUseDescription.json'
     
     with open(filePath, 'r') as getData:
         data =json.loads(getData.read())
