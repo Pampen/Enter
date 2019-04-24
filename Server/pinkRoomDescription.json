@@ -1,0 +1,27 @@
+[
+{
+    "level": "CRIBROOM",
+    "levelDescription": "This is a room with a white crib in it. It looks out of place.",
+    "levelTitle": "Cribroom"
+},
+{
+    "level": "BABYROOM",
+    "levelDescription": "This room is filled with babythings. The walls have painted unicorns and the shelves are filled with toys. Only thing missing is the crib..",
+    "levelTitle": "Babyroom"
+},
+{
+    "level": "NURSINGROOM",
+    "levelDescription": "A nursing room.. and a changing table with a moldy pacifier on it. A funky smell surrounds this room..",
+    "levelTitle": "Nursing room"
+},
+{
+    "level": "STUDYROOM",
+    "levelDescription": "A study. A nice comfy chair, books on the shelves and a decanter filled with a golden liquid and a used glass. Dust everywhere.",
+    "levelTitle": "Study room"
+},
+{
+    "level": "MESSYROOM",
+    "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls...",
+    "levelTitle": "Messy room"
+}
+]
