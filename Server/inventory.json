@@ -21,7 +21,7 @@
     },
     "redKey":{
         "itemName": "Red key",
-        "itemDescription": "A red key"
+        "itemDescription": "A red key."
     },
     "wornDoll": {
         "itemName": "Worn doll",
@@ -53,11 +53,11 @@
     },
     "rustyKey": {
         "itemName": "Rusty key",
-        "itemDescription": "A rusty old key"
+        "itemDescription": "A rusty old key."
     },
     "blueKey": {
         "itemName": "Blue key",
-        "itemDescription": "This key is used in the mirror room"
+        "itemDescription": "This key is used in the mirror room."
     },
     "bronzeKey": {
         "itemName": "Bronze key",

@@ -19,7 +19,7 @@ export default class GameScreen extends Component {
                     type="text"
                     className="terminal-input"
                 ></input>
-                <button id="game-button">Enter</button>
+                <button id="enter-button">Enter</button>
                 </form>
             </div>
         )
