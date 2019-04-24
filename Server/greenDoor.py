@@ -66,8 +66,8 @@ def handleShed(userInput, state):
     if userInput == 'GO WEST' or userInput == "GO SOUTH" or userInput == "GO NORTH":
         return handleInvalidDirection(state)
     elif userInput == 'TAKE STAIRS':
-        #return handleBasement(state)
-        return goToLevel(state, "CELLAR")
+        return handleBasement(state)
+        #return goToLevel(state, "CELLAR")
     elif userInput == 'GO EAST':
         return goToLevel(state, "OUTSIDE_SHED")
     else:
