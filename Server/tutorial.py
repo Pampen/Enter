@@ -3,9 +3,9 @@ from blueDoor import handleBlueStart
 
 def handleOutside(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'GREENHOUSE')
+        return goToLevel(state, 'GREENHOUSE', userInput)
     elif userInput == 'GO NORTH':
-        return goToLevel(state, 'PORCH')
+        return goToLevel(state, 'PORCH', userInput)
     elif userInput == 'GO SOUTH' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
     else:
@@ -13,9 +13,9 @@ def handleOutside(userInput, state):
 
 def handlePorch(userInput, state):
     if userInput == 'GO SOUTH':
-        return goToLevel(state, 'OUTSIDE')
+        return goToLevel(state, 'OUTSIDE', userInput)
     elif userInput == 'GO NORTH':
-        return goToLevel(state, 'MAIN_HALL')
+        return goToLevel(state, 'MAIN_HALL', userInput)
     elif userInput == 'GO EAST' or userInput == 'GO WEST':
         return handleInvalidDirection(state)
     else:
@@ -23,7 +23,7 @@ def handlePorch(userInput, state):
 
 def handleGreenHouse(userInput, state):
     if userInput == 'GO EAST':
-        return goToLevel(state, 'OUTSIDE')
+        return goToLevel(state, 'OUTSIDE', userInput)
     elif userInput == "TAKE BRASS KEY":
         return takeItem(state, 'brassKey')
     elif userInput == 'GO NORTH' or userInput == 'GO SOUTH' or userInput == 'GO WEST':
