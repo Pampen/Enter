@@ -1,0 +1,46 @@
+/*
+Ska kontrollera vilket main-level ett visst level hör till!
+*/
+const levels = {
+    "OUTSIDE": "TUTORIAL",
+    "GREENHOUSE": "TUTORIAL",
+    "PORCH": "TUTORIAL",
+    "MAINHALL": "TUTORIAL",
+    "BEACH": "JOY",
+    "GATE": "JOY",
+    "LIGHTHOUSE_OUTSIDE": "JOY",
+    "LIGHTHOUSE": "JOY",
+    "LIGHTHOUSE_TOP": "JOY",
+    "OUTSIDE_SHED": "JOY",
+    "SHED": "JOY",
+    "CELLAR": "JOY",
+    "OUTSIDE_SHIPWRECK": "JOY",
+    "SHIPWRECK": "JOY",
+    "CABIN": "JOY",
+    "BLUE_START": "SADNESS",
+    "BLUE_TORCH_ROOM": "SADNESS",
+    "BLUE_CORRIDOR_1": "SADNESS",
+    "BLUE_CORRIDOR_2": "SADNESS",
+    "BLUE_CORRIDOR_3": "SADNESS",
+    "BLUE_CORRIDOR_4": "SADNESS",
+    "BLUE_CORRIDOR_5": "SADNESS",
+    "BLUE_CORRIDOR_6": "SADNESS",
+    "BLUE_CORRIDOR_7": "SADNESS",
+    "BLUE_CORRIDOR_8": "SADNESS",
+    "BLUE_CORRIDOR_9": "SADNESS",
+    "BLUE_FINISH": "SADNESS",
+    "LIVING_ROOM": "ANGER",
+    "KITCHEN": "ANGER",
+    "HALL": "ANGER",
+    "UPPER_FLOOR": "ANGER",
+    "ATTIC": "ANGER",
+    "BEDROOM": "ANGER",
+    "BASEMENT": "ANGER",
+    "CRIBROOM": "LOVE",
+    "BABYROOM": "LOVE",
+    "NURSINGROOM": "LOVE",
+    "STUDYROOM": "LOVE",
+    "MESSYROOM": "LOVE"
+}
+
+export {levels}

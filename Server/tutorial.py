@@ -15,7 +15,7 @@ def handlePorch(userInput, state):
     if userInput == 'GO SOUTH':
         return goToLevel(state, 'OUTSIDE', userInput)
     elif userInput == 'GO NORTH':
-        return goToLevel(state, 'MAIN HALL', userInput)
+        return goToLevel(state, 'MAIN_HALL', userInput)
     elif userInput == 'GO EAST' or userInput == 'GO WEST':
         return handleInvalidDirection(state)
     else:

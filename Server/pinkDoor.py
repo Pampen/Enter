@@ -6,7 +6,7 @@ def handleCribroom(userInput, state):
     elif userInput == 'GO EAST':
         return goToLevel(state, 'MESSYROOM', userInput)
     elif userInput == 'GO WEST':
-        return goToLevel(state, 'MAIN HALL', userInput)
+        return goToLevel(state, 'MAIN_HALL', userInput)
     elif userInput == "TAKE CRIB":
         return takeItem(state, 'crib')
     elif userInput == 'GO SOUTH':
@@ -34,7 +34,7 @@ def handleNursingroom(userInput, state):
     elif userInput == 'GO SOUTH':
         return goToLevel(state, 'STUDYROOM', userInput)
     elif userInput == 'GO EAST':
-        return goToLevel(state, 'Blue start', userInput)
+        return goToLevel(state, 'BLUE_START', userInput)
     elif userInput == "TAKE MOLDY PACIFIER":
         return takeItem(state, 'moldyPacifier')
     elif userInput == 'GO NORTH':
@@ -62,7 +62,7 @@ def handleMessyroom(userInput, state):
     elif userInput == "TAKE TORN PAGES":
         return takeItem(state, 'tornPages')
     elif userInput == 'GO EAST':
-        return goToLevel(state, 'Blue start', userInput)
+        return goToLevel(state, 'BLUE_START', userInput)
     elif userInput == 'GO SOUTH':
         return handleInvalidDirection(state)
     else:
