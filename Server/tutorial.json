@@ -166,7 +166,7 @@
     },
     {
         "level": "CRIBROOM",
-        "levelDescription": "This is a room with a white crib in it.",
+        "levelDescription": "This is a room with a white crib in it. It looks out of place.",
         "levelTitle": "Cribroom"
     },
     {
@@ -183,7 +183,7 @@
 
     {
         "level": "NURSINGROOM",
-        "levelDescription": "A nursing room.. and a changing table. A funky smell surrounds this room..",
+        "levelDescription": "A nursing room.. and a changing table with a moldy pacifier on it. A funky smell surrounds this room..",
         "levelTitle": "Nursing room"
     },
     {

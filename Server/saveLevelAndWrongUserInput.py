@@ -1,12 +1,13 @@
 import json
 import os
 
-def goToLevel(state, currentLevel):
+def goToLevel(state, currentLevel, userInput):
     response = {
         'state': state,
         'pageChanges': {
             "levelTitle": '',
-            "levelDescription": ''
+            "levelDescription": '',
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }
     } 
     data = openLevelFile()
@@ -17,11 +18,11 @@ def goToLevel(state, currentLevel):
             response['state']['level'] = level['level']
             return response
 
-def checkTorchItem(state, currentLevel):
+def checkTorchItem(state, currentLevel, userInput):
     if "torch" in state['inventory']:
         return torchBlueDescription(state, currentLevel)
     elif currentLevel != None:
-        return goToLevel(state, currentLevel)
+        return goToLevel(state, currentLevel, userInput)
         
 def torchBlueDescription(state, currentLevel):
     response = {
@@ -68,20 +69,13 @@ def inspectItem(state, userInput):
                     }
                 }
                 return response
-            else:
+            else: 
                 return {
-                    'state': state, 
-                    'pageChanges': {
-                    'levelChatboxText': "Targarfbhsefbk ."
-                    
-                    }
-                }    
-    return {
-            'state': state, 
-            'pageChanges': {
-                    'levelChatboxText': "You do not seem to be carrying that."
-            }
-    }
+                        'state': state, 
+                        'pageChanges': {
+                                'levelChatboxText': "You do not seem to be carrying that."
+                        }
+                }
 def handleInvalidDirection(state):
     response = {
         'state': state,
@@ -89,22 +83,13 @@ def handleInvalidDirection(state):
             'levelChatboxText': 'You cannot go that way.'
         }
     }
-    return response  
+    return response 
 
 def handleInvalidInput(userInput, state):
     response = {
         'state': state,
         'pageChanges': {
             'levelChatboxText': 'You cannot ' + userInput + '.'
-        }
-    }
-    return response
-
-def handleInvalidPickUp(userInput, state):
-    response = {
-        'state': state,
-        'pageChanges': {
-            'levelChatboxText': 'You cannot pick up ' + userInput + '.'
         }
     }
     return response
