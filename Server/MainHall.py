@@ -4,7 +4,7 @@ def handleMainHall(userInput, state):
     if userInput == 'GO SOUTH':
         return goToLevel(state, 'PORCH')
     elif userInput == 'GO NORTH':
-        return goToLevel (state, 'LIVING ROOM')
+        return goToLevel (state, 'LIVING_ROOM')
     elif userInput == 'GO EAST':
         return goToLevel(state, 'CRIBROOM')
     elif userInput == 'GO WEST':  

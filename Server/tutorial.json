@@ -75,57 +75,57 @@
         "levelTitle": "Blue start"
     },
     {
-        "level": "Blue Torch Room",
+        "level": "BLUE_TORCH_ROOM",
         "levelDescription": "In the room, there's a desk with a wooden chair and a torch hanging on the wall. It seems the torch isn't bolted to the wall.",
         "levelTitle": "Blue Torch Room"
     },
     {
-        "level": "Blue Corridor 1",
+        "level": "BLUE_CORRIDOR_1",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 1"
     },
     {
-        "level": "Blue Corridor 2",
+        "level": "BLUE_CORRIDOR_2",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 2"
     },
     {
-        "level": "Blue Corridor 3",
+        "level": "BLUE_CORRIDOR_3",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 3"
     },
     {
-        "level": "Blue Corridor 4",
+        "level": "BLUE_CORRIDOR_4",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 4"
     },
     {
-        "level": "Blue Corridor 5",
+        "level": "BLUE_CORRIDOR_5",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 5"
     },
     {
-        "level": "Blue Corridor 6",
+        "level": "BLUE_CORRIDOR_6",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 6"
     },
     {
-        "level": "Blue Corridor 7",
+        "level": "BLUE_CORRIDOR_7",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 7"
     },
     {
-        "level": "Blue Corridor 8",
+        "level": "BLUE_CORRIDOR_8",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 8"
     },
     {
-        "level": "Blue Corridor 9",
+        "level": "BLUE_CORRIDOR_9",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 9"
     },
     {
-        "level": "Blue Finish",
+        "level": "BLUE_FINISH",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Finish "
     },
@@ -170,7 +170,7 @@
         "levelTitle": "Cribroom"
     },
     {
-        "level": "MAIN HALL",
+        "level": "MAIN_HALL",
         "levelDescription": "This is the main hall. Cobweb covers the walls...",
         "levelTitle": "Main Hall"
     },
