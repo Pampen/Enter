@@ -14,8 +14,11 @@ def handleOutside(userInput, state):
 def handlePorch(userInput, state):
     if userInput == 'GO SOUTH':
         return goToLevel(state, 'OUTSIDE')
-    elif userInput == 'GO NORTH':
-        return goToLevel(state, 'MAIN_HALL')
+    elif userInput == 'GO NORTH' and "brassKey" in state["inventory"]:
+        if userInput == 'USE BRASS KEY':
+            return goToLevel(state, 'MAIN_HALL')
+        else:
+            return handleInvalidInput(userInput, state)
     elif userInput == 'GO EAST' or userInput == 'GO WEST':
         return handleInvalidDirection(state)
     else:
