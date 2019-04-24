@@ -1,12 +1,13 @@
 import json
 import os
 
-def goToLevel(state, currentLevel):
+def goToLevel(state, currentLevel, userInput):
     response = {
         'state': state,
         'pageChanges': {
             "levelTitle": '',
-            "levelDescription": ''
+            "levelDescription": '',
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }
     }
     data = openLevelFile()
@@ -67,7 +68,7 @@ def handleInvalidDirection(state):
             'levelChatboxText': 'You cannot go that way.'
         }
     }
-    return response  
+    return response 
 
 def handleInvalidInput(userInput, state):
     response = {
