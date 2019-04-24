@@ -4,7 +4,6 @@ body {
   font-family: 'Press Start 2P', sans-serif;
   background-color: #555;
 }
-
 .container{
   display: flex;
   flex-grow: 1;
@@ -15,14 +14,12 @@ body {
   color: white;
   box-shadow: 9px 9px 0px -3px rgba(0,0,0,0.75);
 }
-
 .game-container{
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   position: relative;
   background-color: #333;
-
 }
 .game-screen {
   flex-grow: 1;
@@ -59,7 +56,6 @@ body {
   height: 50px;
   background-color: #444;
 }
-
 .terminal-input {
   font-size: 20px;
   padding: 0;
@@ -139,7 +135,6 @@ body {
 #command-button {
   margin-bottom: 5px;
 }
-
 .game-title {
   font-size: 24px;
   letter-spacing: 6px;
@@ -147,15 +142,12 @@ body {
   text-shadow: 0 0 6px black;
   color: white;
 }
-
 #game-title-first-letter {
   font-size: 32px;
 }
-
 #title-animation {
   animation: 0.47s infinite alternate blink-animation;
 }
-
 .close-button {
   border: none;
   background-color: transparent;
@@ -197,4 +189,20 @@ footer {
   100% {
     opacity: 1;
   }
+}
+
+.TUTORIAL{
+  color: orange;
+}
+.SADNESS{
+  color: #5B97A3;
+}
+.LOVE{
+  color: #D5879F;
+}
+.ANGER{
+  color: #CC441E;
+}
+.JOY{
+  color: #84AE90;
 }

@@ -70,67 +70,67 @@
         "levelTitle": "Captains Cabin"
     },
     {
-        "level": "Blue start",
+        "level": "BLUE_START",
         "levelDescription": "You enter a dark room, you hear a faint sobbing. The only light there is is shining through the bottom of a door to your left. In front of you is a hallway leading seemingly into nothingness. ",
         "levelTitle": "Blue start"
     },
     {
-        "level": "Blue Torch Room",
+        "level": "BLUE_TORCH_ROOM",
         "levelDescription": "In the room, there's a desk with a wooden chair and a torch hanging on the wall. It seems the torch isn't bolted to the wall.",
         "levelTitle": "Blue Torch Room"
     },
     {
-        "level": "Blue Corridor 1",
+        "level": "BLUE_CORRIDOR_1",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 1"
     },
     {
-        "level": "Blue Corridor 2",
+        "level": "BLUE_CORRIDOR_2",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 2"
     },
     {
-        "level": "Blue Corridor 3",
+        "level": "BLUE_CORRIDOR_3",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 3"
     },
     {
-        "level": "Blue Corridor 4",
+        "level": "BLUE_CORRIDOR_4",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 4"
     },
     {
-        "level": "Blue Corridor 5",
+        "level": "BLUE_CORRIDOR_5",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 5"
     },
     {
-        "level": "Blue Corridor 6",
+        "level": "BLUE_CORRIDOR_6",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 6"
     },
     {
-        "level": "Blue Corridor 7",
+        "level": "BLUE_CORRIDOR_7",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 7"
     },
     {
-        "level": "Blue Corridor 8",
+        "level": "BLUE_CORRIDOR_8",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 8"
     },
     {
-        "level": "Blue Corridor 9",
+        "level": "BLUE_CORRIDOR_9",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Corridor 9"
     },
     {
-        "level": "Blue Finish",
+        "level": "BLUE_FINISH",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Finish "
     },
     {
-        "level": "LIVING ROOM",
+        "level": "LIVING_ROOM",
         "levelDescription": "A big room with a two red armchairs in front of a fireplace. There are some painting hanging on the walls. You can feel the heat emitting from the fireplace, the flame is dancing so violently. The fireplace could be useful later on... ",
         "levelTitle": "Living Room"
     },
@@ -145,7 +145,7 @@
         "levelTitle": "Hall"
     },
     {
-        "level": "UPPER FLOOR",
+        "level": "UPPER_FLOOR",
         "levelDescription": "There nothing much up here except a door, which you guess is the bedroom, an attic and a window which is painted black, but somehow the sunlight still shines through the black paint.",
         "levelTitle": "Upper Floor"
     },
@@ -166,11 +166,11 @@
     },
     {
         "level": "CRIBROOM",
-        "levelDescription": "This is a room with a white crib in it.",
+        "levelDescription": "This is a room with a white crib in it. It looks out of place.",
         "levelTitle": "Cribroom"
     },
     {
-        "level": "MAIN HALL",
+        "level": "MAIN_HALL",
         "levelDescription": "This is the main hall. Cobweb covers the walls...",
         "levelTitle": "Main Hall"
     },
@@ -183,7 +183,7 @@
 
     {
         "level": "NURSINGROOM",
-        "levelDescription": "A nursing room.. and a changing table. A funky smell surrounds this room..",
+        "levelDescription": "A nursing room.. and a changing table with a moldy pacifier on it. A funky smell surrounds this room..",
         "levelTitle": "Nursing room"
     },
     {
