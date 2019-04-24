@@ -76,6 +76,7 @@ def inspectItem(state, userInput):
                                 'levelChatboxText': "You do not seem to be carrying that."
                         }
                 }
+
 def handleInvalidDirection(state):
     response = {
         'state': state,
