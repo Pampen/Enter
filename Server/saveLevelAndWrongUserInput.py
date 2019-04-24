@@ -19,7 +19,12 @@ def goToLevel(state, currentLevel):
 
 def checkTorchItem(state, currentLevel):
     if "torch" in state['inventory']:
-        return torchBlueDescription(state, currentLevel)
+        if "rustyKey" not in state['inventory']:
+            return torchBlueDescription(state, currentLevel)
+        elif state['inventory']['rustyKey']['itemUse'] == False:
+            return falseKeyDescription(state, currentLevel)
+        elif state['inventory']['rustyKey']['itemUse'] == True:
+            return trueKeyDescription(state, currentLevel)
     elif currentLevel != None:
         return goToLevel(state, currentLevel)
         
@@ -32,6 +37,38 @@ def torchBlueDescription(state, currentLevel):
         }
     } 
     data = openTorchFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
+
+def falseKeyDescription(state, currentLevel):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelTitle": '',
+            "levelDescription": ''
+        }
+    } 
+    data = openfalseKeyFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
+
+def trueKeyDescription(state, currentLevel):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelTitle": '',
+            "levelDescription": ''
+        }
+    } 
+    data = openTrueKeyFile()
     for level in data:
         if level["level"] == currentLevel:
             response['pageChanges']['levelTitle'] = level['levelTitle']
@@ -117,15 +154,26 @@ def handleDoorLock(state, currentLevel):
                     }
                 }
     data = openUseDescriptionFile()
-    print(data, "ÅÅÅÅ", currentLevel)
-    for descrption in data:
-        print(descrption)
-        for d in descrption.keys():
-            print(d)
-            if d == currentLevel:
-                print("hej jesper")
-                response['pageChanges']['levelChatboxText'] = descrption[d]
+    for lockDescrption in data:
+        for descriptionName in lockDescrption.keys():
+            if descriptionName == currentLevel:
+                response['pageChanges']['levelChatboxText'] = lockDescrption[descriptionName]
                 return response
+
+def handleUseItemBlueRoom(state, currentLevel):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelDescription": ''
+        }
+    } 
+    data = openTrueKeyFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
+    
 
 def openLevelFile():
     cwd = os.getcwd()  # Get the current working directory (cwd)
@@ -151,6 +199,22 @@ def openTorchFile():
         data =json.loads(getData.read())
         return data
 
+def openfalseKeyFile():
+    cwd = os.getcwd()
+    filePath = cwd + '/Server/blueFalseKeyDescription.json'
+    
+    with open(filePath, 'r') as getData:
+        data =json.loads(getData.read())
+        return data
+
+def openTrueKeyFile():
+    cwd = os.getcwd()
+    filePath = cwd + '/Server/blueTrueKeyDescription.json'
+    
+    with open(filePath, 'r') as getData:
+        data =json.loads(getData.read())
+        return data
+
 def openUseDescriptionFile():
     cwd = os.getcwd()
     filePath = cwd + '/Server/invalidUseDescription.json'
@@ -158,3 +222,4 @@ def openUseDescriptionFile():
     with open(filePath, 'r') as getData:
         data =json.loads(getData.read())
         return data
+

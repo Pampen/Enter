@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import checkTorchItem, handleInvalidDirection, handleInvalidInput, takeItem, checkTorchItem, handleDoorLock
+from saveLevelAndWrongUserInput import checkTorchItem, handleInvalidDirection, handleInvalidInput, takeItem, checkTorchItem, handleDoorLock, handleUseItemBlueRoom
 
 def handleBlueStart(userInput, state):
     if userInput == 'GO WEST':
@@ -80,8 +80,11 @@ def handleBlueCorridor6(userInput, state):
     elif userInput == 'GO EAST':
         return checkTorchItem(state, 'BLUE_CORRIDOR_7')
     elif userInput == 'GO NORTH':
-        if state['inventory']['rustyKey']['itemUse'] == True:
-            return checkTorchItem(state, 'BLUE_CORRIDOR_8')
+        if "rustyKey" in state['inventory']:
+            if state['inventory']['rustyKey']['itemUse'] == True:
+                return checkTorchItem(state, 'BLUE_CORRIDOR_8')
+            else:
+                return handleDoorLock(state, 'BLUE_CORRIDOR_6')
         else:
             return handleDoorLock(state, 'BLUE_CORRIDOR_6')
     elif userInput == 'GO WEST': 
@@ -92,7 +95,7 @@ def handleBlueCorridor6(userInput, state):
 def handleBlueCorridor7(userInput, state):
     if userInput == 'USE RUSTY KEY' and "rustyKey" in state["inventory"]:
         state['inventory']['rustyKey']['itemUse'] = True
-        return checkTorchItem(state, 'BLUE_CORRIDOR_7')
+        return handleUseItemBlueRoom(state, 'BLUE_CORRIDOR_7')
     elif userInput == 'GO SOUTH' or userInput == 'GO EAST' or userInput == 'GO NORTH': 
         return handleInvalidDirection(state)
     elif userInput == 'GO WEST':
@@ -116,17 +119,14 @@ def handleBlueCorridor9(userInput, state):
     elif userInput == 'GO NORTH': 
         return checkTorchItem(state, 'BLUE_FINISH')
     elif userInput == 'GO EAST':
-        return checkTorchItem(state, 'BLUE_CORRIDOR_9')
+        return checkTorchItem(state, 'BLUE_CORRIDOR_8')
     else:
         return handleInvalidInput(userInput, state)
 
-
 def handleBlueFinish(userInput, state):
-    if userInput == 'GO SOUTH':
-        return checkTorchItem(state, 'BLUE_CORRIDOR_9')
-    elif userInput == "TAKE BlUE KEY":
+    if userInput == "TAKE BLUE KEY":
         return takeItem(state, 'blueKey')
-    elif userInput == 'GO WEST' or userInput == 'GO NORTH' or userInput == 'GO EAST':
+    elif userInput == 'GO WEST' or userInput == 'GO NORTH' or userInput == 'GO EAST' or userInput == 'GO SOUTH':
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)

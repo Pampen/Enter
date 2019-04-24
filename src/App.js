@@ -19,7 +19,7 @@ class App extends Component {
       chatboxText: [],
       inventory: {
       },
-      level: 'BLUE_START'
+      level: 'BLUE_TORCH_ROOM'
     }
     this.updateState=this.updateState.bind(this)
   }
