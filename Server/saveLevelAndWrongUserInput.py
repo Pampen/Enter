@@ -9,8 +9,30 @@ def goToLevel(state, currentLevel, userInput):
             "levelDescription": '',
             'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }
-    }
+    } 
     data = openLevelFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
+
+def checkTorchItem(state, currentLevel, userInput):
+    if "torch" in state['inventory']:
+        return torchBlueDescription(state, currentLevel)
+    elif currentLevel != None:
+        return goToLevel(state, currentLevel, userInput)
+        
+def torchBlueDescription(state, currentLevel):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelTitle": '',
+            "levelDescription": ''
+        }
+    } 
+    data = openTorchFile()
     for level in data:
         if level["level"] == currentLevel:
             response['pageChanges']['levelTitle'] = level['levelTitle']
@@ -47,20 +69,13 @@ def inspectItem(state, userInput):
                     }
                 }
                 return response
-            else:
+            else: 
                 return {
-                    'state': state, 
-                    'pageChanges': {
-                    'levelChatboxText': "Targarfbhsefbk ."
-                    
-                    }
-                }    
-    return {
-            'state': state, 
-            'pageChanges': {
-                    'levelChatboxText': "You do not seem to be carrying that."
-            }
-    }
+                        'state': state, 
+                        'pageChanges': {
+                                'levelChatboxText': "You do not seem to be carrying that."
+                        }
+                }
 def handleInvalidDirection(state):
     response = {
         'state': state,
@@ -78,16 +93,7 @@ def handleInvalidInput(userInput, state):
         }
     }
     return response
-"""
-def handleInvalidTake(userInput, state):
-    response = {
-        'state': state,
-        'pageChanges': {
-            'levelChatboxText': 'You cannot take ' + userInput + '.'
-        }
-    }
-    return response
-"""
+
 def openLevelFile():
     cwd = os.getcwd()  # Get the current working directory (cwd)
     filePath = cwd + '/Server/tutorial.json'
@@ -102,4 +108,12 @@ def openItemFile():
     
     with open(filePath, 'r') as getData:
         data = json.loads(getData.read())
+        return data
+
+def openTorchFile():
+    cwd = os.getcwd()
+    filePath = cwd + '/Server/blueTorchDescription.json'
+    
+    with open(filePath, 'r') as getData:
+        data =json.loads(getData.read())
         return data
