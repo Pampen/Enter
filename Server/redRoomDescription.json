@@ -1,6 +1,6 @@
 [
     {
-        "level": "LIVING ROOM",
+        "level": "LIVING_ROOM",
         "levelDescription": "A big room with a two red armchairs in front of a fireplace. There are some painting hanging on the walls. You can feel the heat emitting from the fireplace, the flame is dancing so violently. The fireplace could be useful later on...",
         "levelTitle": "Living Room"
     },
@@ -15,7 +15,7 @@
         "levelTitle": "Hall"
     },
     {
-        "level": "UPPER FLOOR",
+        "level": "UPPER_FLOOR",
         "levelDescription": "There nothing much up here except a door, which you guess is the bedroom, an attic and a window which is painted black, but somehow the sunlight still shines through the black paint. There is a staircase leading down to the hall.",
         "levelTitle": "Upper Floor"
     },
