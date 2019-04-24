@@ -2,11 +2,7 @@ from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handle
 
 def handleLivingRoom(userInput, state):
     if userInput == 'GO SOUTH':
-<<<<<<< HEAD
-        return goToLevel(state, 'MAIN HALL', userInput)
-=======
-        return goToLevel(state, 'MAIN_HALL')
->>>>>>> 1054ee99653a122feb05cfc34a2239d858530d39
+        return goToLevel(state, 'MAIN_HALL', userInput)
     elif userInput == 'TAKE RED KEY':
         return takeItem(state, 'redKey')
     elif userInput == 'GO EAST':
@@ -20,11 +16,7 @@ def handleLivingRoom(userInput, state):
 
 def handleKitchen(userInput, state):
     if userInput == 'GO WEST':
-<<<<<<< HEAD
-        return goToLevel(state, 'LIVING ROOM', userInput)
-=======
-        return goToLevel(state, 'LIVING_ROOM')
->>>>>>> 1054ee99653a122feb05cfc34a2239d858530d39
+        return goToLevel(state, 'LIVING_ROOM', userInput)
     elif userInput == 'TAKE PHOTOGRAPH':
         return takeItem(state, 'photograph') 
     elif userInput == 'TAKE STAIRS':
@@ -36,19 +28,15 @@ def handleKitchen(userInput, state):
 
 def handleHall(userInput, state):
     if userInput == 'GO EAST':
-<<<<<<< HEAD
-        return goToLevel(state, 'LIVING ROOM', userInput)
+        return goToLevel(state, 'LIVING_ROOM', userInput)
     elif userInput == 'TAKE CAR KEYS':
         return takeItem(state, 'carKeys')
     elif userInput == 'TAKE STAIRS':
-        return goToLevel(state, 'UPPER FLOOR', userInput)
-=======
-        return goToLevel(state, 'LIVING_ROOM')
+        return goToLevel(state, 'LIVING_ROOM', userInput)
     elif userInput == 'TAKE CAR KEYS':
         return takeItem(state, 'carKeys')
     elif userInput == 'TAKE STAIRS':
-        return goToLevel(state, 'UPPER_FLOOR')
->>>>>>> 1054ee99653a122feb05cfc34a2239d858530d39
+        return goToLevel(state, 'UPPER_FLOOR', userInput)
     elif userInput == 'GO SOUTH' or  userInput == 'GO WEST':
         return handleInvalidDirection(state)
     else:
@@ -68,11 +56,7 @@ def handleUpperFloor(userInput, state):
 
 def handleAttic(userInput, state):
     if userInput == 'GO SOUTH':
-<<<<<<< HEAD
-        return goToLevel(state, 'UPPER FLOOR', userInput)
-=======
-        return goToLevel(state, 'UPPER_FLOOR')
->>>>>>> 1054ee99653a122feb05cfc34a2239d858530d39
+        return goToLevel(state, 'UPPER_FLOOR', userInput)
     elif userInput == 'TAKE GREY KEY':
         return takeItem(state, 'greyKey')
     elif userInput == 'GO NORTH' or userInput == 'GO WEST' or userInput == 'GO EAST':
@@ -82,11 +66,7 @@ def handleAttic(userInput, state):
 
 def handleBedroom(userInput, state):
     if userInput == 'GO EAST':
-<<<<<<< HEAD
-        return goToLevel(state, 'UPPER FLOOR', userInput)
-=======
-        return goToLevel(state, 'UPPER_FLOOR')
->>>>>>> 1054ee99653a122feb05cfc34a2239d858530d39
+        return goToLevel(state, 'UPPER_FLOOR', userInput)
     elif userInput == 'TAKE CANVAS':
         return takeItem(state, 'canvas')
     elif userInput == 'GO NORTH' or userInput == 'GO SOUTH' or userInput == 'GO EAST':
@@ -95,13 +75,8 @@ def handleBedroom(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleBasement(userInput, state):
-<<<<<<< HEAD
-    if userInput == 'TAKE STAIRS':
-        return goToLevel(state, 'KITCHEN', userInput)
-=======
     if userInput == 'TAKE_STAIRS':
-        return goToLevel(state, 'KITCHEN')
->>>>>>> 1054ee99653a122feb05cfc34a2239d858530d39
+        return goToLevel(state, 'KITCHEN', userInput)
     elif userInput == 'TAKE LADDER':
         return takeItem(state, 'ladder')
     elif userInput == 'GO WEST' or userInput == 'GO SOUTH' or userInput == 'GO EAST':
