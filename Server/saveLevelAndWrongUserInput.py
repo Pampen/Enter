@@ -20,19 +20,58 @@ def goToLevel(state, currentLevel, userInput):
 
 def checkTorchItem(state, currentLevel, userInput):
     if "torch" in state['inventory']:
-        return torchBlueDescription(state, currentLevel)
+        if "rustyKey" not in state['inventory']:
+            return torchBlueDescription(state, currentLevel, userInput)
+        elif state['inventory']['rustyKey']['itemUse'] == False:
+            return falseKeyDescription(state, currentLevel, userInput)
+        elif state['inventory']['rustyKey']['itemUse'] == True:
+            return trueKeyDescription(state, currentLevel, userInput)
     elif currentLevel != None:
         return goToLevel(state, currentLevel, userInput)
         
-def torchBlueDescription(state, currentLevel):
+def torchBlueDescription(state, currentLevel, userInput):
     response = {
         'state': state,
         'pageChanges': {
             "levelTitle": '',
-            "levelDescription": ''
+            "levelDescription": '',
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }
     } 
     data = openTorchFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
+
+def falseKeyDescription(state, currentLevel, userInput):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelTitle": '',
+            "levelDescription": '',
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
+        }
+    } 
+    data = openfalseKeyFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
+
+def trueKeyDescription(state, currentLevel, userInput):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelTitle": '',
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
+        }
+    } 
+    data = openTrueKeyFile()
     for level in data:
         if level["level"] == currentLevel:
             response['pageChanges']['levelTitle'] = level['levelTitle']
@@ -95,6 +134,44 @@ def handleInvalidInput(userInput, state):
     }
     return response
 
+def handleInvalidPickUp(userInput, state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': 'You cannot pick up ' + userInput + '.'
+        }
+    }
+    return response
+
+def handleDoorLock(state, currentLevel, userInput):
+    response = {
+                'state': state,
+                'pageChanges': {
+                    'levelChatboxText': ''
+                    }
+                }
+    data = openUseDescriptionFile()
+    for lockDescrption in data:
+        for descriptionName in lockDescrption.keys():
+            if descriptionName == currentLevel:
+                response['pageChanges']['levelChatboxText'] = ('You cannot ' + userInput + '. ' + lockDescrption[descriptionName])
+                return response
+
+def handleUseItemBlueRoom(state, currentLevel):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelChatboxText": ''
+        }
+    } 
+    data = openTrueKeyFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelChatboxText'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
+    
+
 def openLevelFile():
     cwd = os.getcwd()  # Get the current working directory (cwd)
     filePath = cwd + '/Server/tutorial.json'
@@ -118,3 +195,28 @@ def openTorchFile():
     with open(filePath, 'r') as getData:
         data =json.loads(getData.read())
         return data
+
+def openfalseKeyFile():
+    cwd = os.getcwd()
+    filePath = cwd + '/Server/blueFalseKeyDescription.json'
+    
+    with open(filePath, 'r') as getData:
+        data =json.loads(getData.read())
+        return data
+
+def openTrueKeyFile():
+    cwd = os.getcwd()
+    filePath = cwd + '/Server/blueTrueKeyDescription.json'
+    
+    with open(filePath, 'r') as getData:
+        data =json.loads(getData.read())
+        return data
+
+def openUseDescriptionFile():
+    cwd = os.getcwd()
+    filePath = cwd + '/Server/invalidUseDescription.json'
+    
+    with open(filePath, 'r') as getData:
+        data =json.loads(getData.read())
+        return data
+
