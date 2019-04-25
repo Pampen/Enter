@@ -75,8 +75,10 @@ showCommandModal = () => {
     commandShow: !this.state.commandShow
   });
 }
-
   render() {
+    /*
+    Move commandlist to corresponding module
+    */ 
     const commands = { 
       goCommand: {
         commandName: "GO (North/West/South/East)",
@@ -89,6 +91,9 @@ showCommandModal = () => {
         commandDescription: "Use this command to inspect items that you have acquired"
       }
     }
+     /*
+    /Move commandlist to corresponding module
+    */ 
     return (
       <main id="wrapper">
         <div className="container">
