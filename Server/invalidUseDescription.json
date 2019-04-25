@@ -1,8 +1,8 @@
 [
-    {
-        "PORCH": "There's a wooden door blocking your way"
-    },
-    {
-        "BLUE_CORRIDOR_6": "There's a rusty gate infront of you"
-    }
+  {
+    "PORCH": "There's a wooden door blocking your way, you need a key to open it"
+  },
+  {
+    "BLUE_CORRIDOR_6": "There's a rusty gate infront of you"
+  }
 ]

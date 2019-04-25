@@ -21,20 +21,21 @@ def goToLevel(state, currentLevel, userInput):
 def checkTorchItem(state, currentLevel, userInput):
     if "torch" in state['inventory']:
         if "rustyKey" not in state['inventory']:
-            return torchBlueDescription(state, currentLevel)
+            return torchBlueDescription(state, currentLevel, userInput)
         elif state['inventory']['rustyKey']['itemUse'] == False:
-            return falseKeyDescription(state, currentLevel)
+            return falseKeyDescription(state, currentLevel, userInput)
         elif state['inventory']['rustyKey']['itemUse'] == True:
-            return trueKeyDescription(state, currentLevel)
+            return trueKeyDescription(state, currentLevel, userInput)
     elif currentLevel != None:
         return goToLevel(state, currentLevel, userInput)
         
-def torchBlueDescription(state, currentLevel):
+def torchBlueDescription(state, currentLevel, userInput):
     response = {
         'state': state,
         'pageChanges': {
             "levelTitle": '',
-            "levelDescription": ''
+            "levelDescription": '',
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }
     } 
     data = openTorchFile()
@@ -45,12 +46,13 @@ def torchBlueDescription(state, currentLevel):
             response['state']['level'] = level['level']
             return response
 
-def falseKeyDescription(state, currentLevel):
+def falseKeyDescription(state, currentLevel, userInput):
     response = {
         'state': state,
         'pageChanges': {
             "levelTitle": '',
-            "levelDescription": ''
+            "levelDescription": '',
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }
     } 
     data = openfalseKeyFile()
@@ -61,12 +63,12 @@ def falseKeyDescription(state, currentLevel):
             response['state']['level'] = level['level']
             return response
 
-def trueKeyDescription(state, currentLevel):
+def trueKeyDescription(state, currentLevel, userInput):
     response = {
         'state': state,
         'pageChanges': {
             "levelTitle": '',
-            "levelDescription": ''
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }
     } 
     data = openTrueKeyFile()
@@ -140,7 +142,7 @@ def handleInvalidPickUp(userInput, state):
     }
     return response
 
-def handleDoorLock(state, currentLevel):
+def handleDoorLock(state, currentLevel, userInput):
     response = {
                 'state': state,
                 'pageChanges': {
@@ -151,20 +153,20 @@ def handleDoorLock(state, currentLevel):
     for lockDescrption in data:
         for descriptionName in lockDescrption.keys():
             if descriptionName == currentLevel:
-                response['pageChanges']['levelChatboxText'] = lockDescrption[descriptionName]
+                response['pageChanges']['levelChatboxText'] = ('You cannot ' + userInput + '. ' + lockDescrption[descriptionName])
                 return response
 
 def handleUseItemBlueRoom(state, currentLevel):
     response = {
         'state': state,
         'pageChanges': {
-            "levelDescription": ''
+            "levelChatboxText": ''
         }
     } 
     data = openTrueKeyFile()
     for level in data:
         if level["level"] == currentLevel:
-            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['pageChanges']['levelChatboxText'] = level['levelDescription']
             response['state']['level'] = level['level']
             return response
     

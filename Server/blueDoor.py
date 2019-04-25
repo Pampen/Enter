@@ -84,9 +84,9 @@ def handleBlueCorridor6(userInput, state):
             if state['inventory']['rustyKey']['itemUse'] == True:
                 return checkTorchItem(state, 'BLUE_CORRIDOR_8', userInput)
             else:
-                return handleDoorLock(state, 'BLUE_CORRIDOR_6')
+                return handleDoorLock(state, 'BLUE_CORRIDOR_6', userInput)
         else:
-            return handleDoorLock(state, 'BLUE_CORRIDOR_6')
+            return handleDoorLock(state, 'BLUE_CORRIDOR_6', userInput)
     elif userInput == 'GO WEST': 
         return handleInvalidDirection(state)
     else:
