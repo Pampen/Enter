@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem
+from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock
 from blueDoor import handleBlueStart
 
 def handleOutside(userInput, state):
@@ -14,8 +14,10 @@ def handleOutside(userInput, state):
 def handlePorch(userInput, state):
     if userInput == 'GO SOUTH':
         return goToLevel(state, 'OUTSIDE', userInput)
-    elif userInput == 'GO NORTH':
+    elif userInput == 'USE BRASS KEY' and "brassKey" in state["inventory"]:
         return goToLevel(state, 'MAIN_HALL', userInput)
+    elif userInput == 'GO NORTH':
+        return handleDoorLock(state, 'PORCH')
     elif userInput == 'GO EAST' or userInput == 'GO WEST':
         return handleInvalidDirection(state)
     else:

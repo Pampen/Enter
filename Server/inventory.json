@@ -53,7 +53,8 @@
     },
     "rustyKey": {
         "itemName": "Rusty key",
-        "itemDescription": "A rusty old key"
+        "itemDescription": "A rusty old key",
+        "itemUse": false
     },
     "blueKey": {
         "itemName": "Blue key",
