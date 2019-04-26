@@ -1,7 +1,7 @@
 [
     {
         "level": "BLUE_START",
-        "levelDescription": "With the torch in hand you can make out the end of the hallway infront of you. ",
+        "levelDescription": "With the torch in hand you can make out the end of the hallway infront of you. You hear a faint sobbing",
         "levelTitle": "Blue start"
     },
     {
@@ -36,27 +36,12 @@
     },
     {
         "level": "BLUE_CORRIDOR_6",
-        "levelDescription": "As you walk forwards the sobbing increases. You walk up to a closed metal gate, to your right is a damp room.",
+        "levelDescription": "As you walk forwards the sobbing increases. Infront of you is a closed metal gate, to your right is a damp room.",
         "levelTitle": "Blue Corridor 6"
     },
     {
         "level": "BLUE_CORRIDOR_7",
-        "levelDescription": "In the room there’s a keyhole on opposite side of the gate. ",
+        "levelDescription": "In the room there’s a keyhole on the opposite side of the gate. ",
         "levelTitle": "Blue Corridor 7"
-    },
-    {
-        "level": "BLUE_CORRIDOR_8",
-        "levelDescription": "The sobbing increases, you can see a corridor on your left. ",
-        "levelTitle": "Blue Corridor 8"
-    },
-    {
-        "level": "BLUE_CORRIDOR_9",
-        "levelDescription": "The sobbing becomes significantly louder, you can make out a figure in front of you sitting on the floor. ",
-        "levelTitle": "Blue Corridor 9"
-    },
-    {
-        "level": "BLUE_FINISH",
-        "levelDescription": "On the floor, there’s a dark haired girl sitting on the ground, with her head in her hands covering her face. As you walk up and lay your hand on her shoulder, she crumbles into ash. You jump back, shook by the event. In the ash there’s a COLOR? key, you pick it up. Could this be the final piece of the puzzle?",
-        "levelTitle": "Blue Finish "
     }
 ]
