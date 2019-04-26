@@ -29,8 +29,8 @@ class App extends Component {
       const newItemDescription = response.pageChanges.itemDescription || null;
 
       const newGameState = {};
+      newGameState.usedItems = response.state.usedItems;
       newGameState.inventory = response.state.inventory;
-      newGameState.level = response.state.level;
 
       if (newTitle) {
         newGameState.title = newTitle;
