@@ -32,10 +32,6 @@ def handleHall(userInput, state):
     elif userInput == 'TAKE CAR KEYS':
         return takeItem(state, 'carKeys')
     elif userInput == 'TAKE STAIRS':
-        return goToLevel(state, 'LIVING_ROOM', userInput)
-    elif userInput == 'TAKE CAR KEYS':
-        return takeItem(state, 'carKeys')
-    elif userInput == 'TAKE STAIRS':
         return goToLevel(state, 'UPPER_FLOOR', userInput)
     elif userInput == 'GO SOUTH' or  userInput == 'GO WEST':
         return handleInvalidDirection(state)
@@ -45,7 +41,7 @@ def handleHall(userInput, state):
 def handleUpperFloor(userInput, state):
     if userInput == 'TAKE STAIRS':
         return goToLevel(state, 'HALL', userInput)
-    elif userInput == 'GO WEST':
+    elif userInput == 'USE GREY KEY' and "greyKey" in state["inventory"]:
         return goToLevel(state, 'BEDROOM', userInput)
     elif userInput == 'GO NORTH':
         return goToLevel(state, 'ATTIC', userInput)

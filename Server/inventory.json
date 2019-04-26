@@ -5,7 +5,7 @@
     },
     "greyKey":{
         "itemName": "Grey key",
-        "itemDescription": "It's a dull-looking, regular key. It can be used to open locked doors."
+        "itemDescription": "It's a dull-looking, regular key. It can be used to open a locked door."
     },
     "photograph": {
         "itemName": "Photograph",
@@ -13,7 +13,7 @@
     },
     "canvas":{
         "itemName": "Canvas",
-        "itemDescription": "It's a canvas painted entirely in the colour red."
+        "itemDescription": "It's a canvas painted entirely in the color red."
     },
     "carKeys":{
         "itemName": "Car keys",

@@ -219,4 +219,3 @@ def openUseDescriptionFile():
     with open(filePath, 'r') as getData:
         data =json.loads(getData.read())
         return data
-

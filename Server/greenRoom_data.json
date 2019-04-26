@@ -26,12 +26,12 @@
     },
     {
         "level": "OUTSIDE_SHED",
-        "levelDescription": "You stand outside the shed, do you decide to go in?.",
+        "levelDescription": "You stand outside the shed, do you decide to go in?",
         "levelTitle": "Shed Frontdoor"
     },
     {
         "level": "SHED",
-        "levelDescription": "You stand inside the shed. It’s filled with what looks to be a bunch of old fisherman gear. There seems to be stairs leading down to the basement.",
+        "levelDescription": "You stand inside the shed. It's filled with what looks to be a bunch of old fisherman gear. There seems to be stairs leading down to the basement.",
         "levelTitle": "Shed"
     },
     {

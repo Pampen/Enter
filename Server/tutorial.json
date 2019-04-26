@@ -46,7 +46,7 @@
     },
     {
         "level": "SHED",
-        "levelDescription": "You stand inside the shed. It’s filled with what looks to be a bunch of old fisherman gear. There seems to be stairs leading down to the basement.",
+        "levelDescription": "You stand inside the shed. It's filled with what looks to be a bunch of old fisherman gear. There seems to be stairs leading down to the basement.",
         "levelTitle": "Shed"
     },
     {
@@ -70,7 +70,7 @@
         "levelTitle": "Captains Cabin"
     },
     {
-        "level": "Blue start",
+        "level": "BLUE_START",
         "levelDescription": "You enter a dark room, you hear a faint sobbing. The only light there is is shining through the bottom of a door to your left. In front of you is a hallway leading seemingly into nothingness.",
         "levelTitle": "Blue start"
     },
@@ -136,16 +136,16 @@
     },
     {
         "level": "KITCHEN",
-        "levelDescription": "An old kitchen, but some modern modifications. There are some plates and glasses in the sink that needs to be washed. By the looks of it, it seems that the person who lived here hasn’t done her or his dishes for a while. The fridge is pretty dusty and the dust is covering the photograph on the fridge. You can’t figure out what is in the picture because of all the dust. There is also a staircase leading down to the basement.",
+        "levelDescription": "An old kitchen, but some modern modifications. There are some plates and glasses in the sink that needs to be washed. By the looks of it, it seems that the person who lived here hasn't done her or his dishes for a while. The fridge is pretty dusty and the dust is covering the photograph on the fridge. You can't figure out what is in the picture because of all the dust. There is also a staircase leading down to the basement.",
         "levelTitle": "Kitchen"
     },
     {
         "level": "HALL",
-        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures and the wall, however, you can’t seem to see persons’ faces in the pictures for some reasons. Every face is blurry. Beneath the pictures there is a small table with a bowl, the bowl contains car keys. There is a staircase leading up to the upper floor.",
+        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures and the wall, however, you can't seem to see persons' faces in the pictures for some reasons. Every face is blurry. Beneath the pictures there is a small table with a bowl, the bowl contains car keys. There is a staircase leading up to the upper floor.",
         "levelTitle": "Hall"
     },
     {
-        "level": "UPPER FLOOR",
+        "level": "UPPER_FLOOR",
         "levelDescription": "There nothing much up here except a door, which you guess is the bedroom, an attic and a window which is painted black, but somehow the sunlight still shines through the black paint. There is a staircase leading down to the hall.",
         "levelTitle": "Upper Floor"
     },
@@ -156,7 +156,7 @@
     },
     {
         "level": "BEDROOM",
-        "levelDescription": "It looks like a regular bedroom, the walls are red, a bookcase filled with obviously books, photos, a tiny leather boot and a box full of old watches. There is a big round window in the room which is painted black, but it doesn’t block the sunlight which is kind of odd. In the center of the bedroom, there is a canvas which is painted red.",
+        "levelDescription": "It looks like a regular bedroom, the walls are red, a bookcase filled with obviously books, photos, a tiny leather boot and a box full of old watches. There is a big round window in the room which is painted black, but it doesn't block the sunlight which is kind of odd. In the center of the bedroom, there is a canvas which is painted red.",
         "levelTitle": "Bedroom"
     },
     {

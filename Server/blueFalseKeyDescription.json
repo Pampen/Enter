@@ -16,7 +16,7 @@
     },
     {
         "level": "BLUE_CORRIDOR_2",
-        "levelDescription": "The sobbing returns, you can make out that it’s coming from your right.",
+        "levelDescription": "The sobbing returns, you can make out that it's coming from your right.",
         "levelTitle": "Blue Corridor 2"
     },
     {
@@ -26,7 +26,7 @@
     },
     {
         "level": "BLUE_CORRIDOR_4",
-        "levelDescription": "The sobbing returns, you can make out that it’s coming from behind you.",
+        "levelDescription": "The sobbing returns, you can make out that it's coming from behind you.",
         "levelTitle": "Blue Corridor 4"
     },
     {
@@ -41,7 +41,7 @@
     },
     {
         "level": "BLUE_CORRIDOR_7",
-        "levelDescription": "In the room there’s a keyhole on the opposite side of the gate. ",
+        "levelDescription": "In the room there's a keyhole on the opposite side of the gate. ",
         "levelTitle": "Blue Corridor 7"
     }
 ]
