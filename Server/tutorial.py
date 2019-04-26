@@ -3,10 +3,7 @@ from blueDoor import handleBlueStart
 
 def handleOutside(userInput, state):
     if userInput == 'GO WEST':
-        if state['usedItems']['lightSwitch'] == False:
-            return goToLevel(state, 'GREENHOUSE_LIGHT_OFF', userInput)
-        else:
-            return goToLevel(state, 'GREENHOUSE_LIGHT_ON', userInput)
+        return goToLevel(state, 'GREENHOUSE', userInput)
     elif userInput == 'GO NORTH':
         return goToLevel(state, 'PORCH', userInput)
     elif userInput == 'GO SOUTH' or userInput == 'GO EAST':

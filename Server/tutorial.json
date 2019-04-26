@@ -5,13 +5,8 @@
     "levelTitle": "Outside"
   },
   {
-    "level": "GREENHOUSE_LIGHT_OFF",
+    "level": "GREENHOUSE",
     "levelDescription": "You enter a black room, as you feel around the wall you feel a lightswitch",
-    "levelTitle": "Outside"
-  },
-  {
-    "level": "GREENHOUSE_LIGHT_ON",
-    "levelDescription": "This is a greenhouse, you catch a glimpse of a brass key on a shelf",
     "levelTitle": "Greenhouse"
   },
   {
