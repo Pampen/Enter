@@ -29,7 +29,7 @@ class App extends Component {
       const newItemDescription = response.pageChanges.itemDescription || null;
 
       const newGameState = {};
-      newGameState.usedItems = response.state.usedItems;
+      newGameState.usedItems = response.state.levelTitle;
       newGameState.inventory = response.state.inventory;
 
       if (newTitle) {
