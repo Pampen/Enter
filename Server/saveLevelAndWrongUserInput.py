@@ -134,15 +134,6 @@ def handleInvalidInput(userInput, state):
     }
     return response
 
-def handleInvalidPickUp(userInput, state):
-    response = {
-        'state': state,
-        'pageChanges': {
-            'levelChatboxText': 'You cannot pick up ' + userInput + '.'
-        }
-    }
-    return response
-
 def handleDoorLock(state, currentLevel, userInput):
     response = {
                 'state': state,
