@@ -1,6 +1,4 @@
-/*
-Ska kontrollera vilket main-level ett visst level hör till!
-*/
+
 const levels = {
     "OUTSIDE": "TUTORIAL",
     "GREENHOUSE": "TUTORIAL",

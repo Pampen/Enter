@@ -7,8 +7,7 @@ import Terminal from "./components/terminal";
 import Inventory from "./components/inventory";
 import Modal from "./components/Modal";
 import Commands from "./components/commands";
-
-import apple from "./assets/apple.jpg";
+import Map from "./components/map";
 
 class App extends Component {
   constructor(props) {
@@ -18,6 +17,9 @@ class App extends Component {
       description: "This is outside",
       chatboxText: [],
       inventory: {},
+      usedItems: {
+        lightSwitch: false
+      },
       level: "OUTSIDE"
     };
     this.updateState = this.updateState.bind(this);
@@ -93,6 +95,11 @@ class App extends Component {
         commandName: "INSPECT (item)",
         commandDescription:
           "Use this command to inspect items that you have acquired"
+      },
+      useCommand: {
+        commandName: "USE (item/stairs)",
+        commandDescription:
+          "Use this command to use an item in your inventory such as 'use key'"
       }
     };
     /*
@@ -117,7 +124,7 @@ class App extends Component {
               level={this.state.level}
             />
             <Modal onClose={this.showMapModal} show={this.state.mapShow}>
-              <img src={apple} alt="An apple" />,
+              <Map level={this.state.level} />
             </Modal>
             <Modal
               onClose={this.showInventoryModal}
