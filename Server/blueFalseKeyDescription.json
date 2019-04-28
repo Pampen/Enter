@@ -1,0 +1,47 @@
+[
+    {
+        "level": "BLUE_START",
+        "levelDescription": "With the torch in hand you can make out the end of the hallway infront of you. ",
+        "levelTitle": "Blue start"
+    },
+    {
+        "level": "BLUE_TORCH_ROOM",
+        "levelDescription": "What are you doing back here, this is certainly not the right way",
+        "levelTitle": "Blue Torch Room"
+    },
+    {
+        "level": "BLUE_CORRIDOR_1",
+        "levelDescription": "You can make out that the sobbing is coming from your right.",
+        "levelTitle": "Blue Corridor 1"
+    },
+    {
+        "level": "BLUE_CORRIDOR_2",
+        "levelDescription": "The sobbing returns, you can make out that it’s coming from your right.",
+        "levelTitle": "Blue Corridor 2"
+    },
+    {
+        "level": "BLUE_CORRIDOR_3",
+        "levelDescription": "asdasda",
+        "levelTitle": "Blue Corridor 3"
+    },
+    {
+        "level": "BLUE_CORRIDOR_4",
+        "levelDescription": "The sobbing returns, you can make out that it’s coming from behind you.",
+        "levelTitle": "Blue Corridor 4"
+    },
+    {
+        "level": "BLUE_CORRIDOR_5",
+        "levelDescription": "The sobbing increases, you can hear it in both your ears.",
+        "levelTitle": "Blue Corridor 5"
+    },
+    {
+        "level": "BLUE_CORRIDOR_6",
+        "levelDescription": "As you walk forwards the sobbing increases. You walk up to a closed metal gate, to your right is a damp room.",
+        "levelTitle": "Blue Corridor 6"
+    },
+    {
+        "level": "BLUE_CORRIDOR_7",
+        "levelDescription": "In the room there’s a keyhole on the opposite side of the gate. ",
+        "levelTitle": "Blue Corridor 7"
+    }
+]
