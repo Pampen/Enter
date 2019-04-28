@@ -2,7 +2,7 @@ from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handle
 
 def handleMainHall(userInput, state):
     if userInput == 'GO SOUTH':
-        return goToLevel(state, 'PORCH', userInput)
+        return handleInvalidDirection(userInput)
     elif userInput == 'GO NORTH':
         return goToLevel (state, 'LIVING_ROOM', userInput)
     elif userInput == 'GO EAST':
