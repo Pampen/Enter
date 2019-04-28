@@ -94,9 +94,9 @@ def takeItem(state, currentItem):
     return response
     
 def inspectItem(state, userInput):
+    print('BOOOOOO')
     itemData = openItemFile()
     for item in itemData:
-        print(item)
         if itemData[item]['itemName'].upper() in userInput:
             print(itemData[item]['itemName'])
             if item in state['inventory']:
@@ -108,13 +108,13 @@ def inspectItem(state, userInput):
                     }
                 }
                 return response
-            else: 
-                return {
-                        'state': state, 
-                        'pageChanges': {
-                                'levelChatboxText': "You do not seem to be carrying that."
-                        }
+        return {
+                'state': state, 
+                'pageChanges': {
+                        'levelChatboxText': "You do not seem to be carrying that."
                 }
+        }
+
 def handleInvalidDirection(state):
     response = {
         'state': state,
