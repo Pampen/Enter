@@ -17,7 +17,7 @@ class App extends Component {
       title: "Outside",
       description: "This is outside",
       chatboxText: [],
-      inventory: {},
+      inventory:{},
       level: "OUTSIDE"
     };
     this.updateState = this.updateState.bind(this);
@@ -78,7 +78,7 @@ class App extends Component {
     /*
     Move commandlist to corresponding module
     */
-
+    console.log(this.state.inventory)
     const commands = {
       goCommand: {
         commandName: "GO (North/West/South/East)",

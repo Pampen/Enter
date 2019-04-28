@@ -6,7 +6,7 @@
     },
     {
         "level": "BLUE_TORCH_ROOM",
-        "levelDescription": "In the room, there's a desk with a wooden chair and a torch hanging on the wall. It seems the torch isn't bolted to the wall, you might be able to pick it up.",
+        "levelDescription": "In the room, there is a desk with a wooden chair and a torch hanging on the wall. It seems the torch isn't bolted to the wall, you might be able to pick it up.",
         "levelTitle": "Blue Torch Room"
     },
     {
@@ -21,7 +21,7 @@
     },
     {
         "level": "BLUE_CORRIDOR_3",
-        "levelDescription": "On the floor, there's a rusty key in front of your feet",
+        "levelDescription": "On the floor, there is a rusty key in front of your feet",
         "levelTitle": "Blue Corridor 3"
     },
     {
@@ -41,7 +41,7 @@
     },
     {
         "level": "BLUE_CORRIDOR_7",
-        "levelDescription": "In the room there’s a keyhole on the opposite side of the gate. ",
+        "levelDescription": "In the room there is a keyhole on the opposite side of the gate. ",
         "levelTitle": "Blue Corridor 7"
     }
 ]
