@@ -17,6 +17,8 @@ body {
   height: 550px;
   margin: auto;
   color: white;
+  border-style: solid;
+  border-color: gray;
   box-shadow: 9px 9px 10px -3px rgba(0,0,0,0.75);
 }
 .game-container{

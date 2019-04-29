@@ -59,8 +59,8 @@ def handleMessyroom(userInput, state):
         return goToLevel(state, 'STUDYROOM', userInput)
     elif userInput == 'GO WEST':
         return goToLevel(state, 'CRIBROOM', userInput)
-    elif userInput == "TAKE TORN PAGES":
-        return takeItem(state, 'tornPages')
+    elif userInput == "TAKE NURSERY RHYME":
+        return takeItem(state, 'nurseryRhyme')
     elif userInput == 'GO EAST':
         return goToLevel(state, 'BLUE_START', userInput)
     elif userInput == 'GO SOUTH':
