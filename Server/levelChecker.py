@@ -34,7 +34,7 @@ levels = {
     'BLUE_FINISH': handleBlueFinish,
     'MAIN_HALL': handleMainHall,
     'LIVING_ROOM': handleLivingRoom,
-    'LIVING_ROOMItem': handleKitchen,
+    'LIVING_ROOMITEM': handleKitchen,
     'KITCHEN': handleKitchen,
     'HALL': handleHall,
     'UPPER_FLOOR': handleUpperFloor,

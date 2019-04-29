@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock 
+from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock
 
 def handleLivingRoom(userInput, state):
     if userInput == 'GO SOUTH':
@@ -17,7 +17,7 @@ def handleLivingRoom(userInput, state):
 def handleKitchen(userInput, state):
     if userInput == 'GO WEST':
         if 'photograph' and 'carKeys' and 'canvas' in state['inventory']: 
-            return goToLevel(state, 'LIVING_ROOMItem', userInput)
+            return goToLevel(state, 'LIVING_ROOMITEM', userInput)
         else:
             return goToLevel(state, 'LIVING_ROOM', userInput)
     elif userInput == 'TAKE PHOTOGRAPH':
@@ -32,7 +32,7 @@ def handleKitchen(userInput, state):
 def handleHall(userInput, state):
     if userInput == 'GO EAST':
         if 'photograph' and 'carKeys' and 'canvas' in state['inventory']: 
-            return goToLevel(state, 'LIVING_ROOMItem', userInput)
+            return goToLevel(state, 'LIVING_ROOMITEM', userInput)
         else:
             return goToLevel(state, 'LIVING_ROOM', userInput)
     elif userInput == 'TAKE CAR KEYS':

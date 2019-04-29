@@ -135,18 +135,23 @@
         "levelTitle": "Living Room"
     },
     {
-    "level": "LIVING_ROOMItem",
+    "level": "LIVING_ROOMITEM",
     "levelDescription": "With the canvas, car keys and the photograph in your possesion you can feel the heat from the fireplace, some things are meant to be burned down to ashes.",
     "levelTitle": "Living Room"
     },
     {
         "level": "KITCHEN",
-        "levelDescription": "An old kitchen, but some modern modifications. There are some plates and glasses in the sink that needs to be washed. By the looks of it, it seems that the person who lived here hasn't done her or his dishes for a while. The fridge is pretty dusty and the dust is covering the photograph on the fridge. You can't figure out what is in the picture because of all the dust. There is also a staircase leading down to the basement.",
+        "levelDescription": "An old kitchen, but some modern modifications. There are some plates and glasses in the sink that needs to be washed. By the looks of it, it seems that the person who lived here hasn't done her or his dishes for a while. The fridge is pretty dusty and the dust is covering the photograph on the fridge. You can't figure out what is in the picture because of all the dust. There is some stairs leading down to the basement.",
         "levelTitle": "Kitchen"
     },
     {
         "level": "HALL",
-        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures and the wall, however, you can't seem to see persons' faces in the pictures for some reasons. Every face is blurry. Beneath the pictures is a small table with a bowl, the bowl contains car keys. There is a staircase leading up to the upper floor.",
+        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures and the wall, however, you can't seem to see persons' faces in the pictures for some reasons. Every face is blurry. Beneath the pictures is a small table with an bowl, the bowl contains car keys. There is some stairs leading up to the upper floor.",
+        "levelTitle": "Hall"
+    },
+    {
+        "level": "HALLITEM",
+        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures and the wall, however, you can't seem to see persons' faces in the pictures for some reasons. Every face is blurry. Beneath the pictures is a small table with an empty bowl. There is some stairs leading up to the upper floor.",
         "levelTitle": "Hall"
     },
     {
