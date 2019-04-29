@@ -82,6 +82,7 @@ body {
 }
 .animation-fade-in {
   animation: 0.2s fade-in;
+  z-index: 1;
 }
 #main-buttons {
   display: flex;

@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handleInvalidInput, takeItem
+from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handleInvalidInput, takeItem, handleDoorLock, goToLevelShedPuzzle
 
 def handleBeach(userInput, state):
     if userInput == 'GO WEST':
@@ -13,8 +13,10 @@ def handleBeach(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleGate(userInput, state):
-    if userInput == 'GO NORTH':
+    if userInput == "USE BRONZE KEY" and "bronzeKey" in state["inventory"]:
         return goToLevel(state, 'LIGHTHOUSE_OUTSIDE', userInput)
+    elif userInput == "GO NORTH":
+        return handleDoorLock(state, "GATE", userInput)
     elif userInput == "GO SOUTH":
         return goToLevel(state, "BEACH", userInput)
     elif userInput == 'GO WEST' or userInput == 'GO EAST':
@@ -67,9 +69,12 @@ def handleShed(userInput, state):
         return handleInvalidDirection(state)
     elif userInput == 'TAKE STAIRS':
         return handleBasement(state)
-        #return goToLevel(state, "CELLAR")
+    elif userInput == "TAKE OIL LAMP" or userInput == "TAKE LAMP":
+        return takeItem(state, 'oilLamp')
     elif userInput == 'GO EAST':
         return goToLevel(state, "OUTSIDE_SHED", userInput)
+    elif userInput == "JOYFUL" and "tornPages" in state["inventory"]:
+        return goToLevelShedPuzzle(state, "CELLAR", userInput)
     else:
         return handleInvalidInput(userInput, state)
   
@@ -85,7 +90,7 @@ def handleOutsideShipwreck(userInput, state):
 
 def handleShipwreck(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'SHIPWRECK_OUTSIDE', userInput)
+        return goToLevel(state, 'OUTSIDE_SHIPWRECK', userInput)
     elif userInput == "GO EAST":
         return goToLevel(state, "CABIN", userInput)
     elif userInput == 'GO NORTH' or userInput == "GO SOUTH":
@@ -107,10 +112,10 @@ def handleCellar(userInput, state):
     if userInput == 'GO WEST' or userInput == "GO NORTH" or userInput == "GO EAST" or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
     elif userInput == 'TAKE STAIRS':
-        return goToLevel(state, "SHED", userInput)
-    elif userInput == "INSPECT GLIMMER":
-        return handleGlimmer(state)
-    elif userInput == "TAKE BRONZE KEY":
+        return goToLevel(state, 'SHED', userInput)
+    elif userInput == "USE OIL LAMP" and "oilLamp" in state["inventory"]:
+        return handleNewCellarDesc(state)
+    elif userInput == "TAKE BRONZE KEY" or userInput == "TAKE KEY":
         return takeItem(state, 'bronzeKey')
     else:
         return handleInvalidInput(userInput, state)
@@ -133,11 +138,20 @@ def handleBasement(state):
     }
     return response
 
-def handleGlimmer(state):
+def handleNewCellarDesc(state):
     response = {
         'state': state,
         'pageChanges': {
-            'levelChatboxText': "While taking a closer look at the glimmer, you can see the reflection of a key that sits right besides a big cogwheel. You could probably grab it if you tried hard enough."
+            'levelDescription': "The Room lights up making it easier to see your surronding. There's a table infront of you with a key on it."
         }
     }
-    return response  
+    return response
+
+def handleNewShedDesc(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelDescription': "The Room lights up making it easier to see your surronding. There's a table infront of you with a key on it."
+        }
+    }
+    return response

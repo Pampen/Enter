@@ -4,5 +4,8 @@
   },
   {
     "BLUE_CORRIDOR_6": "There's a rusty gate infront of you"
+  },
+  {
+    "GATE": "You try opening the gate but it's locked..."
   }
 ]

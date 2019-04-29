@@ -169,7 +169,23 @@ def handleUseItemBlueRoom(state, currentLevel):
             response['pageChanges']['levelChatboxText'] = level['levelDescription']
             response['state']['level'] = level['level']
             return response
-    
+
+def goToLevelShedPuzzle(state, currentLevel, userInput):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelTitle": '',
+            "levelDescription": '',
+            'levelChatboxText': "You managed to open the door and went further into the cellar..."
+        }
+    } 
+    data = openLevelFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
 
 def openLevelFile():
     cwd = os.getcwd()  # Get the current working directory (cwd)

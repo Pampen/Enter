@@ -39,6 +39,10 @@
         "itemName": "Torn pages",
         "itemDescription": "It's a bunch of torn pages with yellowed, frayed edges. The pages appear to have the words JO FU YL drawn on to it, it could be some kind of puzzle?"
     },
+    "oilLamp": {
+        "itemName": "Oil Lamp",
+        "itemDescription": "It's an old oil powered lamp that still has some fuel left in it."
+    },
     "crib": {
         "itemName": "Crib",
         "itemDescription": "An old but sturdy crib."
