@@ -55,7 +55,7 @@ def falseKeyDescription(state, currentLevel, userInput):
             'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }
     } 
-    data = openfalseKeyFile()
+    data = openFalseKeyFile()
     for level in data:
         if level["level"] == currentLevel:
             response['pageChanges']['levelTitle'] = level['levelTitle']
@@ -113,6 +113,27 @@ def inspectItem(state, userInput):
                         'levelChatboxText': "You do not seem to be carrying that."
                 }
         }
+
+def usePersistantItem(state, currentItem, currentLevel):
+    itemData = openItemFile()
+    item = itemData[currentItem]
+    newState = state
+    newState['inventory'][currentItem] = item
+    data = openLevelFile()
+    response = {
+        'state': newState,
+        'pageChanges': {
+            "levelTitle": '',
+            "levelDescription": '',
+            'levelChatboxText': 'You used the ' + item.upper() + "."
+        }
+    } 
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
 
 def handleInvalidDirection(state):
     response = {
@@ -194,7 +215,7 @@ def openTorchFile():
         data =json.loads(getData.read())
         return data
 
-def openfalseKeyFile():
+def openFalseKeyFile():
     cwd = os.getcwd()
     filePath = cwd + '/Server/blueFalseKeyDescription.json'
     

@@ -10,6 +10,11 @@
     "levelTitle": "Greenhouse"
   },
   {
+    "level": "GREENHOUSE_LIGHT_ON",
+    "levelDescription": "With the light turned on you look around the room, you catch a glimpse of a brass key on a shelf.",
+    "levelTitle": "Greenhouse"
+  },
+  {
     "level": "PORCH",
     "levelDescription": "This is a porch.",
     "levelTitle": "Porch"
@@ -174,13 +179,11 @@
     "levelDescription": "This is the main hall. Cobweb covers the walls...",
     "levelTitle": "Main Hall"
   },
-
   {
     "level": "BABYROOM",
     "levelDescription": "This room is filled with babythings. The walls have painted unicorns and the shelves are filled with toys. Only thing missing is the crib..",
     "levelTitle": "Babyroom"
   },
-
   {
     "level": "NURSINGROOM",
     "levelDescription": "A nursing room.. and a changing table with a moldy pacifier on it. A funky smell surrounds this room..",
