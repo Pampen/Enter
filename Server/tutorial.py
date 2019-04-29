@@ -1,9 +1,11 @@
-from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock
-from blueDoor import handleBlueStart
+from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock, usePersistantItem
 
 def handleOutside(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'GREENHOUSE', userInput)
+        if "lightswitch" in state['inventory']:
+            return goToLevel(state, 'GREENHOUSE_LIGHT_ON', userInput)
+        else:
+            return goToLevel(state, 'GREENHOUSE', userInput)
     elif userInput == 'GO NORTH':
         return goToLevel(state, 'PORCH', userInput)
     elif userInput == 'GO SOUTH' or userInput == 'GO EAST':
@@ -27,8 +29,7 @@ def handleGreenHouse(userInput, state):
     if userInput == 'GO EAST':
         return goToLevel(state, 'OUTSIDE', userInput)
     elif userInput == "USE LIGHTSWITCH":
-        state['usedItems']['lightSwitch'] = True
-        return goToLevel(state, 'GREENHOUSE_LIGHT_ON', userInput)
+        return usePersistantItem(state, "lightswitch", "GREENHOUSE_LIGHT_ON")
     elif userInput == "TAKE BRASS KEY":
         return takeItem(state, 'brassKey')
     elif userInput == 'GO NORTH' or userInput == 'GO SOUTH' or userInput == 'GO WEST':

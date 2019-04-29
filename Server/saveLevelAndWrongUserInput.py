@@ -55,7 +55,7 @@ def falseKeyDescription(state, currentLevel, userInput):
             'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }
     } 
-    data = openfalseKeyFile()
+    data = openFalseKeyFile()
     for level in data:
         if level["level"] == currentLevel:
             response['pageChanges']['levelTitle'] = level['levelTitle']
@@ -79,6 +79,13 @@ def trueKeyDescription(state, currentLevel, userInput):
             response['state']['level'] = level['level']
             return response
 
+
+
+
+
+
+
+
 def takeItem(state, currentItem):
     print(currentItem)
     itemData = openItemFile()
@@ -94,9 +101,9 @@ def takeItem(state, currentItem):
     return response
     
 def inspectItem(state, userInput):
-    print('BOOOOOO')
     itemData = openItemFile()
     for item in itemData:
+        print(item)
         if itemData[item]['itemName'].upper() in userInput:
             print(itemData[item]['itemName'])
             if item in state['inventory']:
@@ -115,6 +122,27 @@ def inspectItem(state, userInput):
                 }
         }
 
+def usePersistantItem(state, currentItem, currentLevel):
+    itemData = openItemFile()
+    item = itemData[currentItem]
+    newState = state
+    newState['inventory'][currentItem] = item
+    data = openLevelFile()
+    response = {
+        'state': newState,
+        'pageChanges': {
+            "levelTitle": '',
+            "levelDescription": '',
+            'levelChatboxText': 'You used the ' + item.upper() + "."
+        }
+    } 
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
+
 def handleInvalidDirection(state):
     response = {
         'state': state,
@@ -129,15 +157,6 @@ def handleInvalidInput(userInput, state):
         'state': state,
         'pageChanges': {
             'levelChatboxText': 'You cannot ' + userInput + '.'
-        }
-    }
-    return response
-
-def handleInvalidPickUp(userInput, state):
-    response = {
-        'state': state,
-        'pageChanges': {
-            'levelChatboxText': 'You cannot pick up ' + userInput + '.'
         }
     }
     return response
@@ -211,7 +230,7 @@ def openTorchFile():
         data =json.loads(getData.read())
         return data
 
-def openfalseKeyFile():
+def openFalseKeyFile():
     cwd = os.getcwd()
     filePath = cwd + '/Server/blueFalseKeyDescription.json'
     
@@ -234,4 +253,3 @@ def openUseDescriptionFile():
     with open(filePath, 'r') as getData:
         data =json.loads(getData.read())
         return data
-
