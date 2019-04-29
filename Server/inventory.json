@@ -72,7 +72,5 @@
         "itemName": "Brass key",
         "itemDescription": "It's a simple key made of copper and zinc. It has a greenish tint to it."
     },
-    "lightswitch": {
-        "itemName": "lightswitch"
-    }
+    "lightswitch": {}
 }

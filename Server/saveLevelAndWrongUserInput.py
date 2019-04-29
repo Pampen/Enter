@@ -55,7 +55,7 @@ def falseKeyDescription(state, currentLevel, userInput):
             'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }
     } 
-    data = openfalseKeyFile()
+    data = openFalseKeyFile()
     for level in data:
         if level["level"] == currentLevel:
             response['pageChanges']['levelTitle'] = level['levelTitle']
@@ -127,7 +127,7 @@ def usePersistantItem(state, currentItem, currentLevel):
         'pageChanges': {
             "levelTitle": '',
             "levelDescription": '',
-            'levelChatboxText': 'You used the ' + item['itemName'].upper() + "."
+            'levelChatboxText': 'You used the ' + item.upper() + "."
         }
     } 
     for level in data:
@@ -217,7 +217,7 @@ def openTorchFile():
         data =json.loads(getData.read())
         return data
 
-def openfalseKeyFile():
+def openFalseKeyFile():
     cwd = os.getcwd()
     filePath = cwd + '/Server/blueFalseKeyDescription.json'
     

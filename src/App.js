@@ -24,6 +24,7 @@ class App extends Component {
     };
     this.updateState = this.updateState.bind(this);
   }
+
   updateState(inputElementValue) {
     sendMessage(inputElementValue, this.state).then(response => {
       const newTitle = response.pageChanges.levelTitle || null;
