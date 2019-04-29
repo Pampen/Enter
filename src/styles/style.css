@@ -151,7 +151,7 @@ body {
   font-size: 24px;
   letter-spacing: 6px;
   margin-left: 5px;
-  text-shadow: 0 0 6px black;
+  text-shadow: 0 0 20px black;
   color: white;
 }
 #game-title-first-letter {
@@ -213,7 +213,7 @@ footer {
   color: #D5879F;
 }
 .ANGER{
-  color: #CC441E;
+  color: rgb(253, 50, 39);
 }
 .JOY{
   color: #84AE90;

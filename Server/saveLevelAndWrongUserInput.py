@@ -79,6 +79,13 @@ def trueKeyDescription(state, currentLevel, userInput):
             response['state']['level'] = level['level']
             return response
 
+
+
+
+
+
+
+
 def takeItem(state, currentItem):
     print(currentItem)
     itemData = openItemFile()
@@ -96,6 +103,7 @@ def takeItem(state, currentItem):
 def inspectItem(state, userInput):
     itemData = openItemFile()
     for item in itemData:
+        print(item)
         if itemData[item]['itemName'].upper() in userInput:
             print(itemData[item]['itemName'])
             if item in state['inventory']:
@@ -149,15 +157,6 @@ def handleInvalidInput(userInput, state):
         'state': state,
         'pageChanges': {
             'levelChatboxText': 'You cannot ' + userInput + '.'
-        }
-    }
-    return response
-
-def handleInvalidPickUp(userInput, state):
-    response = {
-        'state': state,
-        'pageChanges': {
-            'levelChatboxText': 'You cannot pick up ' + userInput + '.'
         }
     }
     return response
@@ -238,4 +237,3 @@ def openUseDescriptionFile():
     with open(filePath, 'r') as getData:
         data =json.loads(getData.read())
         return data
-
