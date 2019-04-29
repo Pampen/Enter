@@ -94,7 +94,6 @@ def takeItem(state, currentItem):
     return response
     
 def inspectItem(state, userInput):
-    print('BOOOOOO')
     itemData = openItemFile()
     for item in itemData:
         if itemData[item]['itemName'].upper() in userInput:
