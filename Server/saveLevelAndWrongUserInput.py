@@ -79,13 +79,6 @@ def trueKeyDescription(state, currentLevel, userInput):
             response['state']['level'] = level['level']
             return response
 
-
-
-
-
-
-
-
 def takeItem(state, currentItem):
     print(currentItem)
     itemData = openItemFile()

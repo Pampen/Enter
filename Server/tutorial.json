@@ -46,6 +46,11 @@
     },
     {
         "level": "SHED",
+        "levelDescription": "You stand inside the shed. It's filled with what looks to be a bunch of old fisherman gear. There's an old fashioned oil lamp thats hanging on the wall. There seems to be stairs leading down to the basement.",
+        "levelTitle": "Shed"
+    },
+    {
+        "level": "SHED_NEW",
         "levelDescription": "You stand inside the shed. It's filled with what looks to be a bunch of old fisherman gear. There seems to be stairs leading down to the basement.",
         "levelTitle": "Shed"
     },

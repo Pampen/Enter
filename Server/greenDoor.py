@@ -56,7 +56,10 @@ def handleLighthouseTopFloor(userInput, state):
 
 def handleOutsideShed(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'SHED', userInput)
+        if "oilLamp" in state["inventory"]:
+            return goToLevel(state, 'SHED_NEW', userInput)
+        else:
+            return goToLevel(state, "SHED", userInput)
     elif userInput == 'GO NORTH' or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
     elif userInput == 'GO EAST':
@@ -112,7 +115,10 @@ def handleCellar(userInput, state):
     if userInput == 'GO WEST' or userInput == "GO NORTH" or userInput == "GO EAST" or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
     elif userInput == 'TAKE STAIRS':
-        return goToLevel(state, 'SHED', userInput)
+        if "oilLamp" in state["inventory"]:
+            return goToLevel(state, 'SHED_NEW', userInput)
+        else:
+            return goToLevel(state, "SHED", userInput)
     elif userInput == "USE OIL LAMP" and "oilLamp" in state["inventory"]:
         return handleNewCellarDesc(state)
     elif userInput == "TAKE BRONZE KEY" or userInput == "TAKE KEY":
