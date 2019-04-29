@@ -28,6 +28,7 @@ const levels = {
     "BLUE_CORRIDOR_9": "SADNESS",
     "BLUE_FINISH": "SADNESS",
     "LIVING_ROOM": "ANGER",
+    "LIVING_ROOMItem": "ANGER",
     "KITCHEN": "ANGER",
     "HALL": "ANGER",
     "UPPER_FLOOR": "ANGER",

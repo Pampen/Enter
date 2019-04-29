@@ -135,6 +135,11 @@
         "levelTitle": "Living Room"
     },
     {
+    "level": "LIVING_ROOMItem",
+    "levelDescription": "With the canvas, car keys and the photograph in your possesion you can feel the heat from the fireplace, some things are meant to be burned down to ashes.",
+    "levelTitle": "Living Room"
+    },
+    {
         "level": "KITCHEN",
         "levelDescription": "An old kitchen, but some modern modifications. There are some plates and glasses in the sink that needs to be washed. By the looks of it, it seems that the person who lived here hasn't done her or his dishes for a while. The fridge is pretty dusty and the dust is covering the photograph on the fridge. You can't figure out what is in the picture because of all the dust. There is also a staircase leading down to the basement.",
         "levelTitle": "Kitchen"

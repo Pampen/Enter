@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock, checkBurnItem, burnRedDescription
+from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock 
 
 def handleLivingRoom(userInput, state):
     if userInput == 'GO SOUTH':
@@ -16,7 +16,10 @@ def handleLivingRoom(userInput, state):
 
 def handleKitchen(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'LIVING_ROOM', userInput)
+        if 'photograph' and 'carKeys' and 'canvas' in state['inventory']: 
+            return goToLevel(state, 'LIVING_ROOMItem', userInput)
+        else:
+            return goToLevel(state, 'LIVING_ROOM', userInput)
     elif userInput == 'TAKE PHOTOGRAPH':
         return takeItem(state, 'photograph') 
     elif userInput == 'TAKE STAIRS' or userInput == 'USE STAIRS':
@@ -28,7 +31,10 @@ def handleKitchen(userInput, state):
 
 def handleHall(userInput, state):
     if userInput == 'GO EAST':
-        return goToLevel(state, 'LIVING_ROOM', userInput)
+        if 'photograph' and 'carKeys' and 'canvas' in state['inventory']: 
+            return goToLevel(state, 'LIVING_ROOMItem', userInput)
+        else:
+            return goToLevel(state, 'LIVING_ROOM', userInput)
     elif userInput == 'TAKE CAR KEYS':
         return takeItem(state, 'carKeys')
     elif userInput == 'TAKE STAIRS' or userInput == 'USE STAIRS':

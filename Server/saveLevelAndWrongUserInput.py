@@ -79,28 +79,12 @@ def trueKeyDescription(state, currentLevel, userInput):
             response['state']['level'] = level['level']
             return response
 
-def checkBurnItem(state, currentLevel, userInput):
-    if "photograph"  and "carKeys" and "canvas" not in state['inventory']:
-        return burnRedDescription(state, currentLevel, userInput)
-    elif state['inventory']['photograph', 'carKeys', 'canvas']['itemUse'] == True:
-        return burnRedDescription(state, currentLevel, userInput)
 
-def burnRedDescription(state, currentLevel, userInput):
-    response = {
-        'state': state,
-        'pageChanges': {
-            "levelTitle": '',
-            "levelDescription": '',
-            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
-        }
-    } 
-    data = openBurnFile()
-    for level in data:
-        if level["level"] == currentLevel:
-            response['pageChanges']['levelTitle'] = level['levelTitle']
-            response['pageChanges']['levelDescription'] = level['levelDescription']
-            response['state']['level'] = level['level']
-            return response
+
+
+
+
+
 
 def takeItem(state, currentItem):
     print(currentItem)
@@ -131,13 +115,12 @@ def inspectItem(state, userInput):
                     }
                 }
                 return response
-            else: 
-                return {
-                        'state': state, 
-                        'pageChanges': {
-                                'levelChatboxText': "You do not seem to be carrying that."
-                        }
+        return {
+                'state': state, 
+                'pageChanges': {
+                        'levelChatboxText': "You do not seem to be carrying that."
                 }
+        }
 
 def handleInvalidDirection(state):
     response = {
@@ -232,12 +215,4 @@ def openUseDescriptionFile():
     
     with open(filePath, 'r') as getData:
         data =json.loads(getData.read())
-        return data
-
-def openBurnFile():
-    cwd = os.getcwd()
-    filePath = cwd + '/Server/redBurnDescription.json'
-    
-    with open(filePath, 'r') as getData:
-        data = json.loads(getData.read())
         return data
