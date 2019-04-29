@@ -1,17 +1,17 @@
 [
     {
         "level": "OUTSIDE",
-        "levelDescription": "This is outside.",
+        "levelDescription": "It's cold outside. There is a strange old house in front of you, there isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to your left.",
         "levelTitle": "Outside"
     },
     {
         "level": "GREENHOUSE",
-        "levelDescription": "This is a greenhouse.",
+        "levelDescription": "There aren't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days. In the middle of all this mess you can see a brass key.",
         "levelTitle": "Greenhouse"
     },
     {
         "level": "PORCH",
-        "levelDescription": "This is a porch.",
+        "levelDescription": "The porch is old and the small staircase is missing some planks. The window are all boarded up from the inside and it looks like the windows are painted in black. This porch is barely holding up.",
         "levelTitle": "Porch"
     },
     {
@@ -141,7 +141,7 @@
     },
     {
         "level": "HALL",
-        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures and the wall, however, you can't seem to see persons' faces in the pictures for some reasons. Every face is blurry. Beneath the pictures there is a small table with a bowl, the bowl contains car keys. There is a staircase leading up to the upper floor.",
+        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures and the wall, however, you can't seem to see persons' faces in the pictures for some reasons. Every face is blurry. Beneath the pictures is a small table with a bowl, the bowl contains car keys. There is a staircase leading up to the upper floor.",
         "levelTitle": "Hall"
     },
     {
@@ -171,7 +171,7 @@
     },
     {
         "level": "MAIN_HALL",
-        "levelDescription": "This is the main hall. Cobweb covers the walls...",
+        "levelDescription": "You are now in the main hall of the house. There isn't not much in the main hall except for three odd doors with three different colors, the windows are painted in black and some old creepy paintings on the walls covered in cobweb. The paintings looked a lot like Willem de Kooning's work.",
         "levelTitle": "Main Hall"
     },
     {

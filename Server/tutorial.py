@@ -1,5 +1,4 @@
 from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock
-from blueDoor import handleBlueStart
 
 def handleOutside(userInput, state):
     if userInput == 'GO WEST':

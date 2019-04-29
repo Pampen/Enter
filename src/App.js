@@ -14,7 +14,7 @@ class App extends Component {
     super(props);
     this.state = {
       title: "Outside",
-      description: "This is outside",
+      description: "It's cold outside. There is a strange old house in front of you, there isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to your left.",
       chatboxText: [],
       inventory: {},
       usedItems: {

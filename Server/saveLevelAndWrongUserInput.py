@@ -55,7 +55,7 @@ def falseKeyDescription(state, currentLevel, userInput):
             'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }
     } 
-    data = openfalseKeyFile()
+    data = openFalseKeyFile()
     for level in data:
         if level["level"] == currentLevel:
             response['pageChanges']['levelTitle'] = level['levelTitle']
@@ -72,6 +72,29 @@ def trueKeyDescription(state, currentLevel, userInput):
         }
     } 
     data = openTrueKeyFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
+
+def checkBurnItem(state, currentLevel, userInput):
+    if "photograph"  and "carKeys" and "canvas" not in state['inventory']:
+        return burnRedDescription(state, currentLevel, userInput)
+    elif state['inventory']['photograph', 'carKeys', 'canvas']['itemUse'] == True:
+        return burnRedDescription(state, currentLevel, userInput)
+
+def burnRedDescription(state, currentLevel, userInput):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelTitle": '',
+            "levelDescription": '',
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
+        }
+    } 
+    data = openBurnFile()
     for level in data:
         if level["level"] == currentLevel:
             response['pageChanges']['levelTitle'] = level['levelTitle']
@@ -187,7 +210,7 @@ def openTorchFile():
         data =json.loads(getData.read())
         return data
 
-def openfalseKeyFile():
+def openFalseKeyFile():
     cwd = os.getcwd()
     filePath = cwd + '/Server/blueFalseKeyDescription.json'
     
@@ -209,4 +232,12 @@ def openUseDescriptionFile():
     
     with open(filePath, 'r') as getData:
         data =json.loads(getData.read())
+        return data
+
+def openBurnFile():
+    cwd = os.getcwd()
+    filePath = cwd + '/Server/redBurnDescription.json'
+    
+    with open(filePath, 'r') as getData:
+        data = json.loads(getData.read())
         return data
