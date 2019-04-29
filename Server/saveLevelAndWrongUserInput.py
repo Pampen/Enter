@@ -115,6 +115,28 @@ def inspectItem(state, userInput):
                                 'levelChatboxText': "You do not seem to be carrying that."
                         }
                 }
+
+def usePersistantItem(state, currentItem, currentLevel):
+    itemData = openItemFile()
+    item = itemData[currentItem]
+    newState = state
+    newState['inventory'][currentItem] = item
+    data = openLevelFile()
+    response = {
+        'state': newState,
+        'pageChanges': {
+            "levelTitle": '',
+            "levelDescription": '',
+            'levelChatboxText': 'You used the ' + item['itemName'].upper() + "."
+        }
+    } 
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
+
 def handleInvalidDirection(state):
     response = {
         'state': state,

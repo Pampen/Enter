@@ -4,6 +4,7 @@ Ska kontrollera vilket main-level ett visst level hör till!
 const levels = {
     "OUTSIDE": "TUTORIAL",
     "GREENHOUSE": "TUTORIAL",
+    "GREENHOUSE_LIGHT_ON": "TUTORIAL",
     "PORCH": "TUTORIAL",
     "MAINHALL": "TUTORIAL",
     "BEACH": "JOY",
@@ -43,4 +44,4 @@ const levels = {
     "MESSYROOM": "LOVE"
 }
 
-export {levels}
+export { levels }
