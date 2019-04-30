@@ -135,15 +135,9 @@
         "levelTitle": "Living Room"
     },
     {
-<<<<<<< HEAD
-    "level": "LIVING_ROOMITEM",
-    "levelDescription": "With the canvas, car keys and the photograph in your possesion you can feel the heat from the fireplace, some things are meant to be burned down to ashes.",
-    "levelTitle": "Living Room"
-=======
-        "level": "LIVING_ROOMItem",
+        "level": "LIVING_ROOMITEM",
         "levelDescription": "With the canvas, car keys and the photograph in your possesion you can feel the heat from the fireplace, some things are meant to be burned down to ashes.",
         "levelTitle": "Living Room"
->>>>>>> 2dbc22207f0e946d2d3b73e67696bbde6a1f9b9b
     },
     {
         "level": "KITCHEN",

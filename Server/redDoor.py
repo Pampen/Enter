@@ -17,7 +17,7 @@ def handleLivingRoom(userInput, state):
 def handleKitchen(userInput, state):
     if userInput == 'GO WEST':
         if 'photograph' and 'carKeys' and 'canvas' in state['inventory']: 
-            return goToLevel(state, 'LIVING_ROOMITEM', userInput)
+            return goToLevel(state, 'LIVING_ROOM', userInput) and handleNewLivingRoomdDesc(state)
         else:
             return goToLevel(state, 'LIVING_ROOM', userInput)
     elif userInput == 'TAKE PHOTOGRAPH':
@@ -32,7 +32,7 @@ def handleKitchen(userInput, state):
 def handleHall(userInput, state):
     if userInput == 'GO EAST':
         if 'photograph' and 'carKeys' and 'canvas' in state['inventory']: 
-            return goToLevel(state, 'LIVING_ROOMITEM', userInput)
+            return goToLevel(state, 'LIVING_ROOM', userInput) and handleNewLivingRoomdDesc(state)
         else:
             return goToLevel(state, 'LIVING_ROOM', userInput)
     elif userInput == 'TAKE CAR KEYS':
@@ -91,3 +91,13 @@ def handleBasement(userInput, state):
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)
+
+def handleNewLivingRoomdDesc(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelTitle': "Living Room",
+            'levelDescription': "With the canvas, car keys and the photograph in your possesion you can feel the heat from the fireplace, some things are meant to be burned down to ashes."
+        }
+    }
+    return response
