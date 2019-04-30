@@ -82,6 +82,7 @@ body {
 }
 .animation-fade-in {
   animation: 0.2s fade-in;
+  z-index: 1;
 }
 #main-buttons {
   display: flex;
@@ -110,6 +111,16 @@ body {
 #inventory-button {
   margin-top: 20px;
   margin-bottom: 7px;
+}
+.nav-button {
+
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  text-emphasis-style: bold;
+  color: white;
+  border: 1px solid green;
+  box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
 }
 .inventory {
   padding: 16px;

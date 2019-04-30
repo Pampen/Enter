@@ -8,6 +8,7 @@ from greenDoor import handleBeach, handleCabin, handleCellar, handleGate, handle
 levels = {
     'OUTSIDE': handleOutside,
     'GREENHOUSE': handleGreenHouse,
+    'GREENHOUSE_LIGHT_ON': handleGreenHouse,
     'PORCH': handlePorch,
     'BEACH': handleBeach,
     'CABIN': handleCabin,
