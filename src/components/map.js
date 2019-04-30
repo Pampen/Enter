@@ -8,8 +8,8 @@ class Map extends Component {
     for (const key in levels) {
       if (key === currentLevel) {
         currentLevel = levels[key];
-      }
-    }
+      };
+    };
     console.log(currentLevel);
     switch (currentLevel) {
       case "ANGER":
@@ -24,8 +24,8 @@ class Map extends Component {
         return <img src={apple} alt="an testimage" />;
       default:
         return <div>Where are you and how did you get here?</div>;
-    }
-  }
-}
+    };
+  };
+};
 
 export default Map;
