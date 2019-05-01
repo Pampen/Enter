@@ -2,7 +2,7 @@ from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handle
 
 def handleOutside(userInput, state):
     if userInput == 'GO WEST':
-        if "lightswitch" in state['inventory']:
+        if "lightswitch" in state['usedItems']:
             return goToLevel(state, 'GREENHOUSE_LIGHT_ON', userInput)
         else:
             return goToLevel(state, 'GREENHOUSE', userInput)
@@ -30,7 +30,7 @@ def handleGreenHouse(userInput, state):
         return goToLevel(state, 'OUTSIDE', userInput)
     elif userInput == "USE LIGHTSWITCH":
         return usePersistantItem(state, "lightswitch", "GREENHOUSE_LIGHT_ON")
-    elif userInput == "TAKE BRASS KEY":
+    elif userInput == "TAKE BRASS KEY" or "TAKE KEY":
         return takeItem(state, 'brassKey')
     elif userInput == 'GO NORTH' or userInput == 'GO SOUTH' or userInput == 'GO WEST':
         return handleInvalidDirection(state)

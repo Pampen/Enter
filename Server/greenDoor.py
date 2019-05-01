@@ -57,7 +57,7 @@ def handleLighthouseTopFloor(userInput, state):
 def handleOutsideShed(userInput, state):
     if userInput == 'GO WEST':
         if "oilLamp" in state["inventory"]:
-            return goToLevel(state, 'SHED_NEW', userInput)
+            return goToLevel(state, "SHED", userInput) and handleNewShedDesc(state)
         else:
             return goToLevel(state, "SHED", userInput)
     elif userInput == 'GO NORTH' or userInput == "GO SOUTH":
@@ -76,8 +76,11 @@ def handleShed(userInput, state):
         return takeItem(state, 'oilLamp')
     elif userInput == 'GO EAST':
         return goToLevel(state, "OUTSIDE_SHED", userInput)
-    elif userInput == "JOYFUL" and "tornPages" in state["inventory"]:
-        return goToLevelShedPuzzle(state, "CELLAR", userInput)
+    elif userInput == "JOYFUL":
+        if "tornPages" in state["inventory"]:
+            return goToLevelShedPuzzle(state, "CELLAR", userInput)
+        else:
+            return handleDoorLock(state, "SHED", userInput)
     else:
         return handleInvalidInput(userInput, state)
   
@@ -116,7 +119,7 @@ def handleCellar(userInput, state):
         return handleInvalidDirection(state)
     elif userInput == 'TAKE STAIRS':
         if "oilLamp" in state["inventory"]:
-            return goToLevel(state, 'SHED_NEW', userInput)
+            return goToLevel(state, 'SHED', userInput) and handleNewShedDesc(state)
         else:
             return goToLevel(state, "SHED", userInput)
     elif userInput == "USE OIL LAMP" and "oilLamp" in state["inventory"]:
@@ -157,7 +160,8 @@ def handleNewShedDesc(state):
     response = {
         'state': state,
         'pageChanges': {
-            'levelDescription': "The Room lights up making it easier to see your surronding. There's a table infront of you with a key on it."
+            'levelTitle': "Shed",
+            'levelDescription': "You stand inside the shed. It's filled with what looks to be a bunch of old fisherman gear. There seems to be stairs leading down to the basement."
         }
     }
     return response

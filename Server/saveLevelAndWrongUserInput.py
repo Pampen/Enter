@@ -84,7 +84,9 @@ def takeItem(state, currentItem):
     itemData = openItemFile()
     item = itemData[currentItem]
     newState = state
+    print(item)
     newState['inventory'][currentItem] = item
+    print(newState)
     response = {
         'state': newState, 
         'pageChanges': {
@@ -116,25 +118,20 @@ def inspectItem(state, userInput):
         }
 
 def usePersistantItem(state, currentItem, currentLevel):
-    itemData = openItemFile()
-    item = itemData[currentItem]
+    print(currentItem)
     newState = state
-    newState['inventory'][currentItem] = item
-    data = openLevelFile()
-    response = {
-        'state': newState,
+    newState['usedItems'] = currentItem
+    print(newState)
+    if currentItem == "lightswitch":
+        return goToLevel(newState, currentLevel, currentItem)
+    else:
+        response = {
+        'state': newState, 
         'pageChanges': {
-            "levelTitle": '',
-            "levelDescription": '',
-            'levelChatboxText': 'You used the ' + item.upper() + "."
+                'levelChatboxText': 'You used the ' + currentItem.upper() + '.' 
         }
-    } 
-    for level in data:
-        if level["level"] == currentLevel:
-            response['pageChanges']['levelTitle'] = level['levelTitle']
-            response['pageChanges']['levelDescription'] = level['levelDescription']
-            response['state']['level'] = level['level']
-            return response
+    }
+    return response
 
 def handleInvalidDirection(state):
     response = {
