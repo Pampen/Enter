@@ -55,13 +55,8 @@
         "levelTitle": "Shed"
     },
     {
-        "level": "SHED_NEW",
-        "levelDescription": "You stand inside the shed. It's filled with what looks to be a bunch of old fisherman gear. There seems to be stairs leading down to the basement.",
-        "levelTitle": "Shed"
-    },
-    {
         "level": "CELLAR",
-        "levelDescription": "You find yourself in the basement of the shed. There seems to be nothing but bunch of old junk. Though you see something glimmer in the distant, do you want to inspect it?",
+        "levelDescription": "You find yourself in the basement of the shed. There seems to be nothing but bunch of old junk. Your vision is very limited due to the darkness, maybe you should take a closer look with the help of that oil lamp...",
         "levelTitle": "Cellar"
     },
     {
