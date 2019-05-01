@@ -18,7 +18,7 @@ class App extends Component {
       chatboxText: [],
       inventory: {},
       usedItems: {
-        lightSwitch: false
+
       },
       level: "OUTSIDE"
     };
