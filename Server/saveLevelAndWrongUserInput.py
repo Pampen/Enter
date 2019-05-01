@@ -55,7 +55,7 @@ def falseKeyDescription(state, currentLevel, userInput):
             'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }
     } 
-    data = openfalseKeyFile()
+    data = openFalseKeyFile()
     for level in data:
         if level["level"] == currentLevel:
             response['pageChanges']['levelTitle'] = level['levelTitle']
@@ -96,6 +96,7 @@ def takeItem(state, currentItem):
 def inspectItem(state, userInput):
     itemData = openItemFile()
     for item in itemData:
+        print(item)
         if itemData[item]['itemName'].upper() in userInput:
             print(itemData[item]['itemName'])
             if item in state['inventory']:
@@ -114,6 +115,27 @@ def inspectItem(state, userInput):
                 }
         }
 
+def usePersistantItem(state, currentItem, currentLevel):
+    itemData = openItemFile()
+    item = itemData[currentItem]
+    newState = state
+    newState['inventory'][currentItem] = item
+    data = openLevelFile()
+    response = {
+        'state': newState,
+        'pageChanges': {
+            "levelTitle": '',
+            "levelDescription": '',
+            'levelChatboxText': 'You used the ' + item.upper() + "."
+        }
+    } 
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
+
 def handleInvalidDirection(state):
     response = {
         'state': state,
@@ -128,15 +150,6 @@ def handleInvalidInput(userInput, state):
         'state': state,
         'pageChanges': {
             'levelChatboxText': 'You cannot ' + userInput + '.'
-        }
-    }
-    return response
-
-def handleInvalidPickUp(userInput, state):
-    response = {
-        'state': state,
-        'pageChanges': {
-            'levelChatboxText': 'You cannot pick up ' + userInput + '.'
         }
     }
     return response
@@ -168,7 +181,23 @@ def handleUseItemBlueRoom(state, currentLevel):
             response['pageChanges']['levelChatboxText'] = level['levelDescription']
             response['state']['level'] = level['level']
             return response
-    
+
+def goToLevelShedPuzzle(state, currentLevel, userInput):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelTitle": '',
+            "levelDescription": '',
+            'levelChatboxText': "You managed to open the door and went further into the cellar..."
+        }
+    } 
+    data = openLevelFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
 
 def openLevelFile():
     cwd = os.getcwd()  # Get the current working directory (cwd)
@@ -194,7 +223,7 @@ def openTorchFile():
         data =json.loads(getData.read())
         return data
 
-def openfalseKeyFile():
+def openFalseKeyFile():
     cwd = os.getcwd()
     filePath = cwd + '/Server/tools/blueFalseKeyDescription.json'
     
@@ -217,4 +246,3 @@ def openUseDescriptionFile():
     with open(filePath, 'r') as getData:
         data =json.loads(getData.read())
         return data
-

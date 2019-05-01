@@ -1,7 +1,7 @@
 [
     {
         "level": "BLUE_START",
-        "levelDescription": "With the torch in hand you can make out the end of the hallway infront of you. You hear a faint sobbing",
+        "levelDescription": "With the torch in hand you can make out the end of the hallway infront of you. You hear a faint sobbing.",
         "levelTitle": "Blue start"
     },
     {
@@ -11,12 +11,12 @@
     },
     {
         "level": "BLUE_CORRIDOR_1",
-        "levelDescription": "As you enter the hallway, you see there’s corridors to the left, right and in front of you. The sobbing becomes ever so clearer. ",
+        "levelDescription": "As you enter the hallway, you see there's corridors to the left, right and in front of you. The sobbing becomes ever so clearer.",
         "levelTitle": "Blue Corridor 1"
     },
     {
         "level": "BLUE_CORRIDOR_2",
-        "levelDescription": "As you hold your torch up you catch a glimpse of something shining in front of you down the corridor but the faint sobbing subsides. ",
+        "levelDescription": "As you hold your torch up you catch a glimpse of something shining in front of you down the corridor but the faint sobbing subsides.",
         "levelTitle": "Blue Corridor 2"
     },
     {
@@ -41,7 +41,7 @@
     },
     {
         "level": "BLUE_CORRIDOR_7",
-        "levelDescription": "In the room there is a keyhole on the opposite side of the gate. ",
+        "levelDescription": "In the room there's a keyhole on the opposite side of the gate.",
         "levelTitle": "Blue Corridor 7"
     }
 ]

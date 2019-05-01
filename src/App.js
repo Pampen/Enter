@@ -14,7 +14,7 @@ class App extends Component {
     super(props);
     this.state = {
       title: "Outside",
-      description: "This is outside.",
+      description: "It's cold outside. There is a strange old house in front of you, there isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to your left.",
       chatboxText: [],
       inventory: {},
       usedItems: {
@@ -24,6 +24,7 @@ class App extends Component {
     };
     this.updateState = this.updateState.bind(this);
   }
+
   updateState(inputElementValue) {
     sendMessage(inputElementValue, this.state).then(response => {
       const newTitle = response.pageChanges.levelTitle || null;
@@ -77,34 +78,6 @@ class App extends Component {
     });
   };
   render() {
-    /*
-    Move commandlist to corresponding module
-    */
-    console.log(this.state.inventory)
-    const commands = {
-      goCommand: {
-        commandName: "GO (North/West/South/East)",
-        commandDescription: "Use this command to navigate through the game"
-      },
-      takeCommand: {
-        commandName: "TAKE (item)",
-        commandDescription:
-          "Use this command to pick up items and add them to your inventory"
-      },
-      inspectCommand: {
-        commandName: "INSPECT (item)",
-        commandDescription:
-          "Use this command to inspect items that you have acquired"
-      },
-      useCommand: {
-        commandName: "USE (item/stairs)",
-        commandDescription:
-          "Use this command to use an item in your inventory such as 'use key'"
-      }
-    };
-    /*
-    /Move commandlist to corresponding module
-    */
 
     return (
       <main id="wrapper">
@@ -136,7 +109,7 @@ class App extends Component {
               onClose={this.showCommandModal}
               show={this.state.commandShow}
             >
-              <Commands commandInfo={commands} />
+              <Commands />
             </Modal>
             <Terminal updateState={this.updateState} />
           </div>

@@ -2,6 +2,7 @@
 const levels = {
     "OUTSIDE": "TUTORIAL",
     "GREENHOUSE": "TUTORIAL",
+    "GREENHOUSE_LIGHT_ON": "TUTORIAL",
     "PORCH": "TUTORIAL",
     "MAINHALL": "TUTORIAL",
     "BEACH": "JOY",
@@ -28,6 +29,7 @@ const levels = {
     "BLUE_CORRIDOR_9": "SADNESS",
     "BLUE_FINISH": "SADNESS",
     "LIVING_ROOM": "ANGER",
+    "LIVING_ROOMItem": "ANGER",
     "KITCHEN": "ANGER",
     "HALL": "ANGER",
     "UPPER_FLOOR": "ANGER",
@@ -41,4 +43,4 @@ const levels = {
     "MESSYROOM": "LOVE"
 }
 
-export {levels}
+export { levels }
