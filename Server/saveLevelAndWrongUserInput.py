@@ -1,7 +1,45 @@
 import json
 import os
 
-
+def redPuzzle(state, userInput): 
+    newState = state
+    objectList = state["isBurned"]
+    if len(objectList) == 0 and userInput == 'THROW CANVAS':
+        objectList.append('canvas')
+        print(objectList)
+        newState['isBurned'] = objectList
+        return {
+            'state': newState, 
+            'pageChanges': {
+                'levelChatboxText': "You burn canvas"
+            }
+        }
+    elif 'canvas' in state['inventory'] and 'canvas' in state['isBurned'] and userInput == 'THROW PHOTOGRAPH':
+        objectList.append('photograph')
+        newState['isBurned'] = objectList
+        return {
+        'state': newState, 
+        'pageChanges': {
+            'levelChatboxText': "You burn photograph."
+        }
+    }
+    elif 'photograph' in state['inventory'] and 'photograph' in state['isBurned'] and userInput == 'THROW CAR KEYS':
+        objectList.append('carKeys')
+        newState['isBurned'] = objectList
+        return {
+        'state': newState, 
+        'pageChanges': {
+            'levelChatboxText': "You burn car keys. You completed the puzzle. Here is the red key."
+        }
+    }
+    else:
+        newState['isBurned'] = []
+        return {
+            'state': newState,
+            'pageChanges': {
+                'levelChatboxText': 'It is not the right order dumbnut.'
+            }
+        }
 
 def goToLevel(state, currentLevel, userInput):
     response = {
@@ -114,8 +152,8 @@ def inspectItem(state, userInput):
             'state': state, 
             'pageChanges': {
                     'levelChatboxText': "You do not seem to be carrying that."
-            }
     }
+}
 
 def usePersistantItem(state, currentItem, currentLevel):
     itemData = openItemFile()

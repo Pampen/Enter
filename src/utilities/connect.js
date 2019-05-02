@@ -9,8 +9,8 @@ export default function returnFlaskPost(message, state) {
       message,
       state: {
         inventory: state.inventory,
-        level: state.level
-      }
+        level: state.level,
+        isBurned: state.isBurned      }
     })
   }).then(response => {
     return response.json();

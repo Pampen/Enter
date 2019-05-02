@@ -17,8 +17,6 @@ def getRequest():
 
     response = getResponse(userInput, state)
 
-    print(response)
-
     return jsonify(response)
 
 def getResponse(userInput, state):

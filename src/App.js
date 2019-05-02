@@ -16,12 +16,12 @@ class App extends Component {
       title: "Outside",
       description: "It's cold outside. There is a strange old house in front of you.There isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to the west side of the house.",
       chatboxText: [],
-      inventory: {},
+      inventory: {'canvas': true, 'carKeys': true, 'photograph': true},
       usedItems: {
         lightSwitch: false
       },
-      redPuzzle:{},
-      level: "OUTSIDE"
+      isBurned: [],
+      level: "LIVING_ROOM"
     };
     this.updateState = this.updateState.bind(this);
   }
@@ -36,6 +36,7 @@ class App extends Component {
       const newGameState = {};
       newGameState.inventory = response.state.inventory;
       newGameState.level = response.state.level;
+      newGameState.isBurned = response.state.isBurned;
 
       if (newTitle) {
         newGameState.title = newTitle;
