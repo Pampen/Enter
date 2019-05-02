@@ -15,6 +15,11 @@
         "levelTitle": "Greenhouse"
     },
     {
+        "level": "GREENHOUSE_LIGHT_AND_KEY_ON",
+        "levelDescription": "There aren't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days.",
+        "levelTitle": "Greenhouse"
+    },
+    {
         "level": "PORCH",
         "levelDescription": "The porch is old and the small staircase is missing some planks. The window are all boarded up from the inside and it looks like the windows are painted in black. This porch is barely holding up.",
         "levelTitle": "Porch"
