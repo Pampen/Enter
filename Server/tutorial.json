@@ -26,7 +26,7 @@
     },
     {
         "level": "GATE",
-        "levelDescription": "While making your way up the hill you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over two hundred years old. There's also spikes at the top that makes it impossible to climb over.",
+        "levelDescription": "While making your way up the hill you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over hundreds of years old. There's also spikes at the top that makes it impossible to climb over",
         "levelTitle": "Gate"
     },
     {
@@ -36,17 +36,17 @@
     },
     {
         "level": "LIGHTHOUSE",
-        "levelDescription": "This is the lighthouse. There's a staircase that leads up to the 2nd floor.",
+        "levelDescription": "This is the lighthouse. There's a staircase that leads up to the top floor.",
         "levelTitle": "Lighthouse"
     },
     {
         "level": "LIGHTHOUSE_TOP",
-        "levelDescription": "This is the top floor in the lighthouse. There looks to be some sort of old machine that requires you to put in a key.",
+        "levelDescription": "This is the top floor in the lighthouse. There's a green key hanging on the wall.",
         "levelTitle": "Lighthouse Top Floor"
     },
     {
         "level": "OUTSIDE_SHED",
-        "levelDescription": "You stand outside the shed, do you decide to go in?",
+        "levelDescription": "You stand outside the shed. There seems to be no one inside when looking through the window, so it's probably save to go inside...",
         "levelTitle": "Shed Frontdoor"
     },
     {
