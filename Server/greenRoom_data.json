@@ -1,12 +1,12 @@
 [
     {
         "level": "BEACH",
-        "levelDescription": "The door closes behind you, leaving you alone in the darkness. Suddenly, everything lights up and you find yourself on the beach. There's a Lighthouse right infront of you up the hill, a shipwreck by the coast and what looks to be a shed to your left by the seaside. Which way do you decide to go?",
+        "levelDescription": "The door closes behind you, leaving you alone in the darkness. Suddenly, everything lights up, and you find yourself on the beach. There's a lighthouse right in front of you up the hill, a shipwreck by the coast and what looks to be a shed to your left by the seaside. Which way do you decide to go?",
         "levelTitle": "Beach"
     },
     {
         "level": "GATE",
-        "levelDescription": "While making your way up the hill you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over hundreds of years old. There's also spikes at the top that makes it impossible to climb over",
+        "levelDescription": "While making your way up the hill, you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over two hundred years old. There are also spikes at the top that makes it impossible to climb over.",
         "levelTitle": "Gate"
     },
     {
@@ -20,18 +20,24 @@
         "levelTitle": "Lighthouse"
     },
     {
-        "level": "LIGHTHOUSE_TOP",
-        "levelDescription": "This is the top floor in the lighthouse. There's a green key hanging on the wall.",
+        "level": "LIGHTHOUSE_TOP_FLOOR",
+        "levelDescription": "This is the top floor in the lighthouse. There looks to be some sort of old machine that requires you to put in a key.",
         "levelTitle": "Lighthouse Top Floor"
     },
     {
+<<<<<<< HEAD
         "level": "OUTSIDE_SHED",
         "levelDescription": "You stand outside the shed. There seems to be no one inside when looking through the window, so it's probably save to go inside...",
         "levelTitle": "Shed Frontdoor"
+=======
+        "level": "SHED_FRONT_DOOR",
+        "levelDescription": "You stand outside the shed, do you decide to go in?",
+        "levelTitle": "Shed Front Door"
+>>>>>>> developer_jacky
     },
     {
         "level": "SHED",
-        "levelDescription": "You stand inside the shed. It’s filled with what looks to be a bunch of old fisherman gear. There's an old fashioned oil lamp thats hanging on the wall. There also seems to be stairs leading down to the basement.",
+        "levelDescription": "You stand inside the shed. It's filled with what looks to be a bunch of old fisherman gear. There's an old-fashioned oil lamp thats hanging on the wall. There seems to be stairs leading down to the basement.",
         "levelTitle": "Shed"
     },
     {
@@ -40,9 +46,9 @@
         "levelTitle": "Cellar"
     },
     {
-        "level": "OUTSIDE_SHIPWRECK",
+        "level": "BEACH_EAST_SIDE",
         "levelDescription": "You see a shipwreck in the distant, do you decide to explore it?",
-        "levelTitle": "Beach east side"
+        "levelTitle": "Beach East Side"
     },
     {
         "level": "SHIPWRECK",
@@ -50,8 +56,8 @@
         "levelTitle": "Shipwreck"
     },
     {
-        "level": "CABIN",
-        "levelDescription": "You are currently inside the captains cabin. There's a family photograph on the wall of what looks to be the owner of this boats family. There's a desk with a pieces of torn pages on it.",
+        "level": "CAPTAINS_CABIN",
+        "levelDescription": "You are currently inside the captains cabin. There's a family photograph on the wall of what looks to be the owner of this ships family. There's a desk with a piece of torn pages on it.",
         "levelTitle": "Captains Cabin"
     }
 ]
