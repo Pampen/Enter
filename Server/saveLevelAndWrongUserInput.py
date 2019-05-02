@@ -1,6 +1,8 @@
 import json
 import os
 
+
+
 def goToLevel(state, currentLevel, userInput):
     response = {
         'state': state,
@@ -108,12 +110,12 @@ def inspectItem(state, userInput):
                     }
                 }
                 return response
-        return {
-                'state': state, 
-                'pageChanges': {
-                        'levelChatboxText': "You do not seem to be carrying that."
-                }
-        }
+    return {
+            'state': state, 
+            'pageChanges': {
+                    'levelChatboxText': "You do not seem to be carrying that."
+            }
+    }
 
 def usePersistantItem(state, currentItem, currentLevel):
     itemData = openItemFile()

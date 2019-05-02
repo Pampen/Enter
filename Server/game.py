@@ -23,6 +23,7 @@ def getRequest():
 
 def getResponse(userInput, state):
     if 'INSPECT' in userInput:
+        print("sdasdsa")
         return inspectItem(state, userInput)
     else: 
         return levelChecker(userInput, state)
