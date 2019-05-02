@@ -1,13 +1,10 @@
-from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock, redPuzzle
+from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock, redPuzzle, returnToMainHall
 
 def handleLivingRoom(userInput, state):
-    if userInput == 'GO SOUTH':
-        return goToLevel(state, 'MAIN_HALL', userInput)
-    elif 'THROW' in userInput:
-        print("Asdasda")
+    if 'THROW' in userInput:
         return redPuzzle(state, userInput)
     elif userInput == 'TAKE RED KEY' and 'carKeys' in state['isBurned']:
-        return takeItem(state, 'redKey')
+        return returnToMainHall(state, 'redKey', 'MAIN_HALL')
     elif userInput == 'GO EAST':
         if 'photograph' in state['inventory']: 
             return goToLevel(state, 'KITCHEN', userInput) and handleNewKitchenDesc(state, userInput)
@@ -18,7 +15,7 @@ def handleLivingRoom(userInput, state):
             return goToLevel(state, 'HALL', userInput) and handleNewHallDesc(state, userInput)
         else:
             return goToLevel(state, 'HALL', userInput)
-    elif userInput == 'GO NORTH':
+    elif userInput == 'GO NORTH' or userInput == 'GO SOUTH':
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)

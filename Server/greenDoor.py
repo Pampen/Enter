@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handleInvalidInput, takeItem, handleDoorLock, goToLevelShedPuzzle
+from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handleInvalidInput, takeItem, handleDoorLock, goToLevelShedPuzzle, returnToMainHall
 
 def handleBeach(userInput, state):
     if userInput == 'GO WEST':
@@ -49,8 +49,8 @@ def handleLighthouseTopFloor(userInput, state):
         return handleInvalidDirection(state)
     elif userInput == "TAKE STAIRS":
         return goToLevel(state, "LIGHTHOUSE", userInput)
-    elif userInput == "TAKE GREEN KEY" or userInput == "TAKE KEY":
-        return takeItem(state, "greenKey")
+    elif userInput == 'TAKE GREEN KEY' or userInput == 'TAKE KEY':
+        return returnToMainHall(state, 'greenKey', 'MAIN_HALL')
     else:
         return handleInvalidInput(userInput, state)
 

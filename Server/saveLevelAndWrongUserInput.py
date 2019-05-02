@@ -239,6 +239,27 @@ def goToLevelShedPuzzle(state, currentLevel, userInput):
             response['state']['level'] = level['level']
             return response
 
+def returnToMainHall(state, currentItem, currentLevel):
+    print(currentItem)
+    itemData = openItemFile()
+    item = itemData[currentItem]
+    newState = state
+    newState['inventory'][currentItem] = item
+    response = {
+        'state': newState, 
+        'pageChanges': {
+                'levelChatboxText': 'You picked up ' + item["itemName"].upper() + '. You are now back at the Main Hall'
+        }
+    }
+
+    data = openLevelFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
+
 def openLevelFile():
     cwd = os.getcwd()  # Get the current working directory (cwd)
     filePath = cwd + '/Server/tutorial.json'

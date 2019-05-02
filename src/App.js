@@ -16,12 +16,12 @@ class App extends Component {
       title: "Outside",
       description: "It's cold outside. There is a strange old house in front of you.There isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to the west side of the house.",
       chatboxText: [],
-      inventory: {'canvas': true, 'carKeys': true, 'photograph': true},
+      inventory: {},
       usedItems: {
         lightSwitch: false
       },
       isBurned: [],
-      level: "LIVING_ROOM"
+      level: "OUTSIDE"
     };
     this.updateState = this.updateState.bind(this);
   }
