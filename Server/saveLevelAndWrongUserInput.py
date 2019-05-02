@@ -108,12 +108,12 @@ def inspectItem(state, userInput):
                     }
                 }
                 return response
-        return {
+    return {
                 'state': state, 
                 'pageChanges': {
                         'levelChatboxText': "You do not seem to be carrying that."
-                }
-        }
+    }
+}
 
 def usePersistantItem(state, currentItem, currentLevel):
     itemData = openItemFile()
