@@ -77,6 +77,7 @@ class App extends Component {
     });
   };
   render() {
+    console.log(this.state.level)
 
     return (
       <main id="wrapper">
