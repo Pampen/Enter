@@ -6,16 +6,12 @@
     },
     {
         "level": "GREENHOUSE",
-<<<<<<< HEAD
         "levelDescription": "As you open the door you stare into a dark room, you start to feel around the wall next to the door and notice a lightswitch",
         "levelTitle": "Greenhouse"
     },
     {
         "level": "GREENHOUSE_LIGHT_ON",
-        "levelDescription": "There aren't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days. In the middle of all this mess you can see a brass key.",
-=======
         "levelDescription": "There isn't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days. In the middle of all this mess, you can see a brass key.",
->>>>>>> developer_jacky
         "levelTitle": "Greenhouse"
     },
     {
@@ -40,11 +36,7 @@
     },
     {
         "level": "GATE",
-<<<<<<< HEAD
-        "levelDescription": "While making your way up the hill you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over hundreds of years old. There's also spikes at the top that makes it impossible to climb over",
-=======
-        "levelDescription": "While making your way up the hill, you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over two hundred years old. There are also spikes at the top that makes it impossible to climb over.",
->>>>>>> developer_jacky
+        "levelDescription": "While making your way up the hill, you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over hundreds years old. There are also spikes at the top that makes it impossible to climb over.",
         "levelTitle": "Gate"
     },
     {
@@ -58,25 +50,14 @@
         "levelTitle": "Lighthouse"
     },
     {
-<<<<<<< HEAD
-        "level": "LIGHTHOUSE_TOP",
+        "level": "LIGHTHOUSE_TOP_FLOOR",
         "levelDescription": "This is the top floor in the lighthouse. There's a green key hanging on the wall.",
         "levelTitle": "Lighthouse Top Floor"
     },
     {
-        "level": "OUTSIDE_SHED",
-        "levelDescription": "You stand outside the shed. There seems to be no one inside when looking through the window, so it's probably save to go inside...",
-        "levelTitle": "Shed Frontdoor"
-=======
-        "level": "LIGHTHOUSE_TOP_FLOOR",
-        "levelDescription": "This is the top floor in the lighthouse. There looks to be some sort of old machine that requires you to put in a key.",
-        "levelTitle": "Lighthouse Top Floor"
-    },
-    {
         "level": "SHED_FRONT_DOOR",
-        "levelDescription": "You stand outside the shed, do you decide to go in?",
+        "levelDescription": "There seems to be no one inside when looking through the window, so it's probably save to go inside...",
         "levelTitle": "Shed Front Door"
->>>>>>> developer_jacky
     },
     {
         "level": "SHED",

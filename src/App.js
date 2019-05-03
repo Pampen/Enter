@@ -18,10 +18,10 @@ class App extends Component {
       chatboxText: [],
       inventory: {},
       usedItems: {
-        lightSwitch: false
+        lightSwitch: false,
       },
       isBurned: [],
-      level: "OUTSIDE"
+      level: "LIVING_ROOM"
     };
     this.updateState = this.updateState.bind(this);
   }

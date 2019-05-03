@@ -75,13 +75,13 @@ def handleUpperFloor(userInput, state):
             return goToLevel(state, 'HALL', userInput) and handleNewHallDesc(state, userInput)
         else:
             return goToLevel(state, 'HALL', userInput)
+    elif userInput == 'GO WEST':
+        return handleDoorLock(state, 'UPPER_FLOOR_W', userInput)
     elif userInput == 'USE GREY KEY' and "greyKey" in state["inventory"]:
-        if 'canvas' in state['inventory']: 
+        if 'canvas' in state['inventory']:
             return goToLevel(state, 'BEDROOM', userInput) and handleNewBedroomDesc(state, userInput)
         else:
             return goToLevel(state, 'BEDROOM', userInput)
-    elif userInput == 'GO WEST':
-        return handleDoorLock(state, 'UPPER_FLOOR_W', userInput)
     elif userInput == 'USE LADDER' and "ladder" in state["inventory"]:
         if 'greyKey' in state['inventory']: 
             return goToLevel(state, 'ATTIC', userInput) and handleNewAtticDesc(state, userInput)
@@ -107,8 +107,9 @@ def handleAttic(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleBedroom(userInput, state):
-    if userInput == 'GO EAST':
+    if userInput == 'GO EAST' and "greyKey" in state['inventory']:
         if 'photograph' and 'carKeys' and 'canvas' in state['inventory']: 
+            state['inventory']['greyKey']['itemUse'] = True
             return goToLevel(state, 'UPPER_FLOOR', userInput) and handleFireLoudDesc(state, userInput)
         else:
             return goToLevel(state, 'UPPER_FLOOR', userInput)
@@ -124,7 +125,7 @@ def handleNewLivingRoomDesc(state, userInput):
         'state': state,
         'pageChanges': {
             'levelTitle': "Living Room",
-            'levelDescription': "With the canvas, car keys and the photograph in your possession, you can feel the heat getting stronger and more violent. There is a huge message painted in red all over the room. Three Objects, Three Memories. You should try to throw objects into the fire.",
+            'levelDescription': "With the photograph, car keys and canvas in your possession, you can feel the heat getting stronger and more violent. There is a huge message painted in red all over the room. Three Objects, Three Memories. You should try to throw objects into the fire.",
             'levelChatbox': ' YOU ' + userInput.upper() + "."
         }
     }

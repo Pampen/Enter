@@ -31,7 +31,6 @@ def handleGreenHouse(userInput, state):
     if userInput == 'GO EAST':
         return goToLevel(state, 'OUTSIDE', userInput)
     elif userInput == "USE LIGHTSWITCH":
-<<<<<<< HEAD
         return handlePersistantItems(state, "lightswitch", "GREENHOUSE_LIGHT_ON")
     elif userInput == "TAKE BRASS KEY" or userInput == "TAKE KEY":
         if "lightswitch" in state['usedItems']:
@@ -43,11 +42,6 @@ def handleGreenHouse(userInput, state):
             'levelChatboxText': "It's too dark to see anything, try turning on the light first"
         }
     } 
-=======
-        return usePersistantItem(state, "lightswitch", "GREENHOUSE_LIGHT_ON")
-    elif userInput == "TAKE BRASS KEY" or userInput == "TAKE KEY":
-        return takeItem(state, 'brassKey')
->>>>>>> developer_jacky
     elif userInput == 'GO NORTH' or userInput == 'GO SOUTH' or userInput == 'GO WEST':
         return handleInvalidDirection(state)
     else:
