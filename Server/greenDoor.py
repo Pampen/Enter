@@ -157,7 +157,7 @@ def handleNewCellarDesc(state):
     response = {
         'state': state,
         'pageChanges': {
-            'levelDescription': "The Room lights up making it easier to see your surruondings. There's a table in front of you with a bronze key on it."
+            'levelDescription': "The Room lights up making it easier to see your surroundings. There's a table in front of you with a bronze key on it."
         }
     }
     return response
@@ -178,7 +178,7 @@ def handleNewBeachDesc(state, userInput):
         'state': state,
         'pageChanges': {
             'levelTitle': "Beach",
-            'levelDescription': "You find yourself on the beach. There's a Lighthouse right infront of you up the hill, a shipwreck by the coast and what looks to be a shed to your left by the seaside.",
+            'levelDescription': "You find yourself on the beach. There's a Lighthouse right in front of you up the hill, a shipwreck by the coast and what looks to be a shed to your left by the seaside.",
             'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }
     }

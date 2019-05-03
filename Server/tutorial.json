@@ -6,7 +6,7 @@
     },
     {
         "level": "GREENHOUSE",
-        "levelDescription": "As you open the door you stare into a dark room, you start to feel around the wall next to the door and notice a lightswitch",
+        "levelDescription": "As you open the door, you stare into a dark room, you start to feel around the wall next to the door and notice a lightswitch",
         "levelTitle": "Greenhouse"
     },
     {
@@ -16,7 +16,7 @@
     },
     {
         "level": "GREENHOUSE_LIGHT_AND_KEY_ON",
-        "levelDescription": "There aren't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days.",
+        "levelDescription": "There isn't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days.",
         "levelTitle": "Greenhouse"
     },
     {
@@ -56,7 +56,7 @@
     },
     {
         "level": "SHED_FRONT_DOOR",
-        "levelDescription": "There seems to be no one inside when looking through the window, so it's probably save to go inside...",
+        "levelDescription": "You stand outside the shed. There seems to be no one inside when looking through the window, so it's probably safe to go inside...",
         "levelTitle": "Shed Front Door"
     },
     {
@@ -126,12 +126,12 @@
     },
     {
         "level": "BABY_ROOM",
-        "levelDescription": "This room is filled with babythings. The walls have painted unicorns and the shelves are filled with toys. Only thing missing is the crib...",
+        "levelDescription": "This room is filled with baby things. The walls have painted unicorns, and the shelves are filled with toys. The only thing missing is the crib...",
         "levelTitle": "Baby Room"
     },
     {
         "level": "NURSING_ROOM",
-        "levelDescription": "A nursing room... and a changing table with a moldy pacifier on it. A funky smell surrounds this room..",
+        "levelDescription": "A nursing room... and a changing table with a moldy pacifier on it. A funky smell surrounds this room...",
         "levelTitle": "Nursing Room"
     },
     {
@@ -146,7 +146,7 @@
     },
     {
         "level": "BLUE_START",
-        "levelDescription": "You enter a dark room, you hear a faint sobbing. The only light there is is shining through the bottom of a door to your left. In front of you is a hallway leading seemingly into nothingness.",
+        "levelDescription": "You enter a dark room, and you hear a faint sobbing. The only light there is shining through the bottom of a door to your left. In front of you is a hallway leading seemingly into nothingness.",
         "levelTitle": "Blue start"
     },
     {
