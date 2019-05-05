@@ -18,7 +18,10 @@ class App extends Component {
       chatboxText: [],
       inventory: {},
       usedItems: {},
-      level: "OUTSIDE"
+      level: "OUTSIDE",
+      levelHistory: {
+        OUTSIDE: true
+      }
     };
     this.updateState = this.updateState.bind(this);
   }
@@ -33,7 +36,8 @@ class App extends Component {
       const newGameState = {};
       newGameState.inventory = response.state.inventory;
       newGameState.level = response.state.level;
-      newGameState.usedItems = response.state.usedItems
+      newGameState.usedItems = response.state.usedItems;
+      newGameState.levelHistory = this.state.levelHistory
 
       if (newTitle) {
         newGameState.title = newTitle;
@@ -51,6 +55,7 @@ class App extends Component {
         currentChatboxText.push(newItemDescription);
         newGameState.chatboxText = currentChatboxText;
       }
+      newGameState.levelHistory[response.state.level] = true;
       this.setState(newGameState);
       console.log(this.state);
     });
@@ -97,7 +102,7 @@ class App extends Component {
               level={this.state.level}
             />
             <Modal onClose={this.showMapModal} show={this.state.mapShow}>
-              <Map level={this.state.level} />
+              <Map level={this.state.level} levelHistory={this.state.levelHistory}/>
             </Modal>
             <Modal
               onClose={this.showInventoryModal}

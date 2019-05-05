@@ -117,19 +117,11 @@ def inspectItem(state, userInput):
                 }
                 return response
     return {
-<<<<<<< HEAD
             'state': state, 
             'pageChanges': {
                     'levelChatboxText': "You do not seem to be carrying that."
             }
     }
-=======
-                'state': state, 
-                'pageChanges': {
-                        'levelChatboxText': "You do not seem to be carrying that."
-    }
-}
->>>>>>> 2e9e04a8376a0c79a633b8dca7e13ebdd9db6416
 
 def handlePersistantItems(state, currentItem, currentLevel):
     if currentItem in state['usedItems']:

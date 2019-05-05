@@ -189,6 +189,55 @@ header {
   margin: 5px;
 }
 
+.map-wrapper {
+
+}
+.map-row{
+  display: flex;
+
+}
+.map-cell {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border: 2px solid #aaa;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.map-cell--current {
+  border-color: white;
+}
+.map-cell--hidden {
+  border: none;
+  opacity: 0;
+  pointer-events: none;
+}
+.map-cell-connection {
+  position: absolute;
+  background-color: #555;
+}
+.map-cell-connection--n {
+  top: -20px;
+  height: 16px;
+  width: 2px;
+}
+.map-cell-connection--s {
+  bottom: -20px;
+  height: 16px;
+  width: 2px;
+}
+.map-cell-connection--w {
+  left: -20px;
+  height: 2px;
+  width: 16px;
+}
+.map-cell-connection--e {
+  right: -20px;
+  height: 2px;
+  width: 16px;
+}
 @keyframes blink-animation {
   0% {
     opacity: 0;
