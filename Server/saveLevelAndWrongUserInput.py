@@ -29,7 +29,7 @@ def redPuzzle(state, userInput):
         return {
         'state': newState, 
         'pageChanges': {
-            'levelChatboxText': "You burn car keys. You completed the puzzle. Here is the red key."
+            'levelChatboxText': "You burn car keys. You completed the puzzle. "
         }
     }
     else:

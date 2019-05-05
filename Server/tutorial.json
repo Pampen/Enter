@@ -36,7 +36,7 @@
     },
     {
         "level": "GATE",
-        "levelDescription": "While making your way up the hill, you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over two hundred years old. There are also spikes at the top that makes it impossible to climb over.",
+        "levelDescription": "While making your way up the hill, you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over hundreds of years old. There's also spikes at the top that makes it impossible to climb over.",
         "levelTitle": "Gate"
     },
     {
@@ -51,7 +51,7 @@
     },
     {
         "level": "LIGHTHOUSE_TOP_FLOOR",
-        "levelDescription": "This is the top floor in the lighthouse. There looks to be some sort of old machine that requires you to put in a key.",
+        "levelDescription": "This is the top floor in the lighthouse. There's a green key hanging on the wall.",
         "levelTitle": "Lighthouse Top Floor"
     },
     {
