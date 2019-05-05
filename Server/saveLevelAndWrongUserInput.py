@@ -11,7 +11,7 @@ def redPuzzle(state, userInput):
         return {
             'state': newState, 
             'pageChanges': {
-                'levelChatboxText': "You burn canvas"
+                'levelChatboxText': "You burn the canvas"
             }
         }
     elif 'canvas' in state['inventory'] and 'canvas' in state['isBurned'] and userInput == 'THROW PHOTOGRAPH':
@@ -20,7 +20,7 @@ def redPuzzle(state, userInput):
         return {
         'state': newState, 
         'pageChanges': {
-            'levelChatboxText': "You burn photograph."
+            'levelChatboxText': "You burn the photograph."
         }
     }
     elif 'photograph' in state['inventory'] and 'photograph' in state['isBurned'] and userInput == 'THROW CAR KEYS':
@@ -37,7 +37,7 @@ def redPuzzle(state, userInput):
         return {
             'state': newState,
             'pageChanges': {
-                'levelChatboxText': 'It is not the right order dumbnut.'
+                'levelChatboxText': 'It is not in the right order, you might want to read the description for each item for this level to solve this puzzle...'
             }
         }
 
