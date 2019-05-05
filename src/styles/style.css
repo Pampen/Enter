@@ -156,9 +156,10 @@ body {
 .game-title {
   font-size: 24px;
   letter-spacing: 6px;
-  margin-left: 5px;
+  margin: 10px;
   text-shadow: 0 0 20px black;
   color: white;
+  text-align: left;
 }
 #game-title-first-letter {
   font-size: 32px;
@@ -180,15 +181,189 @@ body {
   cursor: pointer;
 }
 
-footer {
-  text-align: center;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  font-size: 8px;
-  padding-top: 95px;
+header {
+  margin: -8px; 
+  max-height: 60px;
+  margin-bottom: 10px;
 }
 
+ header .copyright{
+  font-size: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-left: 3px;
+  margin: 5px;
+}
+
+.map-wrapper {
+  position: absolute;
+  left: 100%;
+  padding: 20px;
+  background-color: #333;
+  margin-left: 30px;
+  border-radius: 10px;
+  border: 2px dashed #555;
+}
+.map-compass {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  font-size: 10px;
+}
+
+.map-compass-needle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 15px;
+  z-index: 100;
+  border-radius: 50%;
+  animation: 3s compass-needle-wiggle alternate infinite;
+}
+
+.map-compass-needle:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 3px 12px 3px;
+  border-color: transparent transparent #F00 transparent;
+  top: -7px;
+  left: 2px;
+}
+
+.map-compass-needle:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 3px 0 3px;
+  border-color: #CCC transparent transparent transparent;
+  bottom: -7px;
+  left: 2px;
+}
+
+.map-compass:before {
+  content: "";
+  top: 12px;
+  left: 19px;
+  position: absolute;
+  background-color: #fff;
+  width: 2px;
+  height: 16px;
+}
+
+.map-compass:after {
+  content: "";
+  top: 19px;
+  left: 12px;
+  position: absolute;
+  background-color: #fff;
+  width: 16px;
+  height: 2px;
+}
+.map-compass-n {
+  position: absolute;
+  left: 50%;
+}
+.map-compass-s {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+.map-compass-w {
+  position: absolute;
+  top: 50%;
+}
+.map-compass-e {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+}
+.map-row{
+  display: flex;
+
+}
+.map-cell {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.map-cell:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 2px solid #aaa;
+}
+.map-cell--current {
+  border: transparent;
+}
+.map-cell--current:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 3px solid white;
+  animation: 0.9s map-cell-current-room-glow infinite alternate;
+}
+.map-cell--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.map-cell-connection {
+  position: absolute;
+  background-color: #aaa;
+}
+.map-cell-connection--n {
+  top: -14px;
+  height: 8px;
+  width: 4px;
+}
+.map-cell-connection--s {
+  bottom: -14px;
+  height: 8px;
+  width: 4px;
+}
+.map-cell-connection--w {
+  left: -14px;
+  height: 4px;
+  width: 8px;
+}
+.map-cell-connection--e {
+  right: -14px;
+  height: 4px;
+  width: 8px;
+}
+.map-cell-name {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  z-index: 4;
+  animation: 0.8s map-cell-name-wiggle infinite alternate;
+  transform-origin: 0 0;
+  padding: 10px;
+  border: 5px solid black;
+  border-radius: 0 15px 15px 15px;
+  box-shadow: 3px 10px 10px #333;
+  background-color: white;
+  color: black;
+}
+.map-cell:hover .map-cell-name{
+  display: block;
+}
+#mirror-room {
+  animation: 1s compass-mirror-room-spin linear infinite;
+}
 @keyframes blink-animation {
   0% {
     opacity: 0;
@@ -208,6 +383,60 @@ footer {
     opacity: 1;
   }
 }
+
+@keyframes map-cell-name-wiggle {
+  0% {
+    transform: scale(1,1);
+  }
+  100% {
+    transform: scale(0.9, 0.9);
+  }
+}
+@keyframes map-cell-current-room-glow {
+  0% {
+    transform: scale(1,1)
+  }
+  100% {
+    transform: scale(1.1, 1.1)
+  }
+}
+
+@keyframes compass-needle-wiggle {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  28% {
+    transform: rotate(2deg);
+  }
+  35% {
+    transform: rotate(-12deg);
+  }
+  55% {
+    transform: rotate(2deg);
+  }
+  70% {
+    transform: rotate(5deg);
+  }
+  90% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes compass-mirror-room-spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 .TUTORIAL{
   color: orange;

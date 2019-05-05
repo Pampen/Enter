@@ -8,6 +8,7 @@ export default function returnFlaskPost(message, state) {
     body: JSON.stringify({
       message,
       state: {
+        usedItems: state.usedItems,
         inventory: state.inventory,
         level: state.level
       }
