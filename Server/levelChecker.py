@@ -24,7 +24,6 @@ levels = {
     'LIGHTHOUSE': handleLighthouse,
     'LIGHTHOUSE_TOP_FLOOR': handleLighthouseTopFloor,
     'LIVING_ROOM': handleLivingRoom,
-    'LIVING_ROOMITEM': handleKitchen,
     'KITCHEN': handleKitchen,
     'HALL': handleHall,
     'UPPER_FLOOR': handleUpperFloor,

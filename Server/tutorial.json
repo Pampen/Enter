@@ -1,12 +1,12 @@
 [
     {
         "level": "OUTSIDE",
-        "levelDescription": "It's cold outside. There is a strange old house in front of you.There isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to the west side of the house.",
+        "levelDescription": "It's cold outside. There is a strange old house in front of you. There isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to the west side of the house.",
         "levelTitle": "Outside"
     },
     {
         "level": "GREENHOUSE",
-        "levelDescription": "As you open the door, you stare into a dark room, you start to feel around the wall next to the door and notice a lightswitch",
+        "levelDescription": "As you open the door, you stare into a dark room, you start to feel around the wall next to the door and notice a lightswitch.",
         "levelTitle": "Greenhouse"
     },
     {

@@ -17,7 +17,6 @@ const levels = {
     "SHIPWRECK": "JOY",
     "CAPTAINS_CABIN": "JOY",
     "LIVING_ROOM": "ANGER",
-    "LIVING_ROOMITEM": "ANGER",
     "KITCHEN": "ANGER",
     "HALL": "ANGER",
     "UPPER_FLOOR": "ANGER",
