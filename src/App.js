@@ -17,9 +17,7 @@ class App extends Component {
       description: "It's cold outside. There is a strange old house in front of you, there isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to your left.",
       chatboxText: [],
       inventory: {},
-      usedItems: {
-        lightSwitch: false
-      },
+      usedItems: {},
       level: "OUTSIDE"
     };
     this.updateState = this.updateState.bind(this);
@@ -35,6 +33,7 @@ class App extends Component {
       const newGameState = {};
       newGameState.inventory = response.state.inventory;
       newGameState.level = response.state.level;
+      newGameState.usedItems = response.state.usedItems
 
       if (newTitle) {
         newGameState.title = newTitle;
@@ -78,6 +77,7 @@ class App extends Component {
     });
   };
   render() {
+    console.log(this.state.level)
 
     return (
       <main id="wrapper">

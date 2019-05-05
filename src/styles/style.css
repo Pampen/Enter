@@ -149,9 +149,10 @@ body {
 .game-title {
   font-size: 24px;
   letter-spacing: 6px;
-  margin-left: 5px;
+  margin: 10px;
   text-shadow: 0 0 20px black;
   color: white;
+  text-align: left;
 }
 #game-title-first-letter {
   font-size: 32px;
@@ -173,13 +174,19 @@ body {
   cursor: pointer;
 }
 
-footer {
-  text-align: center;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+header {
+  margin: -8px; 
+  max-height: 60px;
+  margin-bottom: 10px;
+}
+
+ header .copyright{
   font-size: 8px;
-  padding-top: 95px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-left: 3px;
+  margin: 5px;
 }
 
 @keyframes blink-animation {
