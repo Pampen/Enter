@@ -101,9 +101,7 @@ class App extends Component {
               chatboxText={this.state.chatboxText}
               level={this.state.level}
             />
-            <Modal onClose={this.showMapModal} show={this.state.mapShow}>
-              <Map level={this.state.level} levelHistory={this.state.levelHistory}/>
-            </Modal>
+            <Map level={this.state.level} levelHistory={this.state.levelHistory}/>
             <Modal
               onClose={this.showInventoryModal}
               show={this.state.inventoryShow}
