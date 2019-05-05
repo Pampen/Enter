@@ -2,7 +2,14 @@ from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handle
 
 def handleBeach(userInput, state):
     if userInput == 'GO WEST':
+<<<<<<< HEAD
         return goToLevel(state, 'SHED_FRONT_DOOR', userInput)
+=======
+        if "oilLamp" in state["inventory"]:
+            return goToLevel(state, "OUTSIDE_SHED", userInput) and handleNewShedFrontDoorDesc(state, userInput)
+        else:
+            return goToLevel(state, "OUTSIDE_SHED", userInput)
+>>>>>>> ba0b2b27987931e81d35e8b6f678a463c636df6d
     elif userInput == 'GO NORTH':
         return goToLevel(state, 'GATE', userInput)
     elif userInput == 'GO SOUTH':
@@ -18,7 +25,7 @@ def handleGate(userInput, state):
     elif userInput == "GO NORTH":
         return handleDoorLock(state, "GATE", userInput)
     elif userInput == "GO SOUTH":
-        return goToLevel(state, "BEACH", userInput)
+        return goToLevel(state, "BEACH", userInput) and handleNewBeachDesc(state, userInput)
     elif userInput == 'GO WEST' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
     else:
@@ -57,7 +64,7 @@ def handleLighthouseTopFloor(userInput, state):
 def handleShedFrontDoor(userInput, state):
     if userInput == 'GO WEST':
         if "oilLamp" in state["inventory"]:
-            return goToLevel(state, "SHED", userInput) and handleNewShedDesc(state)
+            return goToLevel(state, "SHED", userInput) and handleNewShedDesc(state, userInput)
         else:
             return goToLevel(state, "SHED", userInput)
     elif userInput == 'GO NORTH' or userInput == "GO SOUTH":
@@ -75,7 +82,11 @@ def handleShed(userInput, state):
     elif userInput == "TAKE OIL LAMP" or userInput == "TAKE LAMP":
         return takeItem(state, 'oilLamp')
     elif userInput == 'GO EAST':
+<<<<<<< HEAD
         return goToLevel(state, "SHED_FRONT_DOOR", userInput)
+=======
+        return goToLevel(state, "OUTSIDE_SHED", userInput) and handleNewShedFrontDoorDesc(state, userInput)
+>>>>>>> ba0b2b27987931e81d35e8b6f678a463c636df6d
     elif userInput == "JOYFUL":
         if "tornPages" in state["inventory"]:
             return goToLevelShedPuzzle(state, "CELLAR", userInput)
@@ -86,7 +97,7 @@ def handleShed(userInput, state):
   
 def handleBeachEastSide(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'BEACH', userInput)
+        return goToLevel(state, 'BEACH', userInput) and handleNewBeachDesc(state, userInput)
     elif userInput == 'GO EAST':
         return goToLevel(state, 'SHIPWRECK', userInput)
     elif userInput == 'GO SOUTH' or userInput == 'GO NORTH':
@@ -98,7 +109,14 @@ def handleShipwreck(userInput, state):
     if userInput == 'GO WEST':
         return goToLevel(state, 'BEACH_EAST_SIDE', userInput)
     elif userInput == "GO EAST":
+<<<<<<< HEAD
         return goToLevel(state, "CAPTAINS_CABIN", userInput)
+=======
+        if "tornPages" in state["inventory"]:
+            return goToLevel(state, 'CABIN', userInput) and handleNewCabinDesc(state, userInput)
+        else:
+            return goToLevel(state, "CABIN", userInput)
+>>>>>>> ba0b2b27987931e81d35e8b6f678a463c636df6d
     elif userInput == 'GO NORTH' or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
     else:
@@ -119,7 +137,7 @@ def handleCellar(userInput, state):
         return handleInvalidDirection(state)
     elif userInput == 'TAKE STAIRS':
         if "oilLamp" in state["inventory"]:
-            return goToLevel(state, 'SHED', userInput) and handleNewShedDesc(state)
+            return goToLevel(state, 'SHED', userInput) and handleNewShedDesc(state, userInput)
         else:
             return goToLevel(state, "SHED", userInput)
     elif userInput == "USE OIL LAMP" and "oilLamp" in state["inventory"]:
@@ -156,12 +174,46 @@ def handleNewCellarDesc(state):
     }
     return response
 
-def handleNewShedDesc(state):
+def handleNewShedDesc(state, userInput):
     response = {
         'state': state,
         'pageChanges': {
             'levelTitle': "Shed",
-            'levelDescription': "You stand inside the shed. It's filled with what looks to be a bunch of old fisherman gear. There seems to be stairs leading down to the basement."
+            'levelDescription': "You stand inside the shed. It's filled with what looks to be a bunch of old fisherman gear. There are stairs leading down to the basement.",
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
+        }       
+    }
+    return response
+
+def handleNewBeachDesc(state, userInput):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelTitle': "Beach",
+            'levelDescription': "You find yourself on the beach. There's a Lighthouse right infront of you up the hill, a shipwreck by the coast and what looks to be a shed to your left by the seaside.",
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }
+    }
+    return response
+
+def handleNewCabinDesc(state, userInput):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelTitle': "Captains Cabin",
+            'levelDescription': "You are currently inside the captains cabin.",
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
+        }
+    }
+    return response
+
+def handleNewShedFrontDoorDesc(state, userInput):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelTitle': "Shed Frontdoor",
+            'levelDescription': "You stand outside the shed.",
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
+        }       
     }
     return response

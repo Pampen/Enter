@@ -9,6 +9,7 @@ levels = {
     'OUTSIDE': handleOutside,
     'GREENHOUSE': handleGreenHouse,
     'GREENHOUSE_LIGHT_ON': handleGreenHouse,
+    'GREENHOUSE_LIGHT_AND_KEY_ON': handleGreenHouse,
     'PORCH': handlePorch,
     'MAIN_HALL': handleMainHall,
     'BEACH': handleBeach,

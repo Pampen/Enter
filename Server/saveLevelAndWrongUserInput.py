@@ -120,18 +120,26 @@ def trueKeyDescription(state, currentLevel, userInput):
             return response
 
 def takeItem(state, currentItem):
-    print(currentItem)
-    itemData = openItemFile()
-    item = itemData[currentItem]
-    newState = state
-    newState['inventory'][currentItem] = item
-    response = {
-        'state': newState, 
-        'pageChanges': {
-                'levelChatboxText': 'You picked up ' + item["itemName"].upper() + '.'
+    if currentItem in state['inventory']:
+        response = {
+            'state': state, 
+            'pageChanges': {
+                    'levelChatboxText': 'You already seem to be carrying ' + currentItem.upper() + '.'
+            }
         }
-    }
-    return response
+        return response
+    else:
+        itemData = openItemFile()
+        newState = state
+        item = itemData[currentItem]
+        newState['inventory'][currentItem] = item
+        response = {
+            'state': newState, 
+            'pageChanges': {
+                    'levelChatboxText': 'You picked up ' + item["itemName"].upper() + '.'
+            }
+        }
+        return response
     
 def inspectItem(state, userInput):
     itemData = openItemFile()
@@ -155,26 +163,31 @@ def inspectItem(state, userInput):
     }
 }
 
-def usePersistantItem(state, currentItem, currentLevel):
-    itemData = openItemFile()
-    item = itemData[currentItem]
-    newState = state
-    newState['inventory'][currentItem] = item
-    data = openLevelFile()
-    response = {
-        'state': newState,
-        'pageChanges': {
-            "levelTitle": '',
-            "levelDescription": '',
-            'levelChatboxText': 'You used the ' + item.upper() + "."
+def handlePersistantItems(state, currentItem, currentLevel):
+    if currentItem in state['usedItems']:
+        response = {
+            'state': state, 
+            'pageChanges': {
+                    'levelChatboxText': "You've already used the " + currentItem.upper() + "."
+            }
         }
-    } 
-    for level in data:
-        if level["level"] == currentLevel:
-            response['pageChanges']['levelTitle'] = level['levelTitle']
-            response['pageChanges']['levelDescription'] = level['levelDescription']
-            response['state']['level'] = level['level']
-            return response
+        return response
+    else: 
+        newState = state
+        newState['usedItems'] = currentItem
+        response = {
+        'state': newState, 
+        'pageChanges': {
+                'levelChatboxText': 'You used the ' + currentItem.upper() + '.'
+            }
+        }
+        data = openLevelFile()
+        for level in data:
+            if level["level"] == currentLevel:
+                response['pageChanges']['levelTitle'] = level['levelTitle']
+                response['pageChanges']['levelDescription'] = level['levelDescription']
+                response['state']['level'] = level['level']
+        return response
 
 def handleInvalidDirection(state):
     response = {

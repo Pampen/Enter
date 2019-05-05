@@ -6,7 +6,17 @@
     },
     {
         "level": "GREENHOUSE",
-        "levelDescription": "There isn't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days. In the middle of all this mess, you can see a brass key.",
+        "levelDescription": "As you open the door you stare into a dark room, you start to feel around the wall next to the door and notice a lightswitch",
+        "levelTitle": "Greenhouse"
+    },
+    {
+        "level": "GREENHOUSE_LIGHT_ON",
+        "levelDescription": "There aren't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days. In the middle of all this mess you can see a brass key.",
+        "levelTitle": "Greenhouse"
+    },
+    {
+        "level": "GREENHOUSE_LIGHT_AND_KEY_ON",
+        "levelDescription": "There aren't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days.",
         "levelTitle": "Greenhouse"
     },
     {
