@@ -124,13 +124,8 @@ def handleBlueCorridor9(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleBlueFinish(userInput, state):
-<<<<<<< HEAD
     if userInput == 'TAKE BLUE KEY' or userInput == 'TAKE KEY':
         return returnToMainHall(state, 'blueKey', 'MAIN_HALL')
-=======
-    if userInput == "TAKE BLUE KEY" or userInput == "TAKE KEY":
-        return takeItem(state, 'blueKey')
->>>>>>> ba0b2b27987931e81d35e8b6f678a463c636df6d
     elif userInput == 'GO WEST' or userInput == 'GO NORTH' or userInput == 'GO EAST' or userInput == 'GO SOUTH':
         return handleInvalidDirection(state)
     else:

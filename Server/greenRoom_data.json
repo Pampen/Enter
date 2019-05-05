@@ -25,15 +25,9 @@
         "levelTitle": "Lighthouse Top Floor"
     },
     {
-<<<<<<< HEAD
         "level": "SHED_FRONT_DOOR",
         "levelDescription": "You stand outside the shed, do you decide to go in?",
         "levelTitle": "Shed Front Door"
-=======
-        "level": "OUTSIDE_SHED",
-        "levelDescription": "You stand outside the shed. There seems to be no one inside when looking through the window, so it's probably save to go inside...",
-        "levelTitle": "Shed Frontdoor"
->>>>>>> ba0b2b27987931e81d35e8b6f678a463c636df6d
     },
     {
         "level": "SHED",

@@ -2,14 +2,10 @@ from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handle
 
 def handleBeach(userInput, state):
     if userInput == 'GO WEST':
-<<<<<<< HEAD
-        return goToLevel(state, 'SHED_FRONT_DOOR', userInput)
-=======
         if "oilLamp" in state["inventory"]:
-            return goToLevel(state, "OUTSIDE_SHED", userInput) and handleNewShedFrontDoorDesc(state, userInput)
+            return goToLevel(state, "SHED_FRONT_DOOR", userInput) and handleNewShedFrontDoorDesc(state, userInput)
         else:
-            return goToLevel(state, "OUTSIDE_SHED", userInput)
->>>>>>> ba0b2b27987931e81d35e8b6f678a463c636df6d
+            return goToLevel(state, "SHED_FRONT_DOOR", userInput)
     elif userInput == 'GO NORTH':
         return goToLevel(state, 'GATE', userInput)
     elif userInput == 'GO SOUTH':
@@ -82,11 +78,7 @@ def handleShed(userInput, state):
     elif userInput == "TAKE OIL LAMP" or userInput == "TAKE LAMP":
         return takeItem(state, 'oilLamp')
     elif userInput == 'GO EAST':
-<<<<<<< HEAD
-        return goToLevel(state, "SHED_FRONT_DOOR", userInput)
-=======
-        return goToLevel(state, "OUTSIDE_SHED", userInput) and handleNewShedFrontDoorDesc(state, userInput)
->>>>>>> ba0b2b27987931e81d35e8b6f678a463c636df6d
+        return goToLevel(state, "SHED_FRONT_DOOR", userInput) and handleNewShedFrontDoorDesc(state, userInput)
     elif userInput == "JOYFUL":
         if "tornPages" in state["inventory"]:
             return goToLevelShedPuzzle(state, "CELLAR", userInput)
@@ -109,14 +101,10 @@ def handleShipwreck(userInput, state):
     if userInput == 'GO WEST':
         return goToLevel(state, 'BEACH_EAST_SIDE', userInput)
     elif userInput == "GO EAST":
-<<<<<<< HEAD
-        return goToLevel(state, "CAPTAINS_CABIN", userInput)
-=======
         if "tornPages" in state["inventory"]:
-            return goToLevel(state, 'CABIN', userInput) and handleNewCabinDesc(state, userInput)
+            return goToLevel(state, 'CAPTAINS_CABIN', userInput) and handleNewCabinDesc(state, userInput)
         else:
-            return goToLevel(state, "CABIN", userInput)
->>>>>>> ba0b2b27987931e81d35e8b6f678a463c636df6d
+            return goToLevel(state, "CAPTAINS_CABIN", userInput)
     elif userInput == 'GO NORTH' or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
     else:
