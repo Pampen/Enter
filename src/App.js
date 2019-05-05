@@ -21,7 +21,10 @@ class App extends Component {
         lightSwitch: false,
       },
       isBurned: [],
-      level: "OUTSIDE"
+      level: "OUTSIDE",
+      levelHistory: {
+        OUTSIDE: true
+      }
     };
     this.updateState = this.updateState.bind(this);
   }
@@ -38,6 +41,7 @@ class App extends Component {
       newGameState.level = response.state.level;
       newGameState.usedItems = response.state.usedItems
       newGameState.isBurned = response.state.isBurned;
+      newGameState.levelHistory = this.state.levelHistory
 
       if (newTitle) {
         newGameState.title = newTitle;
@@ -55,6 +59,7 @@ class App extends Component {
         currentChatboxText.push(newItemDescription);
         newGameState.chatboxText = currentChatboxText;
       }
+      newGameState.levelHistory[response.state.level] = true;
       this.setState(newGameState);
       console.log(this.state);
     });
@@ -100,9 +105,7 @@ class App extends Component {
               chatboxText={this.state.chatboxText}
               level={this.state.level}
             />
-            <Modal onClose={this.showMapModal} show={this.state.mapShow}>
-              <Map level={this.state.level} />
-            </Modal>
+            <Map level={this.state.level} levelHistory={this.state.levelHistory}/>
             <Modal
               onClose={this.showInventoryModal}
               show={this.state.inventoryShow}
