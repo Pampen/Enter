@@ -11,7 +11,7 @@
     },
     {
         "level": "GREENHOUSE_LIGHT_ON",
-        "levelDescription": "There aren't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days. In the middle of all this mess you can see a brass key.",
+        "levelDescription": "There isn't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days. In the middle of all this mess, you can see a brass key.",
         "levelTitle": "Greenhouse"
     },
     {
@@ -36,7 +36,7 @@
     },
     {
         "level": "GATE",
-        "levelDescription": "While making your way up the hill, you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over hundreds of years old. There's also spikes at the top that makes it impossible to climb over.",
+        "levelDescription": "While making your way up the hill you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over hundreds of years old. There's also spikes at the top that makes it impossible to climb over.",
         "levelTitle": "Gate"
     },
     {
@@ -56,7 +56,7 @@
     },
     {
         "level": "SHED_FRONT_DOOR",
-        "levelDescription": "You stand outside the shed, do you decide to go in?",
+        "levelDescription": "You stand outside the shed. There seems to be no one inside when looking through the window, so it's probably safe to go inside...",
         "levelTitle": "Shed Front Door"
     },
     {
@@ -121,27 +121,27 @@
     },
     {
         "level": "CRIB_ROOM",
-        "levelDescription": "This is a room with a white crib in it. It looks out of place.",
+        "levelDescription": "This is a room with a white crib in it. It looks misplaced. Nothing else in here. The emptiness is too much. Best to move on..",
         "levelTitle": "Crib Room"
     },
     {
         "level": "BABY_ROOM",
-        "levelDescription": "This room is filled with babythings. The walls have painted unicorns and the shelves are filled with toys. Only thing missing is the crib...",
+        "levelDescription": "This room is filled with baby things. The walls have painted unicorns and the shelves are filled with toys. Only thing missing is the crib...",
         "levelTitle": "Baby Room"
     },
     {
         "level": "NURSING_ROOM",
-        "levelDescription": "A nursing room... and a changing table with a moldy pacifier on it. A funky smell surrounds this room..",
+        "levelDescription": "A nursing room.. and a changing table. A funky smell envelopes you as you enter. The smell is sweet, but somewhat earthy... strange.",
         "levelTitle": "Nursing Room"
     },
     {
         "level": "STUDY_ROOM",
-        "levelDescription": "A study. A nice comfy chair, books on the shelves and a decanter filled with a golden liquid and a used glass. Dust everywhere.",
+        "levelDescription": "A study. A nice, comfy chair, rows upon rows of books on the shelves and a decanter filled with a golden liquid  standing besides a used glass... Dust everywhere.",
         "levelTitle": "Study Room"
     },
     {
         "level": "MESSY_ROOM",
-        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls...",
+        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls… A notebook lying on the floor stands out from the rest. A few pages look relatively undamaged.",
         "levelTitle": "Messy Room"
     },
     {

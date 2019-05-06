@@ -1,7 +1,7 @@
 [
     {
         "level": "BLUE_START",
-        "levelDescription": "With the torch in hand you can make out the end of the hallway infront of you. ",
+        "levelDescription": "With the torch in hand you can make out the end of the hallway in front of you. ",
         "levelTitle": "Blue start"
     },
     {
@@ -36,7 +36,7 @@
     },
     {
         "level": "BLUE_CORRIDOR_6",
-        "levelDescription": "The gate has now opened. You can make out that the sobbing is coming infront of you. ",
+        "levelDescription": "The gate has now opened. You can make out that the sobbing is coming in front of you. ",
         "levelTitle": "Blue Corridor 6"
     },
     {

@@ -1,7 +1,7 @@
 [
     {
         "level": "BLUE_START",
-        "levelDescription": "With the torch in hand you can make out the end of the hallway infront of you. You hear a faint sobbing.",
+        "levelDescription": "With the torch in hand you can make out the end of the hallway in front of you. You hear a faint sobbing.",
         "levelTitle": "Blue start"
     },
     {
@@ -36,7 +36,7 @@
     },
     {
         "level": "BLUE_CORRIDOR_6",
-        "levelDescription": "As you walk forwards the sobbing increases. Infront of you is a closed metal gate, to your right is a damp room.",
+        "levelDescription": "As you walk forwards the sobbing increases. In front of you is a closed metal gate, to your right is a damp room.",
         "levelTitle": "Blue Corridor 6"
     },
     {
