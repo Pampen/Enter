@@ -1,12 +1,12 @@
 [
     {
         "level": "BLUE_START",
-        "levelDescription": "With the torch in hand you can make out the end of the hallway in front of you. ",
+        "levelDescription": "With the torch in hand, you can make out the end of the hallway in front of you. ",
         "levelTitle": "Blue start"
     },
     {
         "level": "BLUE_TORCH_ROOM",
-        "levelDescription": "What are you doing back here, this is certainly not the right way",
+        "levelDescription": "What are you doing back here, this is certainly not the right way.",
         "levelTitle": "Blue Torch Room"
     },
     {

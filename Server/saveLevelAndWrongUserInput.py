@@ -36,7 +36,7 @@ def redPuzzle(state, userInput):
                 'levelChatboxText': "You burn car keys. The fire slowly dies and what is left of the fire is ashes and a red key."
             }
         }
-        elif 'photograph' in state['isBurned'] or 'photograph' in state['isBurned'] or 'canvas' in state['isBurned']:
+        elif 'canvas' in state['isBurned'] and userInput == 'THROW CANVAS' or 'photograph' in state['isBurned'] and userInput == 'THROW PHOTOGRAPH' or 'carKeys' in state['isBurned'] and userInput == 'THROW CAR KEYS':
             newState = state
             return {
                 'state': newState,
@@ -48,7 +48,6 @@ def redPuzzle(state, userInput):
             newState['isBurned'] = []
             newState = state
             currentItem = []
-            print('dk')
             if 'canvas' not in state['inventory']:
                 currentItem.append('canvas')
             if 'photograph' not in state['inventory']:
@@ -62,14 +61,13 @@ def redPuzzle(state, userInput):
         return {
                 'state': state,
                 'pageChanges': {
-                    'levelChatboxText': "That doen't seems to be right..."
+                    'levelChatboxText': "That doen't seems to be the right thing to do..."
                 }
             }
 
 def takeBurnItem(state, currentItems):
     newState = state
     print(state['inventory'])
-    print("WE DID IT")
     canvas = {
         "itemName": "Canvas",
         "itemDescription": "It's a canvas painted entirely in the color red."
@@ -85,13 +83,10 @@ def takeBurnItem(state, currentItems):
     for item in currentItems:
         if item == 'canvas':
             newState['inventory']['canvas'] = canvas
-            print(newState)
         elif item == 'photograph':
             newState['inventory']['photograph'] = photograph
-            print('wtf')
         elif item == 'carKeys':
             newState['inventory']['carKeys'] = carKeys
-            print('nej')
         else:
             print('poop')
     response = {

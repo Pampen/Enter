@@ -1,7 +1,7 @@
 [
     {
         "level": "BLUE_START",
-        "levelDescription": "With the torch in hand you can make out the end of the hallway in front of you. You hear a faint sobbing.",
+        "levelDescription": "With the torch in hand, you can make out the end of the hallway in front of you. You hear a faint sobbing.",
         "levelTitle": "Blue start"
     },
     {
@@ -16,7 +16,7 @@
     },
     {
         "level": "BLUE_CORRIDOR_2",
-        "levelDescription": "As you hold your torch up you catch a glimpse of something shining in front of you down the corridor but the faint sobbing subsides.",
+        "levelDescription": "As you hold your torch up, you catch a glimpse of something shining in front of you down the corridor but the faint sobbing subsides.",
         "levelTitle": "Blue Corridor 2"
     },
     {
