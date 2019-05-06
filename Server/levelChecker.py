@@ -2,7 +2,7 @@ from blueDoor import handleBlueCorridor1, handleBlueCorridor2, handleBlueCorrido
 from tutorial import handleGreenHouse, handleOutside, handlePorch
 from MainHall import handleMainHall
 from redDoor import handleUpperFloor, handleLivingRoom, handleKitchen, handleHall, handleBedroom, handleBasement, handleAttic
-from pinkDoor import handleBabyroom, handleCribroom, handleMessyroom, handleNursingroom, handleStudyroom
+from pinkDoor import handleBabyroom, handleCribroom, handleMessyroom, handleNursingroom, handleStudyroom, handleBabyroomcrib, handleBabyroomdoll, handleBabyroomblanket, handleBabyroompacifier, handleBabyroomkey
 from greenDoor import handleBeach, handleCabin, handleCellar, handleGate, handleOutsideShed, handleShed, handleOutsideShipwreck, handleShipwreck, handleLighthouse, handleLighthouseOutside, handleLighthouseTopFloor, handleOcean
 
 levels = {
@@ -47,8 +47,13 @@ levels = {
     'BABYROOM': handleBabyroom,
     'NURSINGROOM': handleNursingroom,
     'STUDYROOM': handleStudyroom,
-    'MESSYROOM': handleMessyroom
-}
+    'MESSYROOM': handleMessyroom,
+    'BABYROOMCRIB' : handleBabyroomcrib,
+    'BABYROOMDOLL' : handleBabyroomdoll,
+    'BABYROOMBLANKET' : handleBabyroomblanket,
+    'BABYROOMPACIFIER': handleBabyroompacifier,
+    'BABYROOMKEY' : handleBabyroomkey    
+        }
 
 def levelChecker(userInput, state):   
     level = state['level']

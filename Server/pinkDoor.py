@@ -21,10 +21,42 @@ def handleBabyroom(userInput, state):
         return goToLevel(state, 'CRIBROOM', userInput)
     elif userInput == "TAKE WORN DOLL":
         return takeItem(state, 'wornDoll')
-    elif userInput == "TAKE PINK KEY":
-        return takeItem(state, 'pinkKey')
+    elif userInput == "USE CRIB" and 'crib' in state['inventory']: 
+        return goToLevel(state, 'BABYROOMCRIB', userInput)
     elif userInput == 'GO NORTH' or userInput == 'GO WEST':
         return handleInvalidDirection(state)
+    else:
+        return handleInvalidInput(userInput, state)
+
+def handleBabyroomcrib(userInput, state):
+    if userInput == "USE WORN DOLL" and 'wornDoll' in state['inventory']: 
+        return goToLevel(state, 'BABYROOMDOLL', userInput)
+    else:
+        return handleInvalidInput(userInput, state)
+
+def handleBabyroomdoll(userInput, state):
+    if userInput == "USE DIRTY BLANKET" and 'dirtyBlanket' in state['inventory']: 
+        return goToLevel(state, 'BABYROOMBLANKET', userInput)
+    else:
+        return handleInvalidInput(userInput, state)
+
+def handleBabyroomblanket(userInput, state):
+    if userInput == "USE MOLDY PACIFIER" and 'moldyPacifier' in state['inventory']: 
+        return goToLevel(state, 'BABYROOMPACIFIER', userInput)
+    else:
+        return handleInvalidInput(userInput, state)
+
+def handleBabyroompacifier(userInput, state):
+    if userInput == "USE NURSERY RHYME" and 'nurseryRhyme' in state['inventory']: 
+        return goToLevel(state, 'BABYROOMKEY', userInput)
+    else:
+        return handleInvalidInput(userInput, state)
+
+def handleBabyroomkey(userInput, state):
+    if userInput == "TAKE PINK KEY":
+        return takeItem(state, 'pinkKey')
+    elif userInput == "GO EAST" and 'pinkKey' in state['inventory']: 
+        return goToLevel(state, 'BLUE_START', userInput)
     else:
         return handleInvalidInput(userInput, state)
 

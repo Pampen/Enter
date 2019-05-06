@@ -23,5 +23,30 @@
     "level": "MESSYROOM",
     "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is pinned to the wall..",
     "levelTitle": "Messy room"
+},
+{
+    "level": "BABYROOMCRIB",
+    "levelDescription": "The crib looks empty.",
+    "levelTitle": "Baby room"
+},
+{
+    "level": "BABYROOMDOLL",
+    "levelDescription": "The doll almost looks like it is shivering in cold..",
+    "levelTitle": "Baby room"
+},
+{
+    "level": "BABYROOMBLANKET",
+    "levelDescription": "The doll looks unhappy. Is it.. pucking it's lips?",
+    "levelTitle": "Baby room"
+},
+{
+    "level": "BABYROOMPACIFIER",
+    "levelDescription": "Do you remember the nursery rhyme? It feels like you should recite it",
+    "levelTitle": "Baby room"
+},
+{
+    "level": "BABYROOMKEY",
+    "levelDescription": "A pink key on the floor. A door with a blueish tint slowly swings open on the east wall..",
+    "levelTitle": "Baby room"
 }
 ]
