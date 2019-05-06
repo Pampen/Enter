@@ -1,27 +1,53 @@
 [
     {
         "level": "OUTSIDE",
-        "levelDescription": "It's cold outside. There is a strange old house in front of you, there isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to your left.",
+        "levelDescription": "It's cold outside. There is a strange old house in front of you. There isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to the west side of the house.",
         "levelTitle": "Outside"
     },
     {
         "level": "GREENHOUSE",
+<<<<<<< HEAD:Server/tools/tutorial.json
         "levelDescription": "There aren't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days. In the middle of all this mess you can see a brass key.",
         "levelTitle": "Greenhouse"
     },
     {
+=======
+        "levelDescription": "As you open the door, you stare into a dark room, you start to feel around the wall next to the door and notice a lightswitch.",
+        "levelTitle": "Greenhouse"
+    },
+    {
+        "level": "GREENHOUSE_LIGHT_ON",
+        "levelDescription": "There isn't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days. In the middle of all this mess, you can see a brass key.",
+        "levelTitle": "Greenhouse"
+    },
+    {
+        "level": "GREENHOUSE_LIGHT_AND_KEY_ON",
+        "levelDescription": "There isn't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days.",
+        "levelTitle": "Greenhouse"
+    },
+    {
+>>>>>>> 3eecd09b533e04a835fd4e16a88358969bebebef:Server/tutorial.json
         "level": "PORCH",
-        "levelDescription": "The porch is old and the small staircase is missing some planks. The window are all boarded up from the inside and it looks like the windows are painted in black. This porch is barely holding up.",
+        "levelDescription": "The porch looks rather old, and the color is almost gone. The window are all boarded up from the inside and it looks like the windows are painted in black. This porch is barely holding up.",
         "levelTitle": "Porch"
     },
     {
+        "level": "MAIN_HALL",
+        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work.",
+        "levelTitle": "Main Hall"
+    },
+    {
         "level": "BEACH",
-        "levelDescription": "The door closes behind you, leaving you alone in the darkness. Suddenly, everything lights up and you find yourself on the beach. There's a Lighthouse right infront of you up the hill, a shipwreck by the coast and what looks to be a shed to your left by the seaside. Which way do you decide to go?",
+        "levelDescription": "The door closes behind you, leaving you alone in the darkness. Suddenly, everything lights up, and you find yourself on the beach. There's a lighthouse right in front of you up the hill, a shipwreck by the coast and what looks to be a shed to your left by the seaside. Which way do you decide to go?",
         "levelTitle": "Beach"
     },
     {
         "level": "GATE",
+<<<<<<< HEAD:Server/tools/tutorial.json
         "levelDescription": "While making your way up the hill you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over two hundred years old. There's also spikes at the top that makes it impossible to climb over.",
+=======
+        "levelDescription": "While making your way up the hill, you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over hundreds years old. There are also spikes at the top that makes it impossible to climb over.",
+>>>>>>> 3eecd09b533e04a835fd4e16a88358969bebebef:Server/tutorial.json
         "levelTitle": "Gate"
     },
     {
@@ -35,6 +61,7 @@
         "levelTitle": "Lighthouse"
     },
     {
+<<<<<<< HEAD:Server/tools/tutorial.json
         "level": "LIGHTHOUSE_TOP",
         "levelDescription": "This is the top floor in the lighthouse. There looks to be some sort of old machine that requires you to put in a key.",
         "levelTitle": "Lighthouse Top Floor"
@@ -43,10 +70,20 @@
         "level": "OUTSIDE_SHED",
         "levelDescription": "You stand outside the shed, do you decide to go in?",
         "levelTitle": "Shed Frontdoor"
+=======
+        "level": "LIGHTHOUSE_TOP_FLOOR",
+        "levelDescription": "This is the top floor in the lighthouse. There's a green key hanging on the wall.",
+        "levelTitle": "Lighthouse Top Floor"
+    },
+    {
+        "level": "SHED_FRONT_DOOR",
+        "levelDescription": "You stand outside the shed. There seems to be no one inside when looking through the window, so it's probably safe to go inside...",
+        "levelTitle": "Shed Front Door"
+>>>>>>> 3eecd09b533e04a835fd4e16a88358969bebebef:Server/tutorial.json
     },
     {
         "level": "SHED",
-        "levelDescription": "You stand inside the shed. It's filled with what looks to be a bunch of old fisherman gear. There's an old fashioned oil lamp thats hanging on the wall. There seems to be stairs leading down to the basement.",
+        "levelDescription": "You stand inside the shed. It's filled with what looks to be a bunch of old fisherman gear. There's an old-fashioned oil lamp thats hanging on the wall. There seems to be stairs leading down to the basement.",
         "levelTitle": "Shed"
     },
     {
@@ -55,9 +92,9 @@
         "levelTitle": "Cellar"
     },
     {
-        "level": "OUTSIDE_SHIPWRECK",
+        "level": "BEACH_EAST_SIDE",
         "levelDescription": "You see a shipwreck in the distant, do you decide to explore it?",
-        "levelTitle": "Beach east side"
+        "levelTitle": "Beach East Side"
     },
     {
         "level": "SHIPWRECK",
@@ -65,13 +102,73 @@
         "levelTitle": "Shipwreck"
     },
     {
-        "level": "CABIN",
-        "levelDescription": "You are currently inside the captains cabin. There's a desk with pieces of torn pages on it.",
+        "level": "CAPTAINS_CABIN",
+        "levelDescription": "You are currently inside the captains cabin. There's a family photograph on the wall of what looks to be the owner of this ships family. There's a desk with a piece of torn pages on it.",
         "levelTitle": "Captains Cabin"
     },
     {
+        "level": "LIVING_ROOM",
+        "levelDescription": "A big room with a two red armchairs in front of a fireplace. There is some painting hanging on the walls. You can feel the heat emitting from the fireplace. The flame is dancing so violently. The fireplace could be useful later on...",
+        "levelTitle": "Living Room"
+    },
+    {
+        "level": "KITCHEN",
+        "levelDescription": "An old kitchen, but with some modern modifications. There are some plates and glasses in the sink that needs to be washed. By the looks of it, it seems that the person who lived here hasn't done her or his dishes for a while. The fridge is old, and it doesn't work anymore, but it has a photograph on it. The photograph might be a clue to all this madness. There are some stairs leading down to the basement.",
+        "levelTitle": "Kitchen"
+    },
+    {
+        "level": "BASEMENT",
+        "levelDescription": "It's cold in the basement. There is not so much down here, just some old furnitures and some boxes filled with old toys, pictures, watches and so on. Most of it seems to be covered by a red cloth to protect them from getting all dusty, except a ladder which is leaning on the wall, it might be useful later. There are some stairs leading up.",
+        "levelTitle": "Basement"
+    },
+    {
+        "level": "HALL",
+        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures and the wall, however, you can't seem to see persons' faces in the pictures for some reasons. Every face is blurry. Beneath the pictures is a small table with a bowl, the bowl contains car keys. There are some stairs leading up to the upper floor.",
+        "levelTitle": "Hall"
+    },
+    {
+        "level": "UPPER_FLOOR",
+        "levelDescription": "It's so quiet up here, there is only a door, which you guess is the bedroom, an attic and a window which is painted black. Somehow the sunlight still shines through the black paint. There is a staircase leading down to the hall.",
+        "levelTitle": "Upper Floor"
+    },
+    {
+        "level": "ATTIC",
+        "levelDescription": "The attic is very dark, but the sunbeams from the windows make it much easier to distinguish what hides behind the dark. There are some boxes with the label 'memories'. In the middle of the attic is a grey key.",
+        "levelTitle": "Attic"
+    },
+    {
+        "level": "BEDROOM",
+        "levelDescription": "It looks like a regular bedroom, the walls are red, a bookcase filled with obviously books, photos, a tiny leather boot and a box full of old watches. There is a big round window in the room which is painted black, but it doesn't block the sunlight which is kind of odd. In the center of the bedroom, there is a canvas which is painted red.",
+        "levelTitle": "Bedroom"
+    },
+    {
+        "level": "CRIB_ROOM",
+        "levelDescription": "This is a room with a white crib in it. It looks out of place.",
+        "levelTitle": "Crib Room"
+    },
+    {
+        "level": "BABY_ROOM",
+        "levelDescription": "This room is filled with baby things. The walls have painted unicorns, and the shelves are filled with toys. The only thing missing is the crib...",
+        "levelTitle": "Baby Room"
+    },
+    {
+        "level": "NURSING_ROOM",
+        "levelDescription": "A nursing room... and a changing table with a moldy pacifier on it. A funky smell surrounds this room...",
+        "levelTitle": "Nursing Room"
+    },
+    {
+        "level": "STUDY_ROOM",
+        "levelDescription": "A study. A nice comfy chair, books on the shelves and a decanter filled with a golden liquid and a used glass. Dust everywhere.",
+        "levelTitle": "Study Room"
+    },
+    {
+        "level": "MESSY_ROOM",
+        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls...",
+        "levelTitle": "Messy Room"
+    },
+    {
         "level": "BLUE_START",
-        "levelDescription": "You enter a dark room, you hear a faint sobbing. The only light there is is shining through the bottom of a door to your left. In front of you is a hallway leading seemingly into nothingness.",
+        "levelDescription": "You enter a dark room, and you hear a faint sobbing. The only light there is shining through the bottom of a door to your left. In front of you is a hallway leading seemingly into nothingness.",
         "levelTitle": "Blue start"
     },
     {
@@ -128,6 +225,7 @@
         "level": "BLUE_FINISH",
         "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
         "levelTitle": "Blue Finish "
+<<<<<<< HEAD:Server/tools/tutorial.json
     },
     {
         "level": "LIVING_ROOM",
@@ -223,5 +321,7 @@
         "level": "BABYROOMKEY",
         "levelDescription": "A pink key on the floor. A door with a blueish tint on the east wall.. ",
         "levelTitle": "Baby room"
+=======
+>>>>>>> 3eecd09b533e04a835fd4e16a88358969bebebef:Server/tutorial.json
     }
 ]

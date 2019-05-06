@@ -1,7 +1,27 @@
 {
-    "ladder": {
+    "brassKey": {
+        "itemName": "Brass key",
+        "itemDescription": "It's a simple key made of copper and zinc. It has a greenish tint to it."
+    },
+    "bronzeKey": {
+        "itemName": "Bronze key",
+        "itemDescription": " It's a simple key made of bronze. It has a silver looking tint to it with the words JOYFUL engraved on to it. This key could probably be used to open the gate."
+    },
+    "greenKey": {
+        "itemName": "Green key",
+        "itemDescription": "A green key with a smiley-shaped handle."
+    },
+    "tornPages": {
+        "itemName": "Torn pages",
+        "itemDescription": "It's a bunch of torn pages with yellowed, frayed edges. The pages appear to have the words JO YF UL drawn on to it."
+    },
+    "oilLamp": {
+        "itemName": "Oil Lamp",
+        "itemDescription": "It's an old oil powered lamp that still has some fuel left in it."
+    },
+        "ladder": {
         "itemName": "Ladder",
-        "itemDescription": "The ladder looks rather old and it seems like it has been through a lot. It looks like it could be made out of oak, but you're not entirely sure it matters."
+        "itemDescription": "The ladder looks rather old, and it seems like it has been through a lot. It looks like it could be made out of oak, but you're not entirely sure it matters."
     },
     "greyKey": {
         "itemName": "Grey key",
@@ -9,19 +29,19 @@
     },
     "photograph": {
         "itemName": "Photograph",
-        "itemDescription": "An old dusty photograph. It looks like it's a picture of the two little girls but you can't seem to see their faces."
+        "itemDescription": "An old dusty photograph. It's a picture of two little girls, but you can't seem to see their faces."
     },
     "canvas": {
         "itemName": "Canvas",
-        "itemDescription": "It's a canvas painted entirely in the color red."
+        "itemDescription": "It's a canvas painted entirely in one the color red."
     },
     "carKeys": {
         "itemName": "Car keys",
-        "itemDescription": "Just some regular car keys, nothing fancy."
+        "itemDescription": "Just some regular car keys, nothing fancy. However, the number '3' is engraved in the car keys."
     },
     "redKey": {
         "itemName": "Red key",
-        "itemDescription": "A red key."
+        "itemDescription": "A red key with a flame-shaped handle."
     },
     "wornDoll": {
         "itemName": "Worn doll",
@@ -35,6 +55,7 @@
         "itemName": "Dirty blanket",
         "itemDescription": "It's a blanket, covered in suspicious stains. You're not sure you want to know."
     },
+<<<<<<< HEAD:Server/tools/inventory.json
     "tornPages": {
         "itemName": "Torn pages",
         "itemDescription": "It's a bunch of torn pages with yellowed, frayed edges. The pages appear to have the words JO YF UL drawn on to it"
@@ -47,6 +68,8 @@
         "itemName": "Nursery rhyme",
         "itemDescription": "Bye baby Bunting Mommy's gone hunting gone to get a rabbit skin to wrap the baby Bunting in"
     },
+=======
+>>>>>>> 3eecd09b533e04a835fd4e16a88358969bebebef:Server/inventory.json
     "crib": {
         "itemName": "Crib",
         "itemDescription": "An old but sturdy crib."
@@ -66,18 +89,6 @@
     },
     "blueKey": {
         "itemName": "Blue key",
-        "itemDescription": "This key is used in the mirror room."
-    },
-    "bronzeKey": {
-        "itemName": "Bronze key",
-        "itemDescription": "It's a simple key made of bronze. It has a silver looking tint to it with the words JOYFUL engraved on to it. This key could probably be used to open the gate."
-    },
-    "greenKey": {
-        "itemName": "Green key",
-        "itemDescription": "A green key."
-    },
-    "brassKey": {
-        "itemName": "Brass key",
-        "itemDescription": "It's a simple key made of copper and zinc. It has a greenish tint to it."
+        "itemDescription": "A blue key with a tear-shaped handle."
     }
 }

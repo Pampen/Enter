@@ -1,6 +1,46 @@
 import json
 import os
 
+def redPuzzle(state, userInput): 
+    newState = state
+    objectList = state["isBurned"]
+    if len(objectList) == 0 and userInput == 'THROW CANVAS':
+        objectList.append('canvas')
+        print(objectList)
+        newState['isBurned'] = objectList
+        return {
+            'state': newState, 
+            'pageChanges': {
+                'levelChatboxText': "You burn the canvas"
+            }
+        }
+    elif 'canvas' in state['inventory'] and 'canvas' in state['isBurned'] and userInput == 'THROW PHOTOGRAPH':
+        objectList.append('photograph')
+        newState['isBurned'] = objectList
+        return {
+        'state': newState, 
+        'pageChanges': {
+            'levelChatboxText': "You burn the photograph."
+        }
+    }
+    elif 'photograph' in state['inventory'] and 'photograph' in state['isBurned'] and userInput == 'THROW CAR KEYS':
+        objectList.append('carKeys')
+        newState['isBurned'] = objectList
+        return {
+        'state': newState, 
+        'pageChanges': {
+            'levelChatboxText': "You burn car keys. The fire slowly dies and what is left of the fire is ashes and a red key."
+        }
+    }
+    else:
+        newState['isBurned'] = []
+        return {
+            'state': newState,
+            'pageChanges': {
+                'levelChatboxText': 'It is not in the right order, you might want to read the description for each item for this level to solve this puzzle...'
+            }
+        }
+
 def goToLevel(state, currentLevel, userInput):
     response = {
         'state': state,
@@ -204,6 +244,27 @@ def goToLevelShedPuzzle(state, currentLevel, userInput):
             'levelChatboxText': "You managed to open the door and went further into the cellar..."
         }
     } 
+    data = openLevelFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response
+
+def returnToMainHall(state, currentItem, currentLevel):
+    print(currentItem)
+    itemData = openItemFile()
+    item = itemData[currentItem]
+    newState = state
+    newState['inventory'][currentItem] = item
+    response = {
+        'state': newState, 
+        'pageChanges': {
+                'levelChatboxText': 'You picked up ' + item["itemName"].upper() + '. You are now back at the Main Hall'
+        }
+    }
+
     data = openLevelFile()
     for level in data:
         if level["level"] == currentLevel:

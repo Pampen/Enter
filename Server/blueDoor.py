@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import checkTorchItem, handleInvalidDirection, handleInvalidInput, takeItem, checkTorchItem, handleDoorLock, handleUseItemBlueRoom
+from saveLevelAndWrongUserInput import checkTorchItem, handleInvalidDirection, handleInvalidInput, takeItem, checkTorchItem, handleDoorLock, handleUseItemBlueRoom, returnToMainHall
 
 def handleBlueStart(userInput, state):
     if userInput == 'GO WEST':
@@ -124,8 +124,8 @@ def handleBlueCorridor9(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleBlueFinish(userInput, state):
-    if userInput == "TAKE BLUE KEY" or userInput == "TAKE KEY":
-        return takeItem(state, 'blueKey')
+    if userInput == 'TAKE BLUE KEY' or userInput == 'TAKE KEY':
+        return returnToMainHall(state, 'blueKey', 'MAIN_HALL')
     elif userInput == 'GO WEST' or userInput == 'GO NORTH' or userInput == 'GO EAST' or userInput == 'GO SOUTH':
         return handleInvalidDirection(state)
     else:

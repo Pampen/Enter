@@ -1,10 +1,10 @@
 from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem
 
-def handleCribroom(userInput, state):
+def handleCribRoom(userInput, state):
     if userInput == 'GO NORTH':
-        return goToLevel(state, 'BABYROOM', userInput)
+        return goToLevel(state, 'BABY_ROOM', userInput)
     elif userInput == 'GO EAST':
-        return goToLevel(state, 'MESSYROOM', userInput)
+        return goToLevel(state, 'MESSY_ROOM', userInput)
     elif userInput == 'GO WEST':
         return goToLevel(state, 'MAIN_HALL', userInput)
     elif userInput == "TAKE CRIB":
@@ -14,11 +14,11 @@ def handleCribroom(userInput, state):
     else:
         return handleInvalidInput(userInput, state)
 
-def handleBabyroom(userInput, state):
+def handleBabyRoom(userInput, state):
     if userInput == 'GO EAST':
-        return goToLevel(state, 'NURSINGROOM', userInput)
+        return goToLevel(state, 'NURSING_ROOM', userInput)
     elif userInput == 'GO SOUTH':
-        return goToLevel(state, 'CRIBROOM', userInput)
+        return goToLevel(state, 'CRIB_ROOM', userInput)
     elif userInput == "TAKE WORN DOLL":
         return takeItem(state, 'wornDoll')
     elif userInput == "USE CRIB" and 'crib' in state['inventory']: 
@@ -28,6 +28,7 @@ def handleBabyroom(userInput, state):
     else:
         return handleInvalidInput(userInput, state)
 
+<<<<<<< HEAD
 def handleBabyroomcrib(userInput, state):
     if userInput == "USE WORN DOLL" and 'wornDoll' in state['inventory']: 
         return goToLevel(state, 'BABYROOMDOLL', userInput)
@@ -61,10 +62,13 @@ def handleBabyroomkey(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleNursingroom(userInput, state):
+=======
+def handleNursingRoom(userInput, state):
+>>>>>>> 3eecd09b533e04a835fd4e16a88358969bebebef
     if userInput == 'GO WEST':
-        return goToLevel(state, 'BABYROOM', userInput)
+        return goToLevel(state, 'BABY_ROOM', userInput)
     elif userInput == 'GO SOUTH':
-        return goToLevel(state, 'STUDYROOM', userInput)
+        return goToLevel(state, 'STUDY_ROOM', userInput)
     elif userInput == 'GO EAST':
         return goToLevel(state, 'BLUE_START', userInput)
     elif userInput == "TAKE MOLDY PACIFIER":
@@ -74,11 +78,11 @@ def handleNursingroom(userInput, state):
     else:
         return handleInvalidInput(userInput, state)
 
-def handleStudyroom(userInput, state):
+def handleStudyRoom(userInput, state):
     if userInput == 'GO NORTH':
-        return goToLevel(state, 'NURSINGROOM', userInput)
+        return goToLevel(state, 'NURSING_ROOM', userInput)
     elif userInput == 'GO SOUTH':
-        return goToLevel(state, 'MESSYROOM', userInput)
+        return goToLevel(state, 'MESSY_ROOM', userInput)
     elif userInput == "TAKE DIRTY BLANKET":
         return takeItem(state, 'dirtyBlanket')
     elif userInput == 'GO WEST' or userInput == 'GO EAST':
@@ -86,13 +90,19 @@ def handleStudyroom(userInput, state):
     else:
         return handleInvalidInput(userInput, state)
 
-def handleMessyroom(userInput, state):
+def handleMessyRoom(userInput, state):
     if userInput == 'GO NORTH':
-        return goToLevel(state, 'STUDYROOM', userInput)
+        return goToLevel(state, 'STUDY_ROOM', userInput)
     elif userInput == 'GO WEST':
+<<<<<<< HEAD
         return goToLevel(state, 'CRIBROOM', userInput)
     elif userInput == "TAKE NURSERY RHYME":
         return takeItem(state, 'nurseryRhyme')
+=======
+        return goToLevel(state, 'CRIB_ROOM', userInput)
+    elif userInput == "TAKE TORN PAGES":
+        return takeItem(state, 'tornPages')
+>>>>>>> 3eecd09b533e04a835fd4e16a88358969bebebef
     elif userInput == 'GO EAST':
         return goToLevel(state, 'BLUE_START', userInput)
     elif userInput == 'GO SOUTH':
