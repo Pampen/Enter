@@ -75,8 +75,6 @@ def handleUpperFloor(userInput, state):
             return goToLevel(state, 'HALL', userInput) and handleNewHallDesc(state, userInput)
         else:
             return goToLevel(state, 'HALL', userInput)
-    elif userInput == 'GO WEST':
-        return handleDoorLock(state, 'UPPER_FLOOR_W', userInput)
     elif userInput == 'USE GREY KEY' and "greyKey" in state["inventory"]:
         if 'canvas' in state['inventory']:
             return goToLevel(state, 'BEDROOM', userInput) and handleNewBedroomDesc(state, userInput)
