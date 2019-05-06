@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock, redPuzzle, returnToMainHall
+from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock, redPuzzle, returnToMainHall, handlePersistantItems
 
 def handleLivingRoom(userInput, state):
     if 'THROW' in userInput:
@@ -81,7 +81,12 @@ def handleUpperFloor(userInput, state):
         if 'canvas' in state['inventory']:
             return goToLevel(state, 'BEDROOM', userInput) and handleNewBedroomDesc(state, userInput)
         else:
+            return handlePersistantItems(state, "GREY KEY", 'BEDROOM')
+    elif userInput == 'GO WEST':
+        if 'GREY KEY' in state['usedItems']:
             return goToLevel(state, 'BEDROOM', userInput)
+        else: 
+            return handleDoorLock(state, 'UPPER_FLOOR_W', userInput)
     elif userInput == 'USE LADDER' and "ladder" in state["inventory"]:
         if 'greyKey' in state['inventory']: 
             return goToLevel(state, 'ATTIC', userInput) and handleNewAtticDesc(state, userInput)

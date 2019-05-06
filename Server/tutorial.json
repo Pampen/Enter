@@ -121,7 +121,7 @@
     },
     {
         "level": "CRIB_ROOM",
-        "levelDescription": "This is a room with a white crib in it. It looks out of place.",
+        "levelDescription": "This is a room with a white crib in it. It looks misplaced. Nothing else in here. The emptiness is too much. Best to move on...",
         "levelTitle": "Crib Room"
     },
     {
@@ -131,17 +131,17 @@
     },
     {
         "level": "NURSING_ROOM",
-        "levelDescription": "A nursing room... and a changing table with a moldy pacifier on it. A funky smell surrounds this room...",
+        "levelDescription": "A nursing room.. and a changing table. A funky smell envelopes you as you enter. The smell is sweet, but somewhat earthy... strange.",
         "levelTitle": "Nursing Room"
     },
     {
         "level": "STUDY_ROOM",
-        "levelDescription": "A study. A nice comfy chair, books on the shelves and a decanter filled with a golden liquid and a used glass. Dust everywhere.",
+        "levelDescription": "A study. A nice, comfy chair, rows upon rows of books on the shelves and a decanter filled with a golden liquid  standing besides a used glass... Dust everywhere.",
         "levelTitle": "Study Room"
     },
     {
         "level": "MESSY_ROOM",
-        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls...",
+        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls… A notebook lying on the floor stands out from the rest. A few pages look relatively undamaged.",
         "levelTitle": "Messy Room"
     },
     {
