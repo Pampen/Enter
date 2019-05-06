@@ -47,7 +47,7 @@ def handleBabyroomblanket(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleBabyroompacifier(userInput, state):
-    if userInput == "USE NURSERY RHYME" and 'nurseryRhyme' in state['inventory']: 
+    if userInput == "Bye baby Bunting Mommy's gone hunting gone to get a rabbit skin to wrap the baby Bunting in" and 'nurseryRhyme' in state['inventory']: 
         return goToLevel(state, 'BABYROOMKEY', userInput)
     else:
         return handleInvalidInput(userInput, state)

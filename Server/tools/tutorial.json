@@ -171,7 +171,7 @@
     },
     {
         "level": "CRIBROOM",
-        "levelDescription": "This is a room with a white crib in it. It looks out of place.",
+        "levelDescription": "This is a room with a white crib in it. It looks out of place. Dust twirls in the small gleams of light coming in from cracks in the boarded up windows",
         "levelTitle": "Cribroom"
     },
     {
@@ -181,22 +181,22 @@
     },
     {
         "level": "BABYROOM",
-        "levelDescription": "This room is filled with babythings. The walls have painted unicorns and the shelves are filled with toys. Only thing missing is the crib...",
+        "levelDescription": "This room is filled with babythings. The walls have painted unicorns and the shelves are filled with toys. A worn doll sits slumped in the centre of the room. Is it waving to me? Well, the only thing clearly missing in here is the crib...",
         "levelTitle": "Babyroom"
     },
     {
         "level": "NURSINGROOM",
-        "levelDescription": "A nursing room... and a changing table with a moldy pacifier on it. A funky smell surrounds this room..",
+        "levelDescription": "A nursing room with a changing table in the middle of it. A bleak ray of sunlight shines on something on the table. As I approach it, I can see that it's a moldy pacifier. A funky smell surrounds this room, perhaps I should not linger here..",
         "levelTitle": "Nursing room"
     },
     {
         "level": "STUDYROOM",
-        "levelDescription": "A study. A nice comfy chair, books on the shelves and a decanter filled with a golden liquid and a used glass. Dust everywhere.",
+        "levelDescription": "A study. A nice comfy chair, books on the shelves and a decanter filled with a golden liquid and a used glass. Dust everywhere. A dirty blanket hangs over the back of the chair. The blanket looks oddly familiar...",
         "levelTitle": "Study room"
     },
     {
         "level": "MESSYROOM",
-        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls...",
+        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls. There is also a page of a note book titled Nursery Rhyme",
         "levelTitle": "Messy room"
     },
     {
