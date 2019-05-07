@@ -66,7 +66,7 @@ def handleOutsideShed(userInput, state):
     elif userInput == 'GO NORTH' or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
     elif userInput == 'GO EAST':
-        return goToLevel(state, "BEACH", userInput)
+        return goToLevel(state, "BEACH", userInput) and handleNewBeachDesc(state, userInput)
     else:
         return handleInvalidInput(userInput, state)
 
