@@ -371,7 +371,7 @@ def openTrueKeyFile():
 
 def openUseDescriptionFile():
     cwd = os.getcwd()
-    filePath = cwd + '/Server/invalidUseDescription.json'
+    filePath = cwd + '/Server/tools/invalidUseDescription.json'
     
     with open(filePath, 'r') as getData:
         data =json.loads(getData.read())
