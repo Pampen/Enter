@@ -3,7 +3,7 @@ from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handle
 def handleLivingRoom(userInput, state):
     if 'THROW' in userInput:
         return redPuzzle(state, userInput)
-    elif userInput == 'TAKE RED KEY' and 'carKeys' in state['isBurned']:
+    elif userInput == 'TAKE RED KEY' or userInput == 'TAKE KEY' and 'carKeys' in state['isBurned']:
         return returnToMainHall(state, 'redKey', 'MAIN_HALL')
     elif userInput == 'GO EAST':
         if 'photograph' in state['inventory']: 
@@ -57,7 +57,7 @@ def handleHall(userInput, state):
             return goToLevel(state, 'LIVING_ROOM', userInput) and handleNewLivingRoomDesc(state, userInput)
         else:
             return goToLevel(state, 'LIVING_ROOM', userInput)
-    elif userInput == 'TAKE CAR KEYS':
+    elif userInput == 'TAKE CAR KEYS' or userInput == 'TAKE KEY':
         return takeItem(state, 'carKeys')
     elif userInput == 'TAKE STAIRS' or userInput == 'USE STAIRS':
         if 'photograph' and 'carKeys' and 'canvas' in state['inventory']: 
@@ -75,14 +75,14 @@ def handleUpperFloor(userInput, state):
             return goToLevel(state, 'HALL', userInput) and handleNewHallDesc(state, userInput)
         else:
             return goToLevel(state, 'HALL', userInput)
-    elif userInput == 'USE GREY KEY' and "greyKey" in state["inventory"]:
+    elif userInput == 'USE GREY KEY' or userInput == 'USE KEY' and "greyKey" in state["inventory"]:
         if 'canvas' in state['inventory']:
-            return goToLevel(state, 'BEDROOM', userInput) and handleNewBedroomDesc(state, userInput)
+            return goToLevel(state, 'BEDROOM', userInput)
         else:
             return handlePersistantItems(state, "GREY KEY", 'BEDROOM')
     elif userInput == 'GO WEST':
         if 'GREY KEY' in state['usedItems']:
-            return goToLevel(state, 'BEDROOM', userInput)
+            return goToLevel(state, 'BEDROOM', userInput) and handleNewBedroomDesc(state, userInput)
         else: 
             return handleDoorLock(state, 'UPPER_FLOOR_W', userInput)
     elif userInput == 'USE LADDER' and "ladder" in state["inventory"]:
@@ -102,7 +102,7 @@ def handleAttic(userInput, state):
         return handleDoorLock(state, 'ATTIC', userInput)
     elif userInput == 'USE LADDER' and "ladder" in state["inventory"]:
         return goToLevel(state, 'UPPER_FLOOR', userInput)
-    elif userInput == 'TAKE GREY KEY':
+    elif userInput == 'TAKE GREY KEY' or userInput == 'TAKE KEY':
         return takeItem(state, 'greyKey')
     elif userInput == 'GO NORTH' or userInput == 'GO WEST' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
@@ -139,7 +139,7 @@ def handleNewKitchenDesc(state, userInput):
         'state': state,
         'pageChanges': {
             'levelTitle': "Kitchen",
-            'levelDescription': "An old kitchen, but with some modern modifications. There are some plates and glasses in the sink that needs to be washed. By the looks of it, it seems that the person who lived here hasn't done her or his dishes for a while. The fridge is old, and it doesn't work anymore. There are some stairs leading down to the basement.",
+            'levelDescription': "An old kitchen, but with some modern modifications. The fridge is old, and it doesn't work anymore. There are some stairs leading down to the basement.",
             'levelChatbox': ' YOU ' + userInput.upper() + "."
         }
     }

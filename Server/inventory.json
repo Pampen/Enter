@@ -29,11 +29,11 @@
     },
     "photograph": {
         "itemName": "Photograph",
-        "itemDescription": "An old dusty photograph. It's a picture of two little girls, but you can't seem to see their faces."
+        "itemDescription": "An old dusty photograph. It's a picture of 2 little girls, but you can't seem to see their faces."
     },
     "canvas": {
         "itemName": "Canvas",
-        "itemDescription": "It's a canvas painted entirely in one the color red."
+        "itemDescription": "It's a canvas painted entirely in 1 color, the color red."
     },
     "carKeys": {
         "itemName": "Car keys",
