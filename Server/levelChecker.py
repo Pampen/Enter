@@ -2,13 +2,8 @@ from tutorial import handleGreenHouse, handleOutside, handlePorch
 from MainHall import handleMainHall
 from greenDoor import handleBeach, handleCaptainsCabin, handleCellar, handleGate, handleShedFrontDoor, handleShed, handleBeachEastSide, handleShipwreck, handleLighthouse, handleLighthouseOutside, handleLighthouseTopFloor, handleOcean
 from redDoor import handleUpperFloor, handleLivingRoom, handleKitchen, handleHall, handleBedroom, handleBasement, handleAttic
-<<<<<<< HEAD
-from pinkDoor import handleBabyroom, handleCribroom, handleMessyroom, handleNursingroom, handleStudyroom, handleBabyroomcrib, handleBabyroomdoll, handleBabyroomblanket, handleBabyroompacifier, handleBabyroomkey
-from greenDoor import handleBeach, handleCabin, handleCellar, handleGate, handleOutsideShed, handleShed, handleOutsideShipwreck, handleShipwreck, handleLighthouse, handleLighthouseOutside, handleLighthouseTopFloor, handleOcean
-=======
-from pinkDoor import handleBabyRoom, handleCribRoom, handleMessyRoom, handleNursingRoom, handleStudyRoom
+from pinkDoor import handleBabyRoom, handleCribRoom, handleMessyRoom, handleNursingRoom, handleStudyRoom, handleBabyRoomCrib, handleBabyRoomDoll, handleBabyRoomBlanket, handleBabyRoomPacifier, handleBabyRoomKey
 from blueDoor import handleBlueCorridor1, handleBlueCorridor2, handleBlueCorridor3, handleBlueCorridor4, handleBlueCorridor5, handleBlueCorridor6, handleBlueCorridor7, handleBlueCorridor8, handleBlueCorridor9, handleBlueStart, handleBlueFinish, handleTorchRoom
->>>>>>> 3eecd09b533e04a835fd4e16a88358969bebebef
 
 levels = {
     'OUTSIDE': handleOutside,
@@ -51,32 +46,14 @@ levels = {
     'BLUE_CORRIDOR_7': handleBlueCorridor7,
     'BLUE_CORRIDOR_8': handleBlueCorridor8,
     'BLUE_CORRIDOR_9': handleBlueCorridor9,
-<<<<<<< HEAD
     'BLUE_FINISH': handleBlueFinish,
-    'MAIN_HALL': handleMainHall,
-    'LIVING_ROOM': handleLivingRoom,
     'LIVING_ROOMItem': handleKitchen,
-    'KITCHEN': handleKitchen,
-    'HALL': handleHall,
-    'UPPER_FLOOR': handleUpperFloor,
-    'BEDROOM': handleBedroom,
-    'BASEMENT': handleBasement,
-    'ATTIC': handleAttic,
-    'CRIBROOM': handleCribroom,
-    'BABYROOM': handleBabyroom,
-    'NURSINGROOM': handleNursingroom,
-    'STUDYROOM': handleStudyroom,
-    'MESSYROOM': handleMessyroom,
-    'BABYROOMCRIB' : handleBabyroomcrib,
-    'BABYROOMDOLL' : handleBabyroomdoll,
-    'BABYROOMBLANKET' : handleBabyroomblanket,
-    'BABYROOMPACIFIER': handleBabyroompacifier,
-    'BABYROOMKEY' : handleBabyroomkey    
-        }
-=======
-    'BLUE_FINISH': handleBlueFinish
+    'BABYROOMCRIB' : handleBabyRoomCrib,
+    'BABYROOMDOLL' : handleBabyRoomDoll,
+    'BABYROOMBLANKET' : handleBabyRoomBlanket,
+    'BABYROOMPACIFIER': handleBabyRoomPacifier,
+    'BABYROOMKEY' : handleBabyRoomKey    
 }
->>>>>>> 3eecd09b533e04a835fd4e16a88358969bebebef
 
 def levelChecker(userInput, state):   
     level = state['level']

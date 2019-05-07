@@ -55,21 +55,6 @@
         "itemName": "Dirty blanket",
         "itemDescription": "It's a blanket, covered in suspicious stains. You're not sure you want to know."
     },
-<<<<<<< HEAD:Server/tools/inventory.json
-    "tornPages": {
-        "itemName": "Torn pages",
-        "itemDescription": "It's a bunch of torn pages with yellowed, frayed edges. The pages appear to have the words JO YF UL drawn on to it"
-    },
-    "oilLamp": {
-        "itemName": "Oil Lamp",
-        "itemDescription": "It's an old oil powered lamp that still has some fuel left in it."
-    },
-    "nurseryRhyme": {
-        "itemName": "Nursery rhyme",
-        "itemDescription": "Bye baby Bunting Mommy's gone hunting gone to get a rabbit skin to wrap the baby Bunting in"
-    },
-=======
->>>>>>> 3eecd09b533e04a835fd4e16a88358969bebebef:Server/inventory.json
     "crib": {
         "itemName": "Crib",
         "itemDescription": "An old but sturdy crib."

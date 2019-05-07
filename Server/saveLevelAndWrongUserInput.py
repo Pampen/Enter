@@ -274,7 +274,7 @@ def handleDoorLock(state, currentLevel, userInput):
     for lockDescrption in data:
         for descriptionName in lockDescrption.keys():
             if descriptionName == currentLevel:
-                response['pageChanges']['levelChatboxText'] = ('You cannot ' + userInput + '. ' + lockDescrption[descriptionName])
+                response['pageChanges']['levelChatboxText'] = 'You cannot ' + userInput + '. ' + lockDescrption[descriptionName]
                 return response
 
 def handleUseItemBlueRoom(state, currentLevel):
