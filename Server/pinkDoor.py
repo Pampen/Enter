@@ -47,7 +47,7 @@ def handleBabyRoomBlanket(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleBabyRoomPacifier(userInput, state):
-    if userInput == "Bye baby Bunting Mommy's gone hunting gone to get a rabbit skin to wrap the baby Bunting in" and 'nurseryRhyme' in state['inventory']: 
+    if userInput == "USE NURSERY RHYME" and 'nurseryRhyme' in state['inventory']: 
         return goToLevel(state, 'BABYROOMKEY', userInput)
     else:
         return handleInvalidInput(userInput, state)
@@ -90,7 +90,7 @@ def handleMessyRoom(userInput, state):
     if userInput == 'GO NORTH':
         return goToLevel(state, 'STUDY_ROOM', userInput)
     elif userInput == 'GO WEST':
-        return goToLevel(state, 'CRIBROOM', userInput)
+        return goToLevel(state, 'CRIB_ROOM', userInput)
     elif userInput == "TAKE NURSERY RHYME":
         return takeItem(state, 'nurseryRhyme')
     elif userInput == 'GO EAST':
