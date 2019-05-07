@@ -1,11 +1,11 @@
-# Enter JS- DEN KOMPLETTA GUIDEN TILL TOTAL FÖRSTRÖELSE
+# Enter JS- DEN KOMPLETTA GUIDEN TILL TOTAL FÖRSTRÖELSE #
 
 Läs sakerna. Gör sakerna. Allt är bra i världen, peace out.
 
 Felicia avsäger sig ansvar för eventuella felskrivingar och
 risker för att denna kompletta guide inte är särskilt komplett.
 
-## Få igång GIT och ladda ner filer
+## Få igång GIT och ladda ner filer ##
 1. Skapa en ny mapp på valfri plats.
 2. Öppna mappen i valfri kodmiljö.
 3. Öppna terminalen i din kodmiljö.
@@ -28,7 +28,7 @@ och kolla om du kan pusha.
 12. EXTRA: Om git gör något skumt så att du inte kan skriva kommandon, skriv:
         :q
 
-## Installera React.js
+## Installera React.js ##
 
 1. Öppna valfri terminal.
 2. Gå till mappen som innehåller filen package.json.
@@ -37,7 +37,7 @@ och kolla om du kan pusha.
 4. Om installationen fungerade, borde mappen "node_modules" existera i projektmappen.
 5. Du behöver troligtvis bara göra det här en gång.
 
-## Starta Server och kör programmet
+## Starta Server och kör programmet ##
 
 1. Öppna en ny terminal.
 2. Gå till mappen som "game.py" finns i på din dator.
@@ -47,6 +47,6 @@ och kolla om du kan pusha.
 	npm start
 5. Nu borde både back- och frontend vara igång. Applikationen finns på localhost:3000.
 
-##Avsluta server
+##Avsluta server##
 1. I terminalen som kör flask, tryck ctrl + c (WIN) eller ctrl + c (MAC)
 2. I din kodmiljös terminal: tryck 

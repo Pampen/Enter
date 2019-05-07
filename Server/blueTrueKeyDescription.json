@@ -1,7 +1,7 @@
 [
     {
         "level": "BLUE_START",
-        "levelDescription": "With the torch in hand you can make out the end of the hallway infront of you. ",
+        "levelDescription": "With the torch in hand, you can make out the end of the hallway in front of you.",
         "levelTitle": "Blue start"
     },
     {
@@ -36,7 +36,7 @@
     },
     {
         "level": "BLUE_CORRIDOR_6",
-        "levelDescription": "The gate has now opened. You can make out that the sobbing is coming infront of you. ",
+        "levelDescription": "The gate has now opened. You can make out that the sobbing is coming in front of you.",
         "levelTitle": "Blue Corridor 6"
     },
     {
@@ -46,17 +46,17 @@
     },
     {
         "level": "BLUE_CORRIDOR_8",
-        "levelDescription": "The sobbing increases, you can see a corridor on your left. ",
+        "levelDescription": "The sobbing increases, you can see a corridor on your left.",
         "levelTitle": "Blue Corridor 8"
     },
     {
         "level": "BLUE_CORRIDOR_9",
-        "levelDescription": "The sobbing becomes significantly louder, you can make out a figure in front of you sitting on the floor. ",
+        "levelDescription": "The sobbing becomes significantly louder, you can make out a figure in front of you sitting on the floor.",
         "levelTitle": "Blue Corridor 9"
     },
     {
         "level": "BLUE_FINISH",
-        "levelDescription": "On the floor, there's a dark haired girl sitting on the ground, with her head in her hands covering her face. As you walk up and lay your hand on her shoulder, she crumbles into ash. You jump back, shook by the event. In the ash there's a blue key. Could this be the final piece of the puzzle?",
+        "levelDescription": "On the floor, there's a dark-haired girl sitting on the ground, with her head in her hands covering her face. As you walk up and lay your hand on her shoulder, she crumbles into ash. You jump back, shook by the event. In the ash there's a blue key. Could this be the final piece of the puzzle?",
         "levelTitle": "Blue Finish "
     }
 ]

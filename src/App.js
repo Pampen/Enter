@@ -14,11 +14,17 @@ class App extends Component {
     super(props);
     this.state = {
       title: "Outside",
-      description: "It's cold outside. There is a strange old house in front of you, there isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to your left.",
+      description: "It's cold outside. There is a strange old house in front of you.There isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to the west side of the house.",
       chatboxText: [],
       inventory: {},
-      usedItems: {},
-      level: "OUTSIDE"
+      usedItems: {
+        lightSwitch: false,
+      },
+      isBurned: [],
+      level: "OUTSIDE",
+      levelHistory: {
+        OUTSIDE: true
+      }
     };
     this.updateState = this.updateState.bind(this);
   }
@@ -34,6 +40,8 @@ class App extends Component {
       newGameState.inventory = response.state.inventory;
       newGameState.level = response.state.level;
       newGameState.usedItems = response.state.usedItems
+      newGameState.isBurned = response.state.isBurned;
+      newGameState.levelHistory = this.state.levelHistory
 
       if (newTitle) {
         newGameState.title = newTitle;
@@ -51,6 +59,7 @@ class App extends Component {
         currentChatboxText.push(newItemDescription);
         newGameState.chatboxText = currentChatboxText;
       }
+      newGameState.levelHistory[response.state.level] = true;
       this.setState(newGameState);
       console.log(this.state);
     });
@@ -96,9 +105,7 @@ class App extends Component {
               chatboxText={this.state.chatboxText}
               level={this.state.level}
             />
-            <Modal onClose={this.showMapModal} show={this.state.mapShow}>
-              <Map level={this.state.level} />
-            </Modal>
+            <Map level={this.state.level} levelHistory={this.state.levelHistory}/>
             <Modal
               onClose={this.showInventoryModal}
               show={this.state.inventoryShow}

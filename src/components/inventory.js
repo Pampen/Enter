@@ -6,7 +6,7 @@ export default class Inventory extends Component {
         console.log(this.props.inventory)
         const inventory = this.props.inventory
         const itemNames = Object.keys(inventory)
-        if(itemNames.length==0) {
+        if(itemNames.length===0) {
             return (
                 <div className="inventory">
                     <p>You do not seem to be carrying anything...</p>
