@@ -120,6 +120,8 @@ def handleCaptainsCabin(userInput, state):
         return handleInvalidDirection(state)
     elif userInput == "TAKE TORN PAGES" or userInput == "TAKE PAGES":
         return takeItem(state, "tornPages")
+    elif userInput == "TAKE FAMILY PHOTOGRAPH" or userInput == "TAKE PHOTOGRAPH" or userInput == "TAKE PHOTO" or userInput == "TAKE FRAMED FAMILY PHOTOGRAPH":
+        return handleInvalidPhoto(state)
     else:
         return handleInvalidInput(userInput, state)
 
@@ -227,6 +229,15 @@ def handleNewBeachEastSide(state, userInput):
             'levelTitle': "Beach East side",
             'levelDescription': "You're standing on the east side of the beach.",
             'levelChatboxText': 'YOU ' + userInput.upper() + '.'
+        }
+    }
+    return response
+
+def handleInvalidPhoto(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': "The Family photograph is stuck on the wall" + "."
         }
     }
     return response
