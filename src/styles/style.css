@@ -1,28 +1,49 @@
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: 'Press Start 2P', sans-serif;
   background-color: #555;
 }
 .container{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-grow: 1;
-  justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 700px;
   height: 550px;
   margin: auto;
   color: white;
-  box-shadow: 9px 9px 10px -3px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 9px 9px 10px -3px rgba(0,0,0,0.75);
+          box-shadow: 9px 9px 10px -3px rgba(0,0,0,0.75);
 }
 .game-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   position: relative;
   background-color: #333;
 }
 .game-screen {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .game-screen-header {
   height: 300px;
@@ -30,10 +51,18 @@ body {
   background-color: #444;
 }
 .game-text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-shrink: 1;
-  flex-direction: column;
-  justify-content: flex-end;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding: 0px 0px 30px 15px;
   overflow: hidden;
   height: 166px;
@@ -52,6 +81,8 @@ body {
   text-shadow: 1px 1px 5px black;
 }
 .terminal {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 50px;
   background-color: #444;
@@ -72,10 +103,19 @@ body {
   outline: 0;
 }
 .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
   min-width: 60px;
   background-color: #444;
@@ -86,16 +126,26 @@ body {
   z-index: 1;
 }
 #main-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #enter-button {
   width: 89px;
   height: 50px;
   background-color: #333;
-  text-emphasis-style: bold;
+  -webkit-text-emphasis-style: bold;
+          text-emphasis-style: bold;
   color: white;
   border: 1px solid green;
   position: absolute;
@@ -104,10 +154,12 @@ body {
   width: 50px;
   height: 50px;
   background-color: #333;
-  text-emphasis-style: bold;
+  -webkit-text-emphasis-style: bold;
+          text-emphasis-style: bold;
   color: white;
   border: 1px solid green;
-  box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
+          box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
 }
 #inventory-button {
   margin-top: 20px;
@@ -118,10 +170,12 @@ body {
   width: 50px;
   height: 50px;
   background-color: #333;
-  text-emphasis-style: bold;
+  -webkit-text-emphasis-style: bold;
+          text-emphasis-style: bold;
   color: white;
   border: 1px solid green;
-  box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
+          box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
 }
 .inventory {
   padding: 16px;
@@ -137,7 +191,8 @@ body {
   padding: 10px;
   border: 5px solid black;
   border-radius: 0 15px 15px 15px;
-  box-shadow: 3px 10px 10px #333;
+  -webkit-box-shadow: 3px 10px 10px #333;
+          box-shadow: 3px 10px 10px #333;
   background-color: white;
   color: black;
 }
@@ -281,17 +336,25 @@ header {
   left: 100%;
 }
 .map-row{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
 }
 .map-cell {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 50px;
   height: 50px;
   position: relative;
   margin: 10px;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .map-cell:after{
   content: "";
@@ -348,11 +411,14 @@ header {
   z-index: 4;
   animation: 0.8s map-cell-name-wiggle infinite alternate;
   -webkit-animation: 0.8s map-cell-name-wiggle infinite alternate;
-  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
   padding: 10px;
   border: 5px solid black;
   border-radius: 0 15px 15px 15px;
-  box-shadow: 3px 10px 10px #333;
+  -webkit-box-shadow: 3px 10px 10px #333;
+          box-shadow: 3px 10px 10px #333;
   background-color: white;
   color: black;
 }
@@ -362,6 +428,17 @@ header {
 #mirror-room {
   animation: 1s compass-mirror-room-spin linear infinite;
   -webkit-animation: 1s compass-mirror-room-spin linear infinite;
+}
+@-webkit-keyframes blink-animation {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 @keyframes blink-animation {
   0% {
@@ -374,6 +451,14 @@ header {
     opacity: 1;
   }
 }
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -383,56 +468,137 @@ header {
   }
 }
 
-@keyframes map-cell-name-wiggle {
+@-webkit-keyframes map-cell-name-wiggle {
   0% {
-    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+            transform: scale(1,1);
   }
   100% {
-    transform: scale(0.9, 0.9);
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+  }
+}
+
+@keyframes map-cell-name-wiggle {
+  0% {
+    -webkit-transform: scale(1,1);
+            transform: scale(1,1);
+  }
+  100% {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+  }
+}
+@-webkit-keyframes map-cell-current-room-glow {
+  0% {
+    -webkit-transform: scale(1,1);
+            transform: scale(1,1)
+  }
+  100% {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1)
   }
 }
 @keyframes map-cell-current-room-glow {
   0% {
-    transform: scale(1,1)
+    -webkit-transform: scale(1,1);
+            transform: scale(1,1)
   }
   100% {
-    transform: scale(1.1, 1.1)
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1)
+  }
+}
+
+@-webkit-keyframes compass-needle-wiggle {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  10% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  28% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  35% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  55% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  70% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  90% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
 @keyframes compass-needle-wiggle {
   0% {
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   10% {
-    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
   }
   28% {
-    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   35% {
-    transform: rotate(-12deg);
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
   }
   55% {
-    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   70% {
-    transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
   }
   90% {
-    transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
   }
   100% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes compass-mirror-room-spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @keyframes compass-mirror-room-spin {
   0% {
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
