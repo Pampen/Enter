@@ -66,7 +66,7 @@ def handleShedFrontDoor(userInput, state):
     elif userInput == 'GO NORTH' or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
     elif userInput == 'GO EAST':
-        return goToLevel(state, "BEACH", userInput)
+        return goToLevel(state, "BEACH", userInput) and handleNewBeachDesc(state, userInput)
     else:
         return handleInvalidInput(userInput, state)
 
@@ -75,7 +75,7 @@ def handleShed(userInput, state):
         return handleInvalidDirection(state)
     elif userInput == 'TAKE STAIRS':
         return handleBasement(state)
-    elif userInput == "TAKE OIL LAMP" or userInput == "TAKE LAMP":
+    elif userInput == "TAKE OIL LAMP" or userInput == "TAKE LAMP" or userInput == "TAKE OLD FASHIONED OIL LAMP" or userInput == "TAKE OLD-FASHIONED OIL LAMP":
         return takeItem(state, 'oilLamp')
     elif userInput == 'GO EAST':
         return goToLevel(state, "SHED_FRONT_DOOR", userInput) and handleNewShedFrontDoorDesc(state, userInput)
@@ -91,7 +91,10 @@ def handleBeachEastSide(userInput, state):
     if userInput == 'GO WEST':
         return goToLevel(state, 'BEACH', userInput) and handleNewBeachDesc(state, userInput)
     elif userInput == 'GO EAST':
-        return goToLevel(state, 'SHIPWRECK', userInput)
+        if "tornPages" in state["inventory"]:
+            return goToLevel(state, 'SHIPWRECK', userInput) and handleNewShipwreckDesc(state, userInput)
+        else:
+            return goToLevel(state, "SHIPWRECK", userInput)
     elif userInput == 'GO SOUTH' or userInput == 'GO NORTH':
         return handleInvalidDirection(state)
     else:
@@ -112,11 +115,13 @@ def handleShipwreck(userInput, state):
 
 def handleCaptainsCabin(userInput, state):
     if userInput == 'GO WEST':
-        return goToLevel(state, 'SHIPWRECK', userInput)
+        return goToLevel(state, 'SHIPWRECK', userInput) and handleNewShipwreckDesc(state, userInput)
     elif userInput == "GO EAST" or userInput == "GO NORTH" or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
     elif userInput == "TAKE TORN PAGES" or userInput == "TAKE PAGES":
         return takeItem(state, "tornPages")
+    elif userInput == "TAKE FAMILY PHOTOGRAPH" or userInput == "TAKE PHOTOGRAPH" or userInput == "TAKE PHOTO" or userInput == "TAKE FRAMED FAMILY PHOTOGRAPH":
+        return handleInvalidPhoto(state)
     else:
         return handleInvalidInput(userInput, state)
 
@@ -148,7 +153,7 @@ def handleBasement(state):
     response = {
         'state': state,
         'pageChanges': {
-            'levelChatboxText': "While trying to make your way downstairs, a door is blocking your way from moving forward. The door appears to be locked with a bunch of chains put onto it, there's a padlock that requires you to enter six words in a certain order."
+            'levelChatboxText': "While trying to make your way downstairs, a door is blocking your way from moving forward. The door appears to be locked with a bunch of chains put onto it, there's a padlock that requires you to enter six letters in a certain order."
         }
     }
     return response
@@ -203,5 +208,36 @@ def handleNewShedFrontDoorDesc(state, userInput):
             'levelDescription': "You stand outside the shed.",
             'levelChatboxText': 'YOU ' + userInput.upper() + '.'
         }       
+    }
+    return response
+
+def handleNewShipwreckDesc(state, userInput):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelTitle': "Shipwreck",
+            'levelDescription': "You find yourself on the old rustic shipwreck.",
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
+        }
+    }
+    return response
+
+def handleNewBeachEastSide(state, userInput):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelTitle': "Beach East side",
+            'levelDescription': "You're standing on the east side of the beach.",
+            'levelChatboxText': 'YOU ' + userInput.upper() + '.'
+        }
+    }
+    return response
+
+def handleInvalidPhoto(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': "The Family photograph is stuck on the wall" + "."
+        }
     }
     return response
