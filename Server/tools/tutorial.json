@@ -126,22 +126,22 @@
     },
     {
         "level": "BABY_ROOM",
-        "levelDescription": "This room is filled with baby things. The walls have painted unicorns, and the shelves are filled with toys. The only thing missing is the crib...",
+        "levelDescription": "This room is filled with baby things. The walls have painted unicorns, and the shelves are filled with toys. A worn doll catches the eye. Is it waving or are you losing your mind? The only thing missing is the crib...",
         "levelTitle": "Baby Room"
     },
     {
         "level": "NURSING_ROOM",
-        "levelDescription": "A nursing room.. and a changing table. A funky smell envelopes you as you enter. The smell is sweet, but somewhat earthy... strange.",
+        "levelDescription": "A nursing room.. and a changing table. A funky smell envelopes you as you enter. The smell is sweet, but somewhat earthy... strange. A moldy pacifier lying on the changing table is caught in a bleak ray of sunlight.",
         "levelTitle": "Nursing Room"
     },
     {
         "level": "STUDY_ROOM",
-        "levelDescription": "A study. A nice, comfy chair, rows upon rows of books on the shelves and a decanter filled with a golden liquid  standing besides a used glass... Dust everywhere.",
+        "levelDescription": "A study. A nice, comfy chair, rows upon rows of books on the shelves and a decanter filled with a golden liquid  standing besides a used glass... Dust everywhere. A dirty blanket is wrapped around the back of the chair.. it looks somehow familiar.",
         "levelTitle": "Study Room"
     },
     {
         "level": "MESSY_ROOM",
-        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls… A notebook lying on the floor stands out from the rest. A few pages look relatively undamaged.",
+        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls… A notebook lying on the floor stands out from the rest. It's titled Nursery Rhyme and has the same rhyme in it as is scribbled on the wall..",
         "levelTitle": "Messy Room"
     },
     {
@@ -291,7 +291,7 @@
     },
     {
         "level": "BABYROOMPACIFIER",
-        "levelDescription": "Do you remember the nursery rhyme? It feels like you should recite it",
+        "levelDescription": "Do you remember the nursery rhyme? It feels like you should use it..",
         "levelTitle": "Baby room"
     },
     {
