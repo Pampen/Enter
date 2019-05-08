@@ -78,8 +78,11 @@ def handleUpperFloor(userInput, state):
     elif userInput == 'USE GREY KEY' or userInput == 'USE KEY' and "greyKey" in state["inventory"]:
             return handlePersistantItems(state, "GREY KEY", 'BEDROOM')
     elif userInput == 'GO WEST':
-        if 'GREY KEY' in state['usedItems'] or 'canvas' in state['inventory']:
-            return goToLevel(state, 'BEDROOM', userInput) and handleNewBedroomDesc(state, userInput)
+        if 'GREY KEY' in state['usedItems']:
+            if 'canvas' in state['inventory']:
+                return goToLevel(state, 'BEDROOM', userInput) and handleNewBedroomDesc(state, userInput)
+            else:
+                return goToLevel(state,'BEDROOM', userInput)
         else:
             return handleDoorLock(state, 'UPPER_FLOOR_W', userInput)
     elif userInput == 'USE LADDER' and "ladder" in state["inventory"]:
