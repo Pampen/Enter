@@ -129,7 +129,7 @@ def handleNewLivingRoomDesc(state, userInput):
         'pageChanges': {
             'levelTitle': "Living Room",
             'levelDescription': "With the photograph, car keys and canvas in your possession, you can feel the heat getting stronger and more violent. There is a huge message painted in red all over the room. Three Objects, Three Memories. You should try to throw objects into the fire.",
-            'levelChatbox': ' YOU ' + userInput.upper() + "."
+            'levelChatboxText': ' YOU ' + userInput.upper() + "."
         }
     }
     return response
@@ -140,7 +140,7 @@ def handleNewKitchenDesc(state, userInput):
         'pageChanges': {
             'levelTitle': "Kitchen",
             'levelDescription': "An old kitchen, but with some modern modifications. The fridge is old, and it doesn't work anymore. There are some stairs leading down to the basement.",
-            'levelChatbox': ' YOU ' + userInput.upper() + "."
+            'levelChatboxText': ' YOU ' + userInput.upper() + "."
         }
     }
     return response
@@ -151,7 +151,7 @@ def handleNewHallDesc(state, userInput):
         'pageChanges': {
             'levelTitle': "Hall",
             'levelDescription': "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures and the wall, however, you can't seem to see persons' faces in the pictures for some reasons. Every face is blurry. Beneath the pictures is a small table with an empty bowl. There are some stairs leading up to the upper floor.",
-            'levelChatbox': ' YOU ' + userInput.upper() + "."
+            'levelChatboxText': ' YOU ' + userInput.upper() + "."
         }
     }
     return response
@@ -162,7 +162,7 @@ def handleNewBasementDesc(state, userInput):
         'pageChanges': {
             'levelTitle': "Basement",
             'levelDescription': "It's cold in the basement. There is not so much down here, just some old furnitures and some boxes filled with old toys, pictures, watches and so on. Most of it seems to be covered by a red cloth to protect them from getting all dusty. There are some stairs leading up.",
-            'levelChatbox': ' YOU ' + userInput.upper() + "."
+            'levelChatboxText': ' YOU ' + userInput.upper() + "."
         }
     }
     return response
@@ -173,7 +173,7 @@ def handleNewAtticDesc(state, userInput):
         'pageChanges': {
             'levelTitle': "Attic",
             'levelDescription': "The attic is very dark, but the sunbeams from the windows make it much easier to distinguish what hides behind the dark. There are some boxes with the label 'memories'.",
-            'levelChatbox': ' YOU ' + userInput.upper() + "."
+            'levelChatboxText': ' YOU ' + userInput.upper() + "."
         }
     }
     return response
@@ -184,7 +184,7 @@ def handleNewBedroomDesc(state, userInput):
         'pageChanges': {
             'levelTitle': "Bedroom",
             'levelDescription': "It looks like a regular bedroom, the walls are red, a bookcase filled with obviously books, photos, a tiny leather boot and a box full of old watches. There is a big round window in the room which is painted black, but it doesn't block the sunlight which is kind of odd.",
-            'levelChatbox': ' YOU ' + userInput.upper() + ".",
+            'levelChatboxText': ' YOU ' + userInput.upper() + ".",
         }
     }
     return response
@@ -195,7 +195,7 @@ def handleFireLoudDesc(state, userInput):
         'pageChanges': {
             'levelTitle': "Upper Floor",
             'levelDescription': "You can hear a loud noise coming from the living room, it sounds like fire, but why is the fire so loud?",
-            'levelChatbox': ' YOU ' + userInput.upper() + "."
+            'levelChatboxText': ' YOU ' + userInput.upper() + "."
         }
     }
     return response
