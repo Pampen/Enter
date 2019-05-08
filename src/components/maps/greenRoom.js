@@ -2,7 +2,10 @@ const beach = {
     color: "green",
     name: "Beach",
     id: 'BEACH',
-    cellName: 'B'
+    cellName: 'B',
+    connections: [
+        "W", "E", "N"
+    ]
 }
 const shed = {
     color: "green",
@@ -20,7 +23,7 @@ const shedFrontDoor = {
     id: 'SHED_FRONT_DOOR',
     cellName: 'SF',
     connections: [
-        'E'
+        'E', "W"
     ]
 }
 const cellar = {
