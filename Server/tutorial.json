@@ -31,7 +31,7 @@
     },
     {
         "level": "BEACH",
-        "levelDescription": "The door closes behind you, leaving you alone in the darkness. Suddenly, everything lights up, and you find yourself on the beach. There's a lighthouse right in front of you up the hill, a shipwreck by the coast and what looks to be a shed to your left by the seaside. Which way do you decide to go?",
+        "levelDescription": "The door closes behind you, leaving you alone in the darkness. Suddenly, everything lights up, and you find yourself on the beach. There's a lighthouse right in front of you up the hill, a shipwreck by the coast and what looks to be a shed close to you. Which way do you decide to go?",
         "levelTitle": "Beach"
     },
     {
@@ -71,7 +71,7 @@
     },
     {
         "level": "BEACH_EAST_SIDE",
-        "levelDescription": "You see a shipwreck in the distant, it's propably worth checking out",
+        "levelDescription": "You see a shipwreck in the distant, it's probably worth checking out",
         "levelTitle": "Beach East Side"
     },
     {
@@ -81,7 +81,7 @@
     },
     {
         "level": "CAPTAINS_CABIN",
-        "levelDescription": "You are currently inside the captains cabin. There's a framed family photograph on the wall of what looks to be the owner of this ships family. There's a desk with a piece of torn pages on it.",
+        "levelDescription": "You are currently inside the captains cabin. There's a framed family photograph on the wall of what looks to be the owner of this ship's family. There's a desk with a piece of torn pages on it.",
         "levelTitle": "Captains Cabin"
     },
     {
