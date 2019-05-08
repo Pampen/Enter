@@ -41,17 +41,17 @@
     },
     {
         "level": "LIGHTHOUSE_OUTSIDE",
-        "levelDescription": "You stand outside the lighthouse, do you decide to go?",
+        "levelDescription": "You stand outside the lighthouse",
         "levelTitle": "Lighthouse Outside"
     },
     {
         "level": "LIGHTHOUSE",
-        "levelDescription": "This is the lighthouse. There's a staircase that leads up to the top floor.",
+        "levelDescription": "This is the lighthouse. There's stairs leading up to the top floor.",
         "levelTitle": "Lighthouse"
     },
     {
         "level": "LIGHTHOUSE_TOP_FLOOR",
-        "levelDescription": "This is the top floor in the lighthouse. There's a green key hanging on the wall.",
+        "levelDescription": "This is the top floor in the lighthouse. The room is filled with a mysterious aura and it's giving you some sorts of joyous feeling in your body. There's a green key hanging on the wall.",
         "levelTitle": "Lighthouse Top Floor"
     },
     {
@@ -71,12 +71,12 @@
     },
     {
         "level": "BEACH_EAST_SIDE",
-        "levelDescription": "You see a shipwreck in the distant, do you decide to explore it?",
+        "levelDescription": "You see a shipwreck in the distant, it's propably worth checking out",
         "levelTitle": "Beach East Side"
     },
     {
         "level": "SHIPWRECK",
-        "levelDescription": "You find yourself inside the old rustic shipwreck. The boat seems to be very old from the looks of it. The captains cabin is up ahead to your right.",
+        "levelDescription": "You find yourself inside the old rustic shipwreck. The boat seems to be very old from the looks of it. The captains cabin seems to be up ahead.",
         "levelTitle": "Shipwreck"
     },
     {
