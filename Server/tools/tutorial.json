@@ -31,7 +31,7 @@
     },
     {
         "level": "BEACH",
-        "levelDescription": "The door closes behind you, leaving you alone in the darkness. Suddenly, everything lights up, and you find yourself on the beach. There's a lighthouse right in front of you up the hill, a shipwreck by the coast and what looks to be a shed to your left by the seaside. Which way do you decide to go?",
+        "levelDescription": "The door closes behind you, leaving you alone in the darkness. Suddenly, everything lights up, and you find yourself on the beach. There's a lighthouse right in front of you up the hill, a shipwreck by the coast and what looks to be a shed close to you. Which way do you decide to go?",
         "levelTitle": "Beach"
     },
     {
@@ -41,17 +41,17 @@
     },
     {
         "level": "LIGHTHOUSE_OUTSIDE",
-        "levelDescription": "You stand outside the lighthouse, do you decide to go?",
+        "levelDescription": "You stand outside the lighthouse",
         "levelTitle": "Lighthouse Outside"
     },
     {
         "level": "LIGHTHOUSE",
-        "levelDescription": "This is the lighthouse. There's a staircase that leads up to the 2nd floor.",
+        "levelDescription": "This is the lighthouse. There's stairs leading up to the top floor.",
         "levelTitle": "Lighthouse"
     },
     {
         "level": "LIGHTHOUSE_TOP_FLOOR",
-        "levelDescription": "This is the top floor in the lighthouse. There's a green key hanging on the wall.",
+        "levelDescription": "This is the top floor in the lighthouse. The room is filled with a mysterious aura and it's giving you some sorts of joyous feeling in your body. There's a green key hanging on the wall.",
         "levelTitle": "Lighthouse Top Floor"
     },
     {
@@ -71,17 +71,17 @@
     },
     {
         "level": "BEACH_EAST_SIDE",
-        "levelDescription": "You see a shipwreck in the distant, do you decide to explore it?",
+        "levelDescription": "You see a shipwreck in the distant, it's probably worth checking out",
         "levelTitle": "Beach East Side"
     },
     {
         "level": "SHIPWRECK",
-        "levelDescription": "You find yourself inside the old rustic shipwreck. The boat seems to be very old from the looks of it. The captains cabin is up ahead to your right.",
+        "levelDescription": "You find yourself inside the old rustic shipwreck. The boat seems to be very old from the looks of it. The captains cabin seems to be up ahead.",
         "levelTitle": "Shipwreck"
     },
     {
         "level": "CAPTAINS_CABIN",
-        "levelDescription": "You are currently inside the captains cabin. There's a family photograph on the wall of what looks to be the owner of this ships family. There's a desk with a piece of torn pages on it.",
+        "levelDescription": "You are currently inside the captains cabin. There's a framed family photograph on the wall of what looks to be the owner of this ship's family. There's a desk with a piece of torn pages on it.",
         "levelTitle": "Captains Cabin"
     },
     {
@@ -91,7 +91,7 @@
     },
     {
         "level": "KITCHEN",
-        "levelDescription": "An old kitchen, but with some modern modifications. There are some plates and glasses in the sink that needs to be washed. By the looks of it, it seems that the person who lived here hasn't done her or his dishes for a while. The fridge is old, and it doesn't work anymore, but it has a photograph on it. The photograph might be a clue to all this madness. There are some stairs leading down to the basement.",
+        "levelDescription": "An old kitchen, but with some modern modifications. The fridge is old, and it doesn't work anymore, but it has a photograph on it. The photograph might be a clue to all this madness. There are some stairs leading down to the basement.",
         "levelTitle": "Kitchen"
     },
     {
@@ -106,7 +106,7 @@
     },
     {
         "level": "UPPER_FLOOR",
-        "levelDescription": "It's so quiet up here, there is only a door, which you guess is the bedroom, an attic and a window which is painted black. Somehow the sunlight still shines through the black paint. There is a staircase leading down to the hall.",
+        "levelDescription": "It's so quiet up here, there is only a door, which you guess is the bedroom, an attic and a window which is painted black. Somehow the sunlight still shines through the black paint. There are some stairs leading down to the hall.",
         "levelTitle": "Upper Floor"
     },
     {

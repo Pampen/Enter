@@ -19,7 +19,7 @@
         "itemName": "Oil Lamp",
         "itemDescription": "It's an old oil powered lamp that still has some fuel left in it."
     },
-        "ladder": {
+    "ladder": {
         "itemName": "Ladder",
         "itemDescription": "The ladder looks rather old, and it seems like it has been through a lot. It looks like it could be made out of oak, but you're not entirely sure it matters."
     },
@@ -29,11 +29,11 @@
     },
     "photograph": {
         "itemName": "Photograph",
-        "itemDescription": "An old dusty photograph. It's a picture of two little girls, but you can't seem to see their faces."
+        "itemDescription": "An old dusty photograph. It's a picture of 2 little girls, but you can't seem to see their faces."
     },
     "canvas": {
         "itemName": "Canvas",
-        "itemDescription": "It's a canvas painted entirely in one the color red."
+        "itemDescription": "It's a canvas painted entirely in 1 color, the color red."
     },
     "carKeys": {
         "itemName": "Car keys",
