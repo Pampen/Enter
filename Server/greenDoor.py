@@ -77,6 +77,8 @@ def handleShed(userInput, state):
         return handleBasement(state)
     elif userInput == "TAKE OIL LAMP" or userInput == "TAKE LAMP" or userInput == "TAKE OLD FASHIONED OIL LAMP" or userInput == "TAKE OLD-FASHIONED OIL LAMP":
         return takeItem(state, 'oilLamp')
+    elif userInput == "THROW OIL LAMP" and "oilLamp" in state["inventory"]:
+        return handleNewShedDescOilLamp(state)
     elif userInput == 'GO EAST':
         return goToLevel(state, "SHED_FRONT_DOOR", userInput) and handleNewShedFrontDoorDesc(state, userInput)
     elif userInput == "JOYFUL":
@@ -120,7 +122,7 @@ def handleCaptainsCabin(userInput, state):
         return handleInvalidDirection(state)
     elif userInput == "TAKE TORN PAGES" or userInput == "TAKE PAGES":
         return takeItem(state, "tornPages")
-    elif userInput == "TAKE FAMILY PHOTOGRAPH" or userInput == "TAKE PHOTOGRAPH" or userInput == "TAKE PHOTO" or userInput == "TAKE FRAMED FAMILY PHOTOGRAPH":
+    elif userInput == "TAKE FAMILY PHOTOGRAPH" or userInput == "TAKE PHOTOGRAPH" or userInput == "TAKE FAMILY PHOTO" or userInput == "TAKE FRAMED FAMILY PHOTOGRAPH":
         return handleInvalidPhoto(state)
     else:
         return handleInvalidInput(userInput, state)
@@ -237,7 +239,16 @@ def handleInvalidPhoto(state):
     response = {
         'state': state,
         'pageChanges': {
-            'levelChatboxText': "The Family photograph is stuck on the wall" + "."
+            'levelChatboxText': "The Family photograph is stuck on the wall..."
+        }
+    }
+    return response
+
+def handleNewShedDescOilLamp(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': "Throwing the oil lamp would result in a fire..."
         }
     }
     return response
