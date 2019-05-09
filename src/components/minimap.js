@@ -6,7 +6,7 @@ import greenRoomMap from "./maps/greenRoom";
 const maps = {
     /*Put map functions here. Check tutorial.js in folder maps*/ 
     'TUTORIAL': tutorialMap,
-    "JOY": greenRoomMap
+    'JOY': greenRoomMap
 };
 
 class MapRow extends Component {

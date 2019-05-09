@@ -22,6 +22,25 @@ const greenhouse = {
         'E'
     ]
 }
+const greenhouseLightOn = {
+    color: 'orange',
+    name: 'Greenhouse',
+    id: 'GREENHOUSE_LIGHT_ON',
+    cellName: 'GH',
+    connections: [
+        'E'
+    ]
+}
+const greenhouseLightOnAndKey = {
+    color: 'orange',
+    name: 'Greenhouse',
+    id: 'GREENHOUSE_LIGHT_AND_KEY_ON',
+    cellName: 'GH',
+    connections: [
+        'E'
+    ]
+
+}
 const outside = {
     color: 'orange',
     name: 'Outside',
