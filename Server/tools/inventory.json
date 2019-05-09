@@ -29,11 +29,11 @@
     },
     "photograph": {
         "itemName": "Photograph",
-        "itemDescription": "An old dusty photograph. It's a picture of two little girls, but you can't seem to see their faces."
+        "itemDescription": "An old dusty photograph. It's a picture of 2 little girls, but you can't seem to see their faces."
     },
     "canvas": {
         "itemName": "Canvas",
-        "itemDescription": "It's a canvas painted entirely in one the color red."
+        "itemDescription": "It's a canvas painted entirely in 1 color, the color red."
     },
     "carKeys": {
         "itemName": "Car keys",
@@ -58,6 +58,10 @@
     "crib": {
         "itemName": "Crib",
         "itemDescription": "An old but sturdy crib."
+    },
+    "nurseryRhyme": {
+        "itemName": "Nursery Rhyme",
+        "itemDescription": "Bye baby Bunting Mommy's gone hunting gone to get a rabbit skin to wrap the baby Bunting in"
     },
     "pinkKey": {
         "itemName": "Pink key",

@@ -274,7 +274,7 @@ def handleDoorLock(state, currentLevel, userInput):
     for lockDescrption in data:
         for descriptionName in lockDescrption.keys():
             if descriptionName == currentLevel:
-                response['pageChanges']['levelChatboxText'] = ('You cannot ' + userInput + '. ' + lockDescrption[descriptionName])
+                response['pageChanges']['levelChatboxText'] = 'You cannot ' + userInput + '. ' + lockDescrption[descriptionName]
                 return response
 
 def handleUseItemBlueRoom(state, currentLevel):
@@ -331,7 +331,7 @@ def returnToMainHall(state, currentItem, currentLevel):
 
 def openLevelFile():
     cwd = os.getcwd()  # Get the current working directory (cwd)
-    filePath = cwd + '/Server/tutorial.json'
+    filePath = cwd + '/Server/tools/tutorial.json'
     
     with open(filePath, 'r') as getData:
         data = json.loads(getData.read())
@@ -339,7 +339,7 @@ def openLevelFile():
         
 def openItemFile():
     cwd = os.getcwd()  # Get the current working directory (cwd)
-    filePath = cwd + '/Server/inventory.json'
+    filePath = cwd + '/Server/tools/inventory.json'
     
     with open(filePath, 'r') as getData:
         data = json.loads(getData.read())
@@ -347,7 +347,7 @@ def openItemFile():
 
 def openTorchFile():
     cwd = os.getcwd()
-    filePath = cwd + '/Server/blueTorchDescription.json'
+    filePath = cwd + '/Server/tools/blueTorchDescription.json'
     
     with open(filePath, 'r') as getData:
         data =json.loads(getData.read())
@@ -355,7 +355,7 @@ def openTorchFile():
 
 def openFalseKeyFile():
     cwd = os.getcwd()
-    filePath = cwd + '/Server/blueFalseKeyDescription.json'
+    filePath = cwd + '/Server/tools/blueFalseKeyDescription.json'
     
     with open(filePath, 'r') as getData:
         data =json.loads(getData.read())
@@ -363,7 +363,7 @@ def openFalseKeyFile():
 
 def openTrueKeyFile():
     cwd = os.getcwd()
-    filePath = cwd + '/Server/blueTrueKeyDescription.json'
+    filePath = cwd + '/Server/tools/blueTrueKeyDescription.json'
     
     with open(filePath, 'r') as getData:
         data =json.loads(getData.read())
@@ -371,7 +371,7 @@ def openTrueKeyFile():
 
 def openUseDescriptionFile():
     cwd = os.getcwd()
-    filePath = cwd + '/Server/invalidUseDescription.json'
+    filePath = cwd + '/Server/tools/invalidUseDescription.json'
     
     with open(filePath, 'r') as getData:
         data =json.loads(getData.read())

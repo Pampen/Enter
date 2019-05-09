@@ -9,6 +9,11 @@ body {
   font-family: 'Press Start 2P', sans-serif;
   background-color: #555;
 }
+.navbar {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
 .container{
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,6 +30,9 @@ body {
   color: white;
   -webkit-box-shadow: 9px 9px 10px -3px rgba(0,0,0,0.75);
           box-shadow: 9px 9px 10px -3px rgba(0,0,0,0.75);
+  border-style: solid;
+  border-color: gray;
+  box-shadow: 9px 9px 10px -3px rgba(0,0,0,0.75);
 }
 .game-container{
   display: -webkit-box;
