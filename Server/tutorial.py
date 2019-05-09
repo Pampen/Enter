@@ -8,6 +8,8 @@ def handleOutside(userInput, state):
             return goToLevel(state, 'GREENHOUSE_LIGHT_ON', userInput)
         else:
             return goToLevel(state, 'GREENHOUSE', userInput)
+    elif userInput == 'LICK DOOR':
+        return goToLevel(state, 'MAIN_HALL', userInput)
     elif userInput == 'GO NORTH':
         return goToLevel(state, 'PORCH', userInput)
     elif userInput == 'GO SOUTH' or userInput == 'GO EAST':
