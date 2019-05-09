@@ -19,7 +19,7 @@ def handleBabyRoom(userInput, state):
         return goToLevel(state, 'NURSING_ROOM', userInput)
     elif userInput == 'GO SOUTH':
         return goToLevel(state, 'CRIB_ROOM', userInput)
-    elif userInput == "TAKE WORN DOLL":
+    elif userInput == "TAKE WORN DOLL" or userInput == "TAKE DOLL":
         return takeItem(state, 'wornDoll')
     elif userInput == "USE CRIB" and 'crib' in state['inventory']: 
         return goToLevel(state, 'BABYROOMCRIB', userInput)

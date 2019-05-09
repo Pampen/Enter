@@ -21,7 +21,7 @@ class App extends Component {
         lightSwitch: false,
       },
       isBurned: [],
-      level: "LIVING_ROOM",
+      level: "OUTSIDE",
       levelHistory: {
         OUTSIDE: true
       }
