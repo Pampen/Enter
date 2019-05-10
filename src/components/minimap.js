@@ -2,18 +2,20 @@ import React, { Component } from "react";
 import { levels } from "../utilities/levelChecker";
 import tutorialMap from './maps/tutorial';
 import greenRoomMap from "./maps/greenRoom";
+import loveMap from "./maps/love.js"
 
 const maps = {
     /*Put map functions here. Check tutorial.js in folder maps*/ 
     'TUTORIAL': tutorialMap,
-    'JOY': greenRoomMap
+    'JOY': greenRoomMap,
+    'LOVE': loveMap
 };
 
 class MapRow extends Component {
     render () {
         return (<div className="map-row">
-        {this.props.row.map((mapCell) => {
-            return <MapCell mapCell={mapCell} level={this.props.level} levelHistory={this.props.levelHistory}/>
+        {this.props.row.map((mapCell, i) => {
+            return <MapCell mapCell={mapCell} level={this.props.level} levelHistory={this.props.levelHistory} i={i}/>
         })}
     </div>
         );
@@ -43,7 +45,7 @@ class MapCell extends Component {
                         })
                         : ''
                 }
-                <div className="map-cell-name">
+                <div className="map-cell-name" key={this.props.i}>
                     {
                         this.props.mapCell && this.props.mapCell.color
                             ? <p className={this.props.mapCell.color}>{this.props.mapCell.name}</p>

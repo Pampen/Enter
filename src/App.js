@@ -21,7 +21,7 @@ class App extends Component {
         lightSwitch: false,
       },
       isBurned: [],
-      level: "LIVING_ROOM",
+      level: "OUTSIDE",
       levelHistory: {
         OUTSIDE: true
       }
@@ -97,7 +97,6 @@ class App extends Component {
             handleInventoryClick={this.showInventoryModal}
             handleCommandClick={this.showCommandModal}
           />
-
           <div className="game-container">
             <GameScreen
               title={this.state.title}
