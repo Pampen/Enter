@@ -97,7 +97,6 @@ class App extends Component {
             handleInventoryClick={this.showInventoryModal}
             handleCommandClick={this.showCommandModal}
           />
-
           <div className="game-container">
             <GameScreen
               title={this.state.title}
@@ -105,7 +104,7 @@ class App extends Component {
               chatboxText={this.state.chatboxText}
               level={this.state.level}
             />
-            <Map level={this.state.level} levelHistory={this.state.levelHistory}/>
+            <Map level={this.state.level} levelHistory={this.state.levelHistory} />
             <Modal
               onClose={this.showInventoryModal}
               show={this.state.inventoryShow}
