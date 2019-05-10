@@ -3,12 +3,14 @@ import { levels } from "../utilities/levelChecker";
 import tutorialMap from './maps/tutorial';
 import greenRoomMap from "./maps/greenRoom";
 import loveMap from "./maps/love.js"
+import redRoomMap from "./maps/redRoom";
 
 const maps = {
     /*Put map functions here. Check tutorial.js in folder maps*/ 
     'TUTORIAL': tutorialMap,
     'JOY': greenRoomMap,
-    'LOVE': loveMap
+    'LOVE': loveMap,
+    "ANGER": redRoomMap
 };
 
 class MapRow extends Component {

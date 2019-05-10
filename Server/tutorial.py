@@ -46,4 +46,3 @@ def handleGreenHouse(userInput, state):
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)
-
