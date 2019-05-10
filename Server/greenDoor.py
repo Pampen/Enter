@@ -16,7 +16,7 @@ def handleBeach(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleGate(userInput, state):
-    if userInput == "USE BRONZE KEY" and "bronzeKey" in state["inventory"]:
+    if userInput == "USE BRONZE KEY" or userInput == 'USE KEY' and "bronzeKey" in state["inventory"]:
         return goToLevel(state, 'LIGHTHOUSE_OUTSIDE', userInput)
     elif userInput == "GO NORTH":
         return handleDoorLock(state, "GATE", userInput)
