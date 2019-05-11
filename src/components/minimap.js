@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { levels } from "../utilities/levelChecker";
 import tutorialMap from './maps/tutorial';
 import greenRoomMap from "./maps/greenRoom";
+import loveMap from "./maps/love.js"
 import redRoomMap from "./maps/redRoom";
 import sadnessMap from "./maps/sadness";
 
@@ -9,18 +10,31 @@ import sadnessMap from "./maps/sadness";
 const maps = {
     /*Put map functions here. Check tutorial.js in folder maps*/
     'TUTORIAL': tutorialMap,
+<<<<<<< HEAD
     "JOY": greenRoomMap,
     "ANGER": redRoomMap,
     "SADNESS": sadnessMap
+=======
+    'JOY': greenRoomMap,
+    'LOVE': loveMap,
+    "ANGER": redRoomMap
+>>>>>>> 76a268c23b812aa8b56a5af0f4cdd2a1f2631aaf
 };
 
 class MapRow extends Component {
     render() {
         return (<div className="map-row">
+<<<<<<< HEAD
             {this.props.row.map((mapCell) => {
                 return <MapCell mapCell={mapCell} level={this.props.level} levelHistory={this.props.levelHistory} />
             })}
         </div>
+=======
+        {this.props.row.map((mapCell, i) => {
+            return <MapCell mapCell={mapCell} level={this.props.level} levelHistory={this.props.levelHistory} i={i}/>
+        })}
+    </div>
+>>>>>>> 76a268c23b812aa8b56a5af0f4cdd2a1f2631aaf
         );
     };
 };
@@ -48,7 +62,7 @@ class MapCell extends Component {
                         })
                         : ''
                 }
-                <div className="map-cell-name">
+                <div className="map-cell-name" key={this.props.i}>
                     {
                         this.props.mapCell && this.props.mapCell.color
                             ? <p className={this.props.mapCell.color}>{this.props.mapCell.name}</p>
