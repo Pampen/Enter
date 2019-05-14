@@ -207,19 +207,6 @@ def handleBlueFinish(userInput, state):
     else:
         return handleInvalidInput(userInput, state)
 
-'''
-def checkTorchItem(state, currentLevel, userInput):
-    if "torch" in state['inventory']:
-        if "rustyKey" not in state['inventory']:
-            return torchBlueDescription(state, currentLevel, userInput)
-        elif state['inventory']['rustyKey']['itemUse'] == False:
-            return falseKeyDescription(state, currentLevel, userInput)
-        elif state['inventory']['rustyKey']['itemUse'] == True:
-            return trueKeyDescription(state, currentLevel, userInput)
-    elif currentLevel != None:
-        return goToLevel(state, currentLevel, userInput)
-'''
-
 def handleFalseTorchLevel(state, userInput):
     response = {
         'state': state,
