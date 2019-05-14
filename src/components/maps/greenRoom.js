@@ -78,7 +78,7 @@ const lighthouseOutside = {
     id: 'LIGHTHOUSE_OUTSIDE',
     cellName: 'LO',
     connections: [
-        'N', "S"
+        'N'
     ]
 }
 const lighthouse = {
@@ -87,7 +87,7 @@ const lighthouse = {
     id: 'LIGHTHOUSE',
     cellName: 'L',
     connections: [
-        'N', "S"
+        'N'
     ]
 }
 const lighthouseTopFloor = {
@@ -96,7 +96,6 @@ const lighthouseTopFloor = {
     id: 'LIGHTHOUSE_TOP_FLOOR',
     cellName: 'LTF',
     connections: [
-        'S'
     ]
 }
 
@@ -105,7 +104,7 @@ const greenRoomMap = [
     [null, null, lighthouse, null, null, null],
     [null, null, lighthouseOutside, null, null, null],
     [cellar, null, gate, null, null, null],
-    [shed,shedFrontDoor, beach, beachEastSide, shipwreck, captainsCabin]
+    [shed, shedFrontDoor, beach, beachEastSide, shipwreck, captainsCabin]
 ];
 
 export default greenRoomMap
