@@ -6,7 +6,7 @@ def handleCribRoom(userInput, state):
     elif userInput == 'GO EAST':
         return goToLevel(state, 'MESSY_ROOM', userInput)
     elif userInput == 'GO WEST':
-        return goToLevel(state, 'MAIN_HALL', userInput)
+        return handleInvalidDirection(state)
     elif userInput == "TAKE CRIB":
         return takeItem(state, 'crib')
     elif userInput == 'GO SOUTH':
@@ -66,7 +66,10 @@ def handleNursingRoom(userInput, state):
     elif userInput == 'GO SOUTH':
         return goToLevel(state, 'STUDY_ROOM', userInput)
     elif userInput == 'GO EAST':
-        return goToLevel(state, 'BLUE_START', userInput)
+        if 'pinkKey' in state['inventory']:
+            return goToLevel(state, 'BLUE_START', userInput)
+        else:
+            return handleInvalidDirection(state) and finishPuzzleFirst(state)
     elif userInput == "TAKE MOLDY PACIFIER":
         return takeItem(state, 'moldyPacifier')
     elif userInput == 'GO NORTH':
@@ -94,8 +97,20 @@ def handleMessyRoom(userInput, state):
     elif userInput == "TAKE NURSERY RHYME":
         return takeItem(state, 'nurseryRhyme')
     elif userInput == 'GO EAST':
-        return goToLevel(state, 'BLUE_START', userInput)
+        if 'pinkKey' in state['inventory']:
+            return goToLevel(state, 'BLUE_START', userInput)
+        else:
+            return handleInvalidDirection(state) and finishPuzzleFirst(state)
     elif userInput == 'GO SOUTH':
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)
+
+def finishPuzzleFirst(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelChatboxText": "Before you move on you need to solve the puzzle for this level.",
+        }
+    }
+    return response
