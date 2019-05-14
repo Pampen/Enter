@@ -52,7 +52,7 @@ levels = {
     'BABYROOMDOLL' : handleBabyRoomDoll,
     'BABYROOMBLANKET' : handleBabyRoomBlanket,
     'BABYROOMPACIFIER': handleBabyRoomPacifier,
-    'BABYROOMKEY' : handleBabyRoomKey    
+    'BABYROOMKEY' : handleBabyRoomKey
 }
 
 def levelChecker(userInput, state):   
