@@ -97,7 +97,6 @@ class App extends Component {
             handleInventoryClick={this.showInventoryModal}
             handleCommandClick={this.showCommandModal}
           />
-
           <div className="game-container">
             <GameScreen
               title={this.state.title}

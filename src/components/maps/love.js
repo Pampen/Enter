@@ -4,7 +4,7 @@ const cribRoom = {
     id: 'CRIB_ROOM',
     cellName:'CR',
     connections: [
-        'N', 'E', 'W'
+        'N', 'E'
     ]
 }
 const babyRoom = {
@@ -40,12 +40,14 @@ const messyRoom = {
     id: 'MESSY_ROOM',
     cellName: 'MR',
     connections: [
-        'N', 'W', 'E'
+        'N', 'W'
     ]
 }
 
 const loveMap = [
-    [],
-    [],
-    []
+    [babyRoom, nursingRoom],
+    [null, studyRoom],
+    [cribRoom, messyRoom]
 ]
+
+export default loveMap
