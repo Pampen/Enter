@@ -3,7 +3,7 @@
     "PORCH": "There's a wooden door blocking your way, you need a key to open it."
   },
   {
-    "BLUE_CORRIDOR_6": "There's a rusty gate in front of you"
+    "BLUE_CORRIDOR_6": "There's a rusty gate in front of you, try using the rusty key in the room next to you"
   },
   {
     "GATE": "You try opening the gate, but it's locked..."

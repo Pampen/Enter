@@ -10,31 +10,19 @@ import sadnessMap from "./maps/sadness";
 const maps = {
     /*Put map functions here. Check tutorial.js in folder maps*/
     'TUTORIAL': tutorialMap,
-<<<<<<< HEAD
     "JOY": greenRoomMap,
     "ANGER": redRoomMap,
-    "SADNESS": sadnessMap
-=======
-    'JOY': greenRoomMap,
-    'LOVE': loveMap,
-    "ANGER": redRoomMap
->>>>>>> 76a268c23b812aa8b56a5af0f4cdd2a1f2631aaf
+    "SADNESS": sadnessMap,
+    'LOVE': loveMap
 };
 
 class MapRow extends Component {
     render() {
         return (<div className="map-row">
-<<<<<<< HEAD
-            {this.props.row.map((mapCell) => {
-                return <MapCell mapCell={mapCell} level={this.props.level} levelHistory={this.props.levelHistory} />
+            {this.props.row.map((mapCell, i) => {
+                return <MapCell mapCell={mapCell} level={this.props.level} levelHistory={this.props.levelHistory} i={i} />
             })}
         </div>
-=======
-        {this.props.row.map((mapCell, i) => {
-            return <MapCell mapCell={mapCell} level={this.props.level} levelHistory={this.props.levelHistory} i={i}/>
-        })}
-    </div>
->>>>>>> 76a268c23b812aa8b56a5af0f4cdd2a1f2631aaf
         );
     };
 };

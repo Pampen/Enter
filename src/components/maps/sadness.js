@@ -12,7 +12,7 @@ const blueTorch = {
     color: "blue",
     name: "Finish",
     id: 'BLUE_TORCH_ROOM',
-    cellName: 'BF',
+    cellName: 'BT',
     connections: [
         'E'
     ]
@@ -24,7 +24,6 @@ const blueQuestion = {
     id: 'BLUE_CORRIDOR_1',
     cellName: '?',
     connections: [
-        'N', 'S'
     ]
 }
 
@@ -32,7 +31,7 @@ const blueFinish = {
     color: "blue",
     name: "Bedroom",
     id: 'BLUE_FINISH',
-    cellName: 'BT',
+    cellName: 'BF',
     connections: [
         'S'
     ]
