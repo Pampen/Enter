@@ -5,6 +5,15 @@
     "levelTitle": "Cribroom"
 },
 {
+<<<<<<< HEAD
+    "level": "BABYROOM",
+    "levelDescription": "This room is filled with babythings. The walls have painted unicorns and the shelves are filled with toys. Only thing missing is the crib...",
+    "levelTitle": "Babyroom"
+},
+{
+    "level": "NURSINGROOM",
+    "levelDescription": "A nursing room... and a changing table with a moldy pacifier on it. A funky smell surrounds this room..",
+=======
     "level": "BABY_ROOM",
     "levelDescription": "This room is filled with babythings. The walls have painted unicorns and the shelves are filled with toys. Only thing missing is the crib..",
     "levelTitle": "Babyroom"
@@ -12,6 +21,7 @@
 {
     "level": "NURSING_ROOM",
     "levelDescription": "A nursing room.. and a changing table with a moldy pacifier on it. A funky smell surrounds this room..",
+>>>>>>> bf33c412742683fa9ff825d5a8ff9c1f08fd221e
     "levelTitle": "Nursing room"
 },
 {
@@ -30,6 +40,15 @@
     "levelTitle": "Baby room"
 },
 {
+<<<<<<< HEAD
+    "level": "BABYROOMDOLL",
+    "levelDescription": "The doll almost looks like it is shivering in cold...",
+    "levelTitle": "Baby room"
+},
+{
+    "level": "BABYROOMBLANKET",
+    "levelDescription": "The doll looks unhappy. Is it... pucking it's lips?",
+=======
     "level": "BABY_ROOM_DOLL",
     "levelDescription": "The doll almost looks like it is shivering in cold..",
     "levelTitle": "Baby room"
@@ -37,6 +56,7 @@
 {
     "level": "BABY_ROOM_BLANKET",
     "levelDescription": "The doll looks unhappy. Is it.. pucking it's lips?",
+>>>>>>> bf33c412742683fa9ff825d5a8ff9c1f08fd221e
     "levelTitle": "Baby room"
 },
 {

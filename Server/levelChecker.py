@@ -1,9 +1,10 @@
 from tutorial import handleGreenHouse, handleOutside, handlePorch
-from MainHall import handleMainHall
+from mainHall import handleMainHall
 from greenDoor import handleBeach, handleCaptainsCabin, handleCellar, handleGate, handleShedFrontDoor, handleShed, handleBeachEastSide, handleShipwreck, handleLighthouse, handleLighthouseOutside, handleLighthouseTopFloor, handleOcean
 from redDoor import handleUpperFloor, handleLivingRoom, handleKitchen, handleHall, handleBedroom, handleBasement, handleAttic
 from pinkDoor import handleBabyRoom, handleCribRoom, handleMessyRoom, handleNursingRoom, handleStudyRoom, handleBabyRoomCrib, handleBabyRoomDoll, handleBabyRoomBlanket, handleBabyRoomPacifier, handleBabyRoomKey
 from blueDoor import handleBlueCorridor1, handleBlueCorridor2, handleBlueCorridor3, handleBlueCorridor4, handleBlueCorridor5, handleBlueCorridor6, handleBlueCorridor7, handleBlueCorridor8, handleBlueCorridor9, handleBlueStart, handleBlueFinish, handleTorchRoom
+from mirrorRoom import handleMirrorRoomJoy, handleMirrorRoomAnger, handleMirrorRoomLove, handleMirrorRoomSadness
 
 levels = {
     'OUTSIDE': handleOutside,
@@ -35,6 +36,12 @@ levels = {
     'NURSING_ROOM': handleNursingRoom,
     'STUDY_ROOM': handleStudyRoom,
     'MESSY_ROOM': handleMessyRoom,
+    'MIRROR_ROOM_SADNESS': handleMirrorRoomSadness,
+    'BABY_ROOM_CRIB' : handleBabyRoomCrib,
+    'BABY_ROOM_DOLL' : handleBabyRoomDoll,
+    'BABY_ROOM_BLANKET' : handleBabyRoomBlanket,
+    'BABY_ROOM_PACIFIER': handleBabyRoomPacifier,
+    'BABY_ROOM_KEY' : handleBabyRoomKey,
     'BLUE_START': handleBlueStart,
     'BLUE_TORCH_ROOM': handleTorchRoom,
     'BLUE_CORRIDOR_1': handleBlueCorridor1,
@@ -47,12 +54,9 @@ levels = {
     'BLUE_CORRIDOR_8': handleBlueCorridor8,
     'BLUE_CORRIDOR_9': handleBlueCorridor9,
     'BLUE_FINISH': handleBlueFinish,
-    'LIVING_ROOMItem': handleKitchen,
-    'BABY_ROOM_CRIB' : handleBabyRoomCrib,
-    'BABY_ROOM_DOLL' : handleBabyRoomDoll,
-    'BABY_ROOM_BLANKET' : handleBabyRoomBlanket,
-    'BABY_ROOM_PACIFIER': handleBabyRoomPacifier,
-    'BABY_ROOM_KEY' : handleBabyRoomKey
+    'MIRROR_ROOM_JOY': handleMirrorRoomJoy,
+    'MIRROR_ROOM_ANGER': handleMirrorRoomAnger,
+    'MIRROR_ROOM_LOVE': handleMirrorRoomLove,
 }
 
 def levelChecker(userInput, state):   
