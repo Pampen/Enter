@@ -6,7 +6,7 @@ def handleCribRoom(userInput, state):
     elif userInput == 'GO EAST':
         return goToLevel(state, 'MESSY_ROOM', userInput)
     elif userInput == 'GO WEST':
-        return goToLevel(state, 'MAIN_HALL', userInput)
+        return handleInvalidDirection(state)
     elif userInput == "TAKE CRIB":
         return takeItem(state, 'crib')
     elif userInput == 'GO SOUTH':
@@ -121,3 +121,12 @@ def handleMessyRoom(userInput, state):
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)
+
+def finishPuzzleFirst(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelChatboxText": "Before you move on you need to solve the puzzle for this level.",
+        }
+    }
+    return response

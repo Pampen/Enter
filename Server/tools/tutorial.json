@@ -147,62 +147,62 @@
     {
         "level": "BLUE_START",
         "levelDescription": "You enter a dark room, and you hear a faint sobbing. The only light there is shining through the bottom of a door to your left. In front of you is a hallway leading seemingly into nothingness.",
-        "levelTitle": "Blue start"
+        "levelTitle": "Hallway"
     },
     {
         "level": "BLUE_TORCH_ROOM",
-        "levelDescription": "In the room, there's a desk with a wooden chair and a torch hanging on the wall. It seems the torch isn't bolted to the wall.",
-        "levelTitle": "Blue Torch Room"
+        "levelDescription": "In the room, there is a desk with a wooden chair and a torch hanging on the wall. It seems the torch isn't bolted to the wall, you might be able to pick it up.",
+        "levelTitle": "Torch room"
     },
     {
         "level": "BLUE_CORRIDOR_1",
-        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
-        "levelTitle": "Blue Corridor 1"
+        "levelDescription": "As you enter the hallway, you see there's corridors to the left, right and in front of you. The sobbing becomes ever so clearer.",
+        "levelTitle": "Corridor"
     },
     {
         "level": "BLUE_CORRIDOR_2",
-        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
-        "levelTitle": "Blue Corridor 2"
+        "levelDescription": "As you hold your torch up, you catch a glimpse of something shining in front of you down the corridor but the faint sobbing subsides.",
+        "levelTitle": "Corridor"
     },
     {
         "level": "BLUE_CORRIDOR_3",
-        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
-        "levelTitle": "Blue Corridor 3"
+        "levelDescription": "On the floor, there is a rusty key in front of your feet.",
+        "levelTitle": "Corridor"
     },
     {
         "level": "BLUE_CORRIDOR_4",
-        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
-        "levelTitle": "Blue Corridor 4"
+        "levelDescription": "As you hold your torch up you catch a glimpse of something shining to the left of you down the corridor.",
+        "levelTitle": "Corridor"
     },
     {
         "level": "BLUE_CORRIDOR_5",
-        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
-        "levelTitle": "Blue Corridor 5"
+        "levelDescription": "While the sobbing increases, you get a feeling that you're missing something.",
+        "levelTitle": "Corridor"
     },
     {
         "level": "BLUE_CORRIDOR_6",
-        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
-        "levelTitle": "Blue Corridor 6"
+        "levelDescription": "As you walk forwards the sobbing increases. In front of you is a closed metal gate, to your right is a damp room.",
+        "levelTitle": "Corridor"
     },
     {
         "level": "BLUE_CORRIDOR_7",
-        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
-        "levelTitle": "Blue Corridor 7"
+        "levelDescription": "In the room there's a keyhole on the opposite side of the gate.",
+        "levelTitle": "Corridor"
     },
     {
         "level": "BLUE_CORRIDOR_8",
-        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
-        "levelTitle": "Blue Corridor 8"
+        "levelDescription": "The sobbing increases, you can see a corridor on your left.",
+        "levelTitle": "Corridor"
     },
     {
         "level": "BLUE_CORRIDOR_9",
-        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
-        "levelTitle": "Blue Corridor 9"
+        "levelDescription": "The sobbing becomes significantly louder, you can make out a figure in front of you sitting on the floor.",
+        "levelTitle": "Corridor"
     },
     {
         "level": "BLUE_FINISH",
-        "levelDescription": "A pitch black room, you can barely see your hands in front of you.",
-        "levelTitle": "Blue Finish "
+        "levelDescription": "On the floor, there's a dark-haired girl sitting on the ground, with her head in her hands covering her face. As you walk up and lay your hand on her shoulder, she crumbles into ash. You jump back, shook by the event. In the ash there's a blue key. Could this be the final piece of the puzzle?",
+        "levelTitle": "Corridor"
     },
     {
         "level": "LIVING_ROOM",

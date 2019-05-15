@@ -2,7 +2,7 @@ const cribRoom = {
     color: 'pink',
     name: 'Crib Room',
     id: 'CRIB_ROOM',
-    cellName:'CR',
+    cellName: 'CR',
     connections: [
         'N', 'E'
     ]
@@ -23,7 +23,7 @@ const nursingRoom = {
     cellName: 'NR',
     connections: [
         'W', 'S', 'E'
-    ] 
+    ]
 }
 const studyRoom = {
     color: 'pink',
@@ -40,7 +40,7 @@ const messyRoom = {
     id: 'MESSY_ROOM',
     cellName: 'MR',
     connections: [
-        'N', 'W'
+        'N', 'W', 'E'
     ]
 }
 
