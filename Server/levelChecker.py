@@ -36,11 +36,11 @@ levels = {
     'NURSING_ROOM': handleNursingRoom,
     'STUDY_ROOM': handleStudyRoom,
     'MESSY_ROOM': handleMessyRoom,
-    'BABYROOMCRIB' : handleBabyRoomCrib,
-    'BABYROOMDOLL' : handleBabyRoomDoll,
-    'BABYROOMBLANKET' : handleBabyRoomBlanket,
-    'BABYROOMPACIFIER': handleBabyRoomPacifier,
-    'BABYROOMKEY' : handleBabyRoomKey,
+    'BABY_ROOM_CRIB' : handleBabyRoomCrib,
+    'BABY_ROOM_DOLL' : handleBabyRoomDoll,
+    'BABY_ROOM_BLANKET' : handleBabyRoomBlanket,
+    'BABY_ROOM_PACIFIER': handleBabyRoomPacifier,
+    'BABY_ROOM_KEY' : handleBabyRoomKey,
     'BLUE_START': handleBlueStart,
     'BLUE_TORCH_ROOM': handleTorchRoom,
     'BLUE_CORRIDOR_1': handleBlueCorridor1,
@@ -56,7 +56,7 @@ levels = {
     'MIRROR_ROOM_JOY': handleMirrorRoomJoy,
     'MIRROR_ROOM_ANGER': handleMirrorRoomAnger,
     'MIRROR_ROOM_LOVE': handleMirrorRoomLove,
-    'MIRROR_ROOM_SADNESS': handleMirrorRoomSadness,
+    'MIRROR_ROOM_SADNESS': handleMirrorRoomSadness
 }
 
 def levelChecker(userInput, state):   
