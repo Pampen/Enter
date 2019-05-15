@@ -22,5 +22,8 @@
   },
   {
     "BABY_ROOM": "You cannot embark on this journey without all the items you need.."
-  }   
+  },
+  {
+    "MIRROR_ROOM": "You cannot go back, there seems like there is one thing you can take, the clock is ticking..."
+  }
 ]

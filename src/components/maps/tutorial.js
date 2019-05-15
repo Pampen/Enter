@@ -1,6 +1,6 @@
 const mainHall = {
     color: "white",
-    name: '???',
+    name: 'MH',
     id: 'MAIN_HALL',
     cellName: '?'
 }
