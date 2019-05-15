@@ -99,7 +99,7 @@ const lighthouseTopFloor = {
     ]
 }
 
-const greenRoomMap = [
+const joyMap = [
     [null, null, lighthouseTopFloor, null, null, null],
     [null, null, lighthouse, null, null, null],
     [null, null, lighthouseOutside, null, null, null],
@@ -107,4 +107,4 @@ const greenRoomMap = [
     [shed, shedFrontDoor, beach, beachEastSide, shipwreck, captainsCabin]
 ];
 
-export default greenRoomMap
+export default joyMap
