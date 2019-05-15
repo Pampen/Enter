@@ -1,51 +1,51 @@
 [
 {
-    "level": "CRIBROOM",
+    "level": "CRIB_ROOM",
     "levelDescription": "This is a room with a white crib in it. It looks out of place.",
     "levelTitle": "Cribroom"
 },
 {
-    "level": "BABYROOM",
+    "level": "BABY_ROOM",
     "levelDescription": "This room is filled with babythings. The walls have painted unicorns and the shelves are filled with toys. Only thing missing is the crib..",
     "levelTitle": "Babyroom"
 },
 {
-    "level": "NURSINGROOM",
+    "level": "NURSING_ROOM",
     "levelDescription": "A nursing room.. and a changing table with a moldy pacifier on it. A funky smell surrounds this room..",
     "levelTitle": "Nursing room"
 },
 {
-    "level": "STUDYROOM",
+    "level": "STUDY_ROOM",
     "levelDescription": "A study. A nice comfy chair, books on the shelves and a decanter filled with a golden liquid and a used glass. Dust everywhere.",
     "levelTitle": "Study room"
 },
 {
-    "level": "MESSYROOM",
+    "level": "MESSY_ROOM",
     "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is pinned to the wall..",
     "levelTitle": "Messy room"
 },
 {
-    "level": "BABYROOMCRIB",
+    "level": "BABY_ROOM_CRIB",
     "levelDescription": "The crib looks empty.",
     "levelTitle": "Baby room"
 },
 {
-    "level": "BABYROOMDOLL",
+    "level": "BABY_ROOM_DOLL",
     "levelDescription": "The doll almost looks like it is shivering in cold..",
     "levelTitle": "Baby room"
 },
 {
-    "level": "BABYROOMBLANKET",
+    "level": "BABY_ROOM_BLANKET",
     "levelDescription": "The doll looks unhappy. Is it.. pucking it's lips?",
     "levelTitle": "Baby room"
 },
 {
-    "level": "BABYROOMPACIFIER",
+    "level": "BABY_ROOM_PACIFIER",
     "levelDescription": "Do you remember the nursery rhyme? It feels like you should recite it",
     "levelTitle": "Baby room"
 },
 {
-    "level": "BABYROOMKEY",
+    "level": "BABY_ROOM_KEY",
     "levelDescription": "A pink key on the floor. A door with a blueish tint slowly swings open on the east wall..",
     "levelTitle": "Baby room"
 }

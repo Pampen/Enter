@@ -170,6 +170,8 @@ body {
   margin-top: 20px;
   margin-bottom: 7px;
 }
+
+ /* * 
 .nav-button {
 
   width: 50px;
@@ -182,6 +184,7 @@ body {
   -webkit-box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
           box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
 }
+ * */ 
 .inventory {
   padding: 16px;
 }

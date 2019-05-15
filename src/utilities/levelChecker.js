@@ -28,6 +28,11 @@ const levels = {
     "NURSING_ROOM": "LOVE",
     "STUDY_ROOM": "LOVE",
     "MESSY_ROOM": "LOVE",
+    'BABY_ROOM_CRIB': "LOVE",
+    'BABY_ROOM_DOLL': "LOVE",
+    'BABY_ROOM_BLANKET': "LOVE",
+    'BABY_ROOM_PACIFIER': "LOVE",
+    'BABY_ROOM_KEY': "LOVE",
     "BLUE_START": "SADNESS",
     "BLUE_TORCH_ROOM": "SADNESS",
     "BLUE_CORRIDOR_1": "SADNESS",
@@ -39,7 +44,11 @@ const levels = {
     "BLUE_CORRIDOR_7": "SADNESS",
     "BLUE_CORRIDOR_8": "SADNESS",
     "BLUE_CORRIDOR_9": "SADNESS",
-    "BLUE_FINISH": "SADNESS"
+    "BLUE_FINISH": "SADNESS",
+    "MIRROR_ROOM_JOY": "JOY",
+    "MIRROR_ROOM_ANGER": "ANGER",
+    "MIRROR_ROOM_LOVE": "LOVE",
+    "MIRROR_ROOM_SADNESS": "SADNESS"
 }
 
 export { levels }
