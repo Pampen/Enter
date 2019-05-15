@@ -1,8 +1,8 @@
 const blueStart = {
     color: "blue",
-    name: "Labyrinth",
+    name: "???",
     id: 'BLUE_START',
-    cellName: 'BS',
+    cellName: '?',
     connections: [
         'W', 'N'
     ]
@@ -10,9 +10,9 @@ const blueStart = {
 
 const blueTorch = {
     color: "blue",
-    name: "Finish",
+    name: "Torch Room",
     id: 'BLUE_TORCH_ROOM',
-    cellName: 'BT',
+    cellName: 'TR',
     connections: [
         'E'
     ]
