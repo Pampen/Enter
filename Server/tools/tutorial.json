@@ -145,29 +145,29 @@
         "levelTitle": "Messy Room"
     },
     {
-        "level": "BABYROOMCRIB",
+        "level": "BABY_ROOM_CRIB",
         "levelDescription": "The crib looks beautiful, almost surreal.. but it also looks empty.",
-        "levelTitle": "Baby Room"
+        "levelTitle": "Baby room"
     },
     {
-        "level": "BABYROOMDOLL",
+        "level": "BABY_ROOM_DOLL",
         "levelDescription": "The doll almost looks like it is shivering in cold..",
-        "levelTitle": "Baby Room"
+        "levelTitle": "Baby room"
     },
     {
-        "level": "BABYROOMBLANKET",
+        "level": "BABY_ROOM_BLANKET",
         "levelDescription": "The doll looks unhappy. Is it.. pucking it's lips?",
-        "levelTitle": "Baby Room"
+        "levelTitle": "Baby room"
     },
     {
-        "level": "BABYROOMPACIFIER",
+        "level": "BABY_ROOM_PACIFIER",
         "levelDescription": "Do you remember the nursery rhyme? It feels like you should use it..",
-        "levelTitle": "Baby Room"
+        "levelTitle": "Baby room"
     },
     {
-        "level": "BABYROOMKEY",
+        "level": "BABY_ROOM_KEY",
         "levelDescription": "A pink key on the floor. A door with a blueish tint on the east wall.. ",
-        "levelTitle": "Baby Room"
+        "levelTitle": "Mirror Room Sadness"
     },
     {
         "level": "BLUE_START",
@@ -246,7 +246,7 @@
     },
     {
         "level": "MIRROR_ROOM_SADNESS",
-        "levelDescription": "A pink key on the floor. A door with a blueish tint on the east wall.. ",
-        "levelTitle": "Mirror Room Sadness"
+        "levelDescription": "A big room with a two red armchairs in front of a fireplace. There are some painting hanging on the walls. You can feel the heat emitting from the fireplace, the flame is dancing so violently. The fireplace could be useful later on...",
+        "levelTitle": "Living Room"
     }
 ]
