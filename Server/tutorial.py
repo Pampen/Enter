@@ -14,9 +14,9 @@ def handleOutside(userInput, state):
         return goToLevel(state, 'CRIB_ROOM', userInput)
     elif userInput == 'SMASH':
         return goToLevel(state, 'LIVING_ROOM', userInput)
-    elif userInput == 'OH HAPPY DAY':
+    elif userInput == 'HAVE A NICE DAY':
         return goToLevel(state, 'BEACH', userInput)
-    elif userInput == 'IM BLUE':
+    elif userInput == 'TAKE A SAD SHOWER':
         return goToLevel(state, 'BLUE_START', userInput)
     elif userInput == 'GO NORTH':
         return goToLevel(state, 'PORCH', userInput)

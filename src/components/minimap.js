@@ -12,9 +12,9 @@ const maps = {
     'TUTORIAL': tutorialMap,
     "JOY": joyMap,
     "ANGER": angerMap,
+    "SADNESS": sadnessMap,
     'LOVE': loveMap,
     'MIRROR_ROOM': mirrorRoomMap,
-    "SADNESS": sadnessMap
 };
 
 class MapRow extends Component {

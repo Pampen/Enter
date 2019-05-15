@@ -42,7 +42,7 @@ def handleLighthouse(userInput, state):
         return handleInvalidDirection(state)
     elif userInput == "GO SOUTH":
         return goToLevel(state, "LIGHTHOUSE_OUTSIDE", userInput)
-    elif userInput == 'TAKE STAIRS':
+    elif userInput == 'TAKE STAIRS' or userInput == 'USE STAIRS':
         return goToLevel(state, "LIGHTHOUSE_TOP_FLOOR", userInput)
     else:
         return handleInvalidInput(userInput, state)
@@ -50,7 +50,7 @@ def handleLighthouse(userInput, state):
 def handleLighthouseTopFloor(userInput, state):
     if userInput == 'GO NORTH' or userInput == 'GO WEST' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
-    elif userInput == "TAKE STAIRS":
+    elif userInput == "TAKE STAIRS" or userInput == 'USE STAIRS':
         return goToLevel(state, "LIGHTHOUSE", userInput)
     elif userInput == 'TAKE GREEN KEY' or userInput == 'TAKE KEY':
         return returnToMainHall(state, 'greenKey', 'MAIN_HALL')
@@ -73,7 +73,7 @@ def handleShedFrontDoor(userInput, state):
 def handleShed(userInput, state):
     if userInput == 'GO WEST' or userInput == "GO SOUTH" or userInput == "GO NORTH":
         return handleInvalidDirection(state)
-    elif userInput == 'TAKE STAIRS':
+    elif userInput == 'TAKE STAIRS' or userInput == 'USE STAIRS':
         return handleBasement(state)
     elif userInput == "TAKE OIL LAMP" or userInput == "TAKE LAMP" or userInput == "TAKE OLD FASHIONED OIL LAMP" or userInput == "TAKE OLD-FASHIONED OIL LAMP":
         return takeItem(state, 'oilLamp')
@@ -130,7 +130,7 @@ def handleCaptainsCabin(userInput, state):
 def handleCellar(userInput, state):
     if userInput == 'GO WEST' or userInput == "GO NORTH" or userInput == "GO EAST" or userInput == "GO SOUTH":
         return handleInvalidDirection(state)
-    elif userInput == 'TAKE STAIRS':
+    elif userInput == 'TAKE STAIRS' or userInput == 'USE STAIRS':
         if "oilLamp" in state["inventory"]:
             return goToLevel(state, 'SHED', userInput) and handleNewShedDesc(state, userInput)
         else:
