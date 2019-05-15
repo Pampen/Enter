@@ -48,11 +48,11 @@ levels = {
     'BLUE_CORRIDOR_9': handleBlueCorridor9,
     'BLUE_FINISH': handleBlueFinish,
     'LIVING_ROOMItem': handleKitchen,
-    'BABYROOMCRIB' : handleBabyRoomCrib,
-    'BABYROOMDOLL' : handleBabyRoomDoll,
-    'BABYROOMBLANKET' : handleBabyRoomBlanket,
-    'BABYROOMPACIFIER': handleBabyRoomPacifier,
-    'BABYROOMKEY' : handleBabyRoomKey
+    'BABY_ROOM_CRIB' : handleBabyRoomCrib,
+    'BABY_ROOM_DOLL' : handleBabyRoomDoll,
+    'BABY_ROOM_BLANKET' : handleBabyRoomBlanket,
+    'BABY_ROOM_PACIFIER': handleBabyRoomPacifier,
+    'BABY_ROOM_KEY' : handleBabyRoomKey
 }
 
 def levelChecker(userInput, state):   

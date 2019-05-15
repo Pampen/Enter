@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem
+from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock
 
 def handleCribRoom(userInput, state):
     if userInput == 'GO NORTH':
@@ -21,8 +21,10 @@ def handleBabyRoom(userInput, state):
         return goToLevel(state, 'CRIB_ROOM', userInput)
     elif userInput == "TAKE WORN DOLL" or userInput == "TAKE DOLL":
         return takeItem(state, 'wornDoll')
-    elif userInput == "USE CRIB" and 'crib' in state['inventory']: 
-        return goToLevel(state, 'BABYROOMCRIB', userInput)
+    elif userInput == "USE CRIB" and 'crib' and 'wornDoll' and 'moldyPacifier' and 'dirtyBlanket' and 'nurseryRhyme' not in state['inventory']: 
+        return handleDoorLock(state, 'BABY_ROOM', userInput)
+    elif userInput == "USE CRIB" and 'crib' and 'wornDoll' and 'moldyPacifier' and 'dirtyBlanket' and 'nurseryRhyme' in state['inventory']:
+        return goToLevel(state, 'BABY_ROOM_CRIB', userInput)
     elif userInput == 'GO NORTH' or userInput == 'GO WEST':
         return handleInvalidDirection(state)
     else:
@@ -30,7 +32,7 @@ def handleBabyRoom(userInput, state):
 
 def handleBabyRoomCrib(userInput, state):
     if userInput == "USE WORN DOLL" or userInput == "USE DOLL" and 'wornDoll' in state['inventory']: 
-        return goToLevel(state, 'BABYROOMDOLL', userInput)
+        return goToLevel(state, 'BABY_ROOM_DOLL', userInput)
     elif userInput == 'GO EAST':
         return goToLevel(state, 'NURSING_ROOM', userInput)
     elif userInput == 'GO SOUTH':
@@ -42,7 +44,7 @@ def handleBabyRoomCrib(userInput, state):
 
 def handleBabyRoomDoll(userInput, state):
     if userInput == "USE DIRTY BLANKET" or userInput == "USE BLANKET" and 'dirtyBlanket' in state['inventory']: 
-        return goToLevel(state, 'BABYROOMBLANKET', userInput)
+        return goToLevel(state, 'BABY_ROOM_BLANKET', userInput)
     elif userInput == 'GO EAST':
         return goToLevel(state, 'NURSING_ROOM', userInput)
     elif userInput == 'GO SOUTH':
@@ -54,7 +56,7 @@ def handleBabyRoomDoll(userInput, state):
 
 def handleBabyRoomBlanket(userInput, state):
     if userInput == "USE MOLDY PACIFIER" or userInput == "USE PACIFIER" and 'moldyPacifier' in state['inventory']: 
-        return goToLevel(state, 'BABYROOMPACIFIER', userInput)
+        return goToLevel(state, 'BABY_ROOM_PACIFIER', userInput)
     elif userInput == 'GO EAST':
         return goToLevel(state, 'NURSING_ROOM', userInput)
     elif userInput == 'GO SOUTH':
@@ -66,7 +68,7 @@ def handleBabyRoomBlanket(userInput, state):
 
 def handleBabyRoomPacifier(userInput, state):
     if userInput == "USE NURSERY RHYME" and 'nurseryRhyme' in state['inventory']: 
-        return goToLevel(state, 'BABYROOMKEY', userInput)
+        return goToLevel(state, 'BABY_ROOM_KEY', userInput)
     elif userInput == 'GO EAST':
         return goToLevel(state, 'NURSING_ROOM', userInput)
     elif userInput == 'GO SOUTH':
