@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import { levels } from "../utilities/levelChecker";
 import tutorialMap from './maps/tutorial';
-import greenRoomMap from "./maps/greenRoom";
+import joyMap from "./maps/joy";
 import angerMap from "./maps/anger";
-import loveMap from "./maps/love.js"
+import loveMap from "./maps/love";
+import mirrorRoomMap from "./maps/mirrorRoom"
 
 const maps = {
     /*Put map functions here. Check tutorial.js in folder maps*/ 
     'TUTORIAL': tutorialMap,
-    "JOY": greenRoomMap,
+    "JOY": joyMap,
     "ANGER": angerMap,
     'LOVE': loveMap,
+    'MIRROR_ROOM': mirrorRoomMap
 };
 
 class MapRow extends Component {
