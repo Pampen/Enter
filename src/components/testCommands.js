@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Command from './command';
+import Testcommand from './singleCommand';
 
-export default class Commands extends Component {
+export default class Test extends Component {
     render() {
         const commandInfo = {
             goCommand: {
@@ -33,11 +33,11 @@ export default class Commands extends Component {
         const commandNames = Object.keys(commandInfo)
 
         return (
-            <div className="inventory">
+            <div className="commandList">
                 <ul>
                     {
                         commandNames.map((commandName, i) =>
-                            <Command key={'item-' + i} commandList={commandInfo[commandName]} />
+                            <Testcommand key={'item-' + i} commandList={commandInfo[commandName]} />
                         )
                     }
                 </ul>

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-export default class Command extends Component {
+export default class TEST1 extends Component {
     render() {
-        const commandList=this.props.commandList
-        return(
+        const commandList = this.props.commandList
+        return (
             <li key={commandList.commandName} className="item">
-                <span className="item-name"> 
+                <span className="item-name">
                     {commandList.commandName}
                 </span>
                 <span className="description">

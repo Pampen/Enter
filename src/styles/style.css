@@ -197,6 +197,17 @@ body {
   font-size: 12px;
 }
 
+.commandList {
+  position: absolute;
+  right: 100%;
+  padding: 20px;
+  background-color: #333;
+  margin: 64% 10% 0% 0%;
+  border-radius: 10px;
+  border: 2px dashed #555;
+  font-size: 12px;
+}
+
 .item {
   position: relative;
 }
