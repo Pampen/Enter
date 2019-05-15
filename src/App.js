@@ -8,6 +8,7 @@ import Inventory from "./components/inventory";
 import Modal from "./components/Modal";
 import Commands from "./components/commands";
 import Map from "./components/map";
+import Testcommands from "./components/testinventory";
 
 class App extends Component {
   constructor(props) {
@@ -105,6 +106,9 @@ class App extends Component {
               level={this.state.level}
             />
             <Map level={this.state.level} levelHistory={this.state.levelHistory} />
+
+            <Testcommands inventory={this.state.inventory} />
+
             <Modal
               onClose={this.showInventoryModal}
               show={this.state.inventoryShow}

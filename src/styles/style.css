@@ -185,9 +185,28 @@ body {
 .inventory {
   padding: 16px;
 }
+
+.inventoryList {
+  position: absolute;
+  right: 100%;
+  padding: 20px;
+  background-color: #333;
+  margin-right: 90px;
+  border-radius: 10px;
+  border: 2px dashed #555;
+  font-size: 12px;
+}
+
 .item {
   position: relative;
 }
+
+.ulInventory {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+}
+
 .description {
   display: none;
   position: absolute;
