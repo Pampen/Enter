@@ -4,7 +4,7 @@ const levels = {
     "GREENHOUSE_LIGHT_ON": "TUTORIAL",
     "GREENHOUSE_LIGHT_AND_KEY_ON": "TUTORIAL",
     "PORCH": "TUTORIAL",
-    "MAINHALL": "TUTORIAL",
+    "MAIN_HALL": "",
     "BEACH": "JOY",
     "GATE": "JOY",
     "LIGHTHOUSE_OUTSIDE": "JOY",
@@ -47,10 +47,11 @@ const levels = {
     "BLUE_CORRIDOR_8": "SADNESS",
     "BLUE_CORRIDOR_9": "SADNESS",
     "BLUE_FINISH": "SADNESS",
-    "MIRROR_ROOM_JOY": "JOY",
-    "MIRROR_ROOM_ANGER": "ANGER",
-    "MIRROR_ROOM_LOVE": "LOVE",
-    "MIRROR_ROOM_SADNESS": "SADNESS"
+    "MIRROR_ROOM": "MIRROR_ROOM",
+    "JOY": "MIRROR_ROOM",
+    "ANGER": "MIRROR_ROOM",
+    "LOVE": "MIRROR_ROOM",
+    "SADNESS": "MIRROR_ROOM"
 }
 
 export { levels }

@@ -151,7 +151,7 @@
     },
     {
         "level": "BABY_ROOM_CRIB",
-        "levelDescription": "The crib looks beautiful, almost surreal.. but it also looks empty.",
+        "levelDescription": "The crib looks beautiful, almost surreal... but it also looks empty.",
         "levelTitle": "Baby room"
     },
     {
@@ -161,12 +161,12 @@
     },
     {
         "level": "BABY_ROOM_BLANKET",
-        "levelDescription": "The doll looks unhappy. Is it.. pucking it's lips?",
+        "levelDescription": "The doll looks unhappy. Is it... pucking it's lips?",
         "levelTitle": "Baby room"
     },
     {
         "level": "BABY_ROOM_PACIFIER",
-        "levelDescription": "Do you remember the nursery rhyme? It feels like you should use it..",
+        "levelDescription": "Do you remember the nursery rhyme? It feels like you should use it...",
         "levelTitle": "Baby room"
     },
     {
@@ -240,23 +240,28 @@
         "levelTitle": "Corridor"
     },
     {
-        "level": "MIRROR_ROOM_JOY",
-        "levelDescription": "A pink key on the floor. A door with a blueish tint on the east wall.. ",
-        "levelTitle": "Mirror Room Joy"
+        "level": "MIRROR_ROOM",
+        "levelDescription": "There isn't much in this room except for darkness and a bright beam of light shining down on a big long mirror. As you approach the mirror, tears starts to flow down your face as you realize who you are. You can't breathe, you're gasping for air, but it feels like you are drowning. You try to scream but cannot make a sound. You lie down on the floor, clench your fist and start hitting the floor until you feel something again. As you rise, you can see the real you, what you have become, and you remember everything. Your dear sister, black-hair and blue eyes. You had an unbreakable bond that only twins can understand. She was so full of joy and energy just like her daughter, a daughter without a mother. It was your fault. Somehow, you have repressed and forgotten your own memories to make yourself accept the image staring back at you in the mirror.",
+        "levelTitle": "Mirror Room"
     },
     {
-        "level": "MIRROR_ROOM_ANGER",
-        "levelDescription": "A pink key on the floor. A door with a blueish tint on the east wall.. ",
-        "levelTitle": "Mirror Room Anger"
+        "level": "JOY",
+        "levelDescription": "You remember that day at the beach together with your parents and your sister. It was a day full of joy. The excitement of running around together with your sister around the beach, discovering the scary shed, the old looking shipwreck and the fantastic view from the top of the lighthouse. If only you could travel back to your childhood, back to that joyful day. If only you could remember your sister's face, why is this memory coming back to me now?",
+        "levelTitle": "Joy"
     },
     {
-        "level": "MIRROR_ROOM_LOVE",
-        "levelDescription": "A pink key on the floor. A door with a blueish tint on the east wall.. ",
-        "levelTitle": "Mirror Room Love"
+        "level": "ANGER",
+        "levelDescription": "This memory is different from before, it seems like it has been a good 15 years from that day at the beach. You are arguing with your sister in the kitchen back at your house. The walls are so red and the flames from the fireplace are so violent. Your sister seems pretty upset with you and you can't seem to reason with her. You can feel the rage flowing through your body and your sister suddenly stops talking to you. She walks furiously to the hall, takes the car keys and slams the door behind her. This was the last time you ever saw her. She had black hair...",
+        "levelTitle": "Anger"
     },
     {
-        "level": "MIRROR_ROOM_SADNESS",
-        "levelDescription": "A big room with a two red armchairs in front of a fireplace. There are some painting hanging on the walls. You can feel the heat emitting from the fireplace, the flame is dancing so violently. The fireplace could be useful later on...",
-        "levelTitle": "Living Room"
+        "level": "LOVE",
+        "levelDescription": "You remember your lovely niece and all the pink colors in her crib room. The baby looked so fragile while lying in her pink crib and at the same time strong, so full of hope, like nothing could touch her. The baby slowly opened her blue eyes, but she didn't cry. She just stared at me with her blue eyes, it reminded you of your sister. The little baby rose her arm trying to reach you, so you tried to meet her hand with the top of your finger but as you made contact everything disappeared.",
+        "levelTitle": "Love"
+    },
+    {
+        "level": "SADNESS",
+        "levelDescription": "You remembered that you woke up in the hospital after the accident and your parents was by your side. They weren't happy, they had this sadness in their eyes. You couldn't see your sister anywhere, so you asked your parents, but they didnt reply. They gave me a box which contained a pocket watch. Inside the pocket watch there was a picture of my niece. You closed the pocket watch and you were filled with endless pain and misery. You didnt argue in the kitchen, You were arguing in the car. You were the driver and you didn't see the car that would forever change your and your sisters lives. Her clock stopped ticking and she left you, and now you are left with nothing but time.",
+        "levelTitle": "Sadness"
     }
 ]

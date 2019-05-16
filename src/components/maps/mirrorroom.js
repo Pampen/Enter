@@ -1,44 +1,54 @@
-const mirrorRoomJoy = {
+const mirrorRoom = {
+    color: "white",
+    name: 'Mirror Room',
+    id: 'MIRROR_ROOM',
+    cellName: 'MR',
+    connections: [
+        'N'
+    ]
+}
+const joy = {
     color: "green",
-    name: 'Mirror Room Joy',
-    id: 'MIRROR_ROOM_JOY',
-    cellName: 'MRJ',
+    name: 'Joy',
+    id: 'JOY',
+    cellName: 'J',
     connections: [
         'N', 'S'
     ]
 }
-const mirrorRoomAnger = {
+const anger = {
     color: "red",
-    name: 'Mirror Room Anger',
-    id: 'MIRROR_ROOM_ANGER',
-    cellName: 'MRA',
+    name: 'Anger',
+    id: 'ANGER',
+    cellName: 'A',
     connections: [
         'N', 'S'
     ]
 }
-const mirrorRoomLove = {
+const love = {
     color: 'pink',
-    name: 'Mirror Room Love',
-    id: 'MIRROR_ROOM_LOVE',
-    cellName: 'MRL',
+    name: 'Love',
+    id: 'LOVE',
+    cellName: 'L',
     connections: [
         'N', 'S'
     ]
 }
-const mirrorRoomSadness = {
+const sadness = {
     color: 'blue',
-    name: 'Mirror Room Sadness',
-    id: 'MIRROR_ROOM_SADNESS',
-    cellName: 'MRS',
+    name: 'Sadness',
+    id: 'SADNESS',
+    cellName: 'S',
     connections: [
         'S'
     ]
 }
 const mirrorRoomMap = [
-    [mirrorRoomSadness],
-    [mirrorRoomLove],
-    [mirrorRoomAnger],
-    [mirrorRoomJoy]
+    [sadness],
+    [love],
+    [anger],
+    [joy],
+    [mirrorRoom]
 ];
 
 export default mirrorRoomMap

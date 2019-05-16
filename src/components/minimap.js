@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { levels } from "../utilities/levelChecker";
 import tutorialMap from './maps/tutorial';
 import joyMap from "./maps/joy";
-import loveMap from "./maps/love.js"
 import angerMap from "./maps/anger";
+import loveMap from "./maps/love";
 import sadnessMap from "./maps/sadness";
-import mirrorRoomMap from "./maps/mirrorRoom"
+import mirrorRoomMap from "./maps/mirrorRoom";
 
 const maps = {
     /*Put map functions here. Check tutorial.js in folder maps*/
@@ -14,7 +14,7 @@ const maps = {
     "ANGER": angerMap,
     "SADNESS": sadnessMap,
     'LOVE': loveMap,
-    'MIRROR_ROOM': mirrorRoomMap
+    'MIRROR_ROOM': mirrorRoomMap,
 };
 
 class MapRow extends Component {
