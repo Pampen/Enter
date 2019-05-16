@@ -2,7 +2,7 @@ from tutorial import handleGreenHouse, handleOutside, handlePorch
 from mainHall import handleMainHall
 from greenDoor import handleBeach, handleCaptainsCabin, handleCellar, handleGate, handleShedFrontDoor, handleShed, handleBeachEastSide, handleShipwreck, handleLighthouse, handleLighthouseOutside, handleLighthouseTopFloor, handleOcean
 from redDoor import handleUpperFloor, handleLivingRoom, handleKitchen, handleHall, handleBedroom, handleBasement, handleAttic
-from pinkDoor import handleBabyRoom, handleCribRoom, handleMessyRoom, handleNursingRoom, handleStudyRoom, handleBabyRoomCrib, handleBabyRoomDoll, handleBabyRoomBlanket, handleBabyRoomPacifier, handleBabyRoomKey, handleBabyRoomNoDoll, handleNursingRoomNoPacifier
+from pinkDoor import handleBabyRoom, handleCribRoom, handleMessyRoom, handleNursingRoom, handleStudyRoom, handleBabyRoomCrib, handleBabyRoomDoll, handleBabyRoomBlanket, handleBabyRoomPacifier, handleBabyRoomKey, handleBabyRoomNoDoll, handleNursingRoomNoPacifier, handleStudyRoomNoBlanket, handleMessyRoomNoRhyme, handleCribRoomNoCrib
 from blueDoor import handleBlueCorridor1, handleBlueCorridor2, handleBlueCorridor3, handleBlueCorridor4, handleBlueCorridor5, handleBlueCorridor6, handleBlueCorridor7, handleBlueCorridor8, handleBlueCorridor9, handleBlueStart, handleBlueFinish, handleTorchRoom
 from mirrorRoom import handleMirrorRoom, handleJoy, handleAnger, handleLove, handleSadness
 
@@ -40,6 +40,9 @@ levels = {
     'BABY_ROOM_DOLL' : handleBabyRoomDoll,
     'BABY_ROOM_NO_DOLL' : handleBabyRoomNoDoll,
     'NURSING_ROOM_NO_PACIFIER' : handleNursingRoomNoPacifier,
+    'STUDY_ROOM_NO_BLANKET' : handleStudyRoomNoBlanket,
+    'MESSY_ROOM_NO_RHYME' : handleMessyRoomNoRhyme,
+    'CRIB_ROOM_NO_CRIB' : handleCribRoomNoCrib,
     'BABY_ROOM_BLANKET' : handleBabyRoomBlanket,
     'BABY_ROOM_PACIFIER': handleBabyRoomPacifier,
     'BABY_ROOM_KEY' : handleBabyRoomKey,

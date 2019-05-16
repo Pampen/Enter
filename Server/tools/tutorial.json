@@ -36,7 +36,7 @@
     },
     {
         "level": "GATE",
-        "levelDescription": "While making your way up the hill, you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over hundreds years old. There are also spikes at the top that makes it impossible to climb over.",
+        "levelDescription": "While making your way up the hill, you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over a hundred years old. There are also spikes at the top that makes it impossible to climb over it.",
         "levelTitle": "Gate"
     },
     {
@@ -125,6 +125,11 @@
         "levelTitle": "Crib Room"
     },
     {
+        "level": "CRIB_ROOM_NO_CRIB",
+        "levelDescription": "Absolutely nothing in here... The emptiness is too much. Best to move on...",
+        "levelTitle": "Crib Room"
+    },
+    {
         "level": "BABY_ROOM",
         "levelDescription": "This room is filled with baby things. The walls have painted unicorns, and the shelves are filled with toys. A worn doll catches the eye. Is it waving or are you losing your mind? The only thing missing is the crib...",
         "levelTitle": "Baby Room"
@@ -145,8 +150,18 @@
         "levelTitle": "Study Room"
     },
     {
+        "level": "STUDY_ROOM_NO_BLANKET",
+        "levelDescription": "A study. A nice, comfy chair, rows upon rows of books on the shelves and a decanter filled with a golden liquid  standing besides a used glass... Dust everywhere.",
+        "levelTitle": "Study Room"
+    },
+    {
         "level": "MESSY_ROOM",
         "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls... A notebook lying on the floor stands out from the rest. It's titled Nursery Rhyme and has the same rhyme in it as is scribbled on the wall...",
+        "levelTitle": "Messy Room"
+    },
+    {
+        "level": "MESSY_ROOM_NO_RHYME",
+        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls... ",
         "levelTitle": "Messy Room"
     },
     {
