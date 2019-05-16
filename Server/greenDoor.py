@@ -81,6 +81,8 @@ def handleShed(userInput, state):
         return handleNewShedDescOilLamp(state)
     elif userInput == 'GO EAST':
         return goToLevel(state, "SHED_FRONT_DOOR", userInput) and handleNewShedFrontDoorDesc(state, userInput)
+    elif userInput == "TAKE FISHERMAN GEAR":
+        return handleInvalidGear(state)
     elif userInput == "JOYFUL":
         if "tornPages" in state["inventory"]:
             return goToLevelShedPuzzle(state, "CELLAR", userInput)
@@ -249,6 +251,15 @@ def handleNewShedDescOilLamp(state):
         'state': state,
         'pageChanges': {
             'levelChatboxText': "Throwing the oil lamp would result in a fire..."
+        }
+    }
+    return response
+
+def handleInvalidGear(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': "There doesn't seem to be anything of value"
         }
     }
     return response
