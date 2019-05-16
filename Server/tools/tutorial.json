@@ -135,6 +135,11 @@
         "levelTitle": "Nursing Room"
     },
     {
+        "level": "NURSING_ROOM_NO_PACIFIER",
+        "levelDescription": "A nursing room... and a changing table. A funky smell envelopes you as you enter. The smell is sweet, but somewhat earthy... strange.",
+        "levelTitle": "Nursing Room"
+    },
+    {
         "level": "STUDY_ROOM",
         "levelDescription": "A study. A nice, comfy chair, rows upon rows of books on the shelves and a decanter filled with a golden liquid  standing besides a used glass... Dust everywhere. A dirty blanket is wrapped around the back of the chair... it looks somehow familiar.",
         "levelTitle": "Study Room"
@@ -167,7 +172,12 @@
     {
         "level": "BABY_ROOM_KEY",
         "levelDescription": "A pink key on the floor. A door with a blueish tint on the east wall.. ",
-        "levelTitle": "Mirror Room Sadness"
+        "levelTitle": "Baby room"
+    },
+    {
+        "level": "BABY_ROOM_NO_DOLL",
+        "levelDescription": "This room is filled with baby things. The walls have painted unicorns, and the shelves are filled with toys. The only thing missing is the crib...",
+        "levelTitle": "Baby room"
     },
     {
         "level": "BLUE_START",
