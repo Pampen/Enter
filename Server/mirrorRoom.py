@@ -40,8 +40,8 @@ def handleLove(userInput, state):
 
 def handleSadness(userInput, state):
     if userInput == 'GO SOUTH':
-        return handleDoorLock(state, 'LOVE', userInput)
-    elif userInput == 'TAKE POCKET WATCH' or 'TAKE WATCH':
+        return handleDoorLock(state, 'MIRROR_ROOM', userInput)
+    elif userInput == 'TAKE POCKET WATCH' or userInput == 'TAKE WATCH':
         return takeItem(state, 'pocketWatch')
     elif userInput == "GO WEST" or userInput == "GO EAST" or userInput == "GO NORTH":
         return handleInvalidDirection(state)
