@@ -56,7 +56,7 @@ def handleBabyRoomKey(userInput, state):
     if userInput == "TAKE PINK KEY":
         return takeItem(state, 'pinkKey')
     elif userInput == "GO EAST" and 'pinkKey' in state['inventory']: 
-        return goToLevel(state, 'BLUE_START', userInput)
+        return state['inventory'].pop('moldyPacifier') and state['inventory'].pop('nurseryRhyme') and state['inventory'].pop('dirtyBlanket') and state['inventory'].pop('wornDoll') and state['inventory'].pop('nurseryRhyme') and goToLevel(state, 'BLUE_START', userInput)
     else:
         return handleInvalidInput(userInput, state)
 

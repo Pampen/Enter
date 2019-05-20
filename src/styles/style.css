@@ -49,10 +49,11 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  border: 2px white;
 }
 .game-screen-header {
   height: 300px;
-  width: 640px;
+  width: 700px;
   background-color: #444;
 }
 .game-text-box {
@@ -97,7 +98,7 @@ body {
   padding: 0;
   margin-bottom: 5px;
   height: 50px;
-  width: 550px;
+  width: 610px;
   background-color: #242424;
   color: white;
   border: none;
@@ -191,7 +192,7 @@ body {
   right: 100%;
   padding: 20px;
   background-color: #333;
-  margin-right: 90px;
+  margin-right: 1%;
   border-radius: 10px;
   border: 2px dashed #555;
   font-size: 12px;
@@ -200,19 +201,27 @@ body {
 .commandList {
   position: absolute;
   right: 100%;
-  padding: 20px;
+  padding: 10px 10px 0px 10px;
   background-color: #333;
-  margin: 64% 10% 0% 0%;
+  margin: 54% 1% 0% 0%;
   border-radius: 10px;
   border: 2px dashed #555;
   font-size: 12px;
+  min-width: 160px;
+  text-align: center;
 }
 
 .item {
   position: relative;
+  padding: 5px 0px 10px 0px;
 }
 
 .ulInventory {
+  margin: 0;
+  padding: 5px;
+}
+
+.ulCommands {
   list-style-type: none;
   margin: 0;
   padding: 5px;
@@ -230,6 +239,7 @@ body {
           box-shadow: 3px 10px 10px #333;
   background-color: white;
   color: black;
+  min-width: 180%;
 }
 .item-name:hover + .description{
   display: block;
@@ -651,3 +661,4 @@ header {
 .JOY{
   color: #84AE90;
 }
+
