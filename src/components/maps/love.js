@@ -31,7 +31,7 @@ const nursingRoom = {
     id: 'NURSING_ROOM',
     cellName: 'NR',
     connections: [
-        'W', 'S', 'E'
+        'W', 'S'
     ]
 }
 const studyRoom = {
@@ -49,7 +49,7 @@ const messyRoom = {
     id: 'MESSY_ROOM',
     cellName: 'MR',
     connections: [
-        'N', 'W', 'E'
+        'N', 'W'
     ]
 }
 
