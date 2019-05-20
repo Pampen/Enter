@@ -8,6 +8,18 @@ def handleOutside(userInput, state):
             return goToLevel(state, 'GREENHOUSE_LIGHT_ON', userInput)
         else:
             return goToLevel(state, 'GREENHOUSE', userInput)
+    elif userInput == 'LICK DOOR':
+        return goToLevel(state, 'MAIN_HALL', userInput)
+    elif userInput == 'PET THE BABY':
+        return goToLevel(state, 'CRIB_ROOM', userInput)
+    elif userInput == 'SMASH':
+        return goToLevel(state, 'LIVING_ROOM', userInput)
+    elif userInput == 'HAVE A NICE DAY':
+        return goToLevel(state, 'BEACH', userInput)
+    elif userInput == 'ABSOLUTE LEGEND':
+        return goToLevel(state, 'MAIN_HALL_ALL_KEYS', userInput)
+    elif userInput == 'TAKE A SAD SHOWER':
+        return goToLevel(state, 'BLUE_START', userInput)
     elif userInput == 'GO NORTH':
         return goToLevel(state, 'PORCH', userInput)
     elif userInput == 'GO SOUTH' or userInput == 'GO EAST':
@@ -18,7 +30,7 @@ def handleOutside(userInput, state):
 def handlePorch(userInput, state):
     if userInput == 'GO SOUTH':
         return goToLevel(state, 'OUTSIDE', userInput)
-    elif userInput == 'USE BRASS KEY' and "brassKey" in state["inventory"]:
+    elif userInput == 'USE BRASS KEY' or userInput == 'USE KEY' and "brassKey" in state["inventory"]:
         return state['inventory'].pop('brassKey') and goToLevel(state, 'MAIN_HALL', userInput) 
     elif userInput == 'GO NORTH':
         return handleDoorLock(state, 'PORCH', userInput)

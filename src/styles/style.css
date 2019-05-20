@@ -172,6 +172,8 @@ body {
   margin-top: 20px;
   margin-bottom: 7px;
 }
+
+ /* * 
 .nav-button {
 
   width: 50px;
@@ -184,6 +186,7 @@ body {
   -webkit-box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
           box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
 }
+ * */ 
 .inventory {
   padding: 16px;
 }
@@ -400,8 +403,6 @@ header {
   content: "";
   width: 100%;
   height: 100%;
-  top: 0;
-  right: 0;
   position: absolute;
   border: 2px solid #aaa;
 }
@@ -413,8 +414,6 @@ header {
   content: "";
   width: 100%;
   height: 100%;
-  top: 0;
-  right: 0;
   position: absolute;
   border: 3px solid white;
   animation: 0.9s map-cell-current-room-glow infinite alternate;
@@ -662,4 +661,6 @@ header {
 .JOY{
   color: #84AE90;
 }
-
+.MAINHALL{
+  color: gray;
+}

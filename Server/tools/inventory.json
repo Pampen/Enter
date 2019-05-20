@@ -79,5 +79,9 @@
     "blueKey": {
         "itemName": "Blue key",
         "itemDescription": "A blue key with a tear-shaped handle."
+    },
+    "pocketWatch": {
+        "itemName": "Pocket Watch",
+        "itemDescription": "An old pocket watch with elaborated details. This pocket watch was given to you by your sister. There is a picture of your niece inside the pocket watch."
     }
 }

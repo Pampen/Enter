@@ -21,12 +21,32 @@
     },
     {
         "level": "PORCH",
-        "levelDescription": "The porch looks rather old, and the color is almost gone. The window are all boarded up from the inside and it looks like the windows are painted in black. This porch is barely holding up.",
+        "levelDescription": "The porch looks rather old, and the color is almost gone. The windows are all boarded up from the inside and it looks like the windows are painted in black. This porch is barely holding up.",
         "levelTitle": "Porch"
     },
     {
         "level": "MAIN_HALL",
         "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work.",
+        "levelTitle": "Main Hall"
+    },
+    {
+        "level": "MAIN_HALL_ALL_KEYS",
+        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work. A strange humming sound comes from the doors.. ",
+        "levelTitle": "Main Hall"
+    },
+    {
+        "level": "MAIN_HALL_RED_KEY",
+        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work. The green door stops humming...",
+        "levelTitle": "Main Hall"
+    },
+    {
+        "level": "MAIN_HALL_PINK_KEY",
+        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work. The red door stops humming... ",
+        "levelTitle": "Main Hall"
+    },
+    {
+        "level": "MAIN_HALL_BLUE_KEY",
+        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work. The pink door stops humming... ",
         "levelTitle": "Main Hall"
     },
     {
@@ -36,7 +56,7 @@
     },
     {
         "level": "GATE",
-        "levelDescription": "While making your way up the hill, you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over hundreds years old. There are also spikes at the top that makes it impossible to climb over.",
+        "levelDescription": "While making your way up the hill, you encounter a gate blocking your path from going to the lighthouse. The gate appears to be very sturdy despite looking to be well over a hundred years old. There are also spikes at the top that makes it impossible to climb over it.",
         "levelTitle": "Gate"
     },
     {
@@ -101,7 +121,7 @@
     },
     {
         "level": "HALL",
-        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures and the wall, however, you can't seem to see persons' faces in the pictures for some reasons. Every face is blurry. Beneath the pictures is a small table with a bowl, the bowl contains car keys. There are some stairs leading up to the upper floor.",
+        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures on the wall, however, you can't seem to see person's faces in the pictures for some reasons. Every face is blurry. Beneath the pictures is a small table with a bowl, the bowl contains car keys. There are some stairs leading up to the upper floor.",
         "levelTitle": "Hall"
     },
     {
@@ -121,7 +141,12 @@
     },
     {
         "level": "CRIB_ROOM",
-        "levelDescription": "This is a room with a white crib in it. It looks misplaced. Nothing else in here. The emptiness is too much. Best to move on...",
+        "levelDescription": "This is a room with a pink crib in it. It looks misplaced. Nothing else in here. The emptiness is too much. Best to move on...",
+        "levelTitle": "Crib Room"
+    },
+    {
+        "level": "CRIB_ROOM_NO_CRIB",
+        "levelDescription": "Absolutely nothing in here... The emptiness is too much. Best to move on...",
         "levelTitle": "Crib Room"
     },
     {
@@ -131,18 +156,63 @@
     },
     {
         "level": "NURSING_ROOM",
-        "levelDescription": "A nursing room.. and a changing table. A funky smell envelopes you as you enter. The smell is sweet, but somewhat earthy... strange. A moldy pacifier lying on the changing table is caught in a bleak ray of sunlight.",
+        "levelDescription": "A nursing room... and a changing table. A funky smell envelopes you as you enter. The smell is sweet, but somewhat earthy... strange. A moldy pacifier lying on the changing table is caught in a bleak ray of sunlight.",
+        "levelTitle": "Nursing Room"
+    },
+    {
+        "level": "NURSING_ROOM_NO_PACIFIER",
+        "levelDescription": "A nursing room... and a changing table. A funky smell envelopes you as you enter. The smell is sweet, but somewhat earthy... strange.",
         "levelTitle": "Nursing Room"
     },
     {
         "level": "STUDY_ROOM",
-        "levelDescription": "A study. A nice, comfy chair, rows upon rows of books on the shelves and a decanter filled with a golden liquid  standing besides a used glass... Dust everywhere. A dirty blanket is wrapped around the back of the chair.. it looks somehow familiar.",
+        "levelDescription": "A study. A nice, comfy chair, rows upon rows of books on the shelves and a decanter filled with a golden liquid  standing besides a used glass... Dust everywhere. A dirty blanket is wrapped around the back of the chair... it looks somehow familiar.",
+        "levelTitle": "Study Room"
+    },
+    {
+        "level": "STUDY_ROOM_NO_BLANKET",
+        "levelDescription": "A study. A nice, comfy chair, rows upon rows of books on the shelves and a decanter filled with a golden liquid  standing besides a used glass... Dust everywhere.",
         "levelTitle": "Study Room"
     },
     {
         "level": "MESSY_ROOM",
-        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls… A notebook lying on the floor stands out from the rest. It's titled Nursery Rhyme and has the same rhyme in it as is scribbled on the wall..",
+        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls... A notebook lying on the floor stands out from the rest. It's titled Nursery Rhyme and has the same rhyme in it as is scribbled on the wall...",
         "levelTitle": "Messy Room"
+    },
+    {
+        "level": "MESSY_ROOM_NO_RHYME",
+        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls... ",
+        "levelTitle": "Messy Room"
+    },
+    {
+        "level": "BABY_ROOM_CRIB",
+        "levelDescription": "The crib looks beautiful, almost surreal... but it also looks empty.",
+        "levelTitle": "Baby room"
+    },
+    {
+        "level": "BABY_ROOM_DOLL",
+        "levelDescription": "The doll almost looks like it is shivering in cold..",
+        "levelTitle": "Baby room"
+    },
+    {
+        "level": "BABY_ROOM_BLANKET",
+        "levelDescription": "The doll looks unhappy. Is it... pucking it's lips?",
+        "levelTitle": "Baby room"
+    },
+    {
+        "level": "BABY_ROOM_PACIFIER",
+        "levelDescription": "Do you remember the nursery rhyme? It feels like you should use it...",
+        "levelTitle": "Baby room"
+    },
+    {
+        "level": "BABY_ROOM_KEY",
+        "levelDescription": "A pink key on the floor. A door with a blueish tint on the east wall.. ",
+        "levelTitle": "Baby room"
+    },
+    {
+        "level": "BABY_ROOM_NO_DOLL",
+        "levelDescription": "This room is filled with baby things. The walls have painted unicorns, and the shelves are filled with toys. The only thing missing is the crib...",
+        "levelTitle": "Baby room"
     },
     {
         "level": "BLUE_START",
@@ -205,98 +275,28 @@
         "levelTitle": "Corridor"
     },
     {
-        "level": "LIVING_ROOM",
-        "levelDescription": "A big room with a two red armchairs in front of a fireplace. There are some painting hanging on the walls. You can feel the heat emitting from the fireplace, the flame is dancing so violently. The fireplace could be useful later on...",
-        "levelTitle": "Living Room"
+        "level": "MIRROR_ROOM",
+        "levelDescription": "There isn't much in this room except for darkness and a bright beam of light shining down on a big long mirror. As you approach the mirror, tears starts to flow down your face as you realize who you are. You can't breathe, you're gasping for air, but it feels like you are drowning. You try to scream but cannot make a sound. You lie down on the floor, clench your fist and start hitting the floor until you feel something again. As you rise, you can see the real you, what you have become, and you remember everything. Your dear sister, black-hair and blue eyes. You had an unbreakable bond that only twins can understand. She was so full of joy and energy just like her daughter, a daughter without a mother. It was your fault. Somehow, you have repressed and forgotten your own memories to make yourself accept the image staring back at you in the mirror.",
+        "levelTitle": "Mirror Room"
     },
     {
-        "level": "LIVING_ROOMItem",
-        "levelDescription": "With the canvas, car keys and the photograph in your possesion you can feel the heat from the fireplace, some things are meant to be burned down to ashes.",
-        "levelTitle": "Living Room"
+        "level": "JOY",
+        "levelDescription": "You remember that day at the beach together with your parents and your sister. It was a day full of joy. The excitement of running around together with your sister around the beach, discovering the scary shed, the old looking shipwreck and the fantastic view from the top of the lighthouse. If only you could travel back to your childhood, back to that joyful day. If only you could remember your sister's face, why is this memory coming back to me now?",
+        "levelTitle": "Joy"
     },
     {
-        "level": "KITCHEN",
-        "levelDescription": "An old kitchen, but some modern modifications. There are some plates and glasses in the sink that needs to be washed. By the looks of it, it seems that the person who lived here hasn't done her or his dishes for a while. The fridge is pretty dusty and the dust is covering the photograph on the fridge. You can't figure out what is in the picture because of all the dust. There is also a staircase leading down to the basement.",
-        "levelTitle": "Kitchen"
+        "level": "ANGER",
+        "levelDescription": "This memory is different from before, it seems like it has been a good 15 years from that day at the beach. You are arguing with your sister in the kitchen back at your house. The walls are so red and the flames from the fireplace are so violent. Your sister seems pretty upset with you and you can't seem to reason with her. You can feel the rage flowing through your body and your sister suddenly stops talking to you. She walks furiously to the hall, takes the car keys and slams the door behind her. This was the last time you ever saw her. She had black hair...",
+        "levelTitle": "Anger"
     },
     {
-        "level": "HALL",
-        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures and the wall, however, you can't seem to see persons' faces in the pictures for some reasons. Every face is blurry. Beneath the pictures is a small table with a bowl, the bowl contains car keys. There is a staircase leading up to the upper floor.",
-        "levelTitle": "Hall"
+        "level": "LOVE",
+        "levelDescription": "You remember your lovely niece and all the pink colors in her crib room. The baby looked so fragile while lying in her pink crib and at the same time strong, so full of hope, like nothing could touch her. The baby slowly opened her blue eyes, but she didn't cry. She just stared at me with her blue eyes, it reminded you of your sister. The little baby rose her arm trying to reach you, so you tried to meet her hand with the top of your finger but as you made contact everything disappeared.",
+        "levelTitle": "Love"
     },
     {
-        "level": "UPPER_FLOOR",
-        "levelDescription": "There nothing much up here except a door, which you guess is the bedroom, an attic and a window which is painted black, but somehow the sunlight still shines through the black paint. There is a staircase leading down to the hall.",
-        "levelTitle": "Upper Floor"
-    },
-    {
-        "level": "ATTIC",
-        "levelDescription": "The attic is very dark, but the sunbeams from the windows makes it much easier to distinguish what hides behind the dark. There are some boxes with the label 'memories'. In the middle of the attic is a grey key.",
-        "levelTitle": "Attic"
-    },
-    {
-        "level": "BEDROOM",
-        "levelDescription": "It looks like a regular bedroom, the walls are red, a bookcase filled with obviously books, photos, a tiny leather boot and a box full of old watches. There is a big round window in the room which is painted black, but it doesn't block the sunlight which is kind of odd. In the center of the bedroom, there is a canvas which is painted red.",
-        "levelTitle": "Bedroom"
-    },
-    {
-        "level": "BASEMENT",
-        "levelDescription": "It's cold in the basement. There is not so much down here, just some old furnitures and some boxes filled with old toys, pictures, watches and so on. Most of it seems to be covered by a red cloth to protect them from getting all dusty, except a ladder which is leaning on the wall. There is a staircase leading up.",
-        "levelTitle": "Basement"
-    },
-    {
-        "level": "CRIBROOM",
-        "levelDescription": "This is a room with a white crib in it. It looks out of place. Dust twirls in the small gleams of light coming in from cracks in the boarded up windows",
-        "levelTitle": "Cribroom"
-    },
-    {
-        "level": "MAIN_HALL",
-        "levelDescription": "You are now in the main hall of the house. There isn't not much in the main hall except for three odd doors with three different colors, the windows are painted in black and some old creepy paintings on the walls covered in cobweb. The paintings looked a lot like Willem de Kooning's work.",
-        "levelTitle": "Main Hall"
-    },
-    {
-        "level": "BABYROOM",
-        "levelDescription": "This room is filled with babythings. The walls have painted unicorns and the shelves are filled with toys. A worn doll sits slumped in the centre of the room. Is it waving to me? Well, the only thing clearly missing in here is the crib...",
-        "levelTitle": "Babyroom"
-    },
-    {
-        "level": "NURSINGROOM",
-        "levelDescription": "A nursing room with a changing table in the middle of it. A bleak ray of sunlight shines on something on the table. As I approach it, I can see that it's a moldy pacifier. A funky smell surrounds this room, perhaps I should not linger here..",
-        "levelTitle": "Nursing room"
-    },
-    {
-        "level": "STUDYROOM",
-        "levelDescription": "A study. A nice comfy chair, books on the shelves and a decanter filled with a golden liquid and a used glass. Dust everywhere. A dirty blanket hangs over the back of the chair. The blanket looks oddly familiar...",
-        "levelTitle": "Study room"
-    },
-    {
-        "level": "MESSYROOM",
-        "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls. There is also a page of a note book titled Nursery Rhyme",
-        "levelTitle": "Messy room"
-    },
-    {
-        "level": "BABYROOMCRIB",
-        "levelDescription": "The crib looks beautiful, almost surreal.. but it also looks empty.",
-        "levelTitle": "Baby room"
-    },
-    {
-        "level": "BABYROOMDOLL",
-        "levelDescription": "The doll almost looks like it is shivering in cold..",
-        "levelTitle": "Baby room"
-    },
-    {
-        "level": "BABYROOMBLANKET",
-        "levelDescription": "The doll looks unhappy. Is it.. pucking it's lips?",
-        "levelTitle": "Baby room"
-    },
-    {
-        "level": "BABYROOMPACIFIER",
-        "levelDescription": "Do you remember the nursery rhyme? It feels like you should use it..",
-        "levelTitle": "Baby room"
-    },
-    {
-        "level": "BABYROOMKEY",
-        "levelDescription": "A pink key on the floor. A door with a blueish tint on the east wall.. ",
-        "levelTitle": "Baby room"
+        "level": "SADNESS",
+        "levelDescription": "You remembered that you woke up in the hospital after the accident and your parents was by your side. They weren't happy, they had this sadness in their eyes. You couldn't see your sister anywhere, so you asked your parents, but they didnt reply. They gave me a box which contained a pocket watch. Inside the pocket watch there was a picture of my niece. You closed the pocket watch and you were filled with endless pain and misery. You didnt argue in the kitchen, You were arguing in the car. You were the driver and you didn't see the car that would forever change your and your sisters lives. Her clock stopped ticking and she left you, and now you are left with nothing but time.",
+        "levelTitle": "Sadness"
     }
 ]

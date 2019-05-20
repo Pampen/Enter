@@ -201,7 +201,7 @@ def handleBlueCorridor9(userInput, state):
 
 def handleBlueFinish(userInput, state):
     if userInput == 'TAKE BLUE KEY' or userInput == 'TAKE KEY':
-        return state['inventory'].pop('torch') and state['inventory'].pop('rustyKey') and returnToMainHall(state, 'blueKey', 'MAIN_HALL')
+        return state['inventory'].pop('torch') and state['inventory'].pop('rustyKey') and returnToMainHall(state, 'blueKey', 'MAIN_HALL_ALL_KEYS')
     elif userInput == 'GO WEST' or userInput == 'GO NORTH' or userInput == 'GO EAST' or userInput == 'GO SOUTH':
         return handleInvalidDirection(state)
     else:
