@@ -49,7 +49,8 @@ const levels = {
     "JOY": "MIRROR_ROOM",
     "ANGER": "MIRROR_ROOM",
     "LOVE": "MIRROR_ROOM",
-    "SADNESS": "MIRROR_ROOM"
+    "SADNESS": "MIRROR_ROOM",
+    "END": ""
 }
 
 export { levels }

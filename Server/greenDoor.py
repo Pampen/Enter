@@ -81,7 +81,7 @@ def handleShed(userInput, state):
         return handleNewShedDescOilLamp(state)
     elif userInput == 'GO EAST':
         return goToLevel(state, "SHED_FRONT_DOOR", userInput) and handleNewShedFrontDoorDesc(state, userInput)
-    elif userInput == "TAKE FISHERMAN GEAR":
+    elif userInput == "TAKE FISHERMAN GEAR" or userInput == "TAKE OLD FISHERMAN GEAR":
         return handleInvalidGear(state)
     elif userInput == "JOYFUL":
         if "tornPages" in state["inventory"]:
@@ -259,7 +259,7 @@ def handleInvalidGear(state):
     response = {
         'state': state,
         'pageChanges': {
-            'levelChatboxText': "There doesn't seem to be anything of value"
+            'levelChatboxText': "Doesn't seem worth taking the fisherman gear"
         }
     }
     return response

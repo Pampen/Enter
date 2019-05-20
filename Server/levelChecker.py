@@ -5,7 +5,7 @@ from redDoor import handleUpperFloor, handleLivingRoom, handleKitchen, handleHal
 from pinkDoor import handleBabyRoom, handleCribRoom, handleMessyRoom, handleNursingRoom, handleStudyRoom, handleBabyRoomCrib, handleBabyRoomDoll, handleBabyRoomBlanket, handleBabyRoomPacifier, handleBabyRoomKey
 from blueDoor import handleBlueCorridor1, handleBlueCorridor2, handleBlueCorridor3, handleBlueCorridor4, handleBlueCorridor5, handleBlueCorridor6, handleBlueCorridor7, handleBlueCorridor8, handleBlueCorridor9, handleBlueStart, handleBlueFinish, handleTorchRoom
 from mirrorRoom import handleMirrorRoom, handleJoy, handleAnger, handleLove, handleSadness
-
+from endRoom import handleLastRoom
 levels = {
     'OUTSIDE': handleOutside,
     'GREENHOUSE': handleGreenHouse,
@@ -57,7 +57,8 @@ levels = {
     'JOY': handleJoy,
     'ANGER': handleAnger,
     'LOVE': handleLove,
-    'SADNESS': handleSadness
+    'SADNESS': handleSadness,
+    'END': handleLastRoom,
 }
 
 def levelChecker(userInput, state):   
