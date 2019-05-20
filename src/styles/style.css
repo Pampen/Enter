@@ -6,7 +6,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: 'Press Start 2P', sans-serif;
+          font-family: 'PixelOperatorRegular'; 
   background-color: #555;
 }
 .navbar {
@@ -103,7 +103,7 @@ body {
   color: white;
   border: none;
   text-shadow: 1px 1px 5px black;
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: 'Quantico', sans-serif;
 }
 .terminal-input:focus {
   outline: 0;
