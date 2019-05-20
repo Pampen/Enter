@@ -151,8 +151,13 @@
     },
     {
         "level": "BABY_ROOM",
-        "levelDescription": "This room is filled with baby things. The walls have painted unicorns, and the shelves are filled with toys. A worn doll catches the eye. Is it waving or are you losing your mind? The only thing missing is the crib...",
+        "levelDescription": "This room is filled with baby things. The walls have painted unicorns, and the shelves are filled with toys. A worn doll catches your eye. Is it waving or are you losing your mind? The only thing missing is the crib...",
         "levelTitle": "Baby Room"
+    },
+    {
+        "level": "TOY_CAR_ROOM",
+        "levelDescription": "The room bathes in a glowing red light. A silver toy car lies upside down in the middle of the room. A red stain slowly grows from under it, and a squeal like a pig being slaughtered can be heard... your head starts to throb and your heart beats a thousand beats a minute... you have to get out. Now.",
+        "levelTitle": "Toy car room"
     },
     {
         "level": "NURSING_ROOM",
@@ -298,5 +303,10 @@
         "level": "SADNESS",
         "levelDescription": "You remembered that you woke up in the hospital after the accident and your parents was by your side. They weren't happy, they had this sadness in their eyes. You couldn't see your sister anywhere, so you asked your parents, but they didnt reply. They gave me a box which contained a pocket watch. Inside the pocket watch there was a picture of my niece. You closed the pocket watch and you were filled with endless pain and misery. You didnt argue in the kitchen, You were arguing in the car. You were the driver and you didn't see the car that would forever change your and your sisters lives. Her clock stopped ticking and she left you, and now you are left with nothing but time.",
         "levelTitle": "Sadness"
+    },
+    {
+        "level": "END",
+        "levelDescription": "You've managed to reach the end of the game",
+        "levelTitle": "The End"
     }
 ]
