@@ -1,10 +1,10 @@
 from tutorial import handleGreenHouse, handleOutside, handlePorch
-from mainHall import handleMainHall
+from mainHall import handleMainHall, handleMainHallAllKeys, handleMainHallBlueKey, handleMainHallPinkKey, handleMainHallRedKey
 from greenDoor import handleBeach, handleCaptainsCabin, handleCellar, handleGate, handleShedFrontDoor, handleShed, handleBeachEastSide, handleShipwreck, handleLighthouse, handleLighthouseOutside, handleLighthouseTopFloor, handleOcean
 from redDoor import handleUpperFloor, handleLivingRoom, handleKitchen, handleHall, handleBedroom, handleBasement, handleAttic
-from pinkDoor import handleBabyRoom, handleCribRoom, handleMessyRoom, handleNursingRoom, handleStudyRoom, handleBabyRoomCrib, handleBabyRoomDoll, handleBabyRoomBlanket, handleBabyRoomPacifier, handleBabyRoomKey
+from pinkDoor import handleBabyRoom, handleCribRoom, handleMessyRoom, handleNursingRoom, handleStudyRoom, handleBabyRoomCrib, handleBabyRoomDoll, handleBabyRoomBlanket, handleBabyRoomPacifier, handleBabyRoomKey, handleBabyRoomNoDoll, handleNursingRoomNoPacifier, handleStudyRoomNoBlanket, handleMessyRoomNoRhyme, handleCribRoomNoCrib
 from blueDoor import handleBlueCorridor1, handleBlueCorridor2, handleBlueCorridor3, handleBlueCorridor4, handleBlueCorridor5, handleBlueCorridor6, handleBlueCorridor7, handleBlueCorridor8, handleBlueCorridor9, handleBlueStart, handleBlueFinish, handleTorchRoom
-from mirrorRoom import handleMirrorRoomJoy, handleMirrorRoomAnger, handleMirrorRoomLove, handleMirrorRoomSadness
+from mirrorRoom import handleMirrorRoom, handleJoy, handleAnger, handleLove, handleSadness
 
 levels = {
     'OUTSIDE': handleOutside,
@@ -13,6 +13,10 @@ levels = {
     'GREENHOUSE_LIGHT_AND_KEY_ON': handleGreenHouse,
     'PORCH': handlePorch,
     'MAIN_HALL': handleMainHall,
+    'MAIN_HALL_ALL_KEYS': handleMainHallAllKeys,
+    'MAIN_HALL_RED_KEY': handleMainHallRedKey,
+    'MAIN_HALL_PINK_KEY': handleMainHallPinkKey,
+    'MAIN_HALL_BLUE_KEY': handleMainHallBlueKey,
     'BEACH': handleBeach,
     'CAPTAINS_CABIN': handleCaptainsCabin,
     'CELLAR': handleCellar,
@@ -36,9 +40,13 @@ levels = {
     'NURSING_ROOM': handleNursingRoom,
     'STUDY_ROOM': handleStudyRoom,
     'MESSY_ROOM': handleMessyRoom,
-    'MIRROR_ROOM_SADNESS': handleMirrorRoomSadness,
     'BABY_ROOM_CRIB' : handleBabyRoomCrib,
     'BABY_ROOM_DOLL' : handleBabyRoomDoll,
+    'BABY_ROOM_NO_DOLL' : handleBabyRoomNoDoll,
+    'NURSING_ROOM_NO_PACIFIER' : handleNursingRoomNoPacifier,
+    'STUDY_ROOM_NO_BLANKET' : handleStudyRoomNoBlanket,
+    'MESSY_ROOM_NO_RHYME' : handleMessyRoomNoRhyme,
+    'CRIB_ROOM_NO_CRIB' : handleCribRoomNoCrib,
     'BABY_ROOM_BLANKET' : handleBabyRoomBlanket,
     'BABY_ROOM_PACIFIER': handleBabyRoomPacifier,
     'BABY_ROOM_KEY' : handleBabyRoomKey,
@@ -54,9 +62,11 @@ levels = {
     'BLUE_CORRIDOR_8': handleBlueCorridor8,
     'BLUE_CORRIDOR_9': handleBlueCorridor9,
     'BLUE_FINISH': handleBlueFinish,
-    'MIRROR_ROOM_JOY': handleMirrorRoomJoy,
-    'MIRROR_ROOM_ANGER': handleMirrorRoomAnger,
-    'MIRROR_ROOM_LOVE': handleMirrorRoomLove,
+    'MIRROR_ROOM': handleMirrorRoom,
+    'JOY': handleJoy,
+    'ANGER': handleAnger,
+    'LOVE': handleLove,
+    'SADNESS': handleSadness
 }
 
 def levelChecker(userInput, state):   

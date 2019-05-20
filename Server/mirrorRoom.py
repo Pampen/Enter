@@ -1,36 +1,48 @@
-from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handleInvalidInput
+from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handleInvalidInput, handleDoorLock, takeItem
 
-def handleMirrorRoomJoy(userInput, state):
+def handleMirrorRoom(userInput, state):
     if userInput == "GO NORTH":
-        return goToLevel(state, 'MIRROR_ROOM_ANGER', userInput)
+        return goToLevel(state, 'JOY', userInput)
     elif userInput == "GO SOUTH" or userInput == "GO WEST" or userInput == "GO EAST":
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)
 
-def handleMirrorRoomAnger(userInput, state):
+def handleJoy(userInput, state):
     if userInput == "GO NORTH":
-        return goToLevel(state,  'MIRROR_ROOM_LOVE', userInput)
+        return goToLevel(state, 'ANGER', userInput)
     elif userInput == "GO SOUTH":
-        return goToLevel(state, 'MIRROR_ROOM_JOY', userInput)
+        return goToLevel(state, 'MIRROR_ROOM', userInput)
     elif userInput == "GO WEST" or userInput == "GO EAST":
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)
 
-def handleMirrorRoomLove(userInput, state):
+def handleAnger(userInput, state):
     if userInput == "GO NORTH":
-        return goToLevel(state, 'MIRROR_ROOM_SADNESS', userInput)
+        return goToLevel(state, 'LOVE', userInput)
     elif userInput == "GO SOUTH":
-        return goToLevel(state, 'MIRROR_ROOM_ANGER', userInput)
+        return goToLevel(state, 'JOY', userInput)
     elif userInput == "GO WEST" or userInput == "GO EAST":
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)
 
-def handleMirrorRoomSadness(userInput, state):
-    if userInput == "GO SOUTH":
-        return goToLevel(state, 'MIRROR_ROOM_LOVE', userInput)
+def handleLove(userInput, state):
+    if userInput == "GO NORTH":
+        return goToLevel(state, 'SADNESS', userInput)
+    elif userInput == "GO SOUTH":
+        return goToLevel(state, 'ANGER', userInput)
+    elif userInput == "GO WEST" or userInput == "GO EAST":
+        return handleInvalidDirection(state)
+    else:
+        return handleInvalidInput(userInput, state)
+
+def handleSadness(userInput, state):
+    if userInput == 'GO SOUTH':
+        return handleDoorLock(state, 'MIRROR_ROOM', userInput)
+    elif userInput == 'TAKE POCKET WATCH' or userInput == 'TAKE WATCH':
+        return takeItem(state, 'pocketWatch')
     elif userInput == "GO WEST" or userInput == "GO EAST" or userInput == "GO NORTH":
         return handleInvalidDirection(state)
     else:
