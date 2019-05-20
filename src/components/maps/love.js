@@ -7,6 +7,15 @@ const cribRoom = {
         'N', 'E'
     ]
 }
+const toyCarRoom = {
+    color: 'pink',
+    name: 'Toy Car Room',
+    id: 'TOY_CAR_ROOM',
+    cellName: 'TCR',
+    connections: [
+        'N', 'S'
+    ]
+}
 const babyRoom = {
     color: 'pink',
     name: 'Baby Room',
@@ -46,7 +55,7 @@ const messyRoom = {
 
 const loveMap = [
     [babyRoom, nursingRoom],
-    [null, studyRoom],
+    [toyCarRoom, studyRoom],
     [cribRoom, messyRoom]
 ]
 

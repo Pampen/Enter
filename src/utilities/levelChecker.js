@@ -28,6 +28,7 @@ const levels = {
     "BEDROOM": "ANGER",
     "BASEMENT": "ANGER",
     "CRIB_ROOM": "LOVE",
+    "TOY_CAR_ROOM": "LOVE",
     "BABY_ROOM": "LOVE",
     "NURSING_ROOM": "LOVE",
     "STUDY_ROOM": "LOVE",

@@ -151,8 +151,13 @@
     },
     {
         "level": "BABY_ROOM",
-        "levelDescription": "This room is filled with baby things. The walls have painted unicorns, and the shelves are filled with toys. A worn doll catches the eye. Is it waving or are you losing your mind? The only thing missing is the crib...",
+        "levelDescription": "This room is filled with baby things. The walls have painted unicorns, and the shelves are filled with toys. A worn doll catches your eye. Is it waving or are you losing your mind? The only thing missing is the crib...",
         "levelTitle": "Baby Room"
+    },
+    {
+        "level": "TOY_CAR_ROOM",
+        "levelDescription": "The room bathes in a glowing red light. A silver toy car lies upside down in the middle of the room. A red stain slowly grows from under it, and a squeal like a pig being slaughtered can be heard... your head starts to throb and your heart beats a thousand beats a minute... you have to get out. Now.",
+        "levelTitle": "Toy car room"
     },
     {
         "level": "NURSING_ROOM",
