@@ -1,5 +1,5 @@
 from tutorial import handleGreenHouse, handleOutside, handlePorch
-from mainHall import handleMainHall
+from MainHall import handleMainHall
 from greenDoor import handleBeach, handleCaptainsCabin, handleCellar, handleGate, handleShedFrontDoor, handleShed, handleBeachEastSide, handleShipwreck, handleLighthouse, handleLighthouseOutside, handleLighthouseTopFloor, handleOcean
 from redDoor import handleUpperFloor, handleLivingRoom, handleKitchen, handleHall, handleBedroom, handleBasement, handleAttic
 from pinkDoor import handleBabyRoom, handleCribRoom, handleMessyRoom, handleNursingRoom, handleStudyRoom, handleBabyRoomCrib, handleBabyRoomDoll, handleBabyRoomBlanket, handleBabyRoomPacifier, handleBabyRoomKey

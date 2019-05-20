@@ -55,6 +55,7 @@ body {
   height: 300px;
   width: 700px;
   background-color: #444;
+  font-size: 150%
 }
 .game-text-box {
   display: -webkit-box;
