@@ -1,5 +1,5 @@
 from tutorial import handleGreenHouse, handleOutside, handlePorch
-from mainHall import handleMainHall
+from mainHall import handleMainHall, handleMainHallAllKeys, handleMainHallBlueKey, handleMainHallPinkKey, handleMainHallRedKey
 from greenDoor import handleBeach, handleCaptainsCabin, handleCellar, handleGate, handleShedFrontDoor, handleShed, handleBeachEastSide, handleShipwreck, handleLighthouse, handleLighthouseOutside, handleLighthouseTopFloor, handleOcean
 from redDoor import handleUpperFloor, handleLivingRoom, handleKitchen, handleHall, handleBedroom, handleBasement, handleAttic
 from pinkDoor import handleBabyRoom, handleCribRoom, handleMessyRoom, handleNursingRoom, handleStudyRoom, handleBabyRoomCrib, handleBabyRoomDoll, handleBabyRoomBlanket, handleBabyRoomPacifier, handleBabyRoomKey, handleBabyRoomNoDoll, handleNursingRoomNoPacifier, handleStudyRoomNoBlanket, handleMessyRoomNoRhyme, handleCribRoomNoCrib
@@ -13,6 +13,10 @@ levels = {
     'GREENHOUSE_LIGHT_AND_KEY_ON': handleGreenHouse,
     'PORCH': handlePorch,
     'MAIN_HALL': handleMainHall,
+    'MAIN_HALL_ALL_KEYS': handleMainHallAllKeys,
+    'MAIN_HALL_RED_KEY': handleMainHallRedKey,
+    'MAIN_HALL_PINK_KEY': handleMainHallPinkKey,
+    'MAIN_HALL_BLUE_KEY': handleMainHallBlueKey,
     'BEACH': handleBeach,
     'CAPTAINS_CABIN': handleCaptainsCabin,
     'CELLAR': handleCellar,

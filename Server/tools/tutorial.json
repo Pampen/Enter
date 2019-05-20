@@ -30,6 +30,26 @@
         "levelTitle": "Main Hall"
     },
     {
+        "level": "MAIN_HALL_ALL_KEYS",
+        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work. A strange humming sound comes from the doors.. ",
+        "levelTitle": "Main Hall"
+    },
+    {
+        "level": "MAIN_HALL_RED_KEY",
+        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work. The green door stops humming...",
+        "levelTitle": "Main Hall"
+    },
+    {
+        "level": "MAIN_HALL_PINK_KEY",
+        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work. The red door stops humming... ",
+        "levelTitle": "Main Hall"
+    },
+    {
+        "level": "MAIN_HALL_BLUE_KEY",
+        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work. The pink door stops humming... ",
+        "levelTitle": "Main Hall"
+    },
+    {
         "level": "BEACH",
         "levelDescription": "The door closes behind you, leaving you alone in the darkness. Suddenly, everything lights up, and you find yourself on the beach. There's a lighthouse right in front of you up the hill, a shipwreck by the coast and what looks to be a shed close to you. Which way do you decide to go?",
         "levelTitle": "Beach"

@@ -99,13 +99,13 @@ def handleBabyRoomBlanket(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleBabyRoomPacifier(userInput, state):
-    if userInput == "USE NURSERY RHYME" and 'nurseryRhyme' in state['inventory']: 
+    if userInput == "USE NURSERY RHYME" or userInput == "USE RHYME" and 'nurseryRhyme' in state['inventory']: 
         return goToLevel(state, 'BABY_ROOM_KEY', userInput)
     else:
         return handleInvalidInput(userInput, state)
 
 def handleBabyRoomKey(userInput, state):
-    if userInput == "TAKE PINK KEY":
+    if userInput == "TAKE PINK KEY" or userInput == "TAKE KEY":
         return takeItem(state, 'pinkKey')
     elif userInput == "GO EAST" and 'pinkKey' in state['inventory']: 
         return goToLevel(state, 'BLUE_START', userInput)
@@ -200,7 +200,7 @@ def handleMessyRoom(userInput, state):
             return goToLevel(state, 'CRIB_ROOM_NO_CRIB', userInput)
         else:
             return goToLevel(state, 'CRIB_ROOM', userInput)
-    elif userInput == "TAKE NURSERY RHYME" or userInput == "TAKE RHYME":
+    elif userInput == "TAKE NURSERY RHYME" or userInput == "TAKE RHYME" or userInput == "TAKE NOTEBOOK":
         return takeItem(state, 'nurseryRhyme')
     elif userInput == 'GO SOUTH' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
