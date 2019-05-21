@@ -6,7 +6,7 @@
     },
     {
         "level": "KITCHEN",
-        "levelDescription": "An old kitchen, but with some modern modifications. There are some plates and glasses in the sink that needs to be washed. By the looks of it, it seems that the person who lived here hasn't done her or his dishes for a while. The fridge is old, and it doesn't work anymore, but it has a photograph on it. The photograph might be a clue to all this madness. There are some stairs leading down to the basement.",
+        "levelDescription": "An old kitchen, but with some modern modifications. The fridge is old, and it doesn't work anymore, but it has a photograph on it. The photograph might be a clue to all this madness. There are some stairs leading down to the basement.",
         "levelTitle": "Kitchen"
     },
     {
@@ -16,12 +16,12 @@
     },
     {
         "level": "HALL",
-        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures and the wall, however, you can't seem to see persons' faces in the pictures for some reasons. Every face is blurry. Beneath the pictures is a small table with a bowl, the bowl contains car keys. There are some stairs leading up to the upper floor.",
+        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures on the wall, however, you can't seem to see person's faces in the pictures for some reasons. Every face is blurry. Beneath the pictures is a small table with a bowl, the bowl contains car keys. There are some stairs leading up to the upper floor.",
         "levelTitle": "Hall"
     },
     {
         "level": "UPPER_FLOOR",
-        "levelDescription": "It's so quiet up here, there is only a door, which you guess is the bedroom, an attic and a window which is painted black. Somehow the sunlight still shines through the black paint. There are some stairs leading down to the hall.",
+        "levelDescription": "It's so quiet up here, there is only a door, which you guess is the bedroom, an attic with an open hatch and a window which is painted black. Somehow the sunlight still shines through the black paint. There are some stairs leading down to the hall.",
         "levelTitle": "Upper Floor"
     },
     {

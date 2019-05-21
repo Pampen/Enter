@@ -3,7 +3,7 @@
     "PORCH": "There's a wooden door blocking your way, you need a key to open it."
   },
   {
-    "BLUE_CORRIDOR_6": "There's a rusty gate in front of you"
+    "BLUE_CORRIDOR_6": "There's a rusty gate in front of you, try using the rusty key in the room next to you"
   },
   {
     "GATE": "You try opening the gate, but it's locked..."
@@ -19,5 +19,11 @@
   },
   {
     "ATTIC": "You are too scared to jump down, if only you had a ladder with you..."
-  }
+  },
+  {
+    "BABY_ROOM": "You cannot help but feel you don't have everything that you need... better look around some more"
+  },
+  {
+    "MIRROR_ROOM": "You cannot go back, there seems like there is one thing you can take, the clock is ticking..."
+  }  
 ]

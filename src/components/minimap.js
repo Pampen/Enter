@@ -1,40 +1,44 @@
 import React, { Component } from "react";
 import { levels } from "../utilities/levelChecker";
 import tutorialMap from './maps/tutorial';
-import greenRoomMap from "./maps/greenRoom";
-import loveMap from "./maps/love.js"
-import redRoomMap from "./maps/redRoom";
+import joyMap from "./maps/joy";
+import angerMap from "./maps/anger";
+import loveMap from "./maps/love";
+import sadnessMap from "./maps/sadness";
+import mirrorRoomMap from "./maps/mirrorRoom";
 
 const maps = {
-    /*Put map functions here. Check tutorial.js in folder maps*/ 
+    /*Put map functions here. Check tutorial.js in folder maps*/
     'TUTORIAL': tutorialMap,
-    'JOY': greenRoomMap,
+    "JOY": joyMap,
+    "ANGER": angerMap,
+    "SADNESS": sadnessMap,
     'LOVE': loveMap,
-    "ANGER": redRoomMap
+    'MIRROR_ROOM': mirrorRoomMap,
 };
 
 class MapRow extends Component {
-    render () {
+    render() {
         return (<div className="map-row">
-        {this.props.row.map((mapCell, i) => {
-            return <MapCell mapCell={mapCell} level={this.props.level} levelHistory={this.props.levelHistory} i={i}/>
-        })}
-    </div>
+            {this.props.row.map((mapCell, i) => {
+                return <MapCell mapCell={mapCell} level={this.props.level} levelHistory={this.props.levelHistory} i={i} />
+            })}
+        </div>
         );
     };
 };
 class MapCell extends Component {
-    render () {
+    render() {
         let mapCellClasses = 'map-cell '
-        if ( !this.props.mapCell || !this.props.levelHistory[this.props.mapCell.id]) {
+        if (!this.props.mapCell || !this.props.levelHistory[this.props.mapCell.id]) {
             mapCellClasses += 'map-cell--hidden '
         };
-        if ( this.props.mapCell && this.props.mapCell.id === this.props.level) {
+        if (this.props.mapCell && this.props.mapCell.id === this.props.level) {
             mapCellClasses += 'map-cell--current '
         };
         return (
             <div className={mapCellClasses}>
-                
+
                 {
                     this.props.mapCell
                         ? this.props.mapCell.cellName
@@ -43,7 +47,7 @@ class MapCell extends Component {
                 {
                     this.props.mapCell && this.props.mapCell.connections
                         ? this.props.mapCell.connections.map((connection) => {
-                            return <MapConnection connection ={connection}/>
+                            return <MapConnection connection={connection} />
                         })
                         : ''
                 }
@@ -51,13 +55,14 @@ class MapCell extends Component {
                     {
                         this.props.mapCell && this.props.mapCell.color
                             ? <p className={this.props.mapCell.color}>{this.props.mapCell.name}</p>
-                            : '' 
+                            : ''
                     }
                 </div>
             </div>
         );
     };
-;}
+    ;
+}
 
 class MapConnection extends Component {
     render() {
@@ -69,30 +74,30 @@ class MapConnection extends Component {
 }
 
 export default class MiniMap extends Component {
-  render() {
-    console.log(this.props.levelHistory)
-    const currentMainLevel = levels[this.props.level]
-    const currentMap = maps[currentMainLevel]
-    if( !currentMap) {
-        return ''
-    };
-    return (
-        <div className="map-wrapper">
-            <div className="map-compass">
-                <span className="map-compass-n">N</span>
-                <span className="map-compass-s">S</span>
-                <span className="map-compass-w">W</span>
-                <span className="map-compass-e">E</span>
-                <div className="map-compass-needle"></div>
+    render() {
+        console.log(this.props.levelHistory)
+        const currentMainLevel = levels[this.props.level]
+        const currentMap = maps[currentMainLevel]
+        if (!currentMap) {
+            return ''
+        };
+        return (
+            <div className="map-wrapper">
+                <div className="map-compass">
+                    <span className="map-compass-n">N</span>
+                    <span className="map-compass-s">S</span>
+                    <span className="map-compass-w">W</span>
+                    <span className="map-compass-e">E</span>
+                    <div className="map-compass-needle"></div>
+                </div>
+                {currentMap.map((row) => {
+                    return <MapRow
+                        level={this.props.level}
+                        levelHistory={this.props.levelHistory}
+                        row={row}
+                    />
+                })}
             </div>
-            {currentMap.map((row) => {
-                return <MapRow 
-                    level={this.props.level}
-                    levelHistory={this.props.levelHistory}
-                    row={row}
-                />
-        } )}
-        </div>
-    );
-  };
+        );
+    };
 };

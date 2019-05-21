@@ -20,6 +20,35 @@ def handleMainHall(userInput, state):
             return goToLevel (state, 'BEACH', userInput)
     else:
         return handleInvalidInput(userInput, state)
+
+def handleMainHallAllKeys(userInput, state):
+    if userInput == 'USE GREEN KEY':
+        return goToLevel (state, 'MAIN_HALL_RED_KEY', userInput)
+    else:
+        return handleInvalidInput(userInput, state)
+
+def handleMainHallRedKey(userInput, state):
+    if userInput == 'USE RED KEY':
+        return goToLevel (state, 'MAIN_HALL_PINK_KEY', userInput)
+    else:
+        return handleInvalidInput(userInput, state)
+
+def handleMainHallPinkKey(userInput, state):
+    if userInput == 'USE PINK KEY':
+        return goToLevel (state, 'MAIN_HALL_BLUE_KEY', userInput)
+    else:
+        return handleInvalidInput(userInput, state)
+
+def handleMainHallBlueKey(userInput, state):
+    if userInput == 'USE BLUE KEY':
+        return goToLevel (state, 'MIRROR_ROOM', userInput)
+    else:
+        return handleInvalidInput(userInput, state)
+
+
+
+
+
     
 def finishedLevel(userInput, state):
     response = {
