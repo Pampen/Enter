@@ -46,6 +46,8 @@ def handleBasement(userInput, state):
             return goToLevel(state, 'KITCHEN', userInput)
     elif userInput == 'TAKE LADDER':
         return takeItem(state, 'ladder')
+    elif userInput == 'TAKE TOYS' or userInput == 'TAKE OLD TOYS':
+        return handleInvalidToy(state)
     elif userInput == 'GO WEST' or userInput == 'GO SOUTH' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
     else:
@@ -64,6 +66,8 @@ def handleHall(userInput, state):
             return goToLevel(state, 'UPPER_FLOOR', userInput) and handleFireLoudDesc(state, userInput)
         else:
             return goToLevel(state, 'UPPER_FLOOR', userInput)
+    elif userInput == 'TAKE PICTURE':
+        return handleInvalidPicture(state)
     elif userInput == 'GO SOUTH' or  userInput == 'GO WEST' or userInput == 'GO NORTH':
         return handleInvalidDirection(state)
     else:
@@ -104,6 +108,8 @@ def handleAttic(userInput, state):
         return goToLevel(state, 'UPPER_FLOOR', userInput)
     elif userInput == 'TAKE GREY KEY' or userInput == 'TAKE KEY':
         return takeItem(state, 'greyKey')
+    elif userInput == 'TAKE BOX' or userInput == 'TAKE BOXES':
+        return handleInvalidBox(state)
     elif userInput == 'GO NORTH' or userInput == 'GO WEST' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
     else:
@@ -196,6 +202,33 @@ def handleFireLoudDesc(state, userInput):
             'levelTitle': "Upper Floor",
             'levelDescription': "You can hear a loud noise coming from the living room, it sounds like fire, but why is the fire so loud?",
             'levelChatboxText': ' YOU ' + userInput.upper() + "."
+        }
+    }
+    return response
+
+def handleInvalidPicture(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': "The picture seems to be stuck to the wall."
+        }
+    }
+    return response
+
+def handleInvalidBox(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': "The boxes seem to be too heavy for you, and you should have workout more..."
+        }
+    }
+    return response
+
+def handleInvalidToy(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': "Get yourself together, you are not a child anymore."
         }
     }
     return response
