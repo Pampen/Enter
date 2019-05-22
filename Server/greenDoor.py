@@ -92,10 +92,10 @@ def handleShed(userInput, state):
         return handleInvalidGear(state)
     elif userInput == "USE PADLOCK" or userInput == "USE LOCK":
         called = called + 1
-        print(called)
         return handlePadlock(state, called)
-    elif userInput == "JOYFUL" and called == 1:
+    elif userInput == "JOYFUL" and called >= 1:
         if "tornPages" in state["inventory"] and "oilLamp" in state["inventory"]:
+            called = called - 1
             return goToLevelShedPuzzle(state, "CELLAR", userInput)
         else:
             return handleDoorLock(state, "SHED", userInput)
