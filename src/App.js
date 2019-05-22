@@ -8,12 +8,24 @@ import Inventory from "./components/inventory";
 import Modal from "./components/Modal";
 import Commands from "./components/commands";
 import Map from "./components/map";
-import Sound from "react-sound"
+import Sound from "react-sound";
+import {levels} from './utilities/levelChecker'
+
+const audioFile = {
+  'TUTORIAL': 'test.mp3',
+  'JOY': 'test2.mp3',
+  'ANGER': 'test3.mp3',
+  'LOVE': '',
+  'SADNESS': '',
+  'MIRROR_ROOM': '',
+  'MAINHALL': ''
+}
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      startedGame: false,
       title: "Outside",
       description: "It's cold outside. There is a strange old house in front of you.There isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to the west side of the house.",
       chatboxText: [],
@@ -25,7 +37,8 @@ class App extends Component {
       level: "OUTSIDE",
       levelHistory: {
         OUTSIDE: true
-      }
+      },
+      audio: './Audio/test.mp3'
     };
     this.updateState = this.updateState.bind(this);
   }
@@ -43,6 +56,9 @@ class App extends Component {
       newGameState.usedItems = response.state.usedItems
       newGameState.isBurned = response.state.isBurned;
       newGameState.levelHistory = this.state.levelHistory
+      newGameState.audio = './Audio/' + audioFile[levels[newGameState.level]]
+      console.log("######################################poo" + newGameState.audio)
+      console.log('#########' + newGameState.level)
 
       if (newTitle) {
         newGameState.title = newTitle;
@@ -65,7 +81,15 @@ class App extends Component {
       console.log(this.state);
     });
   }
-
+  componentDidMount = () => {
+    document.querySelector("body").addEventListener('keydown', (event) => {
+      if(event.keyCode === 13) {
+        if(!this.state.startedGame) {
+          this.setState({startedGame: true})
+        }
+      }
+    })
+  }
   showMapModal = () => {
     this.setState({
       ...this.state,
@@ -86,11 +110,22 @@ class App extends Component {
       commandShow: !this.state.commandShow
     });
   };
+  handleKeyDown = () => {
+    console.log('hello')
+  }
   render() {
     console.log(this.state.level)
 
     return (
       <main id="wrapper">
+        {
+          !this.state.startedGame
+          ? <div class="main-menu">
+              <h1>Enter:_</h1>
+              <h2 class="start-game">Press enter</h2>
+            </div> 
+          : null
+        }
         <div className="container">
           <ButtonContainer
             props
@@ -116,17 +151,19 @@ class App extends Component {
               onClose={this.showCommandModal}
               show={this.state.commandShow}
             >
-              <Commands />
+              <Commands/>
             </Modal>
             <Terminal updateState={this.updateState} />
           </div>
         </div>
-        <Sound
-          url="./Audio/test.mp3"
-          playStatus={Sound.status.PLAYING}
-        >
-
-        </Sound>
+        {
+          this.state.startedGame 
+          ? <audio
+            autoPlay
+            src={this.state.audio}>
+            </audio>
+          : null
+        }
       </main>
     );
   }
