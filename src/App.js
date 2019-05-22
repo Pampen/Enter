@@ -8,6 +8,7 @@ import Inventory from "./components/inventory";
 import Modal from "./components/Modal";
 import Commands from "./components/commands";
 import Map from "./components/map";
+import Sound from "react-sound"
 
 class App extends Component {
   constructor(props) {
@@ -120,6 +121,12 @@ class App extends Component {
             <Terminal updateState={this.updateState} />
           </div>
         </div>
+        <Sound
+          url="./Audio/test.mp3"
+          playStatus={Sound.status.PLAYING}
+        >
+
+        </Sound>
       </main>
     );
   }

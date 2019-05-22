@@ -45,11 +45,6 @@ def handleMainHallBlueKey(userInput, state):
     else:
         return handleInvalidInput(userInput, state)
 
-
-
-
-
-    
 def finishedLevel(userInput, state):
     response = {
     'state': state,
