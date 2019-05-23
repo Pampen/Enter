@@ -12,7 +12,7 @@ class Map extends Component {
         mainLevel = levels[key];
       };
     };
-    return <MiniMap mainLevel={mainLevel} level={this.props.level} levelHistory={this.props.levelHistory}/>
+    return <MiniMap mainLevel={mainLevel} level={this.props.level} levelHistory={this.props.levelHistory} />
   };
 };
 
