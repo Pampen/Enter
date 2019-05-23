@@ -11,7 +11,9 @@ export default function returnFlaskPost(message, state) {
         usedItems: state.usedItems,
         inventory: state.inventory,
         level: state.level,
-        isBurned: state.isBurned      }
+        isBurned: state.isBurned,
+        pinkPuzzleItems: state.pinkPuzzleItems
+      }
     })
   }).then(response => {
     return response.json();
