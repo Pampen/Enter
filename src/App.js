@@ -33,7 +33,7 @@ class App extends Component {
         lightSwitch: false,
       },
       isBurned: [],
-      level: "OUTSIDE",
+      level: "GREENHOUSE",
       levelHistory: {
         OUTSIDE: true
       },
