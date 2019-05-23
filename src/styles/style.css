@@ -259,7 +259,6 @@ body {
 
 .commandList {
   position: absolute;
-  margin-top: 16px;
   top: 100%;
   padding: 10px 10px 0px 10px;
   background-color: #333;
