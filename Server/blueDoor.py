@@ -158,7 +158,7 @@ def handleBlueCorridor6(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleBlueCorridor7(userInput, state):
-    if userInput == 'USE RUSTY KEY' and "rustyKey" in state["inventory"]:
+    if userInput == 'USE RUSTY KEY' or userInput == 'USE KEY' and "rustyKey" in state["inventory"]:
         state['inventory']['rustyKey']['itemUse'] = True
         return handlePersistantItems(state, 'rustyKey', 'BLUE_CORRIDOR_7') and handleUseRustyKey(state, userInput)
     elif userInput == 'GO SOUTH' or userInput == 'GO EAST' or userInput == 'GO NORTH': 
