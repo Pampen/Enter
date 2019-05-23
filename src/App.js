@@ -117,9 +117,9 @@ class App extends Component {
       <main id="wrapper">
           {
           !this.state.startedGame
-          ? <div class="main-menu">
+          ? <div className="main-menu">
               <h1>Enter:_</h1>
-              <h2 class="start-game">Press enter</h2>
+              <h2 className="start-game">Press enter</h2>
             </div> 
           : null
         }
