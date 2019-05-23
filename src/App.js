@@ -11,13 +11,13 @@ import Map from "./components/map";
 import {levels} from './utilities/levelChecker'
 
 const audioFile = {
-  'TUTORIAL': 'test.mp3',
-  'JOY': 'test2.mp3',
-  'ANGER': 'test3.mp3',
-  'LOVE': '',
-  'SADNESS': '',
-  'MIRROR_ROOM': '',
-  'MAINHALL': ''
+  'TUTORIAL': 'tutorial.mp3',
+  'JOY': 'joy.mp3',
+  'ANGER': 'anger.mp3',
+  'LOVE': 'love.mp3',
+  'SADNESS': 'sadness.mp3',
+  'MIRROR_ROOM': 'mirror_room.mp3',
+  'MAIN_HALL': 'tutorial.mp3'
 }
 
 class App extends Component {
@@ -33,11 +33,11 @@ class App extends Component {
         lightSwitch: false,
       },
       isBurned: [],
-      level: "OUTSIDE",
+      level: "GREENHOUSE",
       levelHistory: {
         OUTSIDE: true
       },
-      audio: './Audio/test.mp3'
+      audio: './Audio/tutorial.mp3'
     };
     this.updateState = this.updateState.bind(this);
   }
@@ -56,8 +56,6 @@ class App extends Component {
       newGameState.isBurned = response.state.isBurned;
       newGameState.levelHistory = this.state.levelHistory
       newGameState.audio = './Audio/' + audioFile[levels[newGameState.level]]
-      console.log("######################################poo" + newGameState.audio)
-      console.log('#########' + newGameState.level)
 
       if (newTitle) {
         newGameState.title = newTitle;
@@ -159,6 +157,7 @@ class App extends Component {
           this.state.startedGame 
           ? <audio
             autoPlay
+            loop
             src={this.state.audio}>
             </audio>
           : null

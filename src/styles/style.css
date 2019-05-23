@@ -9,11 +9,6 @@ body {
   font-family: 'Press Start 2P', sans-serif;
   background-color: #555;
 }
-.navbar {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-}
 .main-menu {
   display: flex;
   flex-direction: column;
@@ -183,11 +178,9 @@ body {
   margin-top: 20px;
   margin-bottom: 7px;
 }
-
- /* * 
 .nav-button {
-
-  width: 50px;
+  margin-right: 220px;
+  width: 100px;
   height: 50px;
   background-color: #333;
   -webkit-text-emphasis-style: bold;
@@ -197,7 +190,7 @@ body {
   -webkit-box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
           box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
 }
- * */ 
+
 .inventory {
   padding: 16px;
 }
@@ -254,6 +247,8 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
   margin: -8px; 
   max-height: 60px;
   margin-bottom: 10px;
