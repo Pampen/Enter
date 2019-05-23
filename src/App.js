@@ -115,7 +115,7 @@ class App extends Component {
 
     return (
       <main id="wrapper">
-        {
+          {
           !this.state.startedGame
           ? <div class="main-menu">
               <h1>Enter:_</h1>
@@ -157,6 +157,7 @@ class App extends Component {
           this.state.startedGame 
           ? <audio
             autoPlay
+            loop
             src={this.state.audio}>
             </audio>
           : null
