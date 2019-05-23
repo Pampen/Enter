@@ -117,7 +117,7 @@ def handleAttic(userInput, state):
 
 def handleBedroom(userInput, state):
     if userInput == 'GO EAST' and "greyKey" in state['inventory']:
-        if 'photograph' and 'carKeys' and 'canvas' in state['inventory']: 
+        if 'photograph' in state['inventory'] and 'carKeys' in state['inventory'] and 'canvas' in state['inventory']: 
             state['inventory']['greyKey']['itemUse'] = True
             return goToLevel(state, 'UPPER_FLOOR', userInput) and handleFireLoudDesc(state, userInput)
         else:
@@ -200,7 +200,7 @@ def handleFireLoudDesc(state, userInput):
         'state': state,
         'pageChanges': {
             'levelTitle': "Upper Floor",
-            'levelDescription': "You can hear a loud noise coming from the living room, it sounds like fire, but why is the fire so loud?",
+            'levelDescription': "You can hear a loud noise coming from the living room, it sounds like fire, but why is the fire so loud? There are some stairs leading up.",
             'levelChatboxText': ' YOU ' + userInput.upper() + "."
         }
     }
