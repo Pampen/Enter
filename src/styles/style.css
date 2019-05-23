@@ -9,6 +9,14 @@ body {
           font-family: 'PixelOperatorRegular'; 
   background-color: #555;
 }
+.aboutMain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 30px;
+}
 .main-menu {
   display: flex;
   flex-direction: column;
@@ -21,7 +29,6 @@ body {
   background-color: #555;
   color: white;
 }
-
 
 .nav-button {
   position: absolute;
@@ -110,16 +117,24 @@ body {
   background-color: #444;
 }
 .terminal-input {
-  font-size: 20px;
-  padding: 0;
+  font-family: 'PixelOperatorRegular';
+  box-sizing: border-box;
+  font-size: 24px;
+  padding: 0 16px;
   margin-bottom: 5px;
   height: 50px;
   width: 610px;
   background-color: #242424;
   color: white;
-  border: none;
+  border: 2px solid rgb(186, 121, 9);
+
   text-shadow: 1px 1px 5px black;
-  font-family: 'Quantico', sans-serif;
+}
+
+.terminal-input:before {
+  content: ">";
+  display: block;
+  position: relative;
 }
 .terminal-input:focus {
   outline: 0;
@@ -168,12 +183,23 @@ body {
 #enter-button {
   width: 89px;
   height: 50px;
-  background-color: #333;
+  background-color: rgb(186, 121, 9);
+  font-size: 24px;
+  font-family: 'PixelOperatorRegular';
   -webkit-text-emphasis-style: bold;
           text-emphasis-style: bold;
   color: white;
-  border: 1px solid green;
+  border: none;
   position: absolute;
+}
+
+#enter-button:hover, #enter-button:focus {
+  background-color: rgb(228, 147, 7);
+  cursor: pointer;
+}
+
+#enter-button:active {
+  background-color: rgb(255, 165, 9);
 }
 
 .game-button {
@@ -199,9 +225,21 @@ body {
   -webkit-text-emphasis-style: bold;
           text-emphasis-style: bold;
   color: white;
-  border: 1px solid green;
+  border: 1px solid orange;
   -webkit-box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
           box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
+}
+
+.nav-button a:hover {
+  color: orange;
+}
+
+.nav-button a:visited {
+  color: white;
+}
+
+.nav-button a:active {
+  color: gray;
 }
 
 .inventory {
@@ -221,15 +259,16 @@ body {
 
 .commandList {
   position: absolute;
-    bottom: -21%;
-    padding: 10px 10px 0px 10px;
-    background-color: #333;
-    border-radius: 10px;
-    border: 2px dashed #555;
-    font-size: 20px;
-    min-width: 680px;
-    display: inline;
-    text-align: center;
+  margin-top: 16px;
+  top: 100%;
+  padding: 10px 10px 0px 10px;
+  background-color: #333;
+  border-radius: 10px;
+  border: 2px dashed #555;
+  font-size: 20px;
+  min-width: 680px;
+  display: inline;
+  text-align: center;
 }
 
 #descriptionItem {
@@ -239,7 +278,6 @@ body {
 
 .item {
   position: relative;
-  padding: 5px 0px 10px 0px;
 }
 
 .ulInventory {
@@ -250,21 +288,21 @@ body {
 .ulCommands {
   list-style-type: none;
   padding: 5px;
+  margin: 0;
 }
 
 .description {
   display: none;
   position: absolute;
-  top: 100%;
+  bottom: 100%;
+  left: 50%;
   z-index: 4;
   padding: 10px;
   border: 5px solid black;
-  border-radius: 0 15px 15px 15px;
-  -webkit-box-shadow: 3px 10px 10px #333;
-          box-shadow: 3px 10px 10px #333;
+  border-radius: 15px 15px 15px 0;
   background-color: white;
   color: black;
-  min-width: 180%;
+  min-width: 200px;
 }
 .item-name:hover + .description{
   display: block;
@@ -685,6 +723,6 @@ header {
 .JOY{
   color: #84AE90;
 }
-.MAINHALL{
+.MAIN_HALL{
   color: gray;
 }
