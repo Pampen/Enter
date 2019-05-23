@@ -18,9 +18,9 @@ const maps = {
     "SADNESS": sadnessMap,
     'LOVE': loveMap,
     'MIRROR_ROOM': mirrorRoomMap,
-    'MAINHALL': mainHallMap,
+    'MAIN_HALL': mainHallMap,
     'MAIN_HALL_RETURN_FROM_GREEN': mainHallGoToRedMap,
-    'MAIN_HALL_RETURN_FROM_RED': mainhallGoToPinkMap
+    'MAIN_HALL_RETURN_FROM_RED': mainhallGoToPinkMap,
 };
 
 class MapRow extends Component {
