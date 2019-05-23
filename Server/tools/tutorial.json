@@ -141,7 +141,11 @@
     },
     {
         "level": "CRIB_ROOM",
+<<<<<<< HEAD
         "levelDescription": "This is a room with a pink crib in it. It looks misplaced. There is nothing else in here. The emptiness is too much. Best to move on...",
+=======
+        "levelDescription": "This is a room with a pink crib in it. It looks misplaced. Nothing else in here. The emptiness is too much. Best to move on...",
+>>>>>>> developer_jesper
         "levelTitle": "Crib Room"
     },
     {
@@ -171,12 +175,15 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "level": "MESSY_ROOM_NO_RHYME",
         "levelDescription": "This room is a mess. Broken bottles and thrashed books. A nursery rhyme is scribbled on the walls... ",
         "levelTitle": "Messy Room"
     },
     {
+=======
+>>>>>>> developer_jesper
         "level": "BABY_ROOM_CRIB",
         "levelDescription": "The crib looks beautiful, almost surreal... but it also looks empty.",
         "levelTitle": "Baby room"
@@ -202,12 +209,15 @@
         "levelTitle": "Baby room"
     },
     {
+<<<<<<< HEAD
         "level": "BABY_ROOM_NO_DOLL",
         "levelDescription": "This room is filled with baby things. The walls have painted unicorns, and the shelves are filled with toys. The only thing missing is the crib...",
         "levelTitle": "Baby room"
     },
     {
 >>>>>>> fddcab8f991372c15b77d750a1b8902dbb8da4b5
+=======
+>>>>>>> developer_jesper
         "level": "BLUE_START",
         "levelDescription": "You enter a dark room, and you hear a faint sobbing. The only light there is, is shining through the bottom of a door to your left. In front of you is a hallway leading seemingly into nothingness.",
         "levelTitle": "Hallway"
