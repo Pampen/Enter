@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import "./styles/style.css";
 import sendMessage from "./utilities/connect.js";
-import ButtonContainer from "./components/button-container";
 import GameScreen from "./components/game-screen";
 import Terminal from "./components/terminal";
-import Inventory from "./components/inventory";
-import Modal from "./components/Modal";
-import Commands from "./components/commands";
 import Map from "./components/map";
-import {levels} from './utilities/levelChecker';
+import { levels } from './utilities/levelChecker';
+import Testinventory from "./components/testinventory";
+import Testcommand from "./components/testCommands"
 
 const audioFile = {
   'TUTORIAL': 'tutorial.mp3',
@@ -80,33 +78,13 @@ class App extends Component {
   }
   componentDidMount = () => {
     document.querySelector("body").addEventListener('keydown', (event) => {
-      if(event.keyCode === 13) {
-        if(!this.state.startedGame) {
-          this.setState({startedGame: true})
+      if (event.keyCode === 13) {
+        if (!this.state.startedGame) {
+          this.setState({ startedGame: true })
         }
       }
     })
   }
-  showMapModal = () => {
-    this.setState({
-      ...this.state,
-      mapShow: !this.state.mapShow
-    });
-  };
-
-  showInventoryModal = () => {
-    this.setState({
-      ...this.state,
-      inventoryShow: !this.state.inventoryShow
-    });
-  };
-
-  showCommandModal = () => {
-    this.setState({
-      ...this.state,
-      commandShow: !this.state.commandShow
-    });
-  };
   handleKeyDown = () => {
     console.log('hello')
   }
@@ -117,19 +95,21 @@ class App extends Component {
       <main id="wrapper">
           {
           !this.state.startedGame
+<<<<<<< HEAD
           ? <div className="main-menu">
               <h1>Enter:_</h1>
               <h2 className="start-game">Press enter</h2>
             </div> 
           : null
+=======
+            ? <div class="main-menu">
+              <h1>Enter:_</h1>
+              <h2 class="start-game">Press enter</h2>
+            </div>
+            : null
+>>>>>>> f1729e42076c3bd699fe9e88f4438e7df004b931
         }
         <div className="container">
-          <ButtonContainer
-            props
-            handleMapClick={this.showMapModal}
-            handleInventoryClick={this.showInventoryModal}
-            handleCommandClick={this.showCommandModal}
-          />
           <div className="game-container">
             <GameScreen
               title={this.state.title}
@@ -138,30 +118,33 @@ class App extends Component {
               level={this.state.level}
             />
             <Map level={this.state.level} levelHistory={this.state.levelHistory} />
-            <Modal
-              onClose={this.showInventoryModal}
-              show={this.state.inventoryShow}
-            >
-              <Inventory inventory={this.state.inventory} />
-            </Modal>
-            <Modal
-              onClose={this.showCommandModal}
-              show={this.state.commandShow}
-            >
-              <Commands/>
-            </Modal>
+
+            <Testinventory inventory={this.state.inventory} />
+            <Testcommand />
+
             <Terminal updateState={this.updateState} />
           </div>
         </div>
+<<<<<<< HEAD
           {
             this.state.startedGame 
+=======
+        {
+          this.state.startedGame
+>>>>>>> f1729e42076c3bd699fe9e88f4438e7df004b931
             ? <audio
               autoPlay
               loop
               src={this.state.audio}>
+<<<<<<< HEAD
               </audio>
             : null
           }
+=======
+            </audio>
+            : null
+        }
+>>>>>>> f1729e42076c3bd699fe9e88f4438e7df004b931
       </main>
     );
   }
