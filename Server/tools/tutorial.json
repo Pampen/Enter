@@ -1,7 +1,7 @@
 [
     {
         "level": "OUTSIDE",
-        "levelDescription": "It's cold outside. There is a strange old house in front of you. There isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaves to the west side of the house.",
+        "levelDescription": "It's cold outside. There is a strange old house in front of you. There isn't much to see around you. You are surrounded by a dense forest. There is also a small path covered in leaves to the west side of the house.",
         "levelTitle": "Outside"
     },
     {
@@ -156,7 +156,7 @@
     },
     {
         "level": "TOY_CAR_ROOM",
-        "levelDescription": "The room bathes in a glowing red light. A silver toy car lies upside down in the middle of the room. A red stain slowly grows from under it, and a squeal like a pig being slaughtered can be heard... your head starts to throb and your heart beats a thousand beats a minute... you have to get out. Now.",
+        "levelDescription": "The room bathes in a glowing red light. A silver toy car lies upside down in the middle of the room. A dark stain slowly grows from under it, and a squeal like a pig being slaughtered can be heard... your head starts to throb and your heart beats a thousand beats a minute... you have to get out. Now.",
         "levelTitle": "Toy car room"
     },
     {
@@ -303,6 +303,11 @@
         "level": "SADNESS",
         "levelDescription": "You remembered that you woke up in the hospital after the accident and your parents was by your side. They weren't happy, they had this sadness in their eyes. You couldn't see your sister anywhere, so you asked your parents, but they didnt reply. They gave me a box which contained a pocket watch. Inside the pocket watch there was a picture of my niece. You closed the pocket watch and you were filled with endless pain and misery. You didnt argue in the kitchen, You were arguing in the car. You were the driver and you didn't see the car that would forever change your and your sisters lives. Her clock stopped ticking and she left you, and now you are left with nothing but time.",
         "levelTitle": "Sadness"
+    },
+    {
+        "level": "NOWHERE",
+        "levelDescription": "You lost or something? What the hell are you doing here? Get back to the game weirdo!",
+        "levelTitle": "Nowhere"
     },
     {
         "level": "END",
