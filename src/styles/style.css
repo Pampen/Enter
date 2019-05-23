@@ -316,7 +316,22 @@ body {
   margin: 10px;
   text-shadow: 0 0 20px black;
   color: white;
-  text-align: left;
+  text-decoration: none;
+}
+.game-nav {
+  font-size: 24px;
+  letter-spacing: 6px;
+  margin: auto;
+  text-shadow: 0 0 20px black;
+  color: white;
+  margin-left: 100px;
+  text-decoration: none;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 300px;
 }
 #game-title-first-letter {
   font-size: 32px;
@@ -342,10 +357,11 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
   margin: -8px; 
   max-height: 60px;
   margin-bottom: 10px;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
  header .copyright{
