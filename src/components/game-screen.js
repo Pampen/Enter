@@ -4,6 +4,7 @@ import {levels} from '../utilities/levelChecker'
 export default class GameScreen extends Component {
     render() {
         const  color = levels[this.props.level]
+        console.log('COLOOOOOOOOOOOR: ' + color)
         return(
             <div className="game-screen">
                 <div className="game-screen-header">

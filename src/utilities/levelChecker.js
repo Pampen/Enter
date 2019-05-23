@@ -28,6 +28,7 @@ const levels = {
     "BEDROOM": "ANGER",
     "BASEMENT": "ANGER",
     "CRIB_ROOM": "LOVE",
+    "TOY_CAR_ROOM": "LOVE",
     "BABY_ROOM": "LOVE",
     "NURSING_ROOM": "LOVE",
     "STUDY_ROOM": "LOVE",
@@ -54,11 +55,15 @@ const levels = {
     "BLUE_CORRIDOR_8": "SADNESS",
     "BLUE_CORRIDOR_9": "SADNESS",
     "BLUE_FINISH": "SADNESS",
-    "MIRROR_ROOM": "MIRROR_ROOM",
+    "MIRROR_ROOM_1": "MIRROR_ROOM",
+    "MIRROR_ROOM_2": "MIRROR_ROOM",
     "JOY": "MIRROR_ROOM",
-    "ANGER": "MIRROR_ROOM",
+    "ANGER_1": "MIRROR_ROOM",
+    "ANGER_2": "MIRROR_ROOM",
     "LOVE": "MIRROR_ROOM",
-    "SADNESS": "MIRROR_ROOM"
+    "SADNESS_1": "MIRROR_ROOM",
+    "SADNESS_2": "MIRROR_ROOM",
+    "END": ""
 }
 
 export { levels }

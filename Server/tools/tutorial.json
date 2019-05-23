@@ -1,7 +1,7 @@
 [
     {
         "level": "OUTSIDE",
-        "levelDescription": "It's cold outside. There is a strange old house in front of you. There isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to the west side of the house.",
+        "levelDescription": "It's cold outside. There is a strange old house in front of you. There isn't much to see around you. You are surrounded by a dense forest. There is also a small path covered in leaves to the west side of the house.",
         "levelTitle": "Outside"
     },
     {
@@ -151,8 +151,13 @@
     },
     {
         "level": "BABY_ROOM",
-        "levelDescription": "This room is filled with baby things. The walls have painted unicorns, and the shelves are filled with toys. A worn doll catches the eye. Is it waving or are you losing your mind? The only thing missing is the crib...",
+        "levelDescription": "This room is filled with baby things. The walls have painted unicorns, and the shelves are filled with toys. A worn doll catches your eye. Is it waving or are you losing your mind? The only thing missing is the crib...",
         "levelTitle": "Baby Room"
+    },
+    {
+        "level": "TOY_CAR_ROOM",
+        "levelDescription": "The room bathes in a glowing red light. A silver toy car lies upside down in the middle of the room. A dark stain slowly grows from under it, and a squeal like a pig being slaughtered can be heard... your head starts to throb and your heart beats a thousand beats a minute... you have to get out. Now.",
+        "levelTitle": "Toy car room"
     },
     {
         "level": "NURSING_ROOM",
@@ -191,7 +196,7 @@
     },
     {
         "level": "BABY_ROOM_DOLL",
-        "levelDescription": "The doll almost looks like it is shivering in cold..",
+        "levelDescription": "The doll almost looks like it is shivering in cold...",
         "levelTitle": "Baby room"
     },
     {
@@ -206,7 +211,7 @@
     },
     {
         "level": "BABY_ROOM_KEY",
-        "levelDescription": "A pink key on the floor. A door with a blueish tint on the east wall.. ",
+        "levelDescription": "A pink key on the floor. A door with a blueish tint on the east wall...",
         "levelTitle": "Baby room"
     },
     {
@@ -275,9 +280,14 @@
         "levelTitle": "Corridor"
     },
     {
-        "level": "MIRROR_ROOM",
-        "levelDescription": "There isn't much in this room except for darkness and a bright beam of light shining down on a big long mirror. As you approach the mirror, tears starts to flow down your face as you realize who you are. You can't breathe, you're gasping for air, but it feels like you are drowning. You try to scream but cannot make a sound. You lie down on the floor, clench your fist and start hitting the floor until you feel something again. As you rise, you can see the real you, what you have become, and you remember everything. Your dear sister, black-hair and blue eyes. You had an unbreakable bond that only twins can understand. She was so full of joy and energy just like her daughter, a daughter without a mother. It was your fault. Somehow, you have repressed and forgotten your own memories to make yourself accept the image staring back at you in the mirror.",
-        "levelTitle": "Mirror Room"
+        "level": "MIRROR_ROOM_1",
+        "levelDescription": "A dark room with a bright beam of light shining down on a mirror. As you approach it, tears starts to flow down your face as you realize who you are.It feels like you are drowning. You can see the real you, what you have become, and you remember everything. Your sister, raven hair and blue eyes. You shared a bond only twins can understand...",
+        "levelTitle": "Mirror Room 1"
+    },
+    {
+        "level": "MIRROR_ROOM_2",
+        "levelDescription": "...She was so full of joy just like her daughter, the orphaned daughter. It was your fault. Somehow, you have repressed your own memories to make yourself accept the image staring back at you in the mirror.",
+        "levelTitle": "Mirror Room 2"
     },
     {
         "level": "JOY",
@@ -285,9 +295,14 @@
         "levelTitle": "Joy"
     },
     {
-        "level": "ANGER",
-        "levelDescription": "This memory is different from before, it seems like it has been a good 15 years from that day at the beach. You are arguing with your sister in the kitchen back at your house. The walls are so red and the flames from the fireplace are so violent. Your sister seems pretty upset with you and you can't seem to reason with her. You can feel the rage flowing through your body and your sister suddenly stops talking to you. She walks furiously to the hall, takes the car keys and slams the door behind her. This was the last time you ever saw her. She had black hair...",
-        "levelTitle": "Anger"
+        "level": "ANGER_1",
+        "levelDescription": "This memory is different from before, it seems like it has been a good 15 years from that day at the beach. You are arguing with your sister in the kitchen back at your house. The walls are so red and the flames from the fireplace are so violent. Your sister seems pretty upset with you and you can't seem to reason with her...",
+        "levelTitle": "Anger 1"
+    },
+    {
+        "level": "ANGER_2",
+        "levelDescription": "...You can feel the rage flowing through your body and your sister suddenly stops talking to you. She walks furiously to the hall, takes the car keys and slams the door behind her. This was the last time you ever saw her. She had black hair...",
+        "levelTitle": "Anger 2"
     },
     {
         "level": "LOVE",
@@ -295,8 +310,23 @@
         "levelTitle": "Love"
     },
     {
-        "level": "SADNESS",
-        "levelDescription": "You remembered that you woke up in the hospital after the accident and your parents was by your side. They weren't happy, they had this sadness in their eyes. You couldn't see your sister anywhere, so you asked your parents, but they didnt reply. They gave me a box which contained a pocket watch. Inside the pocket watch there was a picture of my niece. You closed the pocket watch and you were filled with endless pain and misery. You didnt argue in the kitchen, You were arguing in the car. You were the driver and you didn't see the car that would forever change your and your sisters lives. Her clock stopped ticking and she left you, and now you are left with nothing but time.",
-        "levelTitle": "Sadness"
+        "level": "SADNESS_1",
+        "levelDescription": "You remembered that you woke up in the hospital after the accident and your parents was by your side. They weren't happy, they had this sadness in their eyes. You couldn't see your sister anywhere, so you asked your parents, but they didnt reply...",
+        "levelTitle": "Sadness 1"
+    },
+    {
+        "level": "SADNESS_2",
+        "levelDescription": "They gave you a box which contained a pocket watch. Inside the pocket watch was a picture of my niece. You closed the pocket watch and you were filled with endless pain and misery. You didnt argue in the kitchen, You were arguing in the car. You were the driver and you didn't see the car that would forever change your and your sisters lives. Her clock stopped ticking and she left you, and now you are left with nothing but time.",
+        "levelTitle": "Sadness 2"
+    },
+    {
+        "level": "NOWHERE",
+        "levelDescription": "You lost or something? What the hell are you doing here? Get back to the game weirdo!",
+        "levelTitle": "Nowhere"
+    },
+    {
+        "level": "END",
+        "levelDescription": "You've managed to reach the end of the game, thank you for playing!",
+        "levelTitle": "The End"
     }
 ]

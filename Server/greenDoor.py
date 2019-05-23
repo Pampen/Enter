@@ -1,5 +1,8 @@
 from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handleInvalidInput, takeItem, handleDoorLock, goToLevelShedPuzzle, returnToMainHall
-
+global shedCalled
+global gateCalled
+shedCalled = 0
+gateCalled = 0 
 def handleBeach(userInput, state):
     if userInput == 'GO WEST':
         if "oilLamp" in state["inventory"]:
@@ -16,10 +19,15 @@ def handleBeach(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleGate(userInput, state):
+    global gateCalled
     if userInput == "USE BRONZE KEY" or userInput == 'USE KEY' and "bronzeKey" in state["inventory"]:
+        gateCalled = gateCalled + 1
         return goToLevel(state, 'LIGHTHOUSE_OUTSIDE', userInput)
     elif userInput == "GO NORTH":
-        return handleDoorLock(state, "GATE", userInput)
+        if "bronzeKey" in state["inventory"] and gateCalled >= 1:
+            return goToLevel(state, "LIGHTHOUSE_OUTSIDE", userInput) and handleNewGateDesc(state, userInput)
+        else:
+            return handleDoorLock(state, "GATE", userInput)
     elif userInput == "GO SOUTH":
         return goToLevel(state, "BEACH", userInput) and handleNewBeachDesc(state, userInput)
     elif userInput == 'GO WEST' or userInput == 'GO EAST':
@@ -71,24 +79,37 @@ def handleShedFrontDoor(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleShed(userInput, state):
+    global shedCalled
     if userInput == 'GO WEST' or userInput == "GO SOUTH" or userInput == "GO NORTH":
         return handleInvalidDirection(state)
     elif userInput == 'TAKE STAIRS' or userInput == 'USE STAIRS':
-        return handleBasement(state)
+        if "oilLamp" in state["inventory"] and shedCalled < 1:
+            return handleBasement(state)
+        elif "oilLamp" not in state["inventory"]:
+            return handleNoOillamp(state)
+        elif "oilLamp" in state["inventory"] and shedCalled >= 1:
+            return goToLevel(state, "CELLAR", userInput) and handleNewStairsDesc(state, userInput)
+        else:
+            goToLevel(state, "SHED", userInput)
     elif userInput == "TAKE OIL LAMP" or userInput == "TAKE LAMP" or userInput == "TAKE OLD FASHIONED OIL LAMP" or userInput == "TAKE OLD-FASHIONED OIL LAMP":
         return takeItem(state, 'oilLamp')
     elif userInput == "THROW OIL LAMP" and "oilLamp" in state["inventory"]:
         return handleNewShedDescOilLamp(state)
     elif userInput == 'GO EAST':
         return goToLevel(state, "SHED_FRONT_DOOR", userInput) and handleNewShedFrontDoorDesc(state, userInput)
-    elif userInput == "JOYFUL":
-        if "tornPages" in state["inventory"]:
+    elif userInput == "TAKE FISHERMAN GEAR" or userInput == "TAKE OLD FISHERMAN GEAR":
+        return handleInvalidGear(state)
+    elif userInput == "USE PADLOCK" or userInput == "USE LOCK":
+        shedCalled = shedCalled + 1
+        return handlePadlock(state, shedCalled)
+    elif userInput == "JOYFUL" and shedCalled >= 1:
+        if "tornPages" in state["inventory"] and "oilLamp" in state["inventory"]:
             return goToLevelShedPuzzle(state, "CELLAR", userInput)
         else:
             return handleDoorLock(state, "SHED", userInput)
     else:
         return handleInvalidInput(userInput, state)
-  
+
 def handleBeachEastSide(userInput, state):
     if userInput == 'GO WEST':
         return goToLevel(state, 'BEACH', userInput) and handleNewBeachDesc(state, userInput)
@@ -155,7 +176,7 @@ def handleBasement(state):
     response = {
         'state': state,
         'pageChanges': {
-            'levelChatboxText': "While trying to make your way downstairs, a door is blocking your way from moving forward. The door appears to be locked with a bunch of chains put onto it, there's a padlock that requires you to enter six letters in a certain order."
+            'levelChatboxText': "While trying to make your way downstairs, a door is blocking your way from moving forward. The door appears to be locked with a bunch of chains put onto it, there's a padlock that you can use."
         }
     }
     return response
@@ -244,11 +265,67 @@ def handleInvalidPhoto(state):
     }
     return response
 
+def inspectPhoto(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': "It's a family photo of the people who used to live here..."
+        }
+    }
+    return response
+
 def handleNewShedDescOilLamp(state):
     response = {
         'state': state,
         'pageChanges': {
             'levelChatboxText': "Throwing the oil lamp would result in a fire..."
         }
+    }
+    return response
+
+def handleInvalidGear(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': "Doesn't seem worth taking the fisherman gear..."
+        }
+    }
+    return response
+
+def handleNoOillamp(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': "It's seems to be very dark down there, you need something to light up your surrounding..."
+        }
+    }
+    return response
+
+def handlePadlock(state, called):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': "You are holding the padlock in your hand. It requires you to enter six letters in a certain order. What do you want to input?"
+        }
+    }
+    return response
+
+def handleNewStairsDesc(state, userInput):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelTitle': "Cellar",
+            'levelChatboxText': 'The door has already been unlocked from before...'
+        }       
+    }
+    return response
+
+def handleNewGateDesc(state, userInput):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelTitle': "Lighthouse Outside",
+            'levelChatboxText': 'The door has already been unlocked from before...'
+        }       
     }
     return response

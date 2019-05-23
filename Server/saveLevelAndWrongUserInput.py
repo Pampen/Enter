@@ -1,6 +1,9 @@
 import json
 import os
 
+'''
+START: Functions belonging to red module
+'''
 def redPuzzle(state, userInput): 
     newState = state
     objectList = state["isBurned"]
@@ -96,7 +99,9 @@ def takeBurnItem(state, currentItems):
         }
     }
     return response
-
+'''
+END: Functions belonging to red module
+'''
 def goToLevel(state, currentLevel, userInput):
     response = {
         'state': state,
@@ -114,6 +119,9 @@ def goToLevel(state, currentLevel, userInput):
             response['state']['level'] = level['level']
             return response
 
+'''
+START: Functions belonging to blue module
+'''
 def checkTorchItem(state, currentLevel, userInput):
     if "torch" in state['inventory']:
         if "rustyKey" not in state['inventory']:
@@ -174,7 +182,9 @@ def trueKeyDescription(state, currentLevel, userInput):
             response['pageChanges']['levelDescription'] = level['levelDescription']
             response['state']['level'] = level['level']
             return response
-
+'''
+END: Functions belonging to blue module
+'''
 def takeItem(state, currentItem):
     if currentItem in state['inventory']:
         response = {
