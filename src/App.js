@@ -96,8 +96,12 @@ class App extends Component {
           {
           !this.state.startedGame
           ? <div className="main-menu">
-              <h1>Enter:_</h1>
-              <h2 className="start-game">Press enter</h2>
+              <h1 className="game-title">
+                <span id="game-title-first-letter">E</span>nter:<span id="title-animation">_</span>
+              </h1>
+              <span id="title-animation">
+                <h2 className="start-game">Press enter</h2>
+              </span>
             </div> 
           : null
         }
