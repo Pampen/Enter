@@ -18,6 +18,8 @@ def handleMainHall(userInput, state):
             return finishedLevel(userInput, state)
         else:
             return goToLevel (state, 'BEACH', userInput)
+    elif userInput == 'TAKE CREEPY PAINTINGS' or userInput == 'TAKE PAINTINGS':
+        return handleInvalidPaintings(state)
     else:
         return handleInvalidInput(userInput, state)
 
@@ -41,7 +43,7 @@ def handleMainHallPinkKey(userInput, state):
 
 def handleMainHallBlueKey(userInput, state):
     if userInput == 'USE BLUE KEY':
-        return goToLevel (state, 'MIRROR_ROOM', userInput)
+        return goToLevel (state, 'MIRROR_ROOM_1', userInput)
     else:
         return handleInvalidInput(userInput, state)
 
@@ -50,6 +52,15 @@ def finishedLevel(userInput, state):
     'state': state,
     'pageChanges': {
         'levelChatboxText': 'You cannot go ' + userInput.upper() + '. You have already finished that level.'
+    }
+}
+    return response
+
+def handleInvalidPaintings(state):
+    response = {
+    'state': state,
+    'pageChanges': {
+        'levelChatboxText': 'Ehm...why would you even try that? You can do better.'
     }
 }
     return response
