@@ -12,8 +12,12 @@ def handleOutside(userInput, state):
         return goToLevel(state, 'MAIN_HALL', userInput)
     elif userInput == 'LOOK NICE':
         return goToLevel(state, 'MIRROR_ROOM_1', userInput)
+    elif userInput == 'MR JALS':
+        return goToLevel(state, 'SADNESS', userInput)
     elif userInput == 'PET THE BABY':
         return goToLevel(state, 'CRIB_ROOM', userInput)
+    elif userInput == 'GO NOWHERE':
+        return goToLevel(state, 'NOWHERE', userInput)
     elif userInput == 'SMASH':
         return goToLevel(state, 'LIVING_ROOM', userInput)
     elif userInput == 'HAVE A NICE DAY':
@@ -40,6 +44,13 @@ def handlePorch(userInput, state):
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)
+
+def handleNowhere(userInput, state):
+    if userInput == 'GET BACK':
+        return goToLevel(state, 'NOWHERE', userInput)
+    else:
+        return handleInvalidDirection(state)
+ 
 
 def handleGreenHouse(userInput, state):
     if userInput == 'GO EAST':

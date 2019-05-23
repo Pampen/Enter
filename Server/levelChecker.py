@@ -1,4 +1,4 @@
-from tutorial import handleGreenHouse, handleOutside, handlePorch
+from tutorial import handleGreenHouse, handleOutside, handlePorch, handleNowhere
 from mainHall import handleMainHall, handleMainHallAllKeys, handleMainHallBlueKey, handleMainHallPinkKey, handleMainHallRedKey
 from greenDoor import handleBeach, handleCaptainsCabin, handleCellar, handleGate, handleShedFrontDoor, handleShed, handleBeachEastSide, handleShipwreck, handleLighthouse, handleLighthouseOutside, handleLighthouseTopFloor, handleOcean
 from redDoor import handleUpperFloor, handleLivingRoom, handleKitchen, handleHall, handleBedroom, handleBasement, handleAttic
@@ -8,6 +8,7 @@ from mirrorRoom import handleMirrorRoom1, handleMirrorRoom2, handleJoy, handleAn
 from endRoom import handleLastRoom
 levels = {
     'OUTSIDE': handleOutside,
+    'NOWHERE': handleNowhere,
     'GREENHOUSE': handleGreenHouse,
     'GREENHOUSE_LIGHT_ON': handleGreenHouse,
     'GREENHOUSE_LIGHT_AND_KEY_ON': handleGreenHouse,
