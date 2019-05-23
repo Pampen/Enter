@@ -257,6 +257,15 @@ def handleInvalidPhoto(state):
     }
     return response
 
+def inspectPhoto(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': "It's a family photo of the people who used to live here..."
+        }
+    }
+    return response
+
 def handleNewShedDescOilLamp(state):
     response = {
         'state': state,
