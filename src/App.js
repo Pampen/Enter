@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import "./styles/style.css";
 import sendMessage from "./utilities/connect.js";
-import ButtonContainer from "./components/button-container";
 import GameScreen from "./components/game-screen";
 import Terminal from "./components/terminal";
-import Inventory from "./components/inventory";
-import Modal from "./components/Modal";
-import Commands from "./components/commands";
 import Map from "./components/map";
-import Testcommands from "./components/testinventory";
 import { levels } from './utilities/levelChecker';
+import Testinventory from "./components/testinventory";
+import Testcommand from "./components/testCommands"
 
 const audioFile = {
   'TUTORIAL': 'tutorial.mp3',
@@ -34,7 +31,7 @@ class App extends Component {
         lightSwitch: false,
       },
       isBurned: [],
-      level: "GREENHOUSE",
+      level: "OUTSIDE",
       levelHistory: {
         OUTSIDE: true
       },
@@ -88,26 +85,6 @@ class App extends Component {
       }
     })
   }
-  showMapModal = () => {
-    this.setState({
-      ...this.state,
-      mapShow: !this.state.mapShow
-    });
-  };
-
-  showInventoryModal = () => {
-    this.setState({
-      ...this.state,
-      inventoryShow: !this.state.inventoryShow
-    });
-  };
-
-  showCommandModal = () => {
-    this.setState({
-      ...this.state,
-      commandShow: !this.state.commandShow
-    });
-  };
   handleKeyDown = () => {
     console.log('hello')
   }
@@ -125,12 +102,6 @@ class App extends Component {
             : null
         }
         <div className="container">
-          <ButtonContainer
-            props
-            handleMapClick={this.showMapModal}
-            handleInventoryClick={this.showInventoryModal}
-            handleCommandClick={this.showCommandModal}
-          />
           <div className="game-container">
             <GameScreen
               title={this.state.title}
@@ -140,20 +111,9 @@ class App extends Component {
             />
             <Map level={this.state.level} levelHistory={this.state.levelHistory} />
 
-            <Testcommands inventory={this.state.inventory} />
+            <Testinventory inventory={this.state.inventory} />
+            <Testcommand />
 
-            <Modal
-              onClose={this.showInventoryModal}
-              show={this.state.inventoryShow}
-            >
-              <Inventory inventory={this.state.inventory} />
-            </Modal>
-            <Modal
-              onClose={this.showCommandModal}
-              show={this.state.commandShow}
-            >
-              <Commands />
-            </Modal>
             <Terminal updateState={this.updateState} />
           </div>
         </div>
