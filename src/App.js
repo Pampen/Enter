@@ -15,7 +15,13 @@ const audioFile = {
   'LOVE': 'love.mp3',
   'SADNESS': 'sadness.mp3',
   'MIRROR_ROOM': 'mirror_room.mp3',
-  'MAIN_HALL': 'tutorial.mp3'
+  'MAIN_HALL': 'tutorial.mp3',
+  'MAIN_HALL_RETURN_FROM_GREEN': 'tutorial.mp3',
+  'MAIN_HALL_RETURN_FROM_RED': 'tutorial.mp3',
+  "MAINHALL_ALL": 'tutorial.mp3',
+  "MAINHALL_RED": 'tutorial.mp3',
+  "MAINHALL_PINK": 'tutorial.mp3',
+  "MAINHALL_BLUE": 'tutorial.mp3'
 }
 
 class App extends Component {
