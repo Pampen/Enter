@@ -153,15 +153,15 @@ class App extends Component {
             <Terminal updateState={this.updateState} />
           </div>
         </div>
-        {
-          this.state.startedGame 
-          ? <audio
-            autoPlay
-            loop
-            src={this.state.audio}>
-            </audio>
-          : null
-        }
+          {
+            this.state.startedGame 
+            ? <audio
+              autoPlay
+              loop
+              src={this.state.audio}>
+              </audio>
+            : null
+          }
       </main>
     );
   }
