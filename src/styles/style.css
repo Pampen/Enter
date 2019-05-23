@@ -215,15 +215,20 @@ body {
 
 .commandList {
   position: absolute;
-  right: 100%;
-  padding: 10px 10px 0px 10px;
-  background-color: #333;
-  margin: 46% 1% 0% 0%;
-  border-radius: 10px;
-  border: 2px dashed #555;
-  font-size: 20px;
-  min-width: 160px;
-  text-align: center;
+    bottom: -24%;
+    padding: 10px 10px 0px 10px;
+    background-color: #333;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    font-size: 20px;
+    min-width: 680px;
+    display: inline;
+    text-align: center;
+}
+
+#descriptionItem {
+  display: inline;
+  margin: 7%;
 }
 
 .item {
@@ -238,7 +243,6 @@ body {
 
 .ulCommands {
   list-style-type: none;
-  margin: 0;
   padding: 5px;
 }
 

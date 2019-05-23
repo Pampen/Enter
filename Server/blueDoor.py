@@ -90,7 +90,7 @@ def handleBlueCorridor3(userInput, state):
             return goToLevel(state, 'BLUE_CORRIDOR_4', userInput)
         else:
              return goToLevel(state, 'BLUE_CORRIDOR_4', userInput) and handleRustyKeyPickupCorridor4(state, userInput)
-    elif userInput == "TAKE RUSTY KEY":
+    elif userInput == "TAKE RUSTY KEY" or userInput == "TAKE KEY":
         return takeItem(state, 'rustyKey') and handleRustyKeyPickup(state, userInput)
     elif userInput == 'GO WEST' or userInput == 'GO NORTH':
         return handleInvalidDirection(state)
