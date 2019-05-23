@@ -33,7 +33,7 @@ const cellar = {
     id: 'CELLAR',
     cellName: 'C',
     connections: [
-        'N'
+        
     ]
 }
 const beachEastSide = {
