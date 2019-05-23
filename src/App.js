@@ -95,19 +95,11 @@ class App extends Component {
       <main id="wrapper">
           {
           !this.state.startedGame
-<<<<<<< HEAD
           ? <div className="main-menu">
               <h1>Enter:_</h1>
               <h2 className="start-game">Press enter</h2>
             </div> 
           : null
-=======
-            ? <div class="main-menu">
-              <h1>Enter:_</h1>
-              <h2 class="start-game">Press enter</h2>
-            </div>
-            : null
->>>>>>> f1729e42076c3bd699fe9e88f4438e7df004b931
         }
         <div className="container">
           <div className="game-container">
@@ -125,26 +117,15 @@ class App extends Component {
             <Terminal updateState={this.updateState} />
           </div>
         </div>
-<<<<<<< HEAD
           {
             this.state.startedGame 
-=======
-        {
-          this.state.startedGame
->>>>>>> f1729e42076c3bd699fe9e88f4438e7df004b931
             ? <audio
               autoPlay
               loop
               src={this.state.audio}>
-<<<<<<< HEAD
               </audio>
             : null
           }
-=======
-            </audio>
-            : null
-        }
->>>>>>> f1729e42076c3bd699fe9e88f4438e7df004b931
       </main>
     );
   }
