@@ -15,7 +15,7 @@ const audioFile = {
   'LOVE': 'love.mp3',
   'SADNESS': 'sadness.mp3',
   'MIRROR_ROOM': 'mirror_room.mp3',
-  'MAINHALL': 'tutorial.mp3'
+  'MAIN_HALL': 'tutorial.mp3'
 }
 
 class App extends Component {
@@ -35,7 +35,7 @@ class App extends Component {
       levelHistory: {
         OUTSIDE: true
       },
-      audio: './Audio/test.mp3'
+      audio: './Audio/tutorial.mp3'
     };
     this.updateState = this.updateState.bind(this);
   }
