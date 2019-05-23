@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-export default class Item extends Component {
+export default class Testitem extends Component {
     render() {
-        const item=this.props.item
-        return(
+        const item = this.props.item
+        return (
 
             <li key={item.itemName} className="item">
-                <span className="item-name"> 
+                <span className="item-name">
                     {item.itemName}
                 </span>
                 <span className="description">

@@ -10,22 +10,22 @@
         "levelTitle": "Greenhouse"
     },
     {
-        "level": "GREENHOUSE_LIGHT_ON",
-        "levelDescription": "There isn't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days. In the middle of all this mess, you can see a brass key.",
-        "levelTitle": "Greenhouse"
-    },
-    {
-        "level": "GREENHOUSE_LIGHT_AND_KEY_ON",
-        "levelDescription": "There isn't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days.",
-        "levelTitle": "Greenhouse"
-    },
-    {
         "level": "PORCH",
         "levelDescription": "The porch looks rather old, and the color is almost gone. The windows are all boarded up from the inside and it looks like the windows are painted in black. This porch is barely holding up.",
         "levelTitle": "Porch"
     },
     {
         "level": "MAIN_HALL",
+        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work.",
+        "levelTitle": "Main Hall"
+    },
+    {
+        "level": "MAIN_HALL_RETURN_FROM_GREEN",
+        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work.",
+        "levelTitle": "Main Hall"
+    },
+    {
+        "level": "MAIN_HALL_RETURN_FROM_RED",
         "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work.",
         "levelTitle": "Main Hall"
     },
@@ -86,7 +86,7 @@
     },
     {
         "level": "CELLAR",
-        "levelDescription": "You find yourself in the basement of the shed. There seems to be nothing but bunch of old junk. Your vision is very limited due to the darkness, maybe you should take a closer look with the help of that oil lamp...",
+        "levelDescription": "You find yourself in the basement of the shed. There seems to be nothing but bunch of old junk. Your vision is very limited due to the darkness, maybe you have something that can help you light up the room",
         "levelTitle": "Cellar"
     },
     {
@@ -281,13 +281,13 @@
     },
     {
         "level": "MIRROR_ROOM_1",
-        "levelDescription": "A dark room with a bright beam of light shining down on a mirror. As you approach it, tears starts to flow down your face as you realize who you are.It feels like you are drowning. You can see the real you, what you have become, and you remember everything. Your sister, raven hair and blue eyes. You shared a bond only twins can understand...",
-        "levelTitle": "Mirror Room 1"
+        "levelDescription": "A dark room with a bright beam of light shining down on a mirror. As you approach it, tears starts to flow down your face as you realize who you are. It feels like you are drowning. You can see the real you, what you have become, and you remember everything. Your sister, raven hair and blue eyes. You shared a bond only twins can understand...",
+        "levelTitle": "Mirror Room"
     },
     {
         "level": "MIRROR_ROOM_2",
         "levelDescription": "...She was so full of joy just like her daughter, the orphaned daughter. It was your fault. Somehow, you have repressed your own memories to make yourself accept the image staring back at you in the mirror.",
-        "levelTitle": "Mirror Room 2"
+        "levelTitle": "Mirror Room"
     },
     {
         "level": "JOY",
@@ -297,12 +297,12 @@
     {
         "level": "ANGER_1",
         "levelDescription": "This memory is different from before, it seems like it has been a good 15 years from that day at the beach. You are arguing with your sister in the kitchen back at your house. The walls are so red and the flames from the fireplace are so violent. Your sister seems pretty upset with you and you can't seem to reason with her...",
-        "levelTitle": "Anger 1"
+        "levelTitle": "Anger"
     },
     {
         "level": "ANGER_2",
         "levelDescription": "...You can feel the rage flowing through your body and your sister suddenly stops talking to you. She walks furiously to the hall, takes the car keys and slams the door behind her. This was the last time you ever saw her. She had black hair...",
-        "levelTitle": "Anger 2"
+        "levelTitle": "Anger"
     },
     {
         "level": "LOVE",
@@ -312,12 +312,12 @@
     {
         "level": "SADNESS_1",
         "levelDescription": "You remembered that you woke up in the hospital after the accident and your parents was by your side. They weren't happy, they had this sadness in their eyes. You couldn't see your sister anywhere, so you asked your parents, but they didnt reply...",
-        "levelTitle": "Sadness 1"
+        "levelTitle": "Sadness"
     },
     {
         "level": "SADNESS_2",
         "levelDescription": "They gave you a box which contained a pocket watch. Inside the pocket watch was a picture of my niece. You closed the pocket watch and you were filled with endless pain and misery. You didnt argue in the kitchen, You were arguing in the car. You were the driver and you didn't see the car that would forever change your and your sisters lives. Her clock stopped ticking and she left you, and now you are left with nothing but time.",
-        "levelTitle": "Sadness 2"
+        "levelTitle": "Sadness"
     },
     {
         "level": "NOWHERE",

@@ -5,7 +5,10 @@ import joyMap from "./maps/joy";
 import angerMap from "./maps/anger";
 import loveMap from "./maps/love";
 import sadnessMap from "./maps/sadness";
-import mirrorRoomMap from "./maps/mirrorRoom";
+import mirrorRoomMap from "./maps/mirrorroom";
+import mainHallMap from "./maps/mainhall";
+import mainHallGoToRedMap from "./maps/mainhallGoToRed";
+import mainhallGoToPinkMap from "./maps/mainhallGoToPink";
 
 const maps = {
     /*Put map functions here. Check tutorial.js in folder maps*/
@@ -15,6 +18,9 @@ const maps = {
     "SADNESS": sadnessMap,
     'LOVE': loveMap,
     'MIRROR_ROOM': mirrorRoomMap,
+    'MAINHALL': mainHallMap,
+    'MAIN_HALL_RETURN_FROM_GREEN': mainHallGoToRedMap,
+    'MAIN_HALL_RETURN_FROM_RED': mainhallGoToPinkMap
 };
 
 class MapRow extends Component {
@@ -81,6 +87,7 @@ export default class MiniMap extends Component {
         if (!currentMap) {
             return ''
         };
+        const shouldSpin = currentMainLevel === 'MIRROR_ROOM';
         return (
             <div className="map-wrapper">
                 <div className="map-compass">
@@ -88,7 +95,7 @@ export default class MiniMap extends Component {
                     <span className="map-compass-s">S</span>
                     <span className="map-compass-w">W</span>
                     <span className="map-compass-e">E</span>
-                    <div className="map-compass-needle"></div>
+                    <div id={shouldSpin ? "mirror-room" : ""} className="map-compass-needle"></div>
                 </div>
                 {currentMap.map((row) => {
                     return <MapRow

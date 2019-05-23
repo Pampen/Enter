@@ -25,7 +25,7 @@ def handleGate(userInput, state):
         return goToLevel(state, 'LIGHTHOUSE_OUTSIDE', userInput)
     elif userInput == "GO NORTH":
         if "bronzeKey" in state["inventory"] and gateCalled >= 1:
-            return goToLevel(state, "LIGHTHOUSE_OUTSIDE", userInput) and handleNewGateDesc(state, userInput)
+            return goToLevel(state, "LIGHTHOUSE_OUTSIDE", userInput) and handleNewGateDesc(state)
         else:
             return handleDoorLock(state, "GATE", userInput)
     elif userInput == "GO SOUTH":
@@ -56,12 +56,16 @@ def handleLighthouse(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleLighthouseTopFloor(userInput, state):
+    global gateCalled
+    global shedCalled
     if userInput == 'GO NORTH' or userInput == 'GO WEST' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
     elif userInput == "TAKE STAIRS" or userInput == 'USE STAIRS':
         return goToLevel(state, "LIGHTHOUSE", userInput)
     elif userInput == 'TAKE GREEN KEY' or userInput == 'TAKE KEY':
-        return returnToMainHall(state, 'greenKey', 'MAIN_HALL')
+        gateCalled = gateCalled - 1
+        shedCalled = shedCalled - 1
+        return state['inventory'].pop('oilLamp') and state['inventory'].pop('bronzeKey') and state['inventory'].pop('tornPages') and returnToMainHall(state, 'greenKey', 'MAIN_HALL_RETURN_FROM_GREEN')
     else:
         return handleInvalidInput(userInput, state)
 
@@ -87,8 +91,10 @@ def handleShed(userInput, state):
             return handleBasement(state)
         elif "oilLamp" not in state["inventory"]:
             return handleNoOillamp(state)
-        elif "oilLamp" in state["inventory"] and shedCalled >= 1:
-            return goToLevel(state, "CELLAR", userInput) and handleNewStairsDesc(state, userInput)
+        elif "bronzeKey" not in state["inventory"] and shedCalled >= 1:
+            return goToLevel(state, "CELLAR", userInput) and handleNewStairsNoLamp(state)
+        elif "bronzeKey" in state["inventory"] and shedCalled >= 1:
+            return goToLevel(state, "CELLAR", userInput) and handleNewStairsDesc(state)
         else:
             goToLevel(state, "SHED", userInput)
     elif userInput == "TAKE OIL LAMP" or userInput == "TAKE LAMP" or userInput == "TAKE OLD FASHIONED OIL LAMP" or userInput == "TAKE OLD-FASHIONED OIL LAMP":
@@ -100,8 +106,11 @@ def handleShed(userInput, state):
     elif userInput == "TAKE FISHERMAN GEAR" or userInput == "TAKE OLD FISHERMAN GEAR":
         return handleInvalidGear(state)
     elif userInput == "USE PADLOCK" or userInput == "USE LOCK":
-        shedCalled = shedCalled + 1
-        return handlePadlock(state, shedCalled)
+        if shedCalled >= 1:
+            return handlePadlockUsed(state)
+        else:
+            shedCalled = shedCalled + 1
+            return handlePadlock(state)
     elif userInput == "JOYFUL" and shedCalled >= 1:
         if "tornPages" in state["inventory"] and "oilLamp" in state["inventory"]:
             return goToLevelShedPuzzle(state, "CELLAR", userInput)
@@ -301,7 +310,7 @@ def handleNoOillamp(state):
     }
     return response
 
-def handlePadlock(state, called):
+def handlePadlock(state):
     response = {
         'state': state,
         'pageChanges': {
@@ -310,22 +319,44 @@ def handlePadlock(state, called):
     }
     return response
 
-def handleNewStairsDesc(state, userInput):
+def handleNewStairsDesc(state):
     response = {
         'state': state,
         'pageChanges': {
             'levelTitle': "Cellar",
+            'levelDescription': "You find yourself in the basement of the shed. There seems to be nothing worthwhile to do here...",
             'levelChatboxText': 'The door has already been unlocked from before...'
         }       
     }
     return response
 
-def handleNewGateDesc(state, userInput):
+def handleNewStairsNoLamp(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelTitle': "Cellar",
+            'levelDescription': "You find yourself in the basement of the shed. There seems to be nothing but bunch of old junk. Your vision is very limited due to the darkness, maybe you have something that can help you light up the room",
+            'levelChatboxText': 'The door has already been unlocked from before...'
+        }       
+    }
+    return response
+
+def handleNewGateDesc(state):
     response = {
         'state': state,
         'pageChanges': {
             'levelTitle': "Lighthouse Outside",
+            'levelDescription': "You stand outside the lighthouse",
             'levelChatboxText': 'The door has already been unlocked from before...'
+        }       
+    }
+    return response
+
+def handlePadlockUsed(state):
+    response = {
+        'state': state,
+        'pageChanges': {
+            'levelChatboxText': 'The padlock has already been used...'
         }       
     }
     return response

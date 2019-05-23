@@ -90,7 +90,7 @@ def handleBlueCorridor3(userInput, state):
             return goToLevel(state, 'BLUE_CORRIDOR_4', userInput)
         else:
              return goToLevel(state, 'BLUE_CORRIDOR_4', userInput) and handleRustyKeyPickupCorridor4(state, userInput)
-    elif userInput == "TAKE RUSTY KEY":
+    elif userInput == "TAKE RUSTY KEY" or userInput == "TAKE KEY":
         return takeItem(state, 'rustyKey') and handleRustyKeyPickup(state, userInput)
     elif userInput == 'GO WEST' or userInput == 'GO NORTH':
         return handleInvalidDirection(state)
@@ -158,7 +158,7 @@ def handleBlueCorridor6(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def handleBlueCorridor7(userInput, state):
-    if userInput == 'USE RUSTY KEY' and "rustyKey" in state["inventory"]:
+    if userInput == 'USE RUSTY KEY' or userInput == 'USE KEY' and "rustyKey" in state["inventory"]:
         state['inventory']['rustyKey']['itemUse'] = True
         return handlePersistantItems(state, 'rustyKey', 'BLUE_CORRIDOR_7') and handleUseRustyKey(state, userInput)
     elif userInput == 'GO SOUTH' or userInput == 'GO EAST' or userInput == 'GO NORTH': 
@@ -201,7 +201,7 @@ def handleBlueCorridor9(userInput, state):
 
 def handleBlueFinish(userInput, state):
     if userInput == 'TAKE BLUE KEY' or userInput == 'TAKE KEY':
-        return returnToMainHall(state, 'blueKey', 'MAIN_HALL_ALL_KEYS')
+        return state['inventory'].pop('torch') and state['inventory'].pop('rustyKey') and returnToMainHall(state, 'blueKey', 'MAIN_HALL_ALL_KEYS')
     elif userInput == 'GO WEST' or userInput == 'GO NORTH' or userInput == 'GO EAST' or userInput == 'GO SOUTH':
         return handleInvalidDirection(state)
     else:
