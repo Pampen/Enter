@@ -5,7 +5,7 @@ import joyMap from "./maps/joy";
 import angerMap from "./maps/anger";
 import loveMap from "./maps/love";
 import sadnessMap from "./maps/sadness";
-import mirrorRoomMap from "./maps/mirrorroom";
+import mirrorRoomMap from "./maps/mirrorRoom";
 
 const maps = {
     /*Put map functions here. Check tutorial.js in folder maps*/

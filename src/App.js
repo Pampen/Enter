@@ -8,8 +8,7 @@ import Inventory from "./components/inventory";
 import Modal from "./components/Modal";
 import Commands from "./components/commands";
 import Map from "./components/map";
-import Sound from "react-sound";
-import {levels} from './utilities/levelChecker'
+import {levels} from "./utilities/levelChecker";
 
 const audioFile = {
   'TUTORIAL': 'test.mp3',
