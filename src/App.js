@@ -33,7 +33,7 @@ class App extends Component {
         lightSwitch: false,
       },
       isBurned: [],
-      level: "OUTSIDE",
+      level: "GREENHOUSE",
       levelHistory: {
         OUTSIDE: true
       },
@@ -157,6 +157,7 @@ class App extends Component {
           this.state.startedGame 
           ? <audio
             autoPlay
+            loop
             src={this.state.audio}>
             </audio>
           : null
