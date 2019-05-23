@@ -1,37 +1,37 @@
 [
     {
         "level": "OUTSIDE",
-        "levelDescription": "It's cold outside. There is a strange old house in front of you. There isn't much to see around you. You are surrounded by a dense forest. There is also a small path covered in leaves to the west side of the house.",
+        "levelDescription": "It's cold outside. Except for a strange old house in front of you, there isn't much else around. You are surrounded by a dense forest. There is also a small path covered in leaves to the west side of the house.",
         "levelTitle": "Outside"
     },
     {
         "level": "GREENHOUSE",
-        "levelDescription": "As you open the door, you stare into a dark room, you start to feel around the wall next to the door and notice a lightswitch.",
+        "levelDescription": "As you open the door, you stare into a dark room. You start to feel around the wall next to the door and notice a lightswitch.",
         "levelTitle": "Greenhouse"
     },
     {
         "level": "PORCH",
-        "levelDescription": "The porch looks rather old, and the color is almost gone. The windows are all boarded up from the inside and it looks like the windows are painted in black. This porch is barely holding up.",
+        "levelDescription": "The porch looks rather old, and the color is almost gone. The windows of the house are all boarded up from the inside and it looks like they are painted in black. The porch is barely holding up.",
         "levelTitle": "Porch"
     },
     {
         "level": "MAIN_HALL",
-        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work.",
+        "levelDescription": "You are now in the main hall of the house. There isn't much in this room except for three odd doors with three different colors. The windows are painted in black, and some old creepy paintings on the walls are covered in cobwebs. The green door to the west is open.",
         "levelTitle": "Main Hall"
     },
     {
         "level": "MAIN_HALL_RETURN_FROM_GREEN",
-        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work.",
+        "levelDescription": "You find yourself back in the main hall. It looks similar to before, but the red door has opened.",
         "levelTitle": "Main Hall"
     },
     {
         "level": "MAIN_HALL_RETURN_FROM_RED",
-        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work.",
+        "levelDescription": "You find yourself back in the main hall. The red door is closed, and the pink door to the east has opened in its place.",
         "levelTitle": "Main Hall"
     },
     {
         "level": "MAIN_HALL_ALL_KEYS",
-        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work. A strange humming sound comes from the doors.. ",
+        "levelDescription": "You are back at the main hall. A new door has appeared. It has four keyholes, each with a different color...",
         "levelTitle": "Main Hall"
     },
     {
@@ -51,7 +51,7 @@
     },
     {
         "level": "BEACH",
-        "levelDescription": "The door closes behind you, leaving you alone in the darkness. Suddenly, everything lights up, and you find yourself on the beach. There's a lighthouse right in front of you up the hill, a shipwreck by the coast and what looks to be a shed close to you. Which way do you decide to go?",
+        "levelDescription": "The door closes behind you, leaving you alone in the dark. Suddenly, everything lights up, and you find yourself on the beach. There's a lighthouse right in front of you up the hill, a shipwreck by the coast and what looks to be a shed close to you. Which way do you decide to go?",
         "levelTitle": "Beach"
     },
     {
@@ -61,72 +61,72 @@
     },
     {
         "level": "LIGHTHOUSE_OUTSIDE",
-        "levelDescription": "You stand outside the lighthouse",
+        "levelDescription": "You stand outside the lighthouse.",
         "levelTitle": "Lighthouse Outside"
     },
     {
         "level": "LIGHTHOUSE",
-        "levelDescription": "This is the lighthouse. There's stairs leading up to the top floor.",
+        "levelDescription": "You enter the lighthouse. There's stairs leading up to the top floor.",
         "levelTitle": "Lighthouse"
     },
     {
         "level": "LIGHTHOUSE_TOP_FLOOR",
-        "levelDescription": "This is the top floor in the lighthouse. The room is filled with a mysterious aura and it's giving you some sorts of joyous feeling in your body. There's a green key hanging on the wall.",
+        "levelDescription": "You take the stairs to the top floor of the lighthouse. The room is filled with a mysterious aura that makes you feel joyful. There's a green key hanging on the wall.",
         "levelTitle": "Lighthouse Top Floor"
     },
     {
         "level": "SHED_FRONT_DOOR",
-        "levelDescription": "You stand outside the shed. There seems to be no one inside when looking through the window, so it's probably safe to go inside...",
+        "levelDescription": "You stand outside the shed. There seems to be no one inside when looking through the window, so it's probably safe to enter...",
         "levelTitle": "Shed Front Door"
     },
     {
         "level": "SHED",
-        "levelDescription": "You stand inside the shed. It's filled with what looks to be a bunch of old fisherman gear. There's an old-fashioned oil lamp thats hanging on the wall. There seems to be stairs leading down to the basement.",
+        "levelDescription": "You enter the shed. It's filled with what looks to be a bunch of old fishing gear. There's an old-fashioned oil lamp thats hanging on the wall. There seems to be stairs leading down to the basement.",
         "levelTitle": "Shed"
     },
     {
         "level": "CELLAR",
-        "levelDescription": "You find yourself in the basement of the shed. There seems to be nothing but bunch of old junk. Your vision is very limited due to the darkness, maybe you have something that can help you light up the room",
+        "levelDescription": "You find yourself in the basement of the shed. There is nothing but a bunch of old junk. Your vision is very limited due to the darkness. There might be a way to light up the room...",
         "levelTitle": "Cellar"
     },
     {
         "level": "BEACH_EAST_SIDE",
-        "levelDescription": "You see a shipwreck in the distant, it's probably worth checking out",
+        "levelDescription": "You see a shipwreck in the distance, it is probably worth checking out.",
         "levelTitle": "Beach East Side"
     },
     {
         "level": "SHIPWRECK",
-        "levelDescription": "You find yourself inside the old rustic shipwreck. The boat seems to be very old from the looks of it. The captains cabin seems to be up ahead.",
+        "levelDescription": "You find yourself inside the rustic shipwreck. The boat seems to be very old. The captains cabin seems to be up ahead.",
         "levelTitle": "Shipwreck"
     },
     {
         "level": "CAPTAINS_CABIN",
-        "levelDescription": "You are currently inside the captains cabin. There's a framed family photograph on the wall of what looks to be the owner of this ship's family. There's a desk with a piece of torn pages on it.",
+        "levelDescription": "You are currently inside the captains cabin. There's a framed family photograph on the wall of what looks to be of the family of the ship's owner. There's a desk with torn pages on it.",
         "levelTitle": "Captains Cabin"
     },
     {
         "level": "LIVING_ROOM",
-        "levelDescription": "A big room with a two red armchairs in front of a fireplace. There is some painting hanging on the walls. You can feel the heat emitting from the fireplace. The flame is dancing so violently. The fireplace could be useful later on...",
+        "levelDescription": "You enter a big room with two red armchairs in front of a fireplace. There are some paintings hanging on the walls. You can feel the heat emitting from the fireplace. The flame is dancing so violently. The fireplace could be useful later on...",
         "levelTitle": "Living Room"
     },
     {
         "level": "KITCHEN",
-        "levelDescription": "An old kitchen, but with some modern modifications. The fridge is old, and it doesn't work anymore, but it has a photograph on it. The photograph might be a clue to all this madness. There are some stairs leading down to the basement.",
+        "levelDescription": "An old kitchen, but with some modern modifications. The fridge is old, and it doesn't seem to work anymore. There is a photograph taped to the fridge. There are some stairs leading down to the basement.",
         "levelTitle": "Kitchen"
     },
     {
         "level": "BASEMENT",
-        "levelDescription": "It's cold in the basement. There is not so much down here, just some old furnitures and some boxes filled with old toys, pictures, watches and so on. Most of it seems to be covered by a red cloth to protect them from getting all dusty, except a ladder which is leaning on the wall, it might be useful later. There are some stairs leading up.",
+        "levelDescription": "It's cold in the basement. There is not a lot of things down here, just some old furniture and some boxes filled with mementos. Most of it seems to be covered by a red cloth to protect them from getting all dusty, except a ladder which is leaning against the wall. This might be useful later. There are some stairs leading up to the kitchen.",
         "levelTitle": "Basement"
     },
     {
         "level": "HALL",
-        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. Why the letter 'A'? There are also some pictures on the wall, however, you can't seem to see person's faces in the pictures for some reasons. Every face is blurry. Beneath the pictures is a small table with a bowl, the bowl contains car keys. There are some stairs leading up to the upper floor.",
+        "levelDescription": "A small hall with a clothing rack on the side and a small red carpet with the letter 'A' on it. There are also some pictures on the wall. However, you can't seem to see any faces in the pictures. All of the faces are blurry. Beneath the pictures is a small table with a bowl, the bowl contains car keys. There are some stairs leading up to the upper floor.",
         "levelTitle": "Hall"
     },
     {
         "level": "UPPER_FLOOR",
-        "levelDescription": "It's so quiet up here, there is only a door, which you guess is the bedroom, an attic with an open hatch and a window which is painted black. Somehow the sunlight still shines through the black paint. There are some stairs leading down to the hall.",
+        "levelDescription": "It's so quiet up here. There is only one door (which you guess is the bedroom), an attic with an open hatch and a window, which is painted black. The sunlight somehow still makes its way through. There are some stairs leading down to the hall.",
         "levelTitle": "Upper Floor"
     },
     {
@@ -136,12 +136,12 @@
     },
     {
         "level": "BEDROOM",
-        "levelDescription": "It looks like a regular bedroom, the walls are red, a bookcase filled with obviously books, photos, a tiny leather boot and a box full of old watches. There is a big round window in the room which is painted black, but it doesn't block the sunlight which is kind of odd. In the center of the bedroom, there is a canvas which is painted red.",
+        "levelDescription": "It looks like a regular bedroom. The walls are red, a shelf filled with books, photos, a tiny leather boot and a box full of old watches. There is a big round window in the room, which is painted black. In the center of the bedroom, there is a canvas which is painted red.",
         "levelTitle": "Bedroom"
     },
     {
         "level": "CRIB_ROOM",
-        "levelDescription": "This is a room with a pink crib in it. It looks misplaced. Nothing else in here. The emptiness is too much. Best to move on...",
+        "levelDescription": "This is a room with a pink crib in it. It looks misplaced. There is nothing else in here. The emptiness is too much. Best to move on...",
         "levelTitle": "Crib Room"
     },
     {
@@ -156,7 +156,7 @@
     },
     {
         "level": "TOY_CAR_ROOM",
-        "levelDescription": "The room bathes in a glowing red light. A silver toy car lies upside down in the middle of the room. A dark stain slowly grows from under it, and a squeal like a pig being slaughtered can be heard... your head starts to throb and your heart beats a thousand beats a minute... you have to get out. Now.",
+        "levelDescription": "The room bathes in a glowing red light. A silver toy car lies upside down in the middle of the room. A dark stain slowly grows from under it. You hear a high-pitched screaming noise in the back of your head... your head starts to throb and your heart beats a thousand beats a minute... you have to get out. Now.",
         "levelTitle": "Toy car room"
     },
     {
@@ -201,7 +201,7 @@
     },
     {
         "level": "BABY_ROOM_BLANKET",
-        "levelDescription": "The doll looks unhappy. Is it... pucking it's lips?",
+        "levelDescription": "The doll looks unhappy. Is it... pucking its lips?",
         "levelTitle": "Baby room"
     },
     {
@@ -221,12 +221,12 @@
     },
     {
         "level": "BLUE_START",
-        "levelDescription": "You enter a dark room, and you hear a faint sobbing. The only light there is shining through the bottom of a door to your left. In front of you is a hallway leading seemingly into nothingness.",
+        "levelDescription": "You enter a dark room, and you hear a faint sobbing. The only light there is, is shining through the bottom of a door to your left. In front of you is a hallway leading seemingly into nothingness.",
         "levelTitle": "Hallway"
     },
     {
         "level": "BLUE_TORCH_ROOM",
-        "levelDescription": "In the room, there is a desk with a wooden chair and a torch hanging on the wall. It seems the torch isn't bolted to the wall, you might be able to pick it up.",
+        "levelDescription": "In the room, there is a desk with a wooden chair and a torch hanging on the wall. It seems the torch isn't bolted to the wall. You might be able to pick it up.",
         "levelTitle": "Torch room"
     },
     {

@@ -15,7 +15,13 @@ const audioFile = {
   'LOVE': 'love.mp3',
   'SADNESS': 'sadness.mp3',
   'MIRROR_ROOM': 'mirror_room.mp3',
-  'MAIN_HALL': 'tutorial.mp3'
+  'MAIN_HALL': 'tutorial.mp3',
+  'MAIN_HALL_RETURN_FROM_GREEN': 'tutorial.mp3',
+  'MAIN_HALL_RETURN_FROM_RED': 'tutorial.mp3',
+  "MAINHALL_ALL": 'tutorial.mp3',
+  "MAINHALL_RED": 'tutorial.mp3',
+  "MAINHALL_PINK": 'tutorial.mp3',
+  "MAINHALL_BLUE": 'tutorial.mp3'
 }
 
 class App extends Component {
@@ -24,7 +30,7 @@ class App extends Component {
     this.state = {
       startedGame: false,
       title: "Outside",
-      description: "It's cold outside. There is a strange old house in front of you.There isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to the west side of the house.",
+      description: "It's cold outside. There is a strange old house in front of you.There isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaves to the west side of the house.",
       chatboxText: [],
       inventory: {},
       usedItems: {
