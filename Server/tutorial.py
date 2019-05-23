@@ -11,7 +11,7 @@ def handleOutside(userInput, state):
     elif userInput == 'LICK DOOR':
         return goToLevel(state, 'MAIN_HALL', userInput)
     elif userInput == 'LOOK NICE':
-        return goToLevel(state, 'MIRROR_ROOM', userInput)
+        return goToLevel(state, 'MIRROR_ROOM_1', userInput)
     elif userInput == 'MR JALS':
         return goToLevel(state, 'SADNESS', userInput)
     elif userInput == 'PET THE BABY':
