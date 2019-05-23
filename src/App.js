@@ -37,7 +37,7 @@ class App extends Component {
       levelHistory: {
         OUTSIDE: true
       },
-      audio: './Audio/test.mp3'
+      audio: './Audio/tutorial.mp3'
     };
     this.updateState = this.updateState.bind(this);
   }
