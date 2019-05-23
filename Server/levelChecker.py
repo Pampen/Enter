@@ -2,10 +2,10 @@ from tutorial import handleGreenHouse, handleOutside, handlePorch
 from mainHall import handleMainHall, handleMainHallAllKeys, handleMainHallBlueKey, handleMainHallPinkKey, handleMainHallRedKey
 from greenDoor import handleBeach, handleCaptainsCabin, handleCellar, handleGate, handleShedFrontDoor, handleShed, handleBeachEastSide, handleShipwreck, handleLighthouse, handleLighthouseOutside, handleLighthouseTopFloor, handleOcean
 from redDoor import handleUpperFloor, handleLivingRoom, handleKitchen, handleHall, handleBedroom, handleBasement, handleAttic
-from pinkDoor import handleBabyRoom, handleCribRoom, handleMessyRoom, handleNursingRoom, handleStudyRoom, handleBabyRoomCrib, handleBabyRoomDoll, handleBabyRoomBlanket, handleBabyRoomPacifier, handleBabyRoomKey, handleBabyRoomNoDoll, handleNursingRoomNoPacifier, handleStudyRoomNoBlanket, handleMessyRoomNoRhyme, handleCribRoomNoCrib
+from pinkDoor import handleBabyRoom, handleCribRoom, handleMessyRoom, handleNursingRoom, handleStudyRoom, handleBabyRoomCrib, handleBabyRoomDoll, handleBabyRoomBlanket, handleBabyRoomPacifier, handleBabyRoomKey, handleBabyRoomNoDoll, handleNursingRoomNoPacifier, handleStudyRoomNoBlanket, handleMessyRoomNoRhyme, handleCribRoomNoCrib,handleToyCarRoom
 from blueDoor import handleBlueCorridor1, handleBlueCorridor2, handleBlueCorridor3, handleBlueCorridor4, handleBlueCorridor5, handleBlueCorridor6, handleBlueCorridor7, handleBlueCorridor8, handleBlueCorridor9, handleBlueStart, handleBlueFinish, handleTorchRoom
 from mirrorRoom import handleMirrorRoom, handleJoy, handleAnger, handleLove, handleSadness
-
+from endRoom import handleLastRoom
 levels = {
     'OUTSIDE': handleOutside,
     'GREENHOUSE': handleGreenHouse,
@@ -37,6 +37,7 @@ levels = {
     'ATTIC': handleAttic,
     'CRIB_ROOM': handleCribRoom,
     'BABY_ROOM': handleBabyRoom,
+    'TOY_CAR_ROOM': handleToyCarRoom,
     'NURSING_ROOM': handleNursingRoom,
     'STUDY_ROOM': handleStudyRoom,
     'MESSY_ROOM': handleMessyRoom,
@@ -66,7 +67,8 @@ levels = {
     'JOY': handleJoy,
     'ANGER': handleAnger,
     'LOVE': handleLove,
-    'SADNESS': handleSadness
+    'SADNESS': handleSadness,
+    'END': handleLastRoom,
 }
 
 def levelChecker(userInput, state):   
