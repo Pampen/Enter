@@ -26,14 +26,14 @@ class App extends Component {
     this.state = {
       startedGame: false,
       title: "Outside",
-      description: "It's cold outside. There is a strange old house in front of you.There isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaf to the west side of the house.",
+      description: "It's cold outside. There is a strange old house in front of you.There isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaves to the west side of the house.",
       chatboxText: [],
       inventory: {},
       usedItems: {
         lightSwitch: false,
       },
       isBurned: [],
-      level: "GREENHOUSE",
+      level: "OUTSIDE",
       levelHistory: {
         OUTSIDE: true
       },
