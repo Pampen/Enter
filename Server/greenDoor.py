@@ -65,7 +65,7 @@ def handleLighthouseTopFloor(userInput, state):
     elif userInput == 'TAKE GREEN KEY' or userInput == 'TAKE KEY':
         gateCalled = gateCalled - 1
         shedCalled = shedCalled - 1
-        return returnToMainHall(state, 'greenKey', 'MAIN_HALL')
+        return state['inventory'].pop('oilLamp') and state['inventory'].pop('bronzeKey') and state['inventory'].pop('tornPages') and returnToMainHall(state, 'greenKey', 'MAIN_HALL_RETURN_FROM_GREEN')
     else:
         return handleInvalidInput(userInput, state)
 

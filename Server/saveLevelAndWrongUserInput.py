@@ -327,7 +327,7 @@ def returnToMainHall(state, currentItem, currentLevel):
     response = {
         'state': newState, 
         'pageChanges': {
-                'levelChatboxText': 'You picked up ' + item["itemName"].upper() + '. You are now back at the Main Hall'
+                'levelChatboxText': 'You picked up ' + item["itemName"].upper() + '. You are now back at the Main Hall. The items you no longer need were left behind.'
         }
     }
 
