@@ -10,7 +10,8 @@ export default class GameScreen extends Component {
         return (
             <div className="terminal">
                 <form onSubmit={this.handleSubmit.bind(this)}>
-                <input 
+                <input
+                    placeholder="Enter command..."
                     ref={
                         function(inputElement) {
                         this.inputElement=inputElement;
