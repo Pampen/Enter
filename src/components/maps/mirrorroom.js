@@ -1,10 +1,19 @@
-const mirrorRoom = {
+const mirrorRoom1 = {
     color: "white",
-    name: 'Mirror Room',
-    id: 'MIRROR_ROOM',
-    cellName: 'MR',
+    name: 'Mirror Room 1',
+    id: 'MIRROR_ROOM_1',
+    cellName: 'MR1',
     connections: [
-        'N'
+        'E'
+    ]
+}
+const mirrorRoom2 = {
+    color: "white",
+    name: 'Mirror Room 2',
+    id: 'MIRROR_ROOM_2',
+    cellName: 'MR2',
+    connections: [
+        'W', 'N'
     ]
 }
 const joy = {
@@ -13,16 +22,25 @@ const joy = {
     id: 'JOY',
     cellName: 'J',
     connections: [
-        'N', 'S'
+        'W', 'S'
     ]
 }
-const anger = {
+const anger1 = {
     color: "red",
-    name: 'Anger',
-    id: 'ANGER',
-    cellName: 'A',
+    name: 'Anger 1',
+    id: 'ANGER_1',
+    cellName: 'A1',
     connections: [
-        'N', 'S'
+        'E', 'N'
+    ]
+}
+const anger2 = {
+    color: "red",
+    name: 'Anger 2',
+    id: 'ANGER_2',
+    cellName: 'A2',
+    connections: [
+        'E', 'S'
     ]
 }
 const love = {
@@ -31,24 +49,32 @@ const love = {
     id: 'LOVE',
     cellName: 'L',
     connections: [
-        'N', 'S'
+        'N', 'W'
     ]
 }
-const sadness = {
+const sadness1 = {
     color: 'blue',
-    name: 'Sadness',
-    id: 'SADNESS',
-    cellName: 'S',
+    name: 'Sadness 1',
+    id: 'SADNESS_1',
+    cellName: 'S1',
     connections: [
-        'S'
+        'S', 'W'
+    ]
+}
+const sadness2 = {
+    color: 'blue',
+    name: 'Sadness 2',
+    id: 'SADNESS_2',
+    cellName: 'S2',
+    connections: [
+        'E'
     ]
 }
 const mirrorRoomMap = [
-    [sadness],
-    [love],
-    [anger],
-    [joy],
-    [mirrorRoom]
+    [sadness2, sadness1],
+    [anger2, love],
+    [anger1, joy],
+    [mirrorRoom1, mirrorRoom2]
 ];
 
 export default mirrorRoomMap
