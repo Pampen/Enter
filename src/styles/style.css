@@ -9,6 +9,14 @@ body {
           font-family: 'PixelOperatorRegular'; 
   background-color: #555;
 }
+.aboutMain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 30px;
+}
 .main-menu {
   display: flex;
   flex-direction: column;
@@ -217,9 +225,21 @@ body {
   -webkit-text-emphasis-style: bold;
           text-emphasis-style: bold;
   color: white;
-  border: 1px solid green;
+  border: 1px solid orange;
   -webkit-box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
           box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
+}
+
+.nav-button a:hover {
+  color: orange;
+}
+
+.nav-button a:visited {
+  color: white;
+}
+
+.nav-button a:active {
+  color: gray;
 }
 
 .inventory {
