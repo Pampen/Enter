@@ -10,22 +10,22 @@
         "levelTitle": "Greenhouse"
     },
     {
-        "level": "GREENHOUSE_LIGHT_ON",
-        "levelDescription": "There isn't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days. In the middle of all this mess, you can see a brass key.",
-        "levelTitle": "Greenhouse"
-    },
-    {
-        "level": "GREENHOUSE_LIGHT_AND_KEY_ON",
-        "levelDescription": "There isn't that many things inside broken glass, a big bookcase and some dead plants. No one has been watering the plants for days.",
-        "levelTitle": "Greenhouse"
-    },
-    {
         "level": "PORCH",
         "levelDescription": "The porch looks rather old, and the color is almost gone. The windows are all boarded up from the inside and it looks like the windows are painted in black. This porch is barely holding up.",
         "levelTitle": "Porch"
     },
     {
         "level": "MAIN_HALL",
+        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work.",
+        "levelTitle": "Main Hall"
+    },
+    {
+        "level": "MAIN_HALL_RETURN_FROM_GREEN",
+        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work.",
+        "levelTitle": "Main Hall"
+    },
+    {
+        "level": "MAIN_HALL_RETURN_FROM_RED",
         "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work.",
         "levelTitle": "Main Hall"
     },

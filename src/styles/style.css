@@ -14,6 +14,12 @@ body {
   flex-grow: 1;
   justify-content: center;
 }
+
+.nav-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 .container{
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,7 +32,7 @@ body {
           justify-content: center;
   width: 700px;
   height: 550px;
-  margin: auto;
+  margin: 0% 0% 0% 17%;
   color: white;
   -webkit-box-shadow: 9px 9px 10px -3px rgba(0,0,0,0.75);
           box-shadow: 9px 9px 10px -3px rgba(0,0,0,0.75);
@@ -75,6 +81,7 @@ body {
   height: 166px;
   border: 2px solid black;
   color: #999;
+  font-size: 20px;
 }
 .game-text-box p:last-child  {
   color: white;
@@ -109,6 +116,7 @@ body {
 .terminal-input:focus {
   outline: 0;
 }
+
 .button-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,6 +140,7 @@ body {
   -webkit-animation: 0.2s fade-in;
   z-index: 1;
 }
+/* * 
 #main-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,6 +156,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+ * */ 
 #enter-button {
   width: 89px;
   height: 50px;
@@ -157,6 +167,7 @@ body {
   border: 1px solid green;
   position: absolute;
 }
+
 .game-button {
   width: 50px;
   height: 50px;
@@ -199,7 +210,7 @@ body {
   margin-right: 1%;
   border-radius: 10px;
   border: 2px dashed #555;
-  font-size: 12px;
+  font-size: 20px;
 }
 
 .commandList {
@@ -207,10 +218,10 @@ body {
   right: 100%;
   padding: 10px 10px 0px 10px;
   background-color: #333;
-  margin: 54% 1% 0% 0%;
+  margin: 46% 1% 0% 0%;
   border-radius: 10px;
   border: 2px dashed #555;
-  font-size: 12px;
+  font-size: 20px;
   min-width: 160px;
   text-align: center;
 }
@@ -288,9 +299,9 @@ header {
 }
 
  header .copyright{
-  font-size: 8px;
+  font-size: 20px;
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   padding-left: 3px;
   margin: 5px;
@@ -304,6 +315,7 @@ header {
   margin-left: 30px;
   border-radius: 10px;
   border: 2px dashed #555;
+  min-width: 52%;
 }
 .map-compass {
   position: relative;

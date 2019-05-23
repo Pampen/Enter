@@ -9,10 +9,10 @@ from mirrorRoom import handleMirrorRoom, handleJoy, handleAnger, handleLove, han
 levels = {
     'OUTSIDE': handleOutside,
     'GREENHOUSE': handleGreenHouse,
-    'GREENHOUSE_LIGHT_ON': handleGreenHouse,
-    'GREENHOUSE_LIGHT_AND_KEY_ON': handleGreenHouse,
     'PORCH': handlePorch,
     'MAIN_HALL': handleMainHall,
+    'MAIN_HALL_RETURN_FROM_GREEN': handleMainHall,
+    'MAIN_HALL_RETURN_FROM_RED': handleMainHall,
     'MAIN_HALL_ALL_KEYS': handleMainHallAllKeys,
     'MAIN_HALL_RED_KEY': handleMainHallRedKey,
     'MAIN_HALL_PINK_KEY': handleMainHallPinkKey,

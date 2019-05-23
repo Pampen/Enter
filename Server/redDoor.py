@@ -4,7 +4,7 @@ def handleLivingRoom(userInput, state):
     if 'THROW' in userInput:
         return redPuzzle(state, userInput)
     elif userInput == 'TAKE RED KEY' or userInput == 'TAKE KEY' and 'carKeys' in state['isBurned']:
-        return state['inventory'].pop('greyKey') and state['inventory'].pop('ladder') and returnToMainHall(state, 'redKey', 'MAIN_HALL')
+        return state['inventory'].pop('greyKey') and state['inventory'].pop('ladder') and returnToMainHall(state, 'redKey', 'MAIN_HALL_RETURN_FROM_RED')
     elif userInput == 'GO EAST':
         if 'photograph' in state['inventory']: 
             return goToLevel(state, 'KITCHEN', userInput) and handleNewKitchenDesc(state, userInput)
