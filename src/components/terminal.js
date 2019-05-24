@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { levels } from '../utilities/levelChecker';
 
 export default class GameScreen extends Component {
     handleSubmit(noDefault) {
@@ -7,6 +8,8 @@ export default class GameScreen extends Component {
         this.inputElement.value = ''
     }
     render() {
+        const color = levels[this.props.level]
+        console.log('COLOOOOOOOOOOOR: ' + color)
         return (
             <div className="terminal">
                 <form onSubmit={this.handleSubmit.bind(this)}>
