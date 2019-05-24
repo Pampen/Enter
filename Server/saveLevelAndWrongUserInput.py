@@ -343,7 +343,7 @@ def openLevelFile():
     cwd = os.getcwd()  # Get the current working directory (cwd)
     filePath = cwd + '/Server/tools/tutorial.json'
     
-    with open(filePath, 'r') as getData:
+    with open(filePath, "r") as getData:
         data = json.loads(getData.read())
         return data
         
@@ -351,7 +351,7 @@ def openItemFile():
     cwd = os.getcwd()  # Get the current working directory (cwd)
     filePath = cwd + '/Server/tools/inventory.json'
     
-    with open(filePath, 'r') as getData:
+    with open(filePath, "r") as getData:
         data = json.loads(getData.read())
         return data
 

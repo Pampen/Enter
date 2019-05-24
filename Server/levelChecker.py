@@ -2,7 +2,7 @@ from tutorial import handleGreenHouse, handleOutside, handlePorch, handleNowhere
 from mainHall import handleMainHall, handleMainHallAllKeys, handleMainHallBlueKey, handleMainHallPinkKey, handleMainHallRedKey
 from greenDoor import handleBeach, handleCaptainsCabin, handleCellar, handleGate, handleShedFrontDoor, handleShed, handleBeachEastSide, handleShipwreck, handleLighthouse, handleLighthouseOutside, handleLighthouseTopFloor, handleOcean
 from redDoor import handleUpperFloor, handleLivingRoom, handleKitchen, handleHall, handleBedroom, handleBasement, handleAttic
-from pinkDoor import handleBabyRoom, handleCribRoom, handleMessyRoom, handleNursingRoom, handleStudyRoom, handleBabyRoomCrib, handleBabyRoomDoll, handleBabyRoomBlanket, handleBabyRoomPacifier, handleBabyRoomKey, handleBabyRoomNoDoll, handleNursingRoomNoPacifier, handleStudyRoomNoBlanket, handleMessyRoomNoRhyme, handleCribRoomNoCrib,handleToyCarRoom
+from pinkDoor import handleBabyRoom, handleCribRoom, handleMessyRoom, handleNursingRoom, handleStudyRoom, handleToyCarRoom
 from blueDoor import handleBlueCorridor1, handleBlueCorridor2, handleBlueCorridor3, handleBlueCorridor4, handleBlueCorridor5, handleBlueCorridor6, handleBlueCorridor7, handleBlueCorridor8, handleBlueCorridor9, handleBlueStart, handleBlueFinish, handleTorchRoom
 from mirrorRoom import handleMirrorRoom1, handleMirrorRoom2, handleJoy, handleAnger1, handleAnger2, handleLove, handleSadness1, handleSadness2
 from endRoom import handleLastRoom
@@ -42,16 +42,6 @@ levels = {
     'NURSING_ROOM': handleNursingRoom,
     'STUDY_ROOM': handleStudyRoom,
     'MESSY_ROOM': handleMessyRoom,
-    'BABY_ROOM_CRIB' : handleBabyRoomCrib,
-    'BABY_ROOM_DOLL' : handleBabyRoomDoll,
-    'BABY_ROOM_NO_DOLL' : handleBabyRoomNoDoll,
-    'NURSING_ROOM_NO_PACIFIER' : handleNursingRoomNoPacifier,
-    'STUDY_ROOM_NO_BLANKET' : handleStudyRoomNoBlanket,
-    'MESSY_ROOM_NO_RHYME' : handleMessyRoomNoRhyme,
-    'CRIB_ROOM_NO_CRIB' : handleCribRoomNoCrib,
-    'BABY_ROOM_BLANKET' : handleBabyRoomBlanket,
-    'BABY_ROOM_PACIFIER': handleBabyRoomPacifier,
-    'BABY_ROOM_KEY' : handleBabyRoomKey,
     'BLUE_START': handleBlueStart,
     'BLUE_TORCH_ROOM': handleTorchRoom,
     'BLUE_CORRIDOR_1': handleBlueCorridor1,
