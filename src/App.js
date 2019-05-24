@@ -36,6 +36,7 @@ class App extends Component {
       usedItems: {
         lightSwitch: false,
       },
+      pinkPuzzleItems: [],
       isBurned: [],
       level: "OUTSIDE",
       levelHistory: {
@@ -58,6 +59,7 @@ class App extends Component {
       newGameState.level = response.state.level;
       newGameState.usedItems = response.state.usedItems
       newGameState.isBurned = response.state.isBurned;
+      newGameState.pinkPuzzleItems = response.state.pinkPuzzleItems;
       newGameState.levelHistory = this.state.levelHistory
       newGameState.audio = './Audio/' + audioFile[levels[newGameState.level]]
 
