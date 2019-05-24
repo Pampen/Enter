@@ -37,7 +37,7 @@ def handleBabyRoom(userInput, state):
         if len(state['pinkPuzzleItems']) != 0:
                 return handleInvalidDirection(state)
         elif 'pinkKey' in state['inventory']:
-            return goToLevel(state, "NURSING_ROOM", userInput) and studyRoomWithPinkKeyPickedUp(state)
+            return goToLevel(state, "STUDY_ROOM", userInput) and studyRoomWithPinkKeyPickedUp(state)
         elif 'moldyPacifier' in state ['inventory']:
             return goToLevel(state, "NURSING_ROOM", userInput) and nursingRoomWithPacifierPickedUp(state)
         else:
@@ -119,12 +119,7 @@ def handleMessyRoom(userInput, state):
             return goToLevel(state, 'CRIB_ROOM', userInput)
     elif userInput == "TAKE NURSERY RHYME" or userInput == "TAKE RHYME" or userInput == "TAKE NOTEBOOK":
         return takeItem(state, 'nurseryRhyme')
-    elif userInput == 'GO EAST':
-        if 'pinkKey' in state['inventory']:
-            return goToLevel(state, 'BLUE_START', userInput)
-        else:
-            return finishPuzzleFirst(state)
-    elif userInput == 'GO SOUTH':
+    elif userInput == 'GO SOUTH' or userInput == 'GO EAST':
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)
