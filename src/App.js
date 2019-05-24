@@ -134,6 +134,7 @@ class App extends Component {
             ? <audio
               autoPlay
               loop
+              volume="1.0"
               src={this.state.audio}>
               </audio>
             : null
