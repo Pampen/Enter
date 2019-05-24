@@ -29,6 +29,7 @@ class App extends Component {
     super(props);
     this.state = {
       startedGame: false,
+      mapTutorial: false,
       title: "Outside",
       description: "It's cold outside. There is a strange old house in front of you.There isn't much to see around you. You are surrounded by dense forest. There is also a small path covered in leaves to the west side of the house.",
       chatboxText: [],
@@ -96,22 +97,33 @@ class App extends Component {
   handleKeyDown = () => {
     console.log('hello')
   }
+
+
+
   render() {
     console.log(this.state.level)
 
     return (
       <main id="wrapper">
-          {
+        {
           !this.state.startedGame
-          ? <div className="main-menu">
+            ? <div className="main-menu">
               <h1 className="game-title">
+
                 <span id="game-title-first-letter">E</span>nter:<span id="title-animation">_</span>
               </h1>
               <span id="title-animation">
                 <h2 className="start-game">Press enter</h2>
               </span>
-            </div> 
-          : null
+            </div>
+            : null
+        }
+        {
+          !this.state.mapTutorial
+            ? <div className="map-tutorial">
+              <h1>TEST</h1>
+            </div>
+            : null
         }
         <div className="container">
           <div className="game-container">
@@ -129,15 +141,15 @@ class App extends Component {
             <Terminal updateState={this.updateState} />
           </div>
         </div>
-          {
-            this.state.startedGame 
+        {
+          this.state.startedGame
             ? <audio
               autoPlay
               loop
               src={this.state.audio}>
-              </audio>
+            </audio>
             : null
-          }
+        }
       </main>
     );
   }
