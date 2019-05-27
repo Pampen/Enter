@@ -38,9 +38,9 @@ const blueFinish = {
 }
 
 const sadnessMap = [
-    [null, blueFinish],
-    [null, blueQuestion],
-    [blueTorch, blueStart]
+    [null, null, null, blueFinish],
+    [null, null, null, blueQuestion],
+    [null, null, blueTorch, blueStart]
 ];
 
 export default sadnessMap

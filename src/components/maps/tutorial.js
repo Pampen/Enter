@@ -34,7 +34,7 @@ const outside = {
 const tutorialMap = [
     [null, mainHall],
     [null, porch],
-    [greenhouse, outside]
+    [null, greenhouse, outside]
 ];
 
 export default tutorialMap
