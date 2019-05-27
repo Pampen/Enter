@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handleInvalidInput
+from utilities import handleInvalidDirection, goToLevel, handleInvalidInput
 
 def handleMainHall(userInput, state):
     if userInput == 'GO SOUTH':

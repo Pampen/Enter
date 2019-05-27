@@ -1,8 +1,10 @@
-from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handleInvalidInput, takeItem, handleDoorLock, goToLevelShedPuzzle, returnToMainHall
+from utilities import handleInvalidDirection, goToLevel, handleInvalidInput, takeItem, handleDoorLock, returnToMainHall, openLevelFile
+
 global shedCalled
 global gateCalled
 shedCalled = 0
 gateCalled = 0 
+
 def handleBeach(userInput, state):
     if userInput == 'GO WEST':
         if "oilLamp" in state["inventory"]:
@@ -360,3 +362,20 @@ def handlePadlockUsed(state):
         }       
     }
     return response
+
+def goToLevelShedPuzzle(state, currentLevel, userInput):
+    response = {
+        'state': state,
+        'pageChanges': {
+            "levelTitle": '',
+            "levelDescription": '',
+            'levelChatboxText': "You managed to open the door and went further into the cellar..."
+        }
+    } 
+    data = openLevelFile()
+    for level in data:
+        if level["level"] == currentLevel:
+            response['pageChanges']['levelTitle'] = level['levelTitle']
+            response['pageChanges']['levelDescription'] = level['levelDescription']
+            response['state']['level'] = level['level']
+            return response

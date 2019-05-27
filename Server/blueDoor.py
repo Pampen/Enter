@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import checkTorchItem, handleInvalidDirection, handleInvalidInput, takeItem, checkTorchItem, handleDoorLock, handleUseItemBlueRoom, returnToMainHall, goToLevel, handlePersistantItems
+from utilities import handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock, returnToMainHall, goToLevel, handlePersistantItems
 
 def handleBlueStart(userInput, state):
     if userInput == 'GO WEST':

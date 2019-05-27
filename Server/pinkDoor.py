@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock
+from utilities import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock
 
 def handleCribRoom(userInput, state):
     if userInput == 'GO NORTH':
