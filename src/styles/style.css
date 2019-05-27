@@ -30,6 +30,19 @@ body {
   color: white;
 }
 
+.map-tutorial {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999999;
+  justify-content: center;
+  align-items: center;
+  background-color: #555;
+  color: white;
+  }
+
 .nav-button {
   position: absolute;
   top: 0;
