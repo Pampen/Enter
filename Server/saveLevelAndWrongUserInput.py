@@ -341,7 +341,7 @@ def returnToMainHall(state, currentItem, currentLevel):
 
 def openLevelFile():
     cwd = os.getcwd()  # Get the current working directory (cwd)
-    filePath = cwd + '/Server/tools/tutorial.json'
+    filePath = cwd + '/Server/tools/levelDescription.json'
     
     with open(filePath, "r") as getData:
         data = json.loads(getData.read())
