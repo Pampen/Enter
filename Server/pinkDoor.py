@@ -50,14 +50,18 @@ def handleBabyRoom(userInput, state):
     elif userInput == "TAKE WORN DOLL" or userInput == "TAKE DOLL":
         return takeItem(state, 'wornDoll')
     elif 'USE' in userInput:
-        items=[
-            'crib', 'moldyPacifier', 'wornDoll', 'dirtyBlanket', 'nurseryRhyme'
-        ]
-        currentItems=state['inventory']
-        for item in items:
-            if item not in currentItems:
-                return handleDoorLock(state, 'BABY_ROOM', userInput)
-        return pinkRoomPuzzle(state, userInput)
+        puzzleList = state['pinkPuzzleItems']
+        if len(puzzleList) == 0:
+            items=[
+                'crib', 'moldyPacifier', 'wornDoll', 'dirtyBlanket', 'nurseryRhyme'
+            ]
+            currentItems=state['inventory']
+            for item in items:
+                if item not in currentItems:
+                    return handleDoorLock(state, 'BABY_ROOM', userInput)
+            return pinkRoomPuzzle(state, userInput)
+        else:
+            return pinkRoomPuzzle(state, userInput)
     elif userInput == "TAKE PINK KEY" or userInput == "TAKE KEY":
         return takeItem(state, 'pinkKey')
     elif userInput == 'GO NORTH' or userInput == 'GO WEST':
@@ -80,7 +84,7 @@ def handleNursingRoom(userInput, state):
         return takeItem(state, 'moldyPacifier')
     elif userInput == "GO EAST":
         if 'pinkKey' in state['inventory']:
-            return state['inventory'].pop('moldyPacifier') and state['inventory'].pop('nurseryRhyme') and state['inventory'].pop('dirtyBlanket') and state['inventory'].pop('wornDoll') and state['inventory'].pop('crib') and goToLevel(state, 'BLUE_START', userInput)
+            return goToLevel(state, 'BLUE_START', userInput)
         else:
             return finishPuzzleFirst(state)
     elif userInput == 'GO NORTH':
@@ -119,12 +123,7 @@ def handleMessyRoom(userInput, state):
             return goToLevel(state, 'CRIB_ROOM', userInput)
     elif userInput == "TAKE NURSERY RHYME" or userInput == "TAKE RHYME" or userInput == "TAKE NOTEBOOK":
         return takeItem(state, 'nurseryRhyme')
-    elif userInput == 'GO EAST':
-        if 'pinkKey' in state['inventory']:
-            return goToLevel(state, 'BLUE_START', userInput)
-        else:
-            return finishPuzzleFirst(state)
-    elif userInput == 'GO SOUTH':
+    elif userInput == 'GO EAST' or userInput == 'GO SOUTH':
         return handleInvalidDirection(state)
     else:
         return handleInvalidInput(userInput, state)
@@ -139,6 +138,7 @@ def pinkRoomPuzzle(state, userInput):
         if userInput == "USE CRIB" and "crib" not in puzzleList:
             puzzleList.append("crib")
             newState['pinkPuzzelItems'] = puzzleList
+            newState['inventory'].pop('crib')
             response = {
                 'state': newState,
                 'pageChanges': {
@@ -147,9 +147,10 @@ def pinkRoomPuzzle(state, userInput):
                 }
             }
             return response
-        elif userInput == "USE WORN DOLL" or userInput == "USE DOLL" and "crib" in puzzleList:
+        elif userInput == "USE WORN DOLL" or userInput == "USE DOLL" and "crib" in puzzleList and "doll" not in puzzleList:
             puzzleList.append("doll")
             newState['pinkPuzzelItems'] = puzzleList
+            newState['inventory'].pop('wornDoll')
             response = {
                 'state': newState,
                 'pageChanges': {
@@ -158,9 +159,10 @@ def pinkRoomPuzzle(state, userInput):
                 }
             }
             return response
-        elif userInput == "USE DIRTY BLANKET" or userInput == "USE BLANKET" and "doll" in puzzleList:
+        elif userInput == "USE DIRTY BLANKET" or userInput == "USE BLANKET" and "doll" in puzzleList and "blanket" not in puzzleList:
             puzzleList.append("blanket")
             newState['pinkPuzzelItems'] = puzzleList
+            newState['inventory'].pop('dirtyBlanket')
             response = {
                 'state': newState,
                 'pageChanges': {
@@ -169,9 +171,10 @@ def pinkRoomPuzzle(state, userInput):
                 }
             }
             return response
-        elif userInput == "USE MOLDY PACIFIER" or userInput == "USE PACIFIER" and "blanket" in puzzleList:
+        elif userInput == "USE MOLDY PACIFIER" or userInput == "USE PACIFIER" and "blanket" in puzzleList and "pacifier" not in puzzleList:
             puzzleList.append("pacifier")
             newState['pinkPuzzelItems'] = puzzleList
+            newState['inventory'].pop('moldyPacifier')
             response = {
                 'state': newState,
                 'pageChanges': {
@@ -183,6 +186,7 @@ def pinkRoomPuzzle(state, userInput):
         elif userInput == "USE NURSERY RHYME" or userInput == "USE RHYME" and "pacifier" in puzzleList:
             puzzleList.clear() 
             newState['pinkPuzzelItems'] = puzzleList
+            newState['inventory'].pop('nurseryRhyme')
             response = {
                 'state': newState,
                 'pageChanges': {
