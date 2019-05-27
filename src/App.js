@@ -118,13 +118,6 @@ class App extends Component {
             </div>
             : null
         }
-        {
-          !this.state.mapTutorial
-            ? <div className="map-tutorial">
-              <h1>TEST</h1>
-            </div>
-            : null
-        }
         <div className="container">
           <div className="game-container">
             <GameScreen
