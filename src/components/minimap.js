@@ -6,7 +6,7 @@ import angerMap from "./maps/anger";
 import loveMap from "./maps/love";
 import sadnessMap from "./maps/sadness";
 import mirrorRoomMap from "./maps/mirrorRoom";
-import mainHallMap from "./maps/mainhall";
+import mainHallMap from "./maps/mainHall";
 import mainHallGoToRedMap from "./maps/mainhallGoToRed";
 import mainhallGoToPinkMap from "./maps/mainhallGoToPink";
 
