@@ -1,8 +1,8 @@
 const blueStart = {
     color: "blue",
-    name: "???",
+    name: "?",
     id: 'BLUE_START',
-    cellName: '?',
+    cellName: 'H',
     connections: [
         'W', 'N'
     ]
@@ -21,7 +21,7 @@ const blueTorch = {
 const blueQuestion = {
     color: "blue",
     name: "Bedroom",
-    id: 'BLUE_CORRIDOR_1',
+    id: '',
     cellName: '?',
     connections: [
     ]
@@ -38,9 +38,9 @@ const blueFinish = {
 }
 
 const sadnessMap = [
-    [null, blueFinish],
-    [null, blueQuestion],
-    [blueTorch, blueStart]
+    [null, null, null, blueFinish],
+    [null, null, null, blueQuestion],
+    [null, null, blueTorch, blueStart]
 ];
 
 export default sadnessMap
