@@ -7,10 +7,6 @@ export default class GameScreen extends Component {
         this.inputElement.value = ''
     }
     render() {
-<<<<<<< HEAD
-        const color = levels[this.props.level]
-=======
->>>>>>> f93e3f80b4901adc96963954f5a431ad39fc66ed
         return (
             <div className="terminal">
                 <form onSubmit={this.handleSubmit.bind(this)}>
