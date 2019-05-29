@@ -314,7 +314,7 @@ body {
   font-size: 24px;
   letter-spacing: 6px;
   margin: 10px;
-  text-shadow: 0 0 20px black;
+  text-shadow: 1px 1px 5px black;
   color: white;
   text-decoration: none;
 }
@@ -322,16 +322,21 @@ body {
   font-size: 24px;
   letter-spacing: 6px;
   margin: auto;
-  text-shadow: 0 0 20px black;
+  text-shadow: 1px 1px 5px black;
   color: white;
-  margin-left: 100px;
+  margin-left: 150px;
   text-decoration: none;
+}
+.game-nav:hover, .game-title:hover {
+  color: rgb(190, 190, 190);
 }
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding-left: 300px;
+  position: absolute;
+  margin: 16px;
+  margin-left: 300px;
 }
 #game-title-first-letter {
   font-size: 32px;
