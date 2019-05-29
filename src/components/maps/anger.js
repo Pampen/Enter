@@ -73,10 +73,10 @@ const bedroom = {
 }
 
 const angerMap = [
-    [null, attic, null, null],
-    [bedroom, upperFloor, null, null],
-    [null, hall, livingRoom, kitchen],
-    [null, null, null, basement]
+    [null, null, attic, null, null],
+    [null, bedroom, upperFloor, null, null],
+    [null, null, hall, livingRoom, kitchen],
+    [null, null, null, null, basement]
 ];
 
 export default angerMap

@@ -54,9 +54,9 @@ const messyRoom = {
 }
 
 const loveMap = [
-    [babyRoom, nursingRoom],
-    [toyCarRoom, studyRoom],
-    [cribRoom, messyRoom]
+    [null, null, babyRoom, nursingRoom, null, null],
+    [null, null, toyCarRoom, studyRoom, null, null],
+    [null, null, cribRoom, messyRoom, null, null]
 ]
 
 export default loveMap

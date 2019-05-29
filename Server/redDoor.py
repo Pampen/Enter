@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock, redPuzzle, returnToMainHall, handlePersistantItems
+from utilities import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock, returnToMainHall, handlePersistantItems
 
 def handleLivingRoom(userInput, state):
     if 'THROW' in userInput:
@@ -229,6 +229,97 @@ def handleInvalidToy(state):
         'state': state,
         'pageChanges': {
             'levelChatboxText': "Get yourself together, you are not a child anymore."
+        }
+    }
+    return response
+
+def redPuzzle(state, userInput): 
+    newState = state
+    objectList = state["isBurned"]
+    if 'CANVAS' in userInput or 'PHOTOGRAPH' in userInput or 'CAR KEYS' in userInput:
+        if len(objectList) == 0 and userInput == 'THROW CANVAS' and 'canvas' not in state['isBurned']:
+            objectList.append('canvas')
+            newState['isBurned'] = objectList
+            newState['inventory'].pop('canvas')
+            return {
+                'state': newState, 
+                'pageChanges': {
+                    'levelChatboxText': "You burn the canvas"
+                }
+            }
+        elif 'canvas' in state['isBurned'] and userInput == 'THROW PHOTOGRAPH' and 'photograph' not in state['isBurned']:
+            objectList.append('photograph')
+            newState['isBurned'] = objectList
+            newState['inventory'].pop('photograph')
+            return {
+            'state': newState, 
+            'pageChanges': {
+                'levelChatboxText': "You burn the photograph."
+            }
+        }
+        elif 'photograph' in state['isBurned'] and userInput == 'THROW CAR KEYS' and 'carKeys' not in state['isBurned']:
+            objectList.append('carKeys')
+            newState['isBurned'] = objectList
+            newState['inventory'].pop('carKeys')
+            return {
+            'state': newState, 
+            'pageChanges': {
+                'levelChatboxText': "You burn car keys. The fire slowly dies and what is left of the fire is ashes and a red key."
+            }
+        }
+        elif 'canvas' in state['isBurned'] and userInput == 'THROW CANVAS' or 'photograph' in state['isBurned'] and userInput == 'THROW PHOTOGRAPH' or 'carKeys' in state['isBurned'] and userInput == 'THROW CAR KEYS':
+            newState = state
+            return {
+                'state': newState,
+                'pageChanges': {
+                    'levelChatboxText': "You cannot throw the same item."
+                }
+            }
+        else:
+            newState['isBurned'] = []
+            newState = state
+            currentItem = []
+            if 'canvas' not in state['inventory']:
+                currentItem.append('canvas')
+            if 'photograph' not in state['inventory']:
+                currentItem.append('photograph')
+            if 'carKeys' not in state['inventory']:
+                currentItem.append('carKeys')
+            newState = takeBurnItem(state, currentItem)
+            return newState
+    else:
+        return {
+                'state': state,
+                'pageChanges': {
+                    'levelChatboxText': "That doen't seems to be the right thing to do..."
+                }
+            }
+
+def takeBurnItem(state, currentItems):
+    newState = state
+    canvas = {
+        "itemName": "Canvas",
+        "itemDescription": "It's a canvas painted entirely in the color red."
+    }
+    photograph = {
+        "itemName": "Photograph",
+        "itemDescription": "An old dusty photograph. It's a picture of two little girls, but you can't seem to see their faces."
+    }
+    carKeys = {
+        "itemName": "Car keys",
+        "itemDescription": "Just some regular car keys, nothing fancy. However, the number '3' is engraved in the car keys."
+    }
+    for item in currentItems:
+        if item == 'canvas':
+            newState['inventory']['canvas'] = canvas
+        elif item == 'photograph':
+            newState['inventory']['photograph'] = photograph
+        elif item == 'carKeys':
+            newState['inventory']['carKeys'] = carKeys
+        response = {
+        'state': newState,
+        'pageChanges': {
+                'levelChatboxText': 'It is not in the right order, you might want to read the description for each item for this level to solve this puzzle... The items are restored to your inventory.',
         }
     }
     return response

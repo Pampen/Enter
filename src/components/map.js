@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { levels } from "../utilities/levelChecker";
 import MiniMap from './minimap';
 
-
-
 class Map extends Component {
   render() {
     let mainLevel;

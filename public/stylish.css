@@ -10,26 +10,28 @@ display: flex;
 background-color: #555;
 }
 .faq {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: white;
-  margin-left: -250px;
-  margin-top: 400px;
-  line-height: 5px;
-  width: 550px;
+  height: 50%;
+  width: 50%; 
+  overflow: auto;
+  margin: auto; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
 }
 .about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: white;
-  margin-left: 350px;
-  margin-top: 50px;
-  line-height: 30px;
-  width: 900px;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  line-height: 31px;
+  width: 65%;
+  height: 75%;
+  margin: auto;
+  position: absolute;
 }
 .about_container {
   display: flex;
@@ -37,9 +39,9 @@ background-color: #555;
   justify-content: center;
   align-items: center;
   color: white;
-  margin-left: 350px;
   line-height: 30px;
   width: 900px;
+  font-size: 15px;
 }
 .about p {
   font-size: 15px;
@@ -60,7 +62,6 @@ align-items: center;
 background-color: #555;
 color: white;
 }
-
 .nav-button {
 position: absolute;
 top: 0;
@@ -161,7 +162,6 @@ border: 2px solid rgb(186, 121, 9);
 
 text-shadow: 1px 1px 5px black;
 }
-
 .terminal-input:before {
 content: ">";
 display: block;
@@ -170,7 +170,6 @@ position: relative;
 .terminal-input:focus {
 outline: 0;
 }
-
 .button-container {
 display: -webkit-box;
 display: -ms-flexbox;
@@ -223,16 +222,13 @@ color: white;
 border: none;
 position: absolute;
 }
-
 #enter-button:hover, #enter-button:focus {
 background-color: rgb(228, 147, 7);
 cursor: pointer;
 }
-
 #enter-button:active {
 background-color: rgb(255, 165, 9);
 }
-
 .game-button {
 width: 50px;
 height: 50px;
@@ -260,11 +256,9 @@ border: 1px solid green;
 -webkit-box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
         box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.75);
 }
-
 .inventory {
 padding: 16px;
 }
-
 .inventoryList {
 position: absolute;
 right: 100%;
@@ -275,10 +269,8 @@ border-radius: 10px;
 border: 2px dashed #555;
 font-size: 20px;
 }
-
 .commandList {
 position: absolute;
-margin-top: 16px;
 top: 100%;
 padding: 10px 10px 0px 10px;
 background-color: #333;
@@ -289,27 +281,22 @@ min-width: 680px;
 display: inline;
 text-align: center;
 }
-
 #descriptionItem {
 display: inline;
 margin: 7%;
 }
-
 .item {
 position: relative;
 }
-
 .ulInventory {
 margin: 0;
 padding: 5px;
 }
-
 .ulCommands {
 list-style-type: none;
 padding: 5px;
 margin: 0;
 }
-
 .description {
 display: none;
 position: absolute;
@@ -330,27 +317,32 @@ display: block;
 margin-bottom: 5px;
 }
 .game-title {
-font-size: 24px;
-letter-spacing: 6px;
-margin: 10px;
-text-shadow: 0 0 20px black;
-color: white;
-text-decoration: none;
+  font-size: 24px;
+  letter-spacing: 6px;
+  margin: 10px;
+  text-shadow: 1px 1px 5px black;
+  color: white;
+  text-decoration: none;
 }
 .game-nav {
-font-size: 24px;
-letter-spacing: 6px;
-margin: auto;
-text-shadow: 0 0 20px black;
-color: white;
-margin-left: 100px;
-text-decoration: none;
+  font-size: 24px;
+  letter-spacing: 6px;
+  margin: auto;
+  text-shadow: 1px 1px 5px black;
+  color: white;
+  margin-left: 150px;
+  text-decoration: none;
+}
+.game-nav:hover, .game-title:hover {
+  color: rgb(190, 190, 190);
 }
 .navbar {
-display: flex;
-flex-direction: row;
-justify-content: flex-start;
-padding-left: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: absolute;
+  margin: 16px;
+  margin-left: 300px;
 }
 #game-title-first-letter {
 font-size: 32px;
@@ -373,7 +365,6 @@ color: white;
 text-decoration: underline;
 cursor: pointer;
 }
-
 header {
 display: flex;
 margin: -8px; 
@@ -382,7 +373,6 @@ margin-bottom: 10px;
 flex-direction: row;
 justify-content: flex-start;
 }
-
 header .copyright{
 font-size: 20px;
 position: absolute;
@@ -391,7 +381,6 @@ right: 0;
 padding-left: 3px;
 margin: 5px;
 }
-
 .map-wrapper {
 position: absolute;
 left: 100%;
@@ -408,7 +397,6 @@ width: 32px;
 height: 32px;
 font-size: 10px;
 }
-
 .map-compass-needle {
 position: absolute;
 width: 10px;
@@ -420,7 +408,6 @@ border-radius: 50%;
 animation: 3s compass-needle-wiggle alternate infinite;
 -webkit-animation: 3s compass-needle-wiggle alternate infinite;
 }
-
 .map-compass-needle:before {
 content: "";
 position: absolute;
@@ -432,7 +419,6 @@ border-color: transparent transparent #F00 transparent;
 top: -7px;
 left: 2px;
 }
-
 .map-compass-needle:after {
 content: "";
 position: absolute;
@@ -444,7 +430,6 @@ border-color: #CCC transparent transparent transparent;
 bottom: -7px;
 left: 2px;
 }
-
 .map-compass:before {
 content: "";
 top: 12px;
@@ -454,7 +439,6 @@ background-color: #fff;
 width: 2px;
 height: 16px;
 }
-
 .map-compass:after {
 content: "";
 top: 19px;
@@ -485,7 +469,6 @@ left: 100%;
 .map-row{
 display: flex;
 margin: 5px;
-
 }
 .map-cell {
 display: flex;
@@ -505,7 +488,6 @@ border: 2px solid #aaa;
 }
 .map-cell--current {
 border: transparent;
-
 }
 .map-cell--current:after{
 content: "";
@@ -518,7 +500,6 @@ animation: 0.9s map-cell-current-room-glow infinite alternate;
 .map-cell--hidden {
 opacity: 0;
 pointer-events: none;
-
 }
 .map-cell-connection {
 position: absolute;
