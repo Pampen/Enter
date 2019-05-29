@@ -1,7 +1,7 @@
 from flask import Flask, request, Response, jsonify
 from flask_cors import CORS, cross_origin
 from levelChecker import levelChecker
-from saveLevelAndWrongUserInput import inspectItem
+from utilities import inspectItem
 import json
 app = Flask(__name__)
 CORS(app, support_credentials=True)

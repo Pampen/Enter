@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import handleInvalidDirection, goToLevel, handleInvalidInput, handleDoorLock, takeItem
+from utilities import handleInvalidDirection, goToLevel, handleInvalidInput, handleDoorLock, takeItem
 
 def handleMirrorRoom1(userInput, state):
     if userInput == "GO EAST":

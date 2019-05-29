@@ -1,4 +1,4 @@
-from saveLevelAndWrongUserInput import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock, handlePersistantItems
+from utilities import goToLevel, handleInvalidDirection, handleInvalidInput, takeItem, handleDoorLock, handlePersistantItems
 
 def handleOutside(userInput, state):
     if userInput == 'GO WEST':

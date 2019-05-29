@@ -71,10 +71,10 @@ const sadness2 = {
     ]
 }
 const mirrorRoomMap = [
-    [sadness2, sadness1],
-    [anger2, love],
-    [anger1, joy],
-    [mirrorRoom1, mirrorRoom2]
+    [null, null, sadness2, sadness1],
+    [null, null, anger2, love],
+    [null, null, anger1, joy],
+    [null, null, mirrorRoom1, mirrorRoom2]
 ];
 
 export default mirrorRoomMap

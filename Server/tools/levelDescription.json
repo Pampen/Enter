@@ -36,17 +36,17 @@
     },
     {
         "level": "MAIN_HALL_RED_KEY",
-        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work. The green door stops humming...",
+        "levelDescription": "The green keyhole makes a metallic sound as you turn the key. The red one starts emiiting intense heat, almost as if there is raging fire on the other side.. But it doesn't burn you.",
         "levelTitle": "Main Hall"
     },
     {
         "level": "MAIN_HALL_PINK_KEY",
-        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work. The red door stops humming... ",
+        "levelDescription": "The red keyhole is now cold to the touch. You hear a faint noise. As you put your ear to the pink keyhole, you can make out a babys babble.",
         "levelTitle": "Main Hall"
     },
     {
         "level": "MAIN_HALL_BLUE_KEY",
-        "levelDescription": "You are now in the main hall of the house. There isn't much in the main hall except for three odd doors with three different colors. The windows are painted in black and some old creepy paintings on the walls covered in cobwebs. The paintings looked a lot like Willem de Kooning's work. The pink door stops humming... ",
+        "levelDescription": "As you turned the pink key, the baby noise fades. A liquid now starts dripping out of the blue keyhole. Is it.. tears?",
         "levelTitle": "Main Hall"
     },
     {
