@@ -81,7 +81,6 @@ class App extends Component {
       }
       newGameState.levelHistory[response.state.level] = true;
       this.setState(newGameState);
-      console.log(this.state);
     });
   }
   componentDidMount = () => {
@@ -93,12 +92,7 @@ class App extends Component {
       }
     })
   }
-  handleKeyDown = () => {
-    console.log('hello')
-  }
   render() {
-    console.log(this.state.level)
-
     return (
       <main id="wrapper">
           {

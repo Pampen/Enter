@@ -81,7 +81,6 @@ class MapConnection extends Component {
 
 export default class MiniMap extends Component {
     render() {
-        console.log(this.props.levelHistory)
         const currentMainLevel = levels[this.props.level]
         const currentMap = maps[currentMainLevel]
         if (!currentMap) {

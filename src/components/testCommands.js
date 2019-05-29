@@ -29,7 +29,6 @@ export default class Test extends Component {
                     "Use this command to throw an item such as 'throw canvas'"
             }
         };
-        console.log(commandInfo)
         const commandNames = Object.keys(commandInfo)
 
         return (
