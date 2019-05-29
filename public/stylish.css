@@ -10,26 +10,28 @@ display: flex;
 background-color: #555;
 }
 .faq {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: white;
-  margin-left: -250px;
-  margin-top: 400px;
-  line-height: 5px;
-  width: 550px;
+  height: 50%;
+  width: 50%; 
+  overflow: auto;
+  margin: auto; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
 }
 .about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: white;
-  margin-left: 350px;
-  margin-top: 50px;
-  line-height: 30px;
-  width: 900px;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  line-height: 31px;
+  width: 65%;
+  height: 75%;
+  margin: auto;
+  position: absolute;
 }
 .about_container {
   display: flex;
@@ -37,9 +39,9 @@ background-color: #555;
   justify-content: center;
   align-items: center;
   color: white;
-  margin-left: 350px;
   line-height: 30px;
   width: 900px;
+  font-size: 15px;
 }
 .about p {
   font-size: 15px;
@@ -330,27 +332,32 @@ display: block;
 margin-bottom: 5px;
 }
 .game-title {
-font-size: 24px;
-letter-spacing: 6px;
-margin: 10px;
-text-shadow: 0 0 20px black;
-color: white;
-text-decoration: none;
+  font-size: 24px;
+  letter-spacing: 6px;
+  margin: 10px;
+  text-shadow: 1px 1px 5px black;
+  color: white;
+  text-decoration: none;
 }
 .game-nav {
-font-size: 24px;
-letter-spacing: 6px;
-margin: auto;
-text-shadow: 0 0 20px black;
-color: white;
-margin-left: 100px;
-text-decoration: none;
+  font-size: 24px;
+  letter-spacing: 6px;
+  margin: auto;
+  text-shadow: 1px 1px 5px black;
+  color: white;
+  margin-left: 150px;
+  text-decoration: none;
+}
+.game-nav:hover, .game-title:hover {
+  color: rgb(190, 190, 190);
 }
 .navbar {
-display: flex;
-flex-direction: row;
-justify-content: flex-start;
-padding-left: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: absolute;
+  margin: 16px;
+  margin-left: 300px;
 }
 #game-title-first-letter {
 font-size: 32px;
