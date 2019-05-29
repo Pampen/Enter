@@ -43,9 +43,7 @@ def takeItem(state, currentItem):
 def inspectItem(state, userInput):
     itemData = openItemFile()
     for item in itemData:
-        print(item)
         if itemData[item]['itemName'].upper() in userInput:
-            print(itemData[item]['itemName'])
             if item in state['inventory']:
                 itemDescription = itemData[item]['itemDescription']
                 response = {
@@ -121,7 +119,6 @@ def handleDoorLock(state, currentLevel, userInput):
                 return response
 
 def returnToMainHall(state, currentItem, currentLevel):
-    print(currentItem)
     itemData = openItemFile()
     item = itemData[currentItem]
     newState = state
