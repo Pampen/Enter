@@ -98,8 +98,6 @@ class App extends Component {
     console.log('hello')
   }
 
-
-
   render() {
     console.log(this.state.level)
 
@@ -147,4 +145,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;

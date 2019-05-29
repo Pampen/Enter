@@ -239,7 +239,6 @@ def redPuzzle(state, userInput):
     if 'CANVAS' in userInput or 'PHOTOGRAPH' in userInput or 'CAR KEYS' in userInput:
         if len(objectList) == 0 and userInput == 'THROW CANVAS' and 'canvas' not in state['isBurned']:
             objectList.append('canvas')
-            print(objectList)
             newState['isBurned'] = objectList
             newState['inventory'].pop('canvas')
             return {
@@ -286,7 +285,6 @@ def redPuzzle(state, userInput):
                 currentItem.append('photograph')
             if 'carKeys' not in state['inventory']:
                 currentItem.append('carKeys')
-            print(currentItem)
             newState = takeBurnItem(state, currentItem)
             return newState
     else:
@@ -299,7 +297,6 @@ def redPuzzle(state, userInput):
 
 def takeBurnItem(state, currentItems):
     newState = state
-    print(state['inventory'])
     canvas = {
         "itemName": "Canvas",
         "itemDescription": "It's a canvas painted entirely in the color red."
@@ -319,9 +316,7 @@ def takeBurnItem(state, currentItems):
             newState['inventory']['photograph'] = photograph
         elif item == 'carKeys':
             newState['inventory']['carKeys'] = carKeys
-        else:
-            print('poop')
-    response = {
+        response = {
         'state': newState,
         'pageChanges': {
                 'levelChatboxText': 'It is not in the right order, you might want to read the description for each item for this level to solve this puzzle... The items are restored to your inventory.',

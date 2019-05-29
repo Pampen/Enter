@@ -93,4 +93,3 @@ def handleKeyTakeGreenhouse(state):
         }
     }
     return response
-    

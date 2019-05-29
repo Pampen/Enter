@@ -142,7 +142,7 @@ def returnToMainHall(state, currentItem, currentLevel):
             return response
 
 def openLevelFile():
-    cwd = os.getcwd()  # Get the current working directory (cwd)
+    cwd = os.getcwd()
     filePath = cwd + '/Server/tools/levelDescription.json'
     
     with open(filePath, "r") as getData:
@@ -150,35 +150,11 @@ def openLevelFile():
         return data
         
 def openItemFile():
-    cwd = os.getcwd()  # Get the current working directory (cwd)
+    cwd = os.getcwd()
     filePath = cwd + '/Server/tools/inventory.json'
     
     with open(filePath, "r") as getData:
         data = json.loads(getData.read())
-        return data
-
-def openTorchFile():
-    cwd = os.getcwd()
-    filePath = cwd + '/Server/tools/blueTorchDescription.json'
-    
-    with open(filePath, 'r') as getData:
-        data =json.loads(getData.read())
-        return data
-
-def openFalseKeyFile():
-    cwd = os.getcwd()
-    filePath = cwd + '/Server/tools/blueFalseKeyDescription.json'
-    
-    with open(filePath, 'r') as getData:
-        data =json.loads(getData.read())
-        return data
-
-def openTrueKeyFile():
-    cwd = os.getcwd()
-    filePath = cwd + '/Server/tools/blueTrueKeyDescription.json'
-    
-    with open(filePath, 'r') as getData:
-        data =json.loads(getData.read())
         return data
 
 def openUseDescriptionFile():

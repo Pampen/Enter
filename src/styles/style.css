@@ -371,7 +371,6 @@ body {
   text-decoration: underline;
   cursor: pointer;
 }
-
 header {
   display: flex;
   margin: -8px; 
@@ -380,8 +379,7 @@ header {
   flex-direction: row;
   justify-content: flex-start;
 }
-
- header .copyright{
+header .copyright{
   font-size: 20px;
   position: absolute;
   bottom: 0;
@@ -389,7 +387,6 @@ header {
   padding-left: 3px;
   margin: 5px;
 }
-
 .map-wrapper {
   position: absolute;
   left: 100%;
@@ -406,7 +403,6 @@ header {
   height: 32px;
   font-size: 10px;
 }
-
 .map-compass-needle {
   position: absolute;
   width: 10px;
@@ -418,7 +414,6 @@ header {
   animation: 3s compass-needle-wiggle alternate infinite;
   -webkit-animation: 3s compass-needle-wiggle alternate infinite;
 }
-
 .map-compass-needle:before {
   content: "";
   position: absolute;
@@ -430,7 +425,6 @@ header {
   top: -7px;
   left: 2px;
 }
-
 .map-compass-needle:after {
   content: "";
   position: absolute;
@@ -442,7 +436,6 @@ header {
   bottom: -7px;
   left: 2px;
 }
-
 .map-compass:before {
   content: "";
   top: 12px;
@@ -452,7 +445,6 @@ header {
   width: 2px;
   height: 16px;
 }
-
 .map-compass:after {
   content: "";
   top: 19px;
@@ -516,7 +508,6 @@ header {
 .map-cell--hidden {
   opacity: 0;
   pointer-events: none;
-
 }
 .map-cell-connection {
   position: absolute;
@@ -617,7 +608,6 @@ header {
             transform: scale(0.9, 0.9);
   }
 }
-
 @keyframes map-cell-name-wiggle {
   0% {
     -webkit-transform: scale(1,1);
@@ -648,7 +638,6 @@ header {
             transform: scale(1.1, 1.1)
   }
 }
-
 @-webkit-keyframes compass-needle-wiggle {
   0% {
     -webkit-transform: rotate(0);
@@ -718,7 +707,6 @@ header {
             transform: rotate(0deg);
   }
 }
-
 @-webkit-keyframes compass-mirror-room-spin {
   0% {
     -webkit-transform: rotate(0);
@@ -729,7 +717,6 @@ header {
             transform: rotate(360deg);
   }
 }
-
 @keyframes compass-mirror-room-spin {
   0% {
     -webkit-transform: rotate(0);
@@ -740,7 +727,6 @@ header {
             transform: rotate(360deg);
   }
 }
-
 .TUTORIAL{
   color: orange;
 }

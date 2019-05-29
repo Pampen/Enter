@@ -129,11 +129,8 @@ def handleMessyRoom(userInput, state):
         return handleInvalidInput(userInput, state)
 
 def pinkRoomPuzzle(state, userInput):
-    print(state)
     newState = state
     puzzleList = state['pinkPuzzleItems']
-    print(puzzleList)
-    print(state)
     if 'CRIB' in userInput or 'DOLL' in userInput or 'WORN DOLL' or 'BLANKET' in userInput or 'DIRTY BLANKET' in userInput or 'PACIFIER' in userInput or 'MOLDY PACIFIER' in userInput or 'RHYME' in userInput or 'NURSERY RHYME' in userInput:
         if userInput == "USE CRIB" and "crib" not in puzzleList:
             puzzleList.append("crib")

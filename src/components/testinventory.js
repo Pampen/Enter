@@ -23,7 +23,6 @@ export default class testCommands extends Component {
                         )
                     }
                 </ul>
-
             </div>
         );
     }
